@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="389f8bc6-1728-4aca-bbda-54645399ddc1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/enemyUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/enemyUnit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/playerUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/playerUnit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/OmerTestEnvironment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/OmerTestEnvironment.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Scripts/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Scripts/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Scripts/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Scripts/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Scripts/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Scripts/PlayerUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Scripts/PlayerUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Scripts/UnitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Scripts/UnitHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/EditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +27,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/_Scripts/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/_Scripts/EnemyUnit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/_Scripts/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/_Scripts/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/_Scripts/MultiSelect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/_Scripts/PlayerManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/_Scripts/PlayerUnit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/_Scripts/PlayerUnit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/_Scripts/UnitHandler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2OTWCnr1QQY4MzpvFb8mQg9FeHY" />
@@ -58,6 +69,7 @@
       <updated>1681584926527</updated>
       <workItem from="1681584927571" duration="5843000" />
       <workItem from="1681653583474" duration="10801000" />
+      <workItem from="1682182671687" duration="4157000" />
     </task>
     <servers />
   </component>

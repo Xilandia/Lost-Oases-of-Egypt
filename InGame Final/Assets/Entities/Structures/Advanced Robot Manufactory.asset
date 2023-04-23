@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
+  m_Name: Advanced Robot Manufactory
+  m_EditorClassIdentifier: 
+  entityName: Advanced Robot Manufactory
+  entityType: 2
+  entityPrefab: {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1, type: 3}
+  belongsToPlayer: 1
+  entityCost: 500
+  entityHealth: 400
+  entityArmor: 20
+  entityAttack: 0
+  entityTimeBetweenAttacks: 0
+  entityAttackRange: 0
+  entityMoveSpeed: 0
+  entityCreationTime: 90
+  isBuilding: 1
+  isBuildable: 1
+  buildableUnits:
+  - {fileID: 11400000, guid: 5db79ab3e071f4c92a367bb8f81b89d8, type: 2}
+  - {fileID: 11400000, guid: 9942556f0042f4fda9e645bafbe7349e, type: 2}
+  - {fileID: 11400000, guid: a9fb0f02aaa16415ebdf7b72e68e4946, type: 2}
+  - {fileID: 11400000, guid: 9513c6d8d738d428ea9fdfb105f817b2, type: 2}

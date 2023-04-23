@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Entity", menuName = "New Entity")]
@@ -9,11 +7,11 @@ public class Entity : ScriptableObject
     {
         Worker,
         Robot,
-        Building,
+        UnitTrainer,
         Turret,
         BaseStructure,
         Wall
-    };    
+    }    
 
     [Header("Entity Settings")]
 	public string entityName;
@@ -25,11 +23,18 @@ public class Entity : ScriptableObject
     
 	[Space(20)]
 	[Header("Entity Stats")]
-    public int entityCost;
-    public int entityHealth;
-	public int entityArmor;
-    public int entityAttack;
-	public int entityAttackSpeed;
-    public int entityAttackRange;
-    public int entityMoveSpeed;
+    public float entityCost;
+    public float entityHealth;
+	public float entityArmor;
+    public float entityAttack;
+	public float entityTimeBetweenAttacks;
+    public float entityAttackRange;
+    public float entityMoveSpeed;
+    public float entityCreationTime;
+    
+    [Space(20)]
+    [Header("Building Atributes")]
+    public bool isBuilding;
+    public bool isBuildable;
+    public Entity[] buildableUnits;
 }
