@@ -20,6 +20,10 @@ MonoBehaviour:
   entityHealth: 30
   entityArmor: 5
   entityAttack: 20
-  entityAttackSpeed: 1
+  entityTimeBetweenAttacks: 5
   entityAttackRange: 5
   entityMoveSpeed: 3
+  entityCreationTime: 20
+  isBuilding: 0
+  isBuildable: 0
+  buildableUnits: []

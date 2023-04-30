@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -7,13 +5,20 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager instance;
 
     public Transform playerUnits;
+    public Transform playerTrainers;
     public Transform enemyUnits;
+    
+    
+    void Awake()
+    {
+        instance = this;
+    }
     
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
-        UnitHandler.instance.SetEntityStats(playerUnits);
+        EntityHandler.instance.SetEntityStats(playerUnits);
+        EntityHandler.instance.SetEntityStats(playerTrainers);
         //UnitHandler.instance.SetEntityStats(enemyUnits);
     }
 

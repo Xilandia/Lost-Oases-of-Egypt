@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputHandler : MonoBehaviour
 {
@@ -8,15 +8,19 @@ public class InputHandler : MonoBehaviour
 
     private RaycastHit hit;
     
-    private List<Transform> selectedUnits = new List<Transform>();
+    public List<Transform> selectedUnits = new List<Transform>();
+    public Transform selectedStructure = null;
 
-	private bool isDragging = false;
+    public bool isDragging = false;
 	private Vector3 mousePosition;
+
+	private Camera cam;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
+        cam = Camera.main;
     }
 
 	private void OnGUI()
@@ -31,28 +35,46 @@ public class InputHandler : MonoBehaviour
 
     public void HandleUnitMovement()
     {
-        if (Input.GetMouseButtonDown(0))
+	    if (Input.GetMouseButtonDown(0))
         {
+	        if (EventSystem.current.IsPointerOverGameObject())
+	        {
+		        return;
+	        }
+	        
+	        mousePosition = Input.mousePosition;
 
-			mousePosition = Input.mousePosition;
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
                 LayerMask layerHit = hit.transform.gameObject.layer;
-
-                switch (layerHit.value)
+                
+                if (layerHit.value == 8)
                 {
-                    case 8:
-                        SelectUnit(hit.transform, Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
-                        break;
-                    default:
-						isDragging = true;
-                        DeselectUnits();
-                        break;
+	                if (AddedUnit(hit.transform, Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+	                {
+		                DeselectStructure();
+		                // do unit stuff
+	                }
+
+	                if (AddedTrainer(hit.transform))
+	                {
+		                // do trainer stuff
+	                }
+                }
+                else
+                {
+	                isDragging = true;
+	                DeselectUnits();
                 }
             }
+            // for selection over void (probably unwanted behavior)
+            /*else
+            {
+	            isDragging = true;
+	            DeselectUnits();
+            }*/
         }
 
 		if (Input.GetMouseButtonUp(0))
@@ -62,17 +84,17 @@ public class InputHandler : MonoBehaviour
 				// for single category of units
 				/*if (isWithinSelectionBounds(child))
                 {
-                   	SelectUnit(child, true);
+                   	AddedUnit(child, true);
                	}*/
 
 
 				// for when we add multiple categories of units
 				foreach (Transform unit in child)
-				{	
-                	if (isWithinSelectionBounds(unit))
-                	{
-                    	SelectUnit(unit, true);
-                	}
+				{
+					if (isWithinSelectionBounds(unit))
+                    {
+	                    AddedUnit(unit, true);
+                    }
             	}
 			}
 			isDragging = false;
@@ -82,7 +104,7 @@ public class InputHandler : MonoBehaviour
 		{
 			mousePosition = Input.mousePosition;
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -93,7 +115,7 @@ public class InputHandler : MonoBehaviour
                     case 8:
 						// do something? (player unit layer)
                         break;
-    				case 9:                
+    				case 16:                
 						break;
 					default:
 						foreach (Transform unit in selectedUnits)
@@ -108,33 +130,33 @@ public class InputHandler : MonoBehaviour
 
     }
 
-    private void SelectUnit(Transform unit, bool multiSelect = false)
-    {
-        if (!multiSelect)
-        {
-            DeselectUnits();
-        }
-        selectedUnits.Add(unit);
-        unit.Find("Highlight").gameObject.SetActive(true);
-    }
-    
     private void DeselectUnits()
     {
+	    DeselectStructure();
+	    
         foreach (Transform selectedUnit in selectedUnits)
         {
-            selectedUnit.Find("Highlight").gameObject.SetActive(false);
+	        selectedUnit.gameObject.GetComponent<IUnit>().OnInteractExit();
         }
         selectedUnits.Clear();
     }
 
+    private void DeselectStructure()
+    {
+	    if (selectedStructure)
+	    {
+		    selectedStructure.gameObject.GetComponent<ITrainer>().OnInteractExit();
+		    selectedStructure = null;
+	    }
+    }
+    
 	private bool isWithinSelectionBounds(Transform tf)
     {
         if (!isDragging)
         {
             return false;
         }
-
-        Camera cam = Camera.main;
+        
         Bounds viewportBounds = MultiSelect.GetViewportBounds(cam, mousePosition, Input.mousePosition);
         return viewportBounds.Contains(cam.WorldToViewportPoint(tf.position));
     }
@@ -144,4 +166,38 @@ public class InputHandler : MonoBehaviour
         return selectedUnits.Count > 0;
     }
 
+	private IUnit AddedUnit(Transform tf, bool canMultiSelect = false)
+	{
+		IUnit iUnit = tf.GetComponent<IUnit>();
+		if (iUnit)
+		{
+			if (!canMultiSelect)
+			{
+				DeselectUnits();
+			}
+			
+			selectedUnits.Add(iUnit.gameObject.transform);
+			iUnit.OnInteractEnter();
+			
+			return iUnit;
+		}
+		return null;
+	}
+	
+	private ITrainer AddedTrainer(Transform tf)
+	{
+		ITrainer iTrainer = tf.GetComponent<ITrainer>();
+		if (iTrainer)
+		{
+			DeselectUnits();
+			
+			selectedStructure = iTrainer.gameObject.transform;
+			iTrainer.OnInteractEnter();
+			
+			return iTrainer;
+		}
+		return null;
+	}
+	
+	
 }
