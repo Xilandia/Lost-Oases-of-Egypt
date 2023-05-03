@@ -73,6 +73,9 @@ public class EntityHandler : MonoBehaviour
                         
                         pT.buildableUnits = entityStats.buildableUnits;
                         pT.isBuildable = entityStats.isBuildable;
+                        pT.isPrototype = entityStats.isPrototype;
+                        pT.isPlaced = entityStats.isPlaced;
+                        pT.isComplete = entityStats.isComplete;
                     }
                     else
                     {

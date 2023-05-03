@@ -66,11 +66,13 @@ MonoBehaviour:
   trainerCost: 0
   trainerHealth: 0
   trainerArmor: 0
-  trainerBuildTime: 0
+  trainerBuildTime: 30
   trainerCurrentHealth: 0
   isBuildable: 0
-  buildableUnits:
-  - {fileID: 0}
+  isPrototype: 0
+  isPlaced: 0
+  isComplete: 0
+  buildableUnits: []
 --- !u!114 &2441923393280470069
 MonoBehaviour:
   m_ObjectHideFlags: 0

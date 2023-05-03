@@ -22,21 +22,8 @@ public class BuildingSystem : MonoBehaviour
         grid = gridLayout.gameObject.GetComponent<Grid>();
     }
     
-    void Update()
+    public bool TryToPlace()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            InitializeWithObject(buildingPrefabs[0]);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            InitializeWithObject(buildingPrefabs[1]);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            InitializeWithObject(buildingPrefabs[2]);
-        }
-        
         if (objectToPlace != null)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -46,22 +33,17 @@ public class BuildingSystem : MonoBehaviour
                     objectToPlace.Place();
                     Vector3Int start = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
                     TakeArea(start, objectToPlace.Size);
+
+                    return true;
                 }
                 else
                 {
                     // make jingle to indicate that object cannot be placed
                 }
             }
-            
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                objectToPlace.Rotate();
-            }
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Destroy(objectToPlace.gameObject);
-            }
         }
+
+        return false;
     }
     
     public static Vector3 GetMouseWorldPosition()
@@ -97,12 +79,15 @@ public class BuildingSystem : MonoBehaviour
         return tilebases;
     }
     
-    public void InitializeWithObject(GameObject prefab)
+    public void InitializeWithObject(int prefabIndex)
     {
         Vector3 position = SnapToGrid(Vector3.zero);
-        GameObject newObject = Instantiate(prefab, position, Quaternion.identity);
+        GameObject newObject = Instantiate(buildingPrefabs[prefabIndex], position, Quaternion.identity);
+        //newObject.transform.SetParent(grid.transform);
         objectToPlace = newObject.GetComponent<PlacableObject>();
-        newObject.AddComponent<ObjectDrag>();
+        newObject.GetComponent<PlayerTrainer>().isPrototype = true;
+        //newObject.AddComponent<ObjectDrag>();
+        InputHandler.instance.FirstSelectStructure(newObject.transform);
     }
     
     private bool CanBePlaced(PlacableObject objectToPlace)

@@ -13,6 +13,7 @@ public class InputHandler : MonoBehaviour
 
     public bool isDragging = false;
 	private Vector3 mousePosition;
+	private bool structureIsPrototype;
 
 	private Camera cam;
     
@@ -33,7 +34,7 @@ public class InputHandler : MonoBehaviour
 		}
 	}
 
-    public void HandleUnitMovement()
+    public void HandlePlayerInput()
     {
 	    if (Input.GetMouseButtonDown(0))
         {
@@ -60,7 +61,7 @@ public class InputHandler : MonoBehaviour
 
 	                if (AddedTrainer(hit.transform))
 	                {
-		                // do trainer stuff
+		                // do structure stuff
 	                }
                 }
                 else
@@ -91,7 +92,7 @@ public class InputHandler : MonoBehaviour
 				// for when we add multiple categories of units
 				foreach (Transform unit in child)
 				{
-					if (isWithinSelectionBounds(unit))
+					if (IsWithinSelectionBounds(unit))
                     {
 	                    AddedUnit(unit, true);
                     }
@@ -100,7 +101,7 @@ public class InputHandler : MonoBehaviour
 			isDragging = false;
 		}
 
-		if (Input.GetMouseButtonDown(1) && haveSelectedUnits())
+		if (Input.GetMouseButtonDown(1) && HaveSelectedUnits())
 		{
 			mousePosition = Input.mousePosition;
 
@@ -128,7 +129,53 @@ public class InputHandler : MonoBehaviour
             }
 		}
 
+		if (selectedStructure)
+		{
+			if (structureIsPrototype)
+			{
+				PlayerTrainer pT = selectedStructure.gameObject.GetComponent<PlayerTrainer>();
+				pT.UpdatePrototypePosition();
+
+				if (Input.GetKeyDown(KeyCode.Space))
+				{
+					if (BuildingSystem.instance.TryToPlace())
+					{
+						pT.isPrototype = false;
+						structureIsPrototype = false;
+						pT.StartConstruction();
+					}
+				}
+				if (Input.GetKeyDown(KeyCode.T))
+				{
+					selectedStructure.gameObject.GetComponent<PlacableObject>().Rotate();
+				}
+				
+				if (Input.GetKeyDown(KeyCode.Escape))
+				{
+					DeselectStructure();
+				}
+			}
+		}
+		
+		if (Input.GetKeyDown(KeyCode.Z))
+		{
+			BuildingSystem.instance.InitializeWithObject(0);
+		}
+		if (Input.GetKeyDown(KeyCode.X))
+		{
+			BuildingSystem.instance.InitializeWithObject(1);
+		}
+		if (Input.GetKeyDown(KeyCode.C))
+		{
+			BuildingSystem.instance.InitializeWithObject(2);
+		}
+		
     }
+    
+    public void FirstSelectStructure(Transform tf)
+	{
+	    AddedTrainer(tf);
+	}
 
     private void DeselectUnits()
     {
@@ -146,11 +193,16 @@ public class InputHandler : MonoBehaviour
 	    if (selectedStructure)
 	    {
 		    selectedStructure.gameObject.GetComponent<ITrainer>().OnInteractExit();
+		    if (structureIsPrototype)
+		    {
+			    Destroy(selectedStructure.gameObject);
+			    structureIsPrototype = false;
+		    }
 		    selectedStructure = null;
 	    }
     }
     
-	private bool isWithinSelectionBounds(Transform tf)
+	private bool IsWithinSelectionBounds(Transform tf)
     {
         if (!isDragging)
         {
@@ -161,7 +213,7 @@ public class InputHandler : MonoBehaviour
         return viewportBounds.Contains(cam.WorldToViewportPoint(tf.position));
     }
 
-	private bool haveSelectedUnits()
+	private bool HaveSelectedUnits()
     {
         return selectedUnits.Count > 0;
     }
@@ -193,6 +245,9 @@ public class InputHandler : MonoBehaviour
 			
 			selectedStructure = iTrainer.gameObject.transform;
 			iTrainer.OnInteractEnter();
+			
+			PlayerTrainer structure = iTrainer.gameObject.GetComponent<PlayerTrainer>();
+			structureIsPrototype = structure.isPrototype;
 			
 			return iTrainer;
 		}
