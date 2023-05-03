@@ -36,5 +36,8 @@ public class Entity : ScriptableObject
     [Header("Building Atributes")]
     public bool isBuilding;
     public bool isBuildable;
+    public bool isPrototype;
+    public bool isPlaced;
+    public bool isComplete;
     public Entity[] buildableUnits;
 }

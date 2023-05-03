@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9164537273305081322}
   - component: {fileID: 522721199477490802}
+  - component: {fileID: -7585415165409839783}
+  - component: {fileID: 8394402020145376509}
   - component: {fileID: 5235427609967495588}
   m_Layer: 8
   m_Name: Building Wall
@@ -48,6 +50,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7585415165409839783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887137071503025175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a848d2ff0a4d74a01ad5eb3118caf339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trainerName: 
+  trainerCost: 0
+  trainerHealth: 0
+  trainerArmor: 0
+  trainerBuildTime: 0
+  trainerCurrentHealth: 0
+  isBuildable: 0
+  isPrototype: 0
+  isPlaced: 0
+  isComplete: 0
+  buildableUnits: []
+--- !u!114 &8394402020145376509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887137071503025175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d5dd67138c342789ebaf744f95594d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
+  highlight: {fileID: 8197665627867361819}
+  playerTrainer: {fileID: 11400000, guid: 7aaf612f110094aac852774be3c43ca5, type: 2}
 --- !u!114 &5235427609967495588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,9 +125,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5089466740795068163}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.00000011920929, z: -0.000000059604645}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9164537273305081322}

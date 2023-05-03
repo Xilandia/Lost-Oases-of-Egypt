@@ -69,8 +69,7 @@ MonoBehaviour:
   trainerBuildTime: 0
   trainerCurrentHealth: 0
   isBuildable: 0
-  buildableUnits:
-  - {fileID: 0}
+  buildableUnits: []
 --- !u!114 &2441923393280470069
 MonoBehaviour:
   m_ObjectHideFlags: 0
