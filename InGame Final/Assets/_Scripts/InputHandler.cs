@@ -8,10 +8,10 @@ public class InputHandler : MonoBehaviour
 
     private RaycastHit hit;
     
-    public List<Transform> selectedUnits = new List<Transform>();
-    public Transform selectedStructure = null;
+    public List<Transform> selectedUnits;
+    public Transform selectedStructure;
 
-    public bool isDragging = false;
+    public bool isDragging;
 	private Vector3 mousePosition;
 	private bool structureIsPrototype;
 
@@ -138,7 +138,7 @@ public class InputHandler : MonoBehaviour
 
 				if (Input.GetKeyDown(KeyCode.Space))
 				{
-					if (BuildingSystem.instance.TryToPlace())
+					if (BuildingHandler.instance.TryToPlace())
 					{
 						pT.isPrototype = false;
 						structureIsPrototype = false;
@@ -159,15 +159,15 @@ public class InputHandler : MonoBehaviour
 		
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
-			BuildingSystem.instance.InitializeWithObject(0);
+			BuildingHandler.instance.InitializeWithObject(0);
 		}
 		if (Input.GetKeyDown(KeyCode.X))
 		{
-			BuildingSystem.instance.InitializeWithObject(1);
+			BuildingHandler.instance.InitializeWithObject(1);
 		}
 		if (Input.GetKeyDown(KeyCode.C))
 		{
-			BuildingSystem.instance.InitializeWithObject(2);
+			BuildingHandler.instance.InitializeWithObject(2);
 		}
 		
     }

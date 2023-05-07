@@ -25,7 +25,7 @@ public class EntityHandler : MonoBehaviour
 
     public Entity GetEntityStats(string _entityName)
     {
-        switch (_entityName)
+        switch (_entityName.Substring(0, _entityName.Length - 7))
         {
             case "Arbalists":
                 return arbalist;
@@ -49,56 +49,38 @@ public class EntityHandler : MonoBehaviour
         }
     }
 
-    public void SetEntityStats(Transform type)
+    public void SetPlayerUnitStats(PlayerUnit pU, string unitType)
     {
-        foreach (Transform child in type)
-        {
-            foreach (Transform grandchild in child)
-            {
-                Entity entityStats = GetEntityStats(child.name);
+        Entity entityStats = GetEntityStats(unitType);
+        
+        pU.unitName = entityStats.entityName;
+        pU.unitCost = entityStats.entityCost;
+        pU.unitHealth = entityStats.entityHealth;
+        pU.unitCurrentHealth = entityStats.entityHealth;
+        pU.unitArmor = entityStats.entityArmor;
+        pU.unitAttack = entityStats.entityAttack;
+        pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
+        pU.unitAttackRange = entityStats.entityAttackRange;
+        pU.unitMoveSpeed = entityStats.entityMoveSpeed;
+        pU.unitTrainTime = entityStats.entityCreationTime;
+    }
+    
+    public void SetPlayerTrainerStats(PlayerTrainer pT, string trainerType)
+    {
+        Entity entityStats = GetEntityStats(trainerType);
 
-                if (entityStats.belongsToPlayer)
-                {
-                    if (entityStats.isBuilding)
-                    {
-                        // handle player buildings / trainers / turrets
-                        PlayerTrainer pT = grandchild.GetComponent<PlayerTrainer>();
+        pT.trainerName = entityStats.entityName;
+        pT.trainerCost = entityStats.entityCost;
+        pT.trainerHealth = entityStats.entityHealth;
+        pT.trainerCurrentHealth = entityStats.entityHealth;
+        pT.trainerArmor = entityStats.entityArmor;
+        pT.trainerBuildTime = entityStats.entityCreationTime;
                         
-                        pT.trainerName = entityStats.entityName;
-                        pT.trainerCost = entityStats.entityCost;
-                        pT.trainerHealth = entityStats.entityHealth;
-                        pT.trainerCurrentHealth = entityStats.entityHealth;
-                        pT.trainerArmor = entityStats.entityArmor;
-                        pT.trainerBuildTime = entityStats.entityCreationTime;
-                        
-                        pT.buildableUnits = entityStats.buildableUnits;
-                        pT.isBuildable = entityStats.isBuildable;
-                        pT.isPrototype = entityStats.isPrototype;
-                        pT.isPlaced = entityStats.isPlaced;
-                        pT.isComplete = entityStats.isComplete;
-                    }
-                    else
-                    {
-                        PlayerUnit pU = grandchild.GetComponent<PlayerUnit>();
-
-                        pU.unitName = entityStats.entityName;
-                        pU.unitCost = entityStats.entityCost;
-                        pU.unitHealth = entityStats.entityHealth;
-                        pU.unitCurrentHealth = entityStats.entityHealth;
-                        pU.unitArmor = entityStats.entityArmor;
-                        pU.unitAttack = entityStats.entityAttack;
-                        pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
-                        pU.unitAttackRange = entityStats.entityAttackRange;
-                        pU.unitMoveSpeed = entityStats.entityMoveSpeed;
-                        pU.unitTrainTime = entityStats.entityCreationTime;
-                    }
-                }
-                else
-                {
-                    // handle enemy units
-                }
-            }
-        }
+        pT.buildableUnits = entityStats.buildableUnits;
+        pT.isBuildable = entityStats.isBuildable;
+        pT.isPrototype = entityStats.isPrototype;
+        pT.isPlaced = entityStats.isPlaced;
+        pT.isComplete = entityStats.isComplete;
     }
     
 }

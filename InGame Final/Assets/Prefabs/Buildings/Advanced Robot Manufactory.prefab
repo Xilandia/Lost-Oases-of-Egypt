@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 522721199477490802}
   - component: {fileID: 1231638400916525711}
   - component: {fileID: 2441923393280470069}
-  - component: {fileID: 900195033820690027}
+  - component: {fileID: 4109460291600571321}
   m_Layer: 8
-  m_Name: Building Long
+  m_Name: Advanced Robot Manufactory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,11 +29,12 @@ Transform:
   m_GameObject: {fileID: 3887137071503025175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 5, y: 2, z: 2.5}
+  m_LocalScale: {x: 5, y: 2, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8001248251558436667}
   - {fileID: 1905755067820090933}
+  - {fileID: 9103930841371994015}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -66,13 +67,15 @@ MonoBehaviour:
   trainerCost: 0
   trainerHealth: 0
   trainerArmor: 0
-  trainerBuildTime: 30
+  trainerBuildTime: 0
   trainerCurrentHealth: 0
   isBuildable: 0
   isPrototype: 0
   isPlaced: 0
   isComplete: 0
   buildableUnits: []
+  interactable: {fileID: 2441923393280470069}
+  spawnPoint: {fileID: 9103930841371994015}
 --- !u!114 &2441923393280470069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,7 +91,8 @@ MonoBehaviour:
   isInteracting: 0
   highlight: {fileID: 8197665627867361819}
   playerTrainer: {fileID: 11400000, guid: 7aaf612f110094aac852774be3c43ca5, type: 2}
---- !u!114 &900195033820690027
+  pT: {fileID: 1231638400916525711}
+--- !u!114 &4109460291600571321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,6 +187,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6222008108285791914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9103930841371994015}
+  m_Layer: 0
+  m_Name: Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9103930841371994015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222008108285791914}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9164537273305081322}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8197665627867361819
 GameObject:
   m_ObjectHideFlags: 0

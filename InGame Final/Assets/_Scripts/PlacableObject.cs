@@ -26,7 +26,7 @@ public class PlacableObject : MonoBehaviour
         for (int i = 0; i < vertices.Length; i++)
         {
             Vector3 worldPos = transform.TransformPoint(Vertices[i]);
-            vertices[i] = BuildingSystem.instance.gridLayout.WorldToCell(worldPos);
+            vertices[i] = BuildingHandler.instance.gridLayout.WorldToCell(worldPos);
         }
         
         Size = new Vector3Int(Math.Abs((vertices[0] - vertices[1]).x), Math.Abs((vertices[0] - vertices[3]).y), 1);
@@ -58,10 +58,6 @@ public class PlacableObject : MonoBehaviour
 
     public virtual void Place()
     {
-        ObjectDrag drag = gameObject.GetComponent<ObjectDrag>();
-        Destroy(drag);
-        //drag.enabled = false;
-        
         Placed = true;
         
         // invoke events of placement

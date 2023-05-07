@@ -24,7 +24,7 @@ MonoBehaviour:
   entityTimeBetweenAttacks: 0
   entityAttackRange: 0
   entityMoveSpeed: 0
-  entityCreationTime: 120
+  entityCreationTime: 5
   isBuilding: 1
   isBuildable: 1
   isPrototype: 1

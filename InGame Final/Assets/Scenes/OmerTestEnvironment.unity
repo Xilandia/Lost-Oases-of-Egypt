@@ -555,7 +555,6 @@ GameObject:
   m_Component:
   - component: {fileID: 475607579}
   - component: {fileID: 475607578}
-  - component: {fileID: 475607580}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -591,25 +590,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &475607580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475607577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7350906dee36b429bb5fc5cd0fe3382e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridLayout: {fileID: 475607578}
-  MainTilemap: {fileID: 1437853102}
-  whiteTile: {fileID: 11400000, guid: f0392f6823cdf41e180723cc735f224e, type: 2}
-  buildingPrefabs:
-  - {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1, type: 3}
-  - {fileID: 3887137071503025175, guid: 13144e6c5638d4657b2e67a800116149, type: 3}
-  - {fileID: 3887137071503025175, guid: 1d01a8fd651264295b82a9e8452ed5f1, type: 3}
 --- !u!1001 &492145216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1259,6 +1239,7 @@ MonoBehaviour:
   playerUnits: {fileID: 1593585765}
   playerTrainers: {fileID: 497144811}
   enemyUnits: {fileID: 31677847}
+  playerOre: 1000
 --- !u!1001 &774058432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15111,6 +15092,7 @@ GameObject:
   - component: {fileID: 2109516156}
   - component: {fileID: 2109516157}
   - component: {fileID: 2109516155}
+  - component: {fileID: 2109516158}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -15175,6 +15157,25 @@ MonoBehaviour:
   enemyUnitLayer:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &2109516158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109516154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7350906dee36b429bb5fc5cd0fe3382e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridLayout: {fileID: 475607578}
+  MainTilemap: {fileID: 1437853102}
+  whiteTile: {fileID: 11400000, guid: f0392f6823cdf41e180723cc735f224e, type: 2}
+  buildingPrefabs:
+  - {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1, type: 3}
+  - {fileID: 3887137071503025175, guid: 13144e6c5638d4657b2e67a800116149, type: 3}
+  - {fileID: 3887137071503025175, guid: 1d01a8fd651264295b82a9e8452ed5f1, type: 3}
 --- !u!1001 &5285443720404465971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15269,7 +15270,7 @@ PrefabInstance:
     - target: {fileID: 441212237251037617, guid: f12a181bb9b794cee846a25db320bd41,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 441212237251037617, guid: f12a181bb9b794cee846a25db320bd41,
         type: 3}

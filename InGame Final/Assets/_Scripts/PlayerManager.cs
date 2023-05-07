@@ -7,24 +7,25 @@ public class PlayerManager : MonoBehaviour
     public Transform playerUnits;
     public Transform playerTrainers;
     public Transform enemyUnits;
-    
+
+    public float playerOre = 0;
+    private float elapsedTime = 0;
     
     void Awake()
     {
         instance = this;
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        EntityHandler.instance.SetEntityStats(playerUnits);
-        EntityHandler.instance.SetEntityStats(playerTrainers);
-        //UnitHandler.instance.SetEntityStats(enemyUnits);
     }
 
     // Update is called once per frame
     void Update()
     {
         InputHandler.instance.HandlePlayerInput();
+        elapsedTime += Time.deltaTime;
+        
+        if (elapsedTime > 1)
+        {
+            playerOre += 100;
+            elapsedTime = 0;
+        }
     }
 }

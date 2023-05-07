@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class BuildingSystem : MonoBehaviour
+public class BuildingHandler : MonoBehaviour
 {
-    public static BuildingSystem instance;
+    public static BuildingHandler instance;
 
     public GridLayout gridLayout;
     private Grid grid;
@@ -13,6 +13,7 @@ public class BuildingSystem : MonoBehaviour
     public GameObject[] buildingPrefabs;
 
     private PlacableObject objectToPlace;
+    private PlayerTrainer pT; // combine as part of refactor
 
     private static RaycastHit hit;
     
@@ -26,20 +27,26 @@ public class BuildingSystem : MonoBehaviour
     {
         if (objectToPlace != null)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (PlayerManager.instance.playerOre >= pT.trainerCost)
             {
                 if (CanBePlaced(objectToPlace))
                 {
                     objectToPlace.Place();
                     Vector3Int start = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
                     TakeArea(start, objectToPlace.Size);
+                    PlayerManager.instance.playerOre -= pT.trainerCost;
 
                     return true;
                 }
-                else
-                {
-                    // make jingle to indicate that object cannot be placed
-                }
+                
+                // make jingle to indicate that object cannot be placed because of location
+                Debug.Log("Can't place structure here");
+                // no need for else because if returns
+            }
+            else
+            {
+                // make jingle to indicate that player cannot afford object
+                Debug.Log("Can't afford structure");
             }
         }
 
@@ -61,7 +68,7 @@ public class BuildingSystem : MonoBehaviour
     public static Vector3 SnapToGrid(Vector3 position)
     {
         Vector3Int cellPosition = instance.gridLayout.WorldToCell(position);
-        return instance.gridLayout.CellToWorld(cellPosition);
+        return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0,1,0);
     }
 
     private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)
@@ -85,9 +92,11 @@ public class BuildingSystem : MonoBehaviour
         GameObject newObject = Instantiate(buildingPrefabs[prefabIndex], position, Quaternion.identity);
         //newObject.transform.SetParent(grid.transform);
         objectToPlace = newObject.GetComponent<PlacableObject>();
-        newObject.GetComponent<PlayerTrainer>().isPrototype = true;
-        //newObject.AddComponent<ObjectDrag>();
+        pT = newObject.GetComponent<PlayerTrainer>();
+        //pT.myLocation = position;
+        EntityHandler.instance.SetPlayerTrainerStats(pT, newObject.gameObject.name);
         InputHandler.instance.FirstSelectStructure(newObject.transform);
+        pT.isPrototype = true;
     }
     
     private bool CanBePlaced(PlacableObject objectToPlace)
