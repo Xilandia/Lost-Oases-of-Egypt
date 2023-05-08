@@ -90,10 +90,9 @@ public class BuildingHandler : MonoBehaviour
     {
         Vector3 position = SnapToGrid(Vector3.zero);
         GameObject newObject = Instantiate(buildingPrefabs[prefabIndex], position, Quaternion.identity);
-        //newObject.transform.SetParent(grid.transform);
+        newObject.transform.SetParent(PlayerManager.instance.playerTrainers);
         objectToPlace = newObject.GetComponent<PlacableObject>();
         pT = newObject.GetComponent<PlayerTrainer>();
-        //pT.myLocation = position;
         EntityHandler.instance.SetPlayerTrainerStats(pT, newObject.gameObject.name);
         InputHandler.instance.FirstSelectStructure(newObject.transform);
         pT.isPrototype = true;

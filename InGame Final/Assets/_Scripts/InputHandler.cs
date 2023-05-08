@@ -83,20 +83,20 @@ public class InputHandler : MonoBehaviour
 			foreach (Transform child in PlayerManager.instance.playerUnits)
 	        {
 				// for single category of units
-				/*if (isWithinSelectionBounds(child))
+				if (IsWithinSelectionBounds(child))
                 {
                    	AddedUnit(child, true);
-               	}*/
+               	}
 
 
 				// for when we add multiple categories of units
-				foreach (Transform unit in child)
+				/*foreach (Transform unit in child)
 				{
 					if (IsWithinSelectionBounds(unit))
                     {
 	                    AddedUnit(unit, true);
                     }
-            	}
+            	}*/
 			}
 			isDragging = false;
 		}

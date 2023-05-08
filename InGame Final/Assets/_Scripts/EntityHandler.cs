@@ -25,17 +25,23 @@ public class EntityHandler : MonoBehaviour
 
     public Entity GetEntityStats(string _entityName)
     {
-        switch (_entityName.Substring(0, _entityName.Length - 7))
+        
+        if (_entityName.Contains("Clone"))
         {
-            case "Arbalists":
+            _entityName = _entityName.Substring(0, _entityName.Length - 7);
+        }
+        
+        switch (_entityName)
+        {
+            case "Arbalist":
                 return arbalist;
-            case "Gladiators":
+            case "Gladiator":
                 return gladiator;
-            case "Guardians":
+            case "Guardian":
                 return guardian;
-            case "Warlocks":
+            case "Warlock":
                 return warlock;
-            case "Workers":
+            case "Worker":
                 return worker;
             case "Worker Center":
                 return workerCenter;
@@ -52,7 +58,7 @@ public class EntityHandler : MonoBehaviour
     public void SetPlayerUnitStats(PlayerUnit pU, string unitType)
     {
         Entity entityStats = GetEntityStats(unitType);
-        
+
         pU.unitName = entityStats.entityName;
         pU.unitCost = entityStats.entityCost;
         pU.unitHealth = entityStats.entityHealth;

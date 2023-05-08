@@ -85,9 +85,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abbe3b5bb8884c4a9fc3f14691899a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 
+  unitName: None
   unitCost: 0
-  unitHealth: 0
+  unitHealth: 5
   unitArmor: 0
   unitAttack: 0
   unitTimeBetweenAttacks: 0

@@ -15,7 +15,6 @@ public class PlayerTrainer : MonoBehaviour
     private bool constructionStarted = false;
     private float currProgress, initYScale;
     
-    public Transform myLocation;
     [SerializeField] private Transform spawnPoint;
     private Queue<Entity> unitQueue = new Queue<Entity>();
     private float currentUnitTrainTime;
@@ -107,10 +106,10 @@ public class PlayerTrainer : MonoBehaviour
    {
        Entity pU = unitQueue.Dequeue();
        
-       //GameObject unit = Instantiate(pU.entityPrefab, spawnPoint.position, Quaternion.identity);
-       Debug.Log("Will spawn " + pU.entityName);
+       GameObject unit = Instantiate(pU.entityPrefab, spawnPoint.position, Quaternion.identity);
+       unit.transform.SetParent(PlayerManager.instance.playerUnits);
        
-       //EntityHandler.instance.SetPlayerUnitStats(unit.gameObject.GetComponent<PlayerUnit>(), pU.entityName);
+       EntityHandler.instance.SetPlayerUnitStats(unit.gameObject.GetComponent<PlayerUnit>(), pU.entityName);
        if (unitQueue.Count > 0) 
        { 
            currentUnitTrainTime = unitQueue.Peek().entityCreationTime;
