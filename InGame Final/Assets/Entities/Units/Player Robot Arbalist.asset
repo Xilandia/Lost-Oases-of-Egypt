@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: playerRobotWarlock
+  m_Name: Player Robot Arbalist
   m_EditorClassIdentifier: 
-  entityName: Warlock
-  entityType: 0
-  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2, type: 3}
+  entityName: Arbalist
+  entityType: 1
+  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
+    type: 3}
   belongsToPlayer: 1
-  entityCost: 300
-  entityHealth: 20
-  entityArmor: 1
-  entityAttack: 50
-  entityTimeBetweenAttacks: 4
-  entityAttackRange: 4
-  entityMoveSpeed: 2
-  entityCreationTime: 30
+  entityCost: 200
+  entityHealth: 30
+  entityArmor: 5
+  entityAttack: 20
+  entityTimeBetweenAttacks: 5
+  entityAttackRange: 5
+  entityMoveSpeed: 3
+  entityCreationTime: 20
   isBuilding: 0
   isBuildable: 0
   buildableUnits: []
