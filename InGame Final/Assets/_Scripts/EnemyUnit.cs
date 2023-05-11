@@ -72,13 +72,13 @@ public class EnemyUnit : MonoBehaviour
             if (enemyAttackCooldown <= 0)
             {
                 enemyAttackCooldown = enemyTimeBetweenAttacks;
-                if (aggroPlayerUnit == null)
+                if (aggroPlayerUnit)
                 {
-                    Debug.Log("Has target, but no player unit component");
+                    aggroPlayerUnit.TakeDamage(enemyAttack);
                 }
                 else 
                 {
-                    aggroPlayerUnit.TakeDamage(enemyAttack);
+                    //Debug.Log("Has target, but no player unit component");
                 }
             }
             else

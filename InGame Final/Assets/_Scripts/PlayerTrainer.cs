@@ -98,8 +98,6 @@ public class PlayerTrainer : MonoBehaviour
        {
            unitQueue.Enqueue(playerUnit);
        }
-
-       Debug.Log("Added " + playerUnit.entityName + " to queue, now sized " + unitQueue.Count + " and will take " + currentUnitTrainTime + " seconds to train");
    }
 
    public void FinishTrainingUnit()
