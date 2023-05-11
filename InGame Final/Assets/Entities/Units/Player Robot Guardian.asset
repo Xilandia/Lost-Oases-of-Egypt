@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: playerRobotArbalist
+  m_Name: Player Robot Guardian
   m_EditorClassIdentifier: 
-  entityName: Arbalist
+  entityName: Guardian
   entityType: 1
-  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2, type: 3}
+  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
+    type: 3}
   belongsToPlayer: 1
-  entityCost: 200
-  entityHealth: 30
-  entityArmor: 5
-  entityAttack: 20
-  entityTimeBetweenAttacks: 5
-  entityAttackRange: 5
-  entityMoveSpeed: 3
-  entityCreationTime: 20
+  entityCost: 100
+  entityHealth: 100
+  entityArmor: 10
+  entityAttack: 5
+  entityTimeBetweenAttacks: 3
+  entityAttackRange: 1
+  entityMoveSpeed: 4
+  entityCreationTime: 12
   isBuilding: 0
   isBuildable: 0
   buildableUnits: []

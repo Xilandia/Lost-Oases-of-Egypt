@@ -89,7 +89,7 @@ public class InputHandler : MonoBehaviour
                	}
 
 
-				// for when we add multiple categories of units
+				// for when there are nested categories of units
 				/*foreach (Transform unit in child)
 				{
 					if (IsWithinSelectionBounds(unit))

@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: playerRobotGuardian
+  m_Name: Player Robot Gladiator
   m_EditorClassIdentifier: 
-  entityName: Guardian
+  entityName: Gladiator
   entityType: 1
-  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2, type: 3}
+  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
+    type: 3}
   belongsToPlayer: 1
-  entityCost: 100
-  entityHealth: 100
-  entityArmor: 10
-  entityAttack: 5
-  entityTimeBetweenAttacks: 3
+  entityCost: 50
+  entityHealth: 40
+  entityArmor: 3
+  entityAttack: 15
+  entityTimeBetweenAttacks: 2
   entityAttackRange: 1
-  entityMoveSpeed: 4
-  entityCreationTime: 12
+  entityMoveSpeed: 5
+  entityCreationTime: 10
   isBuilding: 0
   isBuildable: 0
   buildableUnits: []
