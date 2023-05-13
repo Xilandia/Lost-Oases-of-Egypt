@@ -68,7 +68,7 @@ public class BuildingHandler : MonoBehaviour
     public static Vector3 SnapToGrid(Vector3 position)
     {
         Vector3Int cellPosition = instance.gridLayout.WorldToCell(position);
-        return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0,1,0);
+        return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0,100,0);
     }
 
     private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)
