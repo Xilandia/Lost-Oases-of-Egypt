@@ -107,6 +107,7 @@ public class EntityHandler : MonoBehaviour
         eU.enemyArmor = entityStats.entityArmor;
         eU.enemyAttack = entityStats.entityAttack;
         eU.enemyTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
+        eU.enemyAttackCooldown = entityStats.entityTimeBetweenAttacks;
         eU.enemyAttackRange = entityStats.entityAttackRange;
         eU.enemyAggroRange = entityStats.entityAggroRange;
         eU.enemyMoveSpeed = entityStats.entityMoveSpeed;

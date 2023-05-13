@@ -3,7 +3,7 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class PlayerUnit : MonoBehaviour
+public class PlayerUnit : MonoBehaviour, Damagable
 {
     private NavMeshAgent navAgent;
     private Camera cam;

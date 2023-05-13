@@ -7,7 +7,9 @@ public class PlayerManager : MonoBehaviour
     public Transform playerUnits;
     public Transform playerTrainers;
     public Transform enemyUnits;
-
+    public Transform baseStructure;
+    public BaseStructure baseStructureScript;
+    
     public float playerOre = 0;
     private float elapsedTime = 0;
     public float[] roundTimer = new float[3];
