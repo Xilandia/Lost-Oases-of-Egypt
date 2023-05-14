@@ -10,7 +10,9 @@ public class Entity : ScriptableObject
         UnitTrainer,
         Turret,
         BaseStructure,
-        Wall
+        Wall,
+        Enemy,
+        Resource // not sure if relevant
     }    
 
     [Header("Entity Settings")]
@@ -29,6 +31,7 @@ public class Entity : ScriptableObject
     public float entityAttack;
 	public float entityTimeBetweenAttacks;
     public float entityAttackRange;
+    public float entityAggroRange;
     public float entityMoveSpeed;
     public float entityCreationTime;
     

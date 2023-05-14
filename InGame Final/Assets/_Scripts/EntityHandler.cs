@@ -12,6 +12,12 @@ public class EntityHandler : MonoBehaviour
     [SerializeField]
     private Entity workerCenter, basicTrainer, advancedTrainer; // trainers (buildings)
     
+    /*[SerializeField]
+    private Entity workerCenter;*/ // preparation for turrets / obelisks
+    
+    [SerializeField]
+    private Entity enemy; // enemy units (to expand)
+    
     [HideInInspector]
     public LayerMask playerInteractableLayer, enemyUnitLayer;
 
@@ -49,6 +55,8 @@ public class EntityHandler : MonoBehaviour
                 return basicTrainer;
             case "Advanced Robot Manufactory":
                 return advancedTrainer;
+            case "Enemy":
+                return enemy;
             default:
                 Debug.Log($"Entity {_entityName} not found!");
                 return null;
@@ -67,6 +75,7 @@ public class EntityHandler : MonoBehaviour
         pU.unitAttack = entityStats.entityAttack;
         pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
         pU.unitAttackRange = entityStats.entityAttackRange;
+        pU.unitAggroRange = entityStats.entityAggroRange;
         pU.unitMoveSpeed = entityStats.entityMoveSpeed;
         pU.unitTrainTime = entityStats.entityCreationTime;
     }
@@ -87,6 +96,23 @@ public class EntityHandler : MonoBehaviour
         pT.isPrototype = entityStats.isPrototype;
         pT.isPlaced = entityStats.isPlaced;
         pT.isComplete = entityStats.isComplete;
+    }
+
+    public void SetEnemyStats(EnemyUnit eU, string enemyType)
+    {
+        Entity entityStats = GetEntityStats(enemyType);
+        
+        eU.enemyName = entityStats.entityName;
+        eU.enemyHealth = entityStats.entityHealth;
+        eU.enemyCurrentHealth = entityStats.entityHealth;
+        eU.enemyArmor = entityStats.entityArmor;
+        eU.enemyAttack = entityStats.entityAttack;
+        eU.enemyTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
+        eU.enemyAttackCooldown = entityStats.entityTimeBetweenAttacks;
+        eU.enemyAttackRange = entityStats.entityAttackRange;
+        eU.enemyAggroRange = entityStats.entityAggroRange;
+        eU.enemyMoveSpeed = entityStats.entityMoveSpeed;
+        
     }
     
 }

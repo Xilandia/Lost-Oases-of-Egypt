@@ -70,12 +70,6 @@ public class InputHandler : MonoBehaviour
 	                DeselectUnits();
                 }
             }
-            // for selection over void (probably unwanted behavior)
-            /*else
-            {
-	            isDragging = true;
-	            DeselectUnits();
-            }*/
         }
 
 		if (Input.GetMouseButtonUp(0))
@@ -89,7 +83,7 @@ public class InputHandler : MonoBehaviour
                	}
 
 
-				// for when we add multiple categories of units
+				// for when there are nested categories of units
 				/*foreach (Transform unit in child)
 				{
 					if (IsWithinSelectionBounds(unit))
@@ -116,9 +110,10 @@ public class InputHandler : MonoBehaviour
                     case 8:
 						// do something? (player unit layer)
                         break;
-    				case 16:                
-						break;
-					default:
+    				case 16:
+	                    // do something? (enemy unit layer)
+	                    break;
+                    default:
 						foreach (Transform unit in selectedUnits)
 						{
 							PlayerUnit pU = unit.gameObject.GetComponent<PlayerUnit>();
