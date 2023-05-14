@@ -75,6 +75,7 @@ public class EntityHandler : MonoBehaviour
         pU.unitAttack = entityStats.entityAttack;
         pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
         pU.unitAttackRange = entityStats.entityAttackRange;
+        pU.unitAggroRange = entityStats.entityAggroRange;
         pU.unitMoveSpeed = entityStats.entityMoveSpeed;
         pU.unitTrainTime = entityStats.entityCreationTime;
     }

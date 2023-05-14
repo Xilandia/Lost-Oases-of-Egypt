@@ -23,8 +23,12 @@ MonoBehaviour:
   entityAttack: 15
   entityTimeBetweenAttacks: 2
   entityAttackRange: 1
+  entityAggroRange: 50
   entityMoveSpeed: 5
   entityCreationTime: 10
   isBuilding: 0
   isBuildable: 0
+  isPrototype: 0
+  isPlaced: 0
+  isComplete: 0
   buildableUnits: []

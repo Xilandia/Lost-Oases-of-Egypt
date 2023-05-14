@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,7 @@ public class BaseStructure : MonoBehaviour, Damagable
     public void TakeDamage(float damage)
     {
         float totalDamage = damage - baseStructureArmor;
-        baseStructureCurrentHealth -= totalDamage;
+        baseStructureCurrentHealth -= Math.Max(totalDamage, 1);
         
         if (baseStructureCurrentHealth <= 0)
         {

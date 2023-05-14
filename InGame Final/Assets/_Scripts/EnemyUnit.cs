@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -35,7 +36,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
         
         if (!hasAggro)
         {
-            CheckForEnemyTargets();
+            CheckForPlayerTargets();
 
             if (targettingBase)
             {
@@ -87,7 +88,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
                 }
                 else 
                 {
-                    Debug.Log("Has target, but no damagable component");
+                    Debug.Log("Has target, but no damageable component");
                 }
             }
             else
@@ -101,20 +102,20 @@ public class EnemyUnit : MonoBehaviour, Damagable
         }
     }
 
-    private void CheckForEnemyTargets()
+    private void CheckForPlayerTargets()
     {
-        rangeColliders = Physics.OverlapSphere(transform.position, enemyAggroRange, EntityHandler.instance.playerInteractableLayer);
-        Debug.Log("Checking for targets, found " + rangeColliders.Length + " targets");
+        rangeColliders = Physics.OverlapSphere(transform.position, enemyAggroRange, 1 << EntityHandler.instance.playerInteractableLayer);
+        
         foreach (Collider col in rangeColliders)
         {
             hasAggro = true;
             targettingBase = false; 
             aggroTarget = col.transform;
-            if (col.gameObject.tag.Equals("PlayerUnit"))
+            if (col.gameObject.tag.Equals("Unit"))
             { 
                 aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerUnit>();
             }
-            else if (col.gameObject.tag.Equals("PlayerTrainer"))
+            else if (col.gameObject.tag.Equals("Trainer"))
             {
                 aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerTrainer>();
             }
@@ -132,7 +133,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
     public void TakeDamage(float damage)
     {
         float totalDamage = damage - enemyArmor;
-        enemyCurrentHealth -= totalDamage;
+        enemyCurrentHealth -= Math.Max(totalDamage, 1);
     }
     
     private void HandleHealth()
