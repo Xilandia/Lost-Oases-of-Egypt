@@ -35,7 +35,7 @@ public class PlayerUnit : MonoBehaviour, Damagable
     {
         HandleHealth();
 
-        if (!isMoving)
+        /*if (!isMoving)
         {
             if (!hasAggro)
             {
@@ -50,7 +50,7 @@ public class PlayerUnit : MonoBehaviour, Damagable
         else
         {
             isMoving = CheckMovementStatus();
-        }
+        }*/
     }
     
     private void CheckForEnemyTargets()
