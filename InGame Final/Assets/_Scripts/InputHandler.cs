@@ -8,8 +8,8 @@ public class InputHandler : MonoBehaviour
 
     private RaycastHit hit;
     
-    public List<Transform> selectedUnits;
-    public Transform selectedStructure;
+    public List<PlayerUnit> selectedUnits;
+    public PlayerTrainer selectedStructure;
 
     public bool isDragging;
 	private Vector3 mousePosition;
@@ -53,13 +53,13 @@ public class InputHandler : MonoBehaviour
                 
                 if (layerHit.value == 8)
                 {
-	                if (AddedUnit(hit.transform, Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+	                if (AddedUnit(hit.transform.gameObject.GetComponent<PlayerUnit>(), Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
 	                {
 		                DeselectStructure();
 		                // do unit stuff
 	                }
 
-	                if (AddedTrainer(hit.transform))
+	                if (AddedTrainer(hit.transform.gameObject.GetComponent<PlayerTrainer>()))
 	                {
 		                // do structure stuff
 	                }
@@ -77,9 +77,10 @@ public class InputHandler : MonoBehaviour
 			foreach (Transform child in PlayerManager.instance.playerUnits)
 	        {
 				// for single category of units
+				// rework for object pools later - to get rid of GetComponent
 				if (IsWithinSelectionBounds(child))
                 {
-                   	AddedUnit(child, true);
+                   	AddedUnit(child.gameObject.GetComponent<PlayerUnit>(), true);
                	}
 
 
@@ -114,10 +115,9 @@ public class InputHandler : MonoBehaviour
 	                    // do something? (enemy unit layer)
 	                    break;
                     default:
-						foreach (Transform unit in selectedUnits)
+						foreach (PlayerUnit unit in selectedUnits)
 						{
-							PlayerUnit pU = unit.gameObject.GetComponent<PlayerUnit>();
-							pU.MoveUnit(hit.point);
+							unit.MoveUnit(hit.point);
 						}
                         break;
                 }
@@ -128,21 +128,20 @@ public class InputHandler : MonoBehaviour
 		{
 			if (structureIsPrototype)
 			{
-				PlayerTrainer pT = selectedStructure.gameObject.GetComponent<PlayerTrainer>();
-				pT.UpdatePrototypePosition();
+				selectedStructure.UpdatePrototypePosition();
 
 				if (Input.GetKeyDown(KeyCode.Space))
 				{
 					if (BuildingHandler.instance.TryToPlace())
 					{
-						pT.isPrototype = false;
+						selectedStructure.isPrototype = false;
 						structureIsPrototype = false;
-						pT.StartConstruction();
+						selectedStructure.StartConstruction();
 					}
 				}
 				if (Input.GetKeyDown(KeyCode.T))
 				{
-					selectedStructure.gameObject.GetComponent<PlacableObject>().Rotate();
+					selectedStructure.trainerPlacable.Rotate();
 				}
 				
 				if (Input.GetKeyDown(KeyCode.Escape))
@@ -167,18 +166,18 @@ public class InputHandler : MonoBehaviour
 		
     }
     
-    public void FirstSelectStructure(Transform tf)
+    public void FirstSelectStructure(PlayerTrainer pU)
 	{
-	    AddedTrainer(tf);
+	    AddedTrainer(pU);
 	}
 
     private void DeselectUnits()
     {
 	    DeselectStructure();
 	    
-        foreach (Transform selectedUnit in selectedUnits)
+        foreach (PlayerUnit selectedUnit in selectedUnits)
         {
-	        selectedUnit.gameObject.GetComponent<IUnit>().OnInteractExit();
+	        selectedUnit.interactable.OnInteractExit();
         }
         selectedUnits.Clear();
     }
@@ -187,7 +186,7 @@ public class InputHandler : MonoBehaviour
     {
 	    if (selectedStructure)
 	    {
-		    selectedStructure.gameObject.GetComponent<ITrainer>().OnInteractExit();
+		    selectedStructure.interactable.OnInteractExit();
 		    if (structureIsPrototype)
 		    {
 			    Destroy(selectedStructure.gameObject);
@@ -213,9 +212,14 @@ public class InputHandler : MonoBehaviour
         return selectedUnits.Count > 0;
     }
 
-	private IUnit AddedUnit(Transform tf, bool canMultiSelect = false)
+	private IUnit AddedUnit(PlayerUnit pU, bool canMultiSelect = false)
 	{
-		IUnit iUnit = tf.GetComponent<IUnit>();
+		if (pU == null)
+		{
+			return null;
+		}
+		
+		IUnit iUnit = pU.interactable;
 		if (iUnit)
 		{
 			if (!canMultiSelect)
@@ -223,7 +227,7 @@ public class InputHandler : MonoBehaviour
 				DeselectUnits();
 			}
 			
-			selectedUnits.Add(iUnit.gameObject.transform);
+			selectedUnits.Add(pU);
 			iUnit.OnInteractEnter();
 			
 			return iUnit;
@@ -231,18 +235,21 @@ public class InputHandler : MonoBehaviour
 		return null;
 	}
 	
-	private ITrainer AddedTrainer(Transform tf)
+	private ITrainer AddedTrainer(PlayerTrainer pT)
 	{
-		ITrainer iTrainer = tf.GetComponent<ITrainer>();
+		if (pT == null)
+		{
+			return null;
+		}
+		
+		ITrainer iTrainer = pT.interactable;
 		if (iTrainer)
 		{
 			DeselectUnits();
 			
-			selectedStructure = iTrainer.gameObject.transform;
+			selectedStructure = pT;
 			iTrainer.OnInteractEnter();
-			
-			PlayerTrainer structure = iTrainer.gameObject.GetComponent<PlayerTrainer>();
-			structureIsPrototype = structure.isPrototype;
+			structureIsPrototype = pT.isPrototype;
 			
 			return iTrainer;
 		}

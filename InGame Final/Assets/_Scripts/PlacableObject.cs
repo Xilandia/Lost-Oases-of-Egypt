@@ -13,10 +13,12 @@ public class PlacableObject : MonoBehaviour
     {
         BoxCollider box = gameObject.GetComponent<BoxCollider>();
         Vertices = new Vector3[4];
-        Vertices[0] = box.center + new Vector3(-box.size.x, -box.size.y, -box.size.z) * 0.5f;
-        Vertices[1] = box.center + new Vector3(box.size.x, -box.size.y, -box.size.z) * 0.5f;
-        Vertices[2] = box.center + new Vector3(box.size.x, -box.size.y, box.size.z) * 0.5f;
-        Vertices[3] = box.center + new Vector3(-box.size.x, -box.size.y, box.size.z) * 0.5f;
+        Vector3 size = box.size;
+        Vector3 center = box.center;
+        Vertices[0] = center + new Vector3(-size.x, -size.y, -size.z) * 0.5f;
+        Vertices[1] = center + new Vector3(size.x, -size.y, -size.z) * 0.5f;
+        Vertices[2] = center + new Vector3(size.x, -size.y, size.z) * 0.5f;
+        Vertices[3] = center + new Vector3(-size.x, -size.y, size.z) * 0.5f;
     }
 
     private void CalculateSizeInCells()

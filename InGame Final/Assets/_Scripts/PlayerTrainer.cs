@@ -14,7 +14,7 @@ public class PlayerTrainer : MonoBehaviour, Damagable
     public Transform trainerTransform;
     public PlacableObject trainerPlacable;
     
-    public bool isBuildable, isPrototype, isPlaced, isComplete;
+    public bool isPrototype, isPlaced, isComplete;
     public Entity[] buildableUnits;
     public ITrainer interactable;
 
@@ -26,6 +26,8 @@ public class PlayerTrainer : MonoBehaviour, Damagable
     private float currentUnitTrainTime;
     private float elapsedTrainingTime;
     private bool isTraining;
+
+    private Vector3 originalScale;
 
     public void UpdatePrototypePosition()
     {
@@ -40,9 +42,8 @@ public class PlayerTrainer : MonoBehaviour, Damagable
         constructionStarted = true;
         isPlaced = true;
         currProgress = 0f;
-        Vector3 scale = transform.localScale;
-        initYScale = scale.y;
-        transform.localScale = new Vector3(scale.x, initYScale / 100, scale.z);
+        originalScale = transform.localScale;
+        transform.localScale = new Vector3(originalScale.x, originalScale.y / 100, originalScale.z);
         interactable.OnInteractExit();
     }
 
@@ -51,7 +52,7 @@ public class PlayerTrainer : MonoBehaviour, Damagable
         if (constructionStarted)
         {
             currProgress += Time.deltaTime;
-            transform.localScale = new Vector3(transform.localScale.x, initYScale * (currProgress / trainerBuildTime), transform.localScale.z);
+            transform.localScale = new Vector3(originalScale.x, initYScale * (currProgress / trainerBuildTime), originalScale.z);
             if (currProgress >= trainerBuildTime)
             {
                 CompleteConstruction();
@@ -69,11 +70,11 @@ public class PlayerTrainer : MonoBehaviour, Damagable
         }
     }
     
-    public void CompleteConstruction()
+    private void CompleteConstruction()
     {
         isPlaced = false;
         isComplete = true;
-        transform.localScale = new Vector3(transform.localScale.x, initYScale, transform.localScale.z);
+        transform.localScale = originalScale;
     }
     
    public void AddToQueue(string unitName)

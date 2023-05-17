@@ -8,8 +8,8 @@ public class PlayerManager : MonoBehaviour
     public Transform playerTrainers;
     public Transform enemyUnits;
     
-    public float playerOre = 0;
-    private float elapsedTime = 0;
+    public float playerOre;
+    private float elapsedTime;
     public float[] roundTimer = new float[3];
 
     void Awake()

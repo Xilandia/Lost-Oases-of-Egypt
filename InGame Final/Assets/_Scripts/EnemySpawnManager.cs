@@ -7,13 +7,13 @@ public class EnemySpawnManager : MonoBehaviour
 {
     public static EnemySpawnManager instance;
     
-    [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
+    [SerializeField] private List<Transform> spawnPoints;
     
     public List<Entity> enemyUnits = new List<Entity>();
 
-    private int numberOfEnemiesToSpawn = 0;
-    private float previousPeriodTick = 0;
-    private int periodNumber = 0;
+    private int numberOfEnemiesToSpawn;
+    private float previousPeriodTick;
+    private int periodNumber;
     public float periodLength;
     public float progressionMultiplier = 1;
 

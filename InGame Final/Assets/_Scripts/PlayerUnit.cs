@@ -157,7 +157,7 @@ public class PlayerUnit : MonoBehaviour, Damagable
 
     private void UnitDeath()
     {
-        InputHandler.instance.selectedUnits.Remove(gameObject.transform);
+        InputHandler.instance.selectedUnits.Remove(this);
         Destroy(gameObject);
     } 
 }
