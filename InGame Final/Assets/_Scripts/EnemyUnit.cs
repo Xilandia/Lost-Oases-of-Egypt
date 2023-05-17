@@ -1,17 +1,19 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class EnemyUnit : MonoBehaviour
+public class EnemyUnit : MonoBehaviour, Damagable
 {
     private NavMeshAgent navAgent;
     private Camera cam;
     
     private Collider[] rangeColliders;
     private Transform aggroTarget;
-    private PlayerUnit aggroPlayerUnit;
+    private Damagable aggroDamagable;
     private bool hasAggro = false;
+    private bool targettingBase = false;
     private float distanceToTarget;
 
     public string enemyName;
@@ -26,9 +28,6 @@ public class EnemyUnit : MonoBehaviour
     {
         navAgent = GetComponent<NavMeshAgent>();
         cam = Camera.main;
-        
-        enemyCurrentHealth = enemyHealth; // temporary until I properly handle enemy stats
-        enemyAttackCooldown = enemyTimeBetweenAttacks;
     }
 
     void Update()
@@ -37,7 +36,13 @@ public class EnemyUnit : MonoBehaviour
         
         if (!hasAggro)
         {
-            CheckForEnemyTargets();
+            CheckForPlayerTargets();
+
+            if (targettingBase)
+            {
+                MoveToAggroTarget();
+                ConsiderAttack();
+            }
         }
         else
         {
@@ -58,9 +63,14 @@ public class EnemyUnit : MonoBehaviour
             distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
             navAgent.stoppingDistance = enemyAttackRange + 1; // consider moving to where it will only run once
 
-            if (distanceToTarget <= enemyAggroRange)
+            if (distanceToTarget <= enemyAggroRange || targettingBase)
             {
                 navAgent.SetDestination(aggroTarget.position);
+            }
+            else
+            {
+                aggroTarget = null;
+                hasAggro = false;
             }
         }
     }
@@ -72,13 +82,13 @@ public class EnemyUnit : MonoBehaviour
             if (enemyAttackCooldown <= 0)
             {
                 enemyAttackCooldown = enemyTimeBetweenAttacks;
-                if (aggroPlayerUnit)
+                if (aggroDamagable != null)
                 {
-                    aggroPlayerUnit.TakeDamage(enemyAttack);
+                    aggroDamagable.TakeDamage(enemyAttack);
                 }
                 else 
                 {
-                    //Debug.Log("Has target, but no player unit component");
+                    Debug.Log("Has target, but no damageable component");
                 }
             }
             else
@@ -92,30 +102,38 @@ public class EnemyUnit : MonoBehaviour
         }
     }
 
-    private void CheckForEnemyTargets()
+    private void CheckForPlayerTargets()
     {
-        rangeColliders = Physics.OverlapSphere(transform.position, enemyAggroRange);
-
+        rangeColliders = Physics.OverlapSphere(transform.position, enemyAggroRange, 1 << EntityHandler.instance.playerInteractableLayer);
+        
         foreach (Collider col in rangeColliders)
         {
-            if (col.gameObject.layer == EntityHandler.instance.playerInteractableLayer)
-            {
-                hasAggro = true;
-                aggroTarget = col.transform;
-                aggroPlayerUnit = aggroTarget.gameObject.GetComponent<PlayerUnit>();
-                break;
+            hasAggro = true;
+            targettingBase = false; 
+            aggroTarget = col.transform;
+            if (col.gameObject.tag.Equals("Unit"))
+            { 
+                aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerUnit>();
             }
-            else if (col.gameObject.layer == EntityHandler.instance.playerInteractableLayer)
+            else if (col.gameObject.tag.Equals("Trainer"))
             {
-                // handle trainer aggro
+                aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerTrainer>();
             }
+
+            break;
+        }
+        if (!hasAggro)
+        {
+            aggroTarget = PlayerManager.instance.baseStructure;
+            aggroDamagable = PlayerManager.instance.baseStructureScript;
+            targettingBase = true;
         }
     }
     
     public void TakeDamage(float damage)
     {
         float totalDamage = damage - enemyArmor;
-        enemyCurrentHealth -= totalDamage;
+        enemyCurrentHealth -= Math.Max(totalDamage, 1);
     }
     
     private void HandleHealth()

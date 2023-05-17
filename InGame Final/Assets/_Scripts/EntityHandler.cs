@@ -75,6 +75,7 @@ public class EntityHandler : MonoBehaviour
         pU.unitAttack = entityStats.entityAttack;
         pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
         pU.unitAttackRange = entityStats.entityAttackRange;
+        pU.unitAggroRange = entityStats.entityAggroRange;
         pU.unitMoveSpeed = entityStats.entityMoveSpeed;
         pU.unitTrainTime = entityStats.entityCreationTime;
     }
@@ -107,6 +108,7 @@ public class EntityHandler : MonoBehaviour
         eU.enemyArmor = entityStats.entityArmor;
         eU.enemyAttack = entityStats.entityAttack;
         eU.enemyTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
+        eU.enemyAttackCooldown = entityStats.entityTimeBetweenAttacks;
         eU.enemyAttackRange = entityStats.entityAttackRange;
         eU.enemyAggroRange = entityStats.entityAggroRange;
         eU.enemyMoveSpeed = entityStats.entityMoveSpeed;

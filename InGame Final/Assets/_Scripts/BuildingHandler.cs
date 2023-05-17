@@ -10,6 +10,9 @@ public class BuildingHandler : MonoBehaviour
     [SerializeField] private Tilemap MainTilemap;
     [SerializeField] private TileBase whiteTile;
     
+    public AudioClip[] buildingSounds;
+    public AudioSource soundEffectSource;
+    
     public GameObject[] buildingPrefabs;
 
     private PlacableObject objectToPlace;
@@ -35,17 +38,17 @@ public class BuildingHandler : MonoBehaviour
                     Vector3Int start = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
                     TakeArea(start, objectToPlace.Size);
                     PlayerManager.instance.playerOre -= pT.trainerCost;
-
+                    soundEffectSource.PlayOneShot(buildingSounds[2]);
+                    
                     return true;
                 }
                 
-                // make jingle to indicate that object cannot be placed because of location
+                soundEffectSource.PlayOneShot(buildingSounds[1]);
                 Debug.Log("Can't place structure here");
-                // no need for else because if returns
             }
             else
             {
-                // make jingle to indicate that player cannot afford object
+                soundEffectSource.PlayOneShot(buildingSounds[0]);
                 Debug.Log("Can't afford structure");
             }
         }
@@ -68,7 +71,7 @@ public class BuildingHandler : MonoBehaviour
     public static Vector3 SnapToGrid(Vector3 position)
     {
         Vector3Int cellPosition = instance.gridLayout.WorldToCell(position);
-        return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0,1,0);
+        return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0,98,0);
     }
 
     private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)

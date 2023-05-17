@@ -15,6 +15,7 @@ public class EnemySpawnManager : MonoBehaviour
     private float previousPeriodTick = 0;
     private int periodNumber = 0;
     public float periodLength;
+    public float progressionMultiplier = 1;
 
     // Start is called before the first frame update
     void Awake()
@@ -56,6 +57,6 @@ public class EnemySpawnManager : MonoBehaviour
 
     private void CalculateWaveSize()
     {
-        numberOfEnemiesToSpawn = (int) Math.Ceiling(periodNumber * 2 * Math.Pow(1.1, periodNumber));
+        numberOfEnemiesToSpawn = (int) Math.Ceiling(periodNumber * 2 * Math.Pow(1.1, periodNumber) * progressionMultiplier);
     }
 }

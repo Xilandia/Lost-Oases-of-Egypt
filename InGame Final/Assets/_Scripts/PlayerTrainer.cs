@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerTrainer : MonoBehaviour
+public class PlayerTrainer : MonoBehaviour, Damagable
 {
 
     public string trainerName;
@@ -115,6 +116,18 @@ public class PlayerTrainer : MonoBehaviour
        else 
        { 
            isTraining = false;
+       }
+   }
+   
+   public void TakeDamage(float damage)
+   {
+       float totalDamage = damage - trainerArmor;
+       trainerCurrentHealth -= Math.Max(totalDamage, 1);
+
+       if (trainerCurrentHealth <= 0)
+       {
+           // make sound, do something?
+           Destroy(gameObject);
        }
    }
 }
