@@ -20,8 +20,8 @@ public class EnemyUnit : MonoBehaviour, Damagable
     public float enemyCurrentHealth;
     public float enemyAttackCooldown;
     
-    public GameObject enemyStatDisplay;
-    public Image enemyHealthBarImage;
+    public GameObject enemyPrefab;
+    public Transform enemyTransform;
     
     void Start()
     {
@@ -124,10 +124,6 @@ public class EnemyUnit : MonoBehaviour, Damagable
     
     private void HandleHealth()
     {
-        enemyStatDisplay.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward, cam.transform.rotation * Vector3.up);
-        
-        enemyHealthBarImage.fillAmount = enemyCurrentHealth / enemyHealth;
-        
         if (enemyCurrentHealth <= 0)
         {
             UnitDeath();

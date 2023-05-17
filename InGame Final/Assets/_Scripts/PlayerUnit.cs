@@ -16,7 +16,10 @@ public class PlayerUnit : MonoBehaviour, Damagable
     
     public GameObject unitStatDisplay;
     public Image unitHealthBarImage;
-    
+    public GameObject unitPrefab;
+    public Transform unitTransform;
+    public IUnit interactable;
+
     private Collider[] rangeColliders;
     public Vector3 moveTarget;
     public Transform aggroTarget;

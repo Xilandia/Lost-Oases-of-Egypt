@@ -9,6 +9,11 @@ public class PlayerTrainer : MonoBehaviour, Damagable
     public string trainerName;
     public float trainerCost, trainerHealth, trainerArmor, trainerBuildTime;
     public float trainerCurrentHealth;
+    
+    public GameObject trainerPrefab;
+    public Transform trainerTransform;
+    public PlacableObject trainerPlacable;
+    
     public bool isBuildable, isPrototype, isPlaced, isComplete;
     public Entity[] buildableUnits;
     public ITrainer interactable;

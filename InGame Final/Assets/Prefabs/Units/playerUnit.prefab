@@ -92,11 +92,20 @@ MonoBehaviour:
   unitAttack: 0
   unitTimeBetweenAttacks: 0
   unitAttackRange: 0
+  unitAggroRange: 0
   unitMoveSpeed: 0
   unitTrainTime: 0
   unitCurrentHealth: 0
+  unitAttackCooldown: 0
   unitStatDisplay: {fileID: 1176556250010233137}
   unitHealthBarImage: {fileID: 8513949334024704735}
+  unitPrefab: {fileID: 1100987419105808796}
+  unitTransform: {fileID: 1100987419105808784}
+  interactable: {fileID: 2508237986389632620}
+  moveTarget: {x: 0, y: 0, z: 0}
+  aggroTarget: {fileID: 0}
+  hasAggro: 0
+  isMoving: 0
 --- !u!114 &2508237986389632620
 MonoBehaviour:
   m_ObjectHideFlags: 0
