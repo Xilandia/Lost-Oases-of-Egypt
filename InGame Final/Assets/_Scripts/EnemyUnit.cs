@@ -13,7 +13,6 @@ public class EnemyUnit : MonoBehaviour, Damagable
     private Transform aggroTarget;
     private Damagable aggroDamagable;
     private bool hasAggro = false;
-    private bool targettingBase = false;
     private float distanceToTarget;
 
     public string enemyName;
@@ -37,12 +36,6 @@ public class EnemyUnit : MonoBehaviour, Damagable
         if (!hasAggro)
         {
             CheckForPlayerTargets();
-
-            if (targettingBase)
-            {
-                MoveToAggroTarget();
-                ConsiderAttack();
-            }
         }
         else
         {
@@ -63,7 +56,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
             distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
             navAgent.stoppingDistance = enemyAttackRange + 1; // consider moving to where it will only run once
 
-            if (distanceToTarget <= enemyAggroRange || targettingBase)
+            if (distanceToTarget <= enemyAggroRange)
             {
                 navAgent.SetDestination(aggroTarget.position);
             }
@@ -109,7 +102,6 @@ public class EnemyUnit : MonoBehaviour, Damagable
         foreach (Collider col in rangeColliders)
         {
             hasAggro = true;
-            targettingBase = false; 
             aggroTarget = col.transform;
             if (col.gameObject.tag.Equals("Unit"))
             { 
@@ -121,12 +113,6 @@ public class EnemyUnit : MonoBehaviour, Damagable
             }
 
             break;
-        }
-        if (!hasAggro)
-        {
-            aggroTarget = PlayerManager.instance.baseStructure;
-            aggroDamagable = PlayerManager.instance.baseStructureScript;
-            targettingBase = true;
         }
     }
     
