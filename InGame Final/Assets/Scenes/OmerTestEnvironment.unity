@@ -1312,7 +1312,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1796834693}
   enemyUnits:
-  - {fileID: 11400000, guid: 3b4a629e7edd44c54bc5e7a0cd6d8a40, type: 2}
+  - {fileID: -3730260759065913479, guid: f12a181bb9b794cee846a25db320bd41, type: 3}
   periodLength: 5
   progressionMultiplier: 1
 --- !u!1001 &1001404140

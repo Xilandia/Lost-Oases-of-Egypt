@@ -13,7 +13,6 @@ public class InputHandler : MonoBehaviour
 
     public bool isDragging;
 	private Vector3 mousePosition;
-	private bool structureIsPrototype;
 
 	private Camera cam;
     
@@ -36,134 +35,149 @@ public class InputHandler : MonoBehaviour
 
     public void HandlePlayerInput()
     {
+	    HandleMouseClickAndDrag();
+	    HandleUnitOrders();
+	    HandleStructurePrototype();
+	    HandleHotkeys();
+    }
+
+    private void HandleMouseClickAndDrag()
+    {
 	    if (Input.GetMouseButtonDown(0))
-        {
-	        if (EventSystem.current.IsPointerOverGameObject())
-	        {
-		        return;
-	        }
+	    {
+		    if (EventSystem.current.IsPointerOverGameObject())
+		    {
+			    return;
+		    }
 	        
-	        mousePosition = Input.mousePosition;
+		    mousePosition = Input.mousePosition;
 
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+		    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                LayerMask layerHit = hit.transform.gameObject.layer;
+		    if (Physics.Raycast(ray, out hit))
+		    {
+			    LayerMask layerHit = hit.transform.gameObject.layer;
                 
-                if (layerHit.value == 8)
-                {
-	                if (AddedUnit(hit.transform.gameObject.GetComponent<PlayerUnit>(), Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
-	                {
-		                DeselectStructure();
-		                // do unit stuff
-	                }
+			    if (layerHit.value == 8)
+			    {
+				    if (AddedUnit(hit.transform.gameObject.GetComponent<PlayerUnit>(), Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+				    {
+					    DeselectStructure();
+					    // do unit stuff
+				    }
 
-	                if (AddedTrainer(hit.transform.gameObject.GetComponent<PlayerTrainer>()))
-	                {
-		                // do structure stuff
-	                }
-                }
-                else
-                {
-	                isDragging = true;
-	                DeselectUnits();
-                }
-            }
-        }
+				    if (AddedTrainer(hit.transform.gameObject.GetComponent<PlayerTrainer>()))
+				    {
+					    // do structure stuff
+				    }
+			    }
+			    else
+			    {
+				    isDragging = true;
+				    DeselectUnits();
+			    }
+		    }
+	    }
 
-		if (Input.GetMouseButtonUp(0))
-		{
-			foreach (Transform child in PlayerManager.instance.playerUnits)
-	        {
-				// for single category of units
-				// rework for object pools later - to get rid of GetComponent
-				if (IsWithinSelectionBounds(child))
-                {
-                   	AddedUnit(child.gameObject.GetComponent<PlayerUnit>(), true);
-               	}
+	    if (Input.GetMouseButtonUp(0))
+	    {
+		    foreach (Transform child in PlayerManager.instance.playerUnits)
+		    {
+			    // for single category of units
+			    // rework for object pools later - to get rid of GetComponent
+			    if (IsWithinSelectionBounds(child))
+			    {
+				    AddedUnit(child.gameObject.GetComponent<PlayerUnit>(), true);
+			    }
 
 
-				// for when there are nested categories of units
-				/*foreach (Transform unit in child)
-				{
-					if (IsWithinSelectionBounds(unit))
+			    // for when there are nested categories of units
+			    /*foreach (Transform unit in child)
+			    {
+				    if (IsWithinSelectionBounds(unit))
                     {
-	                    AddedUnit(unit, true);
+                        AddedUnit(unit, true);
                     }
-            	}*/
-			}
-			isDragging = false;
-		}
+                }*/
+		    }
+		    isDragging = false;
+	    }
+    }
 
-		if (Input.GetMouseButtonDown(1) && HaveSelectedUnits())
-		{
-			mousePosition = Input.mousePosition;
+    private void HandleUnitOrders()
+    {
+	    if (Input.GetMouseButtonDown(1) && HaveSelectedUnits())
+	    {
+		    mousePosition = Input.mousePosition;
 
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+		    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                LayerMask layerHit = hit.transform.gameObject.layer;
+		    if (Physics.Raycast(ray, out hit))
+		    {
+			    LayerMask layerHit = hit.transform.gameObject.layer;
 
-                switch (layerHit.value)
-                {
-                    case 8:
-						// do something? (player unit layer)
-                        break;
-    				case 16:
-	                    // do something? (enemy unit layer)
-	                    break;
-                    default:
-						foreach (PlayerUnit unit in selectedUnits)
-						{
-							unit.MoveUnit(hit.point);
-						}
-                        break;
-                }
-            }
-		}
+			    switch (layerHit.value)
+			    {
+				    case 8:
+					    // do something? (player unit layer)
+					    break;
+				    case 16:
+					    // do something? (enemy unit layer)
+					    break;
+				    default:
+					    foreach (PlayerUnit unit in selectedUnits)
+					    {
+						    unit.MoveUnit(hit.point);
+					    }
+					    break;
+			    }
+		    }
+	    }
+    }
 
-		if (selectedStructure)
-		{
-			if (structureIsPrototype)
-			{
-				selectedStructure.UpdatePrototypePosition();
+    private void HandleStructurePrototype()
+    {
+	    if (selectedStructure)
+	    {
+		    if (selectedStructure.isPrototype)
+		    {
+			    selectedStructure.UpdatePrototypePosition();
 
-				if (Input.GetKeyDown(KeyCode.Space))
-				{
-					if (BuildingHandler.instance.TryToPlace())
-					{
-						selectedStructure.isPrototype = false;
-						structureIsPrototype = false;
-						selectedStructure.StartConstruction();
-					}
-				}
-				if (Input.GetKeyDown(KeyCode.T))
-				{
-					selectedStructure.trainerPlacable.Rotate();
-				}
+			    if (Input.GetKeyDown(KeyCode.Space))
+			    {
+				    if (BuildingHandler.instance.TryToPlace())
+				    {
+					    selectedStructure.isPrototype = false;
+					    selectedStructure.StartConstruction();
+				    }
+			    }
+			    if (Input.GetKeyDown(KeyCode.T))
+			    {
+				    selectedStructure.trainerPlacable.Rotate();
+			    }
 				
-				if (Input.GetKeyDown(KeyCode.Escape))
-				{
-					DeselectStructure();
-				}
-			}
-		}
-		
-		if (Input.GetKeyDown(KeyCode.Z))
-		{
-			BuildingHandler.instance.InitializeWithObject(0);
-		}
-		if (Input.GetKeyDown(KeyCode.X))
-		{
-			BuildingHandler.instance.InitializeWithObject(1);
-		}
-		if (Input.GetKeyDown(KeyCode.C))
-		{
-			BuildingHandler.instance.InitializeWithObject(2);
-		}
-		
+			    if (Input.GetKeyDown(KeyCode.Escape))
+			    {
+				    DeselectStructure();
+			    }
+		    }
+	    }
+    }
+
+    private void HandleHotkeys()
+    {
+	    if (Input.GetKeyDown(KeyCode.Z))
+	    {
+		    BuildingHandler.instance.InitializeWithObject(0);
+	    }
+	    if (Input.GetKeyDown(KeyCode.X))
+	    {
+		    BuildingHandler.instance.InitializeWithObject(1);
+	    }
+	    if (Input.GetKeyDown(KeyCode.C))
+	    {
+		    BuildingHandler.instance.InitializeWithObject(2);
+	    }
     }
     
     public void FirstSelectStructure(PlayerTrainer pU)
@@ -187,10 +201,9 @@ public class InputHandler : MonoBehaviour
 	    if (selectedStructure)
 	    {
 		    selectedStructure.interactable.OnInteractExit();
-		    if (structureIsPrototype)
+		    if (selectedStructure.isPrototype)
 		    {
 			    Destroy(selectedStructure.gameObject);
-			    structureIsPrototype = false;
 		    }
 		    selectedStructure = null;
 	    }
@@ -249,7 +262,6 @@ public class InputHandler : MonoBehaviour
 			
 			selectedStructure = pT;
 			iTrainer.OnInteractEnter();
-			structureIsPrototype = pT.isPrototype;
 			
 			return iTrainer;
 		}

@@ -22,6 +22,9 @@ public class EnemyUnit : MonoBehaviour, Damagable
     public GameObject enemyPrefab;
     public Transform enemyTransform;
     
+    public delegate void OnDisableCallback(EnemyUnit Instance);
+    public OnDisableCallback disable;
+    
     void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
@@ -123,6 +126,8 @@ public class EnemyUnit : MonoBehaviour, Damagable
     
     private void HandleHealth()
     {
+        enemyCurrentHealth -= Time.deltaTime;
+        
         if (enemyCurrentHealth <= 0)
         {
             UnitDeath();
@@ -131,6 +136,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
 
     private void UnitDeath()
     {
-        Destroy(gameObject);
+        disable?.Invoke(this);
+        //Destroy(gameObject);
     }
 }
