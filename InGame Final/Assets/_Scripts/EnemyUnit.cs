@@ -15,6 +15,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
     private Damagable aggroDamagable;
     private bool hasAggro;
     private float distanceToTarget;
+    private float distanceToClosestTarget;
     public bool stageOne = true;
 
     public string enemyName;
@@ -38,29 +39,33 @@ public class EnemyUnit : MonoBehaviour, Damagable
     void Update()
     {
         HandleHealth();
-
-        if (stageOne)
+        
+        if (hasAggro)
         {
-            if (hasAggro)
-            {
-                MoveToAggroTarget();
-                ConsiderAttack();
-            }
+            MoveToAggroTarget(); 
+            ConsiderAttack();
         }
     }
     
     private void MoveToAggroTarget()
     {
-        if (aggroTarget.Equals(null))
+        if (aggroTarget == null)
         {
             hasAggro = false;
-            CheckForPlayerTargets();
+            if (stageOne)
+            {
+                CheckForPlayerTargets();
+            }
+            else
+            {
+                CheckForClosestTarget();
+            }
         }
         else
         {
             distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
             
-            if (distanceToTarget <= enemyAggroRange + 2) // range offset
+            if (distanceToTarget <= enemyAggroRange + 2 || !stageOne) // range offset or in second stage of behavior
             {
                 navAgent.SetDestination(aggroTarget.position);
             }
@@ -129,10 +134,138 @@ public class EnemyUnit : MonoBehaviour, Damagable
         }
     }
 
+    public void TransitionPhase()
+    {
+        stageOne = false;
+        CheckForClosestTarget();
+    }
+    
     private void CheckForClosestTarget()
     {
+        hasAggro = false;
+        distanceToClosestTarget = 1000;
         
+        if (MeleeSoldierInRange())
+        {
+            
+        }
+        else if (RangedSoldierInRange())
+        {
+            
+        }
+        else if (TowerInRange())
+        {
+            
+        }
+        else if (BarracksInRange())
+        {
+            
+        } 
+        else if (WorkerInRange())
+        {
+            
+        }
+        else
+        {
+            Debug.Log("No targets in lists");
+        }
     }
+
+    private bool MeleeSoldierInRange()
+    {
+        bool inRange = false;
+        
+        foreach (PlayerUnit pU in PlayerManager.instance.meleeSoldiers)
+        {
+            if (distanceToClosestTarget > Vector3.Distance(transform.position, pU.transform.position))
+            {
+                distanceToClosestTarget = Vector3.Distance(transform.position, pU.transform.position);
+                aggroTarget = pU.transform;
+                aggroDamagable = pU;
+                hasAggro = true;
+                inRange = true;
+            }
+        }
+        
+        return inRange;
+    }
+    
+    private bool RangedSoldierInRange()
+    {
+        bool inRange = false;
+        
+        foreach (PlayerUnit pU in PlayerManager.instance.rangedSoldiers)
+        {
+            if (distanceToClosestTarget > Vector3.Distance(transform.position, pU.transform.position))
+            {
+                distanceToClosestTarget = Vector3.Distance(transform.position, pU.transform.position);
+                aggroTarget = pU.transform;
+                aggroDamagable = pU;
+                hasAggro = true;
+                inRange = true;
+            }
+        }
+        
+        return inRange;
+    }
+    
+    private bool TowerInRange()
+    {
+        bool inRange = false;
+        
+        foreach (PlayerTrainer pT in PlayerManager.instance.towers)
+        {
+            if (distanceToClosestTarget > Vector3.Distance(transform.position, pT.transform.position))
+            {
+                distanceToClosestTarget = Vector3.Distance(transform.position, pT.transform.position);
+                aggroTarget = pT.transform;
+                aggroDamagable = pT;
+                hasAggro = true;
+                inRange = true;
+            }
+        }
+        
+        return inRange;
+    }
+    
+    private bool BarracksInRange()
+    {
+        bool inRange = false;
+        
+        foreach (PlayerTrainer pT in PlayerManager.instance.barracks)
+        {
+            if (distanceToClosestTarget > Vector3.Distance(transform.position, pT.transform.position))
+            {
+                distanceToClosestTarget = Vector3.Distance(transform.position, pT.transform.position);
+                aggroTarget = pT.transform;
+                aggroDamagable = pT;
+                hasAggro = true;
+                inRange = true;
+            }
+        }
+        
+        return inRange;
+    }
+    
+    private bool WorkerInRange()
+    {
+        bool inRange = false;
+        
+        foreach (PlayerUnit pU in PlayerManager.instance.workers)
+        {
+            if (distanceToClosestTarget > Vector3.Distance(transform.position, pU.transform.position))
+            {
+                distanceToClosestTarget = Vector3.Distance(transform.position, pU.transform.position);
+                aggroTarget = pU.transform;
+                aggroDamagable = pU;
+                hasAggro = true;
+                inRange = true;
+            }
+        }
+        
+        return inRange;
+    }
+    
     
     public void TakeDamage(float damage)
     {

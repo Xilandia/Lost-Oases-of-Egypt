@@ -159,6 +159,11 @@ public class PlayerUnit : MonoBehaviour, Damagable
     private void UnitDeath()
     {
         InputHandler.instance.selectedUnits.Remove(this);
+        
+        PlayerManager.instance.meleeSoldiers.Remove(this);
+        PlayerManager.instance.rangedSoldiers.Remove(this);
+        PlayerManager.instance.workers.Remove(this);
+        
         Destroy(gameObject);
     } 
     

@@ -8,7 +8,7 @@ namespace _Scripts
         {
             if (Helper.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.enemyUnitLayer))
             {
-                other.gameObject.GetComponent<EnemyUnit>().stageOne = false;
+                other.gameObject.GetComponent<EnemyUnit>().TransitionPhase();
             }
         }
     }
