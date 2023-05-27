@@ -228,7 +228,7 @@ public class InputHandler : MonoBehaviour
 
 	private IUnit AddedUnit(PlayerUnit pU, bool canMultiSelect = false)
 	{
-		if (pU == null)
+		if (pU.Equals(null))
 		{
 			return null;
 		}
@@ -251,7 +251,7 @@ public class InputHandler : MonoBehaviour
 	
 	private ITrainer AddedTrainer(PlayerTrainer pT)
 	{
-		if (pT == null)
+		if (pT.Equals(null))
 		{
 			return null;
 		}

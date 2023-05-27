@@ -89,7 +89,7 @@ public class PlayerTrainer : MonoBehaviour, Damagable
            }
        }
        
-       if (playerUnit == null)
+       if (playerUnit.Equals(null))
        {
            Debug.LogError("PlayerTrainer.cs: AddToQueue(): playerUnit is null");
            return;

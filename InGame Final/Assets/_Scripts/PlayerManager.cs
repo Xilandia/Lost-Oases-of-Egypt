@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -7,6 +8,12 @@ public class PlayerManager : MonoBehaviour
     public Transform playerUnits;
     public Transform playerTrainers;
     public Transform enemyUnits;
+
+    public List<PlayerUnit> meleeSoldiers = new List<PlayerUnit>();
+    public List<PlayerUnit> rangedSoldiers = new List<PlayerUnit>();
+    public List<PlayerTrainer> towers = new List<PlayerTrainer>();
+    public List<PlayerTrainer> barracks = new List<PlayerTrainer>();
+    public List<PlayerUnit> workers = new List<PlayerUnit>();
     
     public float playerOre;
     private float elapsedTime;

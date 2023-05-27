@@ -51,7 +51,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
     
     private void MoveToAggroTarget()
     {
-        if (aggroTarget == null)
+        if (aggroTarget.Equals(null))
         {
             hasAggro = false;
             CheckForPlayerTargets();
@@ -127,6 +127,11 @@ public class EnemyUnit : MonoBehaviour, Damagable
             aggroTarget = null;
             navAgent.stoppingDistance = 0;
         }
+    }
+
+    private void CheckForClosestTarget()
+    {
+        
     }
     
     public void TakeDamage(float damage)

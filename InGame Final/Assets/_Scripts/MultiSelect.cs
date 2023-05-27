@@ -8,7 +8,7 @@ public static class MultiSelect
     {
         get
         { 
-            if (_whiteTexture == null)
+            if (_whiteTexture.Equals(null))
             {
                 _whiteTexture = new Texture2D(1, 1);
                 _whiteTexture.SetPixel(0, 0, Color.white);
