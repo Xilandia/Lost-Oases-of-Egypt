@@ -1,4 +1,5 @@
 using System;
+using _Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -160,4 +161,12 @@ public class PlayerUnit : MonoBehaviour, Damagable
         InputHandler.instance.selectedUnits.Remove(this);
         Destroy(gameObject);
     } 
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (Helper.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.enemyUnitLayer))
+        {
+            //Debug.Log("Player Collider entered");
+        }
+    }
 }

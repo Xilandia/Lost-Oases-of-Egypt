@@ -19,6 +19,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     private ObjectPool<EnemyUnit> enemyPool;
 
+    public Transform enemyGoal;
+
     [SerializeField] 
     private EnemyUnit enemyOnePrefab;
     

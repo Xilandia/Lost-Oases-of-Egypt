@@ -1,18 +1,21 @@
 using System;
+using _Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyUnit : MonoBehaviour, Damagable
 {
-    private NavMeshAgent navAgent;
-    private Camera cam;
+    
+    [SerializeField] NavMeshAgent navAgent;
+    [SerializeField] private SphereCollider rangeCollider;
     
     private Collider[] rangeColliders;
     private Transform aggroTarget;
     private Damagable aggroDamagable;
-    private bool hasAggro = false;
+    private bool hasAggro;
     private float distanceToTarget;
+    public bool stageOne = true;
 
     public string enemyName;
     public float enemyHealth, enemyArmor, enemyAttack, enemyTimeBetweenAttacks, enemyAttackRange, enemyMoveSpeed, enemyAggroRange;
@@ -28,21 +31,23 @@ public class EnemyUnit : MonoBehaviour, Damagable
     void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
-        cam = Camera.main;
+        
+        navAgent.SetDestination(EnemySpawnManager.instance.enemyGoal.position);
+        rangeCollider.radius = enemyAggroRange;
+        navAgent.stoppingDistance = enemyAttackRange + 1;
     }
 
     void Update()
     {
         HandleHealth();
-        
-        if (!hasAggro)
+
+        if (stageOne)
         {
-            CheckForPlayerTargets();
-        }
-        else
-        {
-            MoveToAggroTarget();
-            ConsiderAttack();
+            if (hasAggro)
+            {
+                MoveToAggroTarget();
+                ConsiderAttack();
+            }
         }
     }
     
@@ -50,15 +55,14 @@ public class EnemyUnit : MonoBehaviour, Damagable
     {
         if (aggroTarget == null)
         {
-            navAgent.SetDestination(transform.position);
             hasAggro = false;
+            CheckForPlayerTargets();
         }
         else
         {
             distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
-            navAgent.stoppingDistance = enemyAttackRange + 1; // consider moving to where it will only run once
-
-            if (distanceToTarget <= enemyAggroRange)
+            
+            if (distanceToTarget <= enemyAggroRange + 2) // range offset
             {
                 navAgent.SetDestination(aggroTarget.position);
             }
@@ -66,6 +70,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
             {
                 aggroTarget = null;
                 hasAggro = false;
+                Debug.Log("Entered aggro range, but target is out of range");
             }
         }
     }
@@ -99,8 +104,8 @@ public class EnemyUnit : MonoBehaviour, Damagable
 
     private void CheckForPlayerTargets()
     {
-        rangeColliders = Physics.OverlapSphere(transform.position, enemyAggroRange, 1 << EntityHandler.instance.playerInteractableLayer);
-        
+        rangeColliders = Physics.OverlapSphere(transform.position, enemyAggroRange, EntityHandler.instance.playerInteractableLayer);
+
         foreach (Collider col in rangeColliders)
         {
             hasAggro = true;
@@ -115,6 +120,12 @@ public class EnemyUnit : MonoBehaviour, Damagable
             }
 
             break;
+        }
+
+        if (!hasAggro)
+        {
+            navAgent.SetDestination(EnemySpawnManager.instance.enemyGoal.position);
+            aggroTarget = null;
         }
     }
     
@@ -138,5 +149,27 @@ public class EnemyUnit : MonoBehaviour, Damagable
     {
         disable?.Invoke(this);
         //Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (Helper.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.playerInteractableLayer))
+        {
+            //Debug.Log("Enemy Collider entered with other as a player interactable", other.gameObject);
+            if (!hasAggro)
+            {
+                Debug.Log("No target now, giving target");
+                hasAggro = true;
+                aggroTarget = other.transform;
+                if (other.gameObject.tag.Equals("Unit"))
+                { 
+                    aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerUnit>();
+                }
+                else if (other.gameObject.tag.Equals("Trainer"))
+                {
+                    aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerTrainer>();
+                }
+            }
+        }
     }
 }
