@@ -121,7 +121,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
             {
                 aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerTrainer>();
             }
-            navAgent.stoppingDistance = enemyAttackRange + 1;
+            navAgent.stoppingDistance = enemyAttackRange;
 
             break;
         }
@@ -137,6 +137,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
     public void TransitionPhase()
     {
         stageOne = false;
+        navAgent.stoppingDistance = enemyAttackRange;
         CheckForClosestTarget();
     }
     
