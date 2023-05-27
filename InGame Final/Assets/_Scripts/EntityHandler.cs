@@ -12,30 +12,41 @@ public class EntityHandler : MonoBehaviour
     [SerializeField]
     private Entity workerCenter, basicTrainer, advancedTrainer; // trainers (buildings)
     
-    [HideInInspector]
+    /*[SerializeField]
+    private Entity workerCenter;*/ // preparation for turrets / obelisks
+    
+    [SerializeField]
+    private Entity enemy; // enemy units (to expand)
+    
     public LayerMask playerInteractableLayer, enemyUnitLayer;
 
     void Awake()
     {
         instance = this;
-        
-        playerInteractableLayer = LayerMask.NameToLayer("Interactables");
-        enemyUnitLayer = LayerMask.NameToLayer("Enemy Units");
+
+        playerInteractableLayer = LayerMask.GetMask("Interactables");
+        enemyUnitLayer = LayerMask.GetMask("Enemies");
     }
 
-    public Entity GetEntityStats(string _entityName)
+    private Entity GetEntityStats(string _entityName)
     {
+        
+        if (_entityName.Contains("Clone"))
+        {
+            _entityName = _entityName.Substring(0, _entityName.Length - 7);
+        }
+        
         switch (_entityName)
         {
-            case "Arbalists":
+            case "Arbalist":
                 return arbalist;
-            case "Gladiators":
+            case "Gladiator":
                 return gladiator;
-            case "Guardians":
+            case "Guardian":
                 return guardian;
-            case "Warlocks":
+            case "Warlock":
                 return warlock;
-            case "Workers":
+            case "Worker":
                 return worker;
             case "Worker Center":
                 return workerCenter;
@@ -43,59 +54,63 @@ public class EntityHandler : MonoBehaviour
                 return basicTrainer;
             case "Advanced Robot Manufactory":
                 return advancedTrainer;
+            case "Enemy":
+                return enemy;
             default:
-                Debug.Log($"Entity {_entityName} not found!");
+                Debug.LogError($"Entity {_entityName} not found!");
                 return null;
         }
     }
 
-    public void SetEntityStats(Transform type)
+    public void SetPlayerUnitStats(PlayerUnit pU, string unitType)
     {
-        foreach (Transform child in type)
-        {
-            foreach (Transform grandchild in child)
-            {
-                Entity entityStats = GetEntityStats(child.name);
+        Entity entityStats = GetEntityStats(unitType);
 
-                if (entityStats.belongsToPlayer)
-                {
-                    if (entityStats.isBuilding)
-                    {
-                        // handle player buildings / trainers / turrets
-                        PlayerTrainer pT = grandchild.GetComponent<PlayerTrainer>();
-                        
-                        pT.trainerName = entityStats.entityName;
-                        pT.trainerCost = entityStats.entityCost;
-                        pT.trainerHealth = entityStats.entityHealth;
-                        pT.trainerCurrentHealth = entityStats.entityHealth;
-                        pT.trainerArmor = entityStats.entityArmor;
-                        pT.trainerBuildTime = entityStats.entityCreationTime;
-                        
-                        pT.buildableUnits = entityStats.buildableUnits;
-                        pT.isBuildable = entityStats.isBuildable;
-                    }
-                    else
-                    {
-                        PlayerUnit pU = grandchild.GetComponent<PlayerUnit>();
+        pU.unitName = entityStats.entityName;
+        pU.unitCost = entityStats.entityCost;
+        pU.unitHealth = entityStats.entityHealth;
+        pU.unitCurrentHealth = entityStats.entityHealth;
+        pU.unitArmor = entityStats.entityArmor;
+        pU.unitAttack = entityStats.entityAttack;
+        pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
+        pU.unitAttackRange = entityStats.entityAttackRange;
+        pU.unitAggroRange = entityStats.entityAggroRange;
+        pU.unitMoveSpeed = entityStats.entityMoveSpeed;
+        pU.unitTrainTime = entityStats.entityCreationTime;
+    }
+    
+    public void SetPlayerTrainerStats(PlayerTrainer pT, string trainerType)
+    {
+        Entity entityStats = GetEntityStats(trainerType);
 
-                        pU.unitName = entityStats.entityName;
-                        pU.unitCost = entityStats.entityCost;
-                        pU.unitHealth = entityStats.entityHealth;
-                        pU.unitCurrentHealth = entityStats.entityHealth;
-                        pU.unitArmor = entityStats.entityArmor;
-                        pU.unitAttack = entityStats.entityAttack;
-                        pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
-                        pU.unitAttackRange = entityStats.entityAttackRange;
-                        pU.unitMoveSpeed = entityStats.entityMoveSpeed;
-                        pU.unitTrainTime = entityStats.entityCreationTime;
-                    }
-                }
-                else
-                {
-                    // handle enemy units
-                }
-            }
-        }
+        pT.trainerName = entityStats.entityName;
+        pT.trainerCost = entityStats.entityCost;
+        pT.trainerHealth = entityStats.entityHealth;
+        pT.trainerCurrentHealth = entityStats.entityHealth;
+        pT.trainerArmor = entityStats.entityArmor;
+        pT.trainerBuildTime = entityStats.entityCreationTime;
+                        
+        pT.buildableUnits = entityStats.buildableUnits;
+        pT.isPrototype = entityStats.isPrototype;
+        pT.isPlaced = entityStats.isPlaced;
+        pT.isComplete = entityStats.isComplete;
+    }
+
+    public void SetEnemyStats(EnemyUnit eU, string enemyType)
+    {
+        Entity entityStats = GetEntityStats(enemyType);
+        
+        eU.enemyName = entityStats.entityName;
+        eU.enemyHealth = entityStats.entityHealth;
+        eU.enemyCurrentHealth = entityStats.entityHealth;
+        eU.enemyArmor = entityStats.entityArmor;
+        eU.enemyAttack = entityStats.entityAttack;
+        eU.enemyTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
+        eU.enemyAttackCooldown = entityStats.entityTimeBetweenAttacks;
+        eU.enemyAttackRange = entityStats.entityAttackRange;
+        eU.enemyAggroRange = entityStats.entityAggroRange;
+        eU.enemyMoveSpeed = entityStats.entityMoveSpeed;
+        
     }
     
 }

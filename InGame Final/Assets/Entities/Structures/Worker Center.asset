@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Worker Center
   entityType: 2
-  entityPrefab: {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1, type: 3}
+  entityPrefab: {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1,
+    type: 3}
   belongsToPlayer: 1
   entityCost: 1000
   entityHealth: 500
@@ -23,9 +24,12 @@ MonoBehaviour:
   entityTimeBetweenAttacks: 0
   entityAttackRange: 0
   entityMoveSpeed: 0
-  entityCreationTime: 120
+  entityCreationTime: 5
   isBuilding: 1
   isBuildable: 1
+  isPrototype: 1
+  isPlaced: 0
+  isComplete: 0
   buildableUnits:
   - {fileID: 11400000, guid: 54b6804b18aac467d95f034f74694260, type: 2}
   - {fileID: 11400000, guid: 9513c6d8d738d428ea9fdfb105f817b2, type: 2}

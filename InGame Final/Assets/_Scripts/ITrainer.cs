@@ -2,12 +2,24 @@ using UnityEngine;
 
 public class ITrainer : Interactable
 {
-    public Entity playerTrainer;
+    public Entity playerTrainer; // squish into pT
+    public PlayerTrainer pT; // combine as part of refactor
     
     public override void OnInteractEnter()
     {
-        ActionFrame.instance.SetActionButtons(playerTrainer);
         base.OnInteractEnter();
+        if (pT.isPrototype)
+        {
+            highlight.SetActive(false);
+        }
+        if (pT.isPlaced)
+        {
+            OnInteractExit();
+        }
+        if (pT.isComplete)
+        {
+            ActionFrame.instance.SetActionButtons(playerTrainer);
+        }
     }
 
     public override void OnInteractExit()

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class IUnit : Interactable
 {
-    public GameObject unitStatDisplay = null;
+    public GameObject unitStatDisplay;
     
     public override void Awake()
     {

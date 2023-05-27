@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Basic Robot Manufactory
   entityType: 2
-  entityPrefab: {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1, type: 3}
+  entityPrefab: {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1,
+    type: 3}
   belongsToPlayer: 1
   entityCost: 200
   entityHealth: 300
@@ -26,6 +27,9 @@ MonoBehaviour:
   entityCreationTime: 30
   isBuilding: 1
   isBuildable: 1
+  isPrototype: 1
+  isPlaced: 0
+  isComplete: 0
   buildableUnits:
   - {fileID: 11400000, guid: 9942556f0042f4fda9e645bafbe7349e, type: 2}
   - {fileID: 11400000, guid: a9fb0f02aaa16415ebdf7b72e68e4946, type: 2}

@@ -4,6 +4,6 @@ public class Action : MonoBehaviour
 {
     public void OnClick()
     {
-        // clicked!
+        InputHandler.instance.selectedStructure.AddToQueue(name);
     }
 }
