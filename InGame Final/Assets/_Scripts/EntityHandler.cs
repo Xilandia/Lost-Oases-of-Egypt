@@ -18,7 +18,6 @@ public class EntityHandler : MonoBehaviour
     [SerializeField]
     private Entity enemy; // enemy units (to expand)
     
-    //[HideInInspector]
     public LayerMask playerInteractableLayer, enemyUnitLayer;
 
     void Awake()
@@ -27,9 +26,6 @@ public class EntityHandler : MonoBehaviour
 
         playerInteractableLayer = LayerMask.GetMask("Interactables");
         enemyUnitLayer = LayerMask.GetMask("Enemies");
-
-        //playerInteractableLayer = LayerMask.NameToLayer("Interactables");
-        //enemyUnitLayer = LayerMask.NameToLayer("Enemies");
     }
 
     private Entity GetEntityStats(string _entityName)

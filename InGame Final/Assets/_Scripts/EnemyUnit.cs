@@ -28,13 +28,11 @@ public class EnemyUnit : MonoBehaviour, Damagable
     public delegate void OnDisableCallback(EnemyUnit Instance);
     public OnDisableCallback disable;
     
-    void Start()
+    void Start() // might need to change this to awake
     {
-        navAgent = GetComponent<NavMeshAgent>();
-        
         navAgent.SetDestination(EnemySpawnManager.instance.enemyGoal.position);
         rangeCollider.radius = enemyAggroRange;
-        navAgent.stoppingDistance = enemyAttackRange + 1;
+        //CheckForPlayerTargets(); might not need if the collider automatically checks on awake
     }
 
     void Update()
@@ -118,6 +116,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
             {
                 aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerTrainer>();
             }
+            navAgent.stoppingDistance = enemyAttackRange + 1;
 
             break;
         }
@@ -126,6 +125,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
         {
             navAgent.SetDestination(EnemySpawnManager.instance.enemyGoal.position);
             aggroTarget = null;
+            navAgent.stoppingDistance = 0;
         }
     }
     
@@ -155,7 +155,6 @@ public class EnemyUnit : MonoBehaviour, Damagable
     {
         if (Helper.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.playerInteractableLayer))
         {
-            //Debug.Log("Enemy Collider entered with other as a player interactable", other.gameObject);
             if (!hasAggro)
             {
                 Debug.Log("No target now, giving target");
@@ -169,6 +168,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
                 {
                     aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerTrainer>();
                 }
+                navAgent.stoppingDistance = enemyAttackRange + 1;
             }
         }
     }
