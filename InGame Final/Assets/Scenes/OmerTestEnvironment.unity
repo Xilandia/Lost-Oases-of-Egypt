@@ -14373,8 +14373,38 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
+      propertyPath: unitArmor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
+      propertyPath: unitAttack
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
+      propertyPath: unitHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
+      propertyPath: unitAggroRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
+      propertyPath: unitAttackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
       propertyPath: unitCurrentHealth
-      value: 30
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
+      propertyPath: unitTimeBetweenAttacks
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -512577293634403931, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
@@ -14536,6 +14566,11 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAggroRange
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3730260759065913479, guid: f12a181bb9b794cee846a25db320bd41,
+        type: 3}
+      propertyPath: enemyCurrentHealth
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -2824862782651866687, guid: f12a181bb9b794cee846a25db320bd41,
         type: 3}

@@ -276,7 +276,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
     
     private void HandleHealth()
     {
-        enemyCurrentHealth -= Time.deltaTime;
+        //enemyCurrentHealth -= Time.deltaTime;
         
         if (enemyCurrentHealth <= 0)
         {
@@ -286,8 +286,8 @@ public class EnemyUnit : MonoBehaviour, Damagable
 
     private void UnitDeath()
     {
-        disable?.Invoke(this);
-        //Destroy(gameObject);
+        //disable?.Invoke(this);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -307,7 +307,7 @@ public class EnemyUnit : MonoBehaviour, Damagable
                 {
                     aggroDamagable = aggroTarget.gameObject.GetComponent<PlayerTrainer>();
                 }
-                navAgent.stoppingDistance = enemyAttackRange + 1;
+                navAgent.stoppingDistance = enemyAttackRange;
             }
         }
     }

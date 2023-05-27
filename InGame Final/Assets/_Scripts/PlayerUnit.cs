@@ -39,38 +39,10 @@ public class PlayerUnit : MonoBehaviour, Damagable
     {
         HandleHealth();
 
-        /*if (!isMoving)
+        if (hasAggro)
         {
-            if (!hasAggro)
-            {
-                CheckForEnemyTargets();
-            }
-            else
-            {
-                MoveToAggroTarget();
-                ConsiderAttack();
-            }
-        }
-        else
-        {
-            isMoving = CheckMovementStatus();
-        }*/
-    }
-    
-    private void CheckForEnemyTargets()
-    {
-        rangeColliders = Physics.OverlapSphere(transform.position, unitAggroRange, 1 << EntityHandler.instance.enemyUnitLayer);
-        
-        foreach (Collider col in rangeColliders)
-        {
-            hasAggro = true;
-            aggroTarget = col.transform;
-            if (col.gameObject.tag.Equals("Enemy Unit"))
-            { 
-                aggroDamagable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
-            }
-
-            break;
+            MoveToAggroTarget(); 
+            ConsiderAttack();
         }
     }
     
@@ -80,25 +52,41 @@ public class PlayerUnit : MonoBehaviour, Damagable
         isMoving = true;
         moveTarget = _destination;
     }
-
-    private bool CheckMovementStatus()
+    
+    private void CheckForEnemyTargets()
     {
-        return Math.Abs(Vector3.Distance(moveTarget, transform.position)) < 0.5f;
+        rangeColliders = Physics.OverlapSphere(transform.position, unitAggroRange, EntityHandler.instance.enemyUnitLayer);
+
+        foreach (Collider col in rangeColliders)
+        {
+            hasAggro = true;
+            aggroTarget = col.transform;
+            aggroDamagable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
+            navAgent.stoppingDistance = unitAttackRange;
+
+            break;
+        }
+
+        if (!hasAggro)
+        {
+            navAgent.SetDestination(moveTarget);
+            aggroTarget = null;
+            navAgent.stoppingDistance = 0;
+        }
     }
 
     private void MoveToAggroTarget()
     {
         if (aggroTarget == null)
         {
-            navAgent.SetDestination(transform.position);
             hasAggro = false;
+            CheckForEnemyTargets();
         }
         else
         {
             distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
-            navAgent.stoppingDistance = unitAttackRange; // consider moving to where it will only run once
-
-            if (distanceToTarget <= unitAggroRange)
+            
+            if (distanceToTarget <= unitAggroRange + 2) // range offset or in second stage of behavior
             {
                 navAgent.SetDestination(aggroTarget.position);
             }
@@ -106,13 +94,14 @@ public class PlayerUnit : MonoBehaviour, Damagable
             {
                 aggroTarget = null;
                 hasAggro = false;
+                Debug.Log("Entered aggro range, but target is out of range");
             }
         }
     }
     
     private void ConsiderAttack()
     {
-        if (distanceToTarget <= unitAttackRange)
+        if (distanceToTarget <= unitAttackRange + 1)
         {
             if (unitAttackCooldown <= 0)
             {
@@ -172,6 +161,14 @@ public class PlayerUnit : MonoBehaviour, Damagable
         if (Helper.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.enemyUnitLayer))
         {
             //Debug.Log("Player Collider entered");
+            if (!hasAggro)
+            {
+                Debug.Log("No target now, giving target");
+                hasAggro = true;
+                aggroTarget = other.transform;
+                aggroDamagable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
+                navAgent.stoppingDistance = unitAttackRange;
+            }
         }
     }
 }
