@@ -13,9 +13,8 @@ public class BuildingHandler : MonoBehaviour
     public AudioClip[] buildingSounds;
     public AudioSource soundEffectSource;
     
-    public GameObject[] buildingPrefabs;
-
-    private PlacableObject objectToPlace;
+    public PlayerTrainer[] buildings;
+    
     private PlayerTrainer pT; // combine as part of refactor
 
     private static RaycastHit hit;
@@ -28,15 +27,15 @@ public class BuildingHandler : MonoBehaviour
     
     public bool TryToPlace()
     {
-        if (objectToPlace != null)
+        if (pT.isPrototype)
         {
             if (PlayerManager.instance.playerOre >= pT.trainerCost)
             {
-                if (CanBePlaced(objectToPlace))
+                if (CanBePlaced(pT.trainerPlacable))
                 {
-                    objectToPlace.Place();
-                    Vector3Int start = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
-                    TakeArea(start, objectToPlace.Size);
+                    pT.trainerPlacable.Place();
+                    Vector3Int start = gridLayout.WorldToCell(pT.trainerPlacable.GetStartPosition());
+                    TakeArea(start, pT.trainerPlacable.Size);
                     PlayerManager.instance.playerOre -= pT.trainerCost;
                     soundEffectSource.PlayOneShot(buildingSounds[2]);
                     
@@ -71,7 +70,7 @@ public class BuildingHandler : MonoBehaviour
     public static Vector3 SnapToGrid(Vector3 position)
     {
         Vector3Int cellPosition = instance.gridLayout.WorldToCell(position);
-        return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0,98,0);
+        return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0,1/*98*/,0); // figure out modular / shifting height
     }
 
     private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)
@@ -92,12 +91,11 @@ public class BuildingHandler : MonoBehaviour
     public void InitializeWithObject(int prefabIndex)
     {
         Vector3 position = SnapToGrid(Vector3.zero);
-        GameObject newObject = Instantiate(buildingPrefabs[prefabIndex], position, Quaternion.identity);
+        GameObject newObject = Instantiate(buildings[prefabIndex].trainerPrefab, position, Quaternion.identity);
         newObject.transform.SetParent(PlayerManager.instance.playerTrainers);
-        objectToPlace = newObject.GetComponent<PlacableObject>();
         pT = newObject.GetComponent<PlayerTrainer>();
         EntityHandler.instance.SetPlayerTrainerStats(pT, newObject.gameObject.name);
-        InputHandler.instance.FirstSelectStructure(newObject.transform);
+        InputHandler.instance.FirstSelectStructure(pT);
         pT.isPrototype = true;
     }
     

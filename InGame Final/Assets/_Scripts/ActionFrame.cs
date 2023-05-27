@@ -34,6 +34,7 @@ public class ActionFrame : MonoBehaviour
 
     public void ClearAction()
     {
+        // object pool buttons?
         foreach (Button button in buttons)
         {
             Destroy(button.gameObject);

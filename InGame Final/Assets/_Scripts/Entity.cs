@@ -3,25 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Entity", menuName = "New Entity")]
 public class Entity : ScriptableObject
 {
-    public enum entityList
-    {
-        Worker,
-        Robot,
-        UnitTrainer,
-        Turret,
-        BaseStructure,
-        Wall,
-        Enemy,
-        Resource // not sure if relevant
-    }    
-
-    [Header("Entity Settings")]
+	[Header("Entity Settings")]
 	public string entityName;
 
-    public entityList entityType;
-    
-    public GameObject entityPrefab;
-	public bool belongsToPlayer;
+	public GameObject entityPrefab;
     
 	[Space(20)]
 	[Header("Entity Stats")]
@@ -37,7 +22,6 @@ public class Entity : ScriptableObject
     
     [Space(20)]
     [Header("Building Atributes")]
-    public bool isBuilding;
     public bool isBuildable;
     public bool isPrototype;
     public bool isPlaced;

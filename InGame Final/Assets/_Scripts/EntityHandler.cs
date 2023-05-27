@@ -18,18 +18,17 @@ public class EntityHandler : MonoBehaviour
     [SerializeField]
     private Entity enemy; // enemy units (to expand)
     
-    [HideInInspector]
     public LayerMask playerInteractableLayer, enemyUnitLayer;
 
     void Awake()
     {
         instance = this;
-        
-        playerInteractableLayer = LayerMask.NameToLayer("Interactables");
-        enemyUnitLayer = LayerMask.NameToLayer("Enemy Units");
+
+        playerInteractableLayer = LayerMask.GetMask("Interactables");
+        enemyUnitLayer = LayerMask.GetMask("Enemies");
     }
 
-    public Entity GetEntityStats(string _entityName)
+    private Entity GetEntityStats(string _entityName)
     {
         
         if (_entityName.Contains("Clone"))
@@ -58,7 +57,7 @@ public class EntityHandler : MonoBehaviour
             case "Enemy":
                 return enemy;
             default:
-                Debug.Log($"Entity {_entityName} not found!");
+                Debug.LogError($"Entity {_entityName} not found!");
                 return null;
         }
     }
@@ -92,7 +91,6 @@ public class EntityHandler : MonoBehaviour
         pT.trainerBuildTime = entityStats.entityCreationTime;
                         
         pT.buildableUnits = entityStats.buildableUnits;
-        pT.isBuildable = entityStats.isBuildable;
         pT.isPrototype = entityStats.isPrototype;
         pT.isPlaced = entityStats.isPlaced;
         pT.isComplete = entityStats.isComplete;
