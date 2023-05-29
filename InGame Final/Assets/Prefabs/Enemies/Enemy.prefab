@@ -107,7 +107,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 35
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393d5e8befa3d4fa28038c5722106762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navAgent: {fileID: -2824862782651866687}
-  rangeCollider: {fileID: 493349807}
-  stageOne: 1
+  m_NavAgent: {fileID: -2824862782651866687}
+  m_RangeCollider: {fileID: 493349807}
+  behaviorOne: 1
   enemyName: 
   enemyHealth: 0
   enemyArmor: 0
