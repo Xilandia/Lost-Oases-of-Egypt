@@ -1225,6 +1225,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &249099584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 46.45766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 46.45765
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 46.45766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 413.80002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.899998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 699.10004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.83577484
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.013909361
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5488686
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0055015045
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 66.592
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.348
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224177579533500590, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_Name
+      value: Canyon Sandstone Rocky Ground_uk4teag (132)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
 --- !u!1001 &261974507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3468,6 +3552,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &794217630
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2033450183672423201, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_Name
+      value: Canyon Sandstone Rocks Pile_ulducap (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 107
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 22.623589
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 22.623577
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 22.623589
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 408.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 28.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 674.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.99957204
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.010708014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.021279076
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.016980266
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.185
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -357.541
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263014376721089371, guid: 49a70714a26b7264db6fd4d91e306de1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.972
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49a70714a26b7264db6fd4d91e306de1, type: 3}
 --- !u!1001 &800985620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6871,6 +7039,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22f66c108f5fba4cbea1466bd88631d, type: 3}
+--- !u!1001 &1536704110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 46.45766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 46.45765
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 46.45766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 385.30002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.899998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 669
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5644009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.010774024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8253653
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.010375811
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.678
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 111.275
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.348
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224177579533500590, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_Name
+      value: Canyon Sandstone Rocky Ground_uk4teag (130)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
 --- !u!1001 &1624382970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7117,6 +7369,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &1666659655
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 109
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 46.45766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 46.45765
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 46.45766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 406.50003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 22.099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 663.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5216947
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.012414281
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.85303986
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0018946485
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.927
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 242.889
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151139004121714097, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224177579533500590, guid: 731961d4b609b53459fe8a35f60c1e1e,
+        type: 3}
+      propertyPath: m_Name
+      value: Canyon Sandstone Rocky Ground_uk4teag (131)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
 --- !u!1001 &1671523944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8615,37 +8951,37 @@ PrefabInstance:
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150.8
+      value: 137.7
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.2
+      value: 38.2
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 834.6
+      value: 835.9
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.46058384
+      value: -0.48267132
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00018013088
+      value: 0.00016805851
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.88761604
+      value: -0.87580144
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00047973703
+      value: 0.00048409824
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
@@ -8655,7 +8991,7 @@ PrefabInstance:
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -234.85
+      value: -237.72
       objectReference: {fileID: 0}
     - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
         type: 3}
