@@ -375,6 +375,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &39382711
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.344287
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3442774
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.344287
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 482.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 264.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.45095548
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0065036356
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.011173387
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.807
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -126.376
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.243
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156419889680489829, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_uk5oded (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841974519114326632, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
 --- !u!1001 &104737462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -968,6 +1057,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &189786954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6204736
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6204736
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6204736
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 520.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 764.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.54735416
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06007658
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8339318
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.036768727
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -246.54001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -8.074
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &191005088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -983,37 +1156,37 @@ PrefabInstance:
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 9.5117
+      value: 7.0836425
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 9.5117
+      value: 7.0836425
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 9.5117
+      value: 7.0836425
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 662
+      value: 618.5
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: -35.1
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 711.6
+      value: 276.8
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.024051892
+      value: -0.89164543
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
@@ -1023,7 +1196,7 @@ PrefabInstance:
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99971074
+      value: 0.45273447
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
@@ -1038,7 +1211,7 @@ PrefabInstance:
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 177.244
+      value: 306.161
       objectReference: {fileID: 0}
     - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
         type: 3}
@@ -1052,6 +1225,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0, type: 3}
+--- !u!1001 &203228609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 139
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 575.9859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1644926
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 878.857
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.2640268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.043628685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9622728
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.04916686
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -210.913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -6.327
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &206610034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1474,6 +1731,90 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Huge Canyon Sandstone Cliff_veoneio (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
+--- !u!1001 &284730945
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 560.31195
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.9011464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 636.4307
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9242579
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00008085443
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38176858
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0005060216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -315.113
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_Name
+      value: Huge Canyon Sandstone Cliff_veoneio (19)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
@@ -2322,6 +2663,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &471201904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 564.6877
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.016405
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 864.8295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.3208295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06402915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.94417053
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.03886766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.852
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -217.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -8.391
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &475331945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2329,6 +2754,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1024598669572169325, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.99
+      objectReference: {fileID: 0}
     - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_Name
@@ -2357,22 +2787,22 @@ PrefabInstance:
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 262.1
+      value: 264.1
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.4
+      value: 16.7
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 961
+      value: 960.1
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.16217773
+      value: 0.23596172
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -2382,7 +2812,7 @@ PrefabInstance:
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9867616
+      value: 0.97176236
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -2397,7 +2827,7 @@ PrefabInstance:
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 161.333
+      value: 152.703
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -2741,6 +3171,174 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &530796348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 137
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0002134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0002134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0002134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 551.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 861.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.4000388
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.034307633
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9115084
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.08913216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 7.761
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -227.918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.764
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &553844692
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 143
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 613.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 920.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.2904755
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0141446525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9496271
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.1167574
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 13.295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -214.297
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -2.413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_Name
+      value: Huge Canyon Sandstone Cliff_veoneio (24)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!1001 &561843315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2909,6 +3507,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &581490990
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 580.32007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7443409
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 636.834
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.85338765
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08677538
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5136388
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.019356886
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -7.367
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -297.458
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.077
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &609776447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2993,6 +3675,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &617302786
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.345785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.3457937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.345785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 552.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 548.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5261
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.011937109
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.84988004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.027932357
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.442
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -603.533
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.522
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685976404908235671, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_Name
+      value: Massive Canyon Sandstone Cliff_vcbqbfvga (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40c834b1a51c931458836786ee1d38f4, type: 3}
 --- !u!1001 &628033447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3359,6 +4125,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d08620536aa1e4b880b1da6c972c77, type: 3}
+--- !u!1001 &687426602
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.015611
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.015611
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.015611
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 535.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 985.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.12459883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9922072
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 194.315
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &688248195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3547,6 +4397,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
+--- !u!1001 &727213292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 609.065
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8658724
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 902.35785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13960671
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.038668778
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9876988
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.05887156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 6.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -196.374
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -5.356
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &730739426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3720,6 +4654,179 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &780421342
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.821364
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 11.821379
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 11.821364
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 232
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 268.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.055344608
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.003801317
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9983795
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.012684715
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.475
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -546.341
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006149567532943939, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7685976404908235671, guid: 40c834b1a51c931458836786ee1d38f4,
+        type: 3}
+      propertyPath: m_Name
+      value: Massive Canyon Sandstone Cliff_vcbqbfvga (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40c834b1a51c931458836786ee1d38f4, type: 3}
+--- !u!1001 &793873213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 121
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3874
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3873943
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3874
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 581.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 359.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8862266
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.042937666
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4612253
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0054917806
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -4.656
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -304.94202
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.718
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156419889680489829, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_uk5oded (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841974519114326632, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
 --- !u!1001 &794217630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4145,6 +5252,179 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &897571273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 535.3225
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24453688
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 723.1497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.68501806
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.065590136
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7251133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.025672343
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -266.54498
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.497
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &901355379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3874
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3873943
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3874
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 622.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 314.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9084611
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.042604197
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.41572186
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.007660652
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -4.806
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -310.769
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.237
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156419889680489829, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_uk5oded (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841974519114326632, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
 --- !u!1001 &914278444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4229,6 +5509,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &916705779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 526.874
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.104246
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 689.4688
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8595926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.01878737
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5105708
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00806979
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 2.323
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -298.576
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.305
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_Name
+      value: Huge Canyon Sandstone Cliff_veoneio (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!1001 &936692456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4313,6 +5677,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &949001978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.344287
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3442774
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.344287
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 585.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 239.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.19940779
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0018235268
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9798313
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.012799082
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.396
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -203.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156419889680489829, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_uk5oded (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841974519114326632, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
 --- !u!1001 &954035082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4417,6 +5870,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d08620536aa1e4b880b1da6c972c77, type: 3}
+--- !u!1001 &956093668
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 569.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 643.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9046924
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08391064
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4167319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.028725887
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -7.347
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -310.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.061
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &986987208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4501,6 +6038,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &987210000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 574.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 898.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.40907958
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.018432222
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9070113
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.098207824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 11.141
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -228.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -2.741
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_Name
+      value: Huge Canyon Sandstone Cliff_veoneio (23)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!1001 &1020906030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4763,6 +6384,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
+--- !u!1001 &1100902807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 131
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 540.1238
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6140275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 705.627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7266097
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08600134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6812521
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.023189094
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -5.358
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -273.28198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -8.716
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &1111813276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5099,6 +6804,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &1165536511
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.9340403
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.9340403
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.9340403
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 393.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 40.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1048.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0032212539
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0014087771
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9995323
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.030378435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.482
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 179.635
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &1185585257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5435,6 +7224,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &1215674350
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.205654
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.205654
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.205654
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 540.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 841.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.486285
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.030035997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8729813
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.022988345
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.977
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -238.179
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.728
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_Name
+      value: Huge Canyon Sandstone Cliff_veoneio (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!1001 &1221487107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5939,6 +7812,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &1272206928
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.5117
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.5117
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9.5117
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 662
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 711.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.024051892
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99971074
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 177.244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109939889579488584, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862009539294738236, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Huge Canyon Sandstone Spire_ulbwebv (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f23e1e988f6a4c4b9d0b3b250e651e0, type: 3}
 --- !u!1001 &1287351556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6275,6 +8232,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22f66c108f5fba4cbea1466bd88631d, type: 3}
+--- !u!1001 &1341731738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 127
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 554.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 668.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8073625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.088252395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.583294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0120613985
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -7.379
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -287.848
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.091
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &1342628105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6359,6 +8400,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &1355865850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 133
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.708347
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 517.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 732.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7888157
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.014888925
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.61441207
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00677806
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.869
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -284.15698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070835836572119027, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_Name
+      value: Huge Canyon Sandstone Cliff_veoneio (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!1001 &1375103002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6440,6 +8565,90 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.157
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &1379975344
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 582.54626
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4322824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 889.04083
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.36643577
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.058510747
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9266026
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.060901865
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -223.464
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -8.826
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
@@ -7291,6 +9500,174 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &1597898359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5778477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 594.5181
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6587105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 891.35944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.1981254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.058565136
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.97731054
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.046696406
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.903
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -203.181
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.659
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &1616045069
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 545.95325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.425159
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 684.0121
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7714317
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0690113
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.63243854
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.012331999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -5.214
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -281.029
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -6.129
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &1624382970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7453,6 +9830,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1656640726
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 142
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 618.06915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.3984747
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 910.4625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.2453171
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.05667546
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.965272
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.06969539
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 6.128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -208.964
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -8.305
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &1657129184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8292,6 +10753,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &1734078083
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4526703
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4526603
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4526703
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 422.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 278.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.06459877
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00006980717
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9978276
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.012928146
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.478
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -187.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156419889680489829, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_uk5oded (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841974519114326632, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
 --- !u!1001 &1734115265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9341,6 +11891,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
+--- !u!1001 &2024483017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 530.1169
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5454907
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 734.2622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.759845
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0687723
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6453492
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.037820797
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -279.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -8.422
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &2041755531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9509,6 +12143,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731961d4b609b53459fe8a35f60c1e1e, type: 3}
+--- !u!1001 &2060382347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3874
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3873943
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3874
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 562.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 391.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8263086
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0432852
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5615517
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0004405338
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -4.131
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -291.501
+      objectReference: {fileID: 0}
+    - target: {fileID: 308830125481112888, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -2.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156419889680489829, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_uk5oded (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841974519114326632, guid: fe4cb80402bff534fa6f26e315d6ccee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
 --- !u!1001 &2075898677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9682,6 +12405,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4cb80402bff534fa6f26e315d6ccee, type: 3}
+--- !u!1001 &2111436671
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_Name
+      value: Gigantic Canyon Sandstone Cliff_umdjfhfga (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7797111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 538
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 693.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8359419
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06826369
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5440209
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.024136784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -5.041
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -293.598
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -6.608
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 685885546bced5646a65cc6de39a4418, type: 3}
 --- !u!1001 &2146178317
 PrefabInstance:
   m_ObjectHideFlags: 0

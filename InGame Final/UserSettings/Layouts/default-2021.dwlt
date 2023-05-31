@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 204
+  controlID: 18
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 205
+  controlID: 36
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 206
+  controlID: 37
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,7 +187,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 353
+    width: 354
     height: 827
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -211,9 +211,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 353
+    x: 354
     y: 0
-    width: 1602
+    width: 1601
     height: 827
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -297,9 +297,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 353
+    x: 354
     y: 73
-    width: 1600
+    width: 1599
     height: 806
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 115.755035, y: -313.2611, z: 1601.5492}
+    m_Target: {x: 5.5795307, y: -220.17908, z: 885.759}
     speed: 2
-    m_Value: {x: 115.755035, y: -313.2611, z: 1601.5492}
+    m_Value: {x: 5.5795307, y: -220.17908, z: 885.759}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -607,20 +607,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.19989969, y: 0.2019571, z: -0.043238778, w: -0.9586073}
+    m_Target: {x: -0.24653219, y: 0.20689696, z: -0.042407457, w: -0.947087}
     speed: 2
-    m_Value: {x: -0.20405334, y: 0.2016043, z: -0.04411578, w: -0.9569596}
+    m_Value: {x: -0.24340379, y: 0.2067803, z: -0.041734632, w: -0.94670737}
   m_Size:
-    m_Target: 664.8152
+    m_Target: 354.5381
     speed: 2
-    m_Value: 636.18677
+    m_Value: 371.24408
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 30
-    m_SpeedNormalized: 1
+    m_Speed: 26.400124
+    m_SpeedNormalized: 0.8800001
     m_SpeedMin: 0.001
     m_SpeedMax: 30
     m_EasingEnabled: 1
@@ -661,7 +661,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 352
+    width: 353
     height: 806
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -670,10 +670,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
-      m_SelectedIDs: 3a6a0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 18fbffff
+      scrollPos: {x: 0, y: 1040}
+      m_SelectedIDs: fa6fd9ff
+      m_LastClickedID: -2527238
+      m_ExpandedIDs: 1c71d9ff0cf4dbff36f6dbff0cc3ddffb6c6ddff58c5f7ffead0f7ff8a45f8ff0248f8ffa28ef8ff22bcf8ffc8cbf8ff4279f9ff7cbcf9ff4ecffeff06e2feff5a3effff5e3effff003fffff023fffff063fffff9a3fffff3642ffff3c42ffff4643ffff4a43ffff0e44ffff1644ffff5444ffff5644ffff5844ffff5a44ffff1845ffff3045ffff7645ffffba45ffff7847ffff7a47ffff8c47ffff9647ffff9c47ffffd248ffffdc48ffff1449ffff1a49ffff2249ffff804affff864affff924affffce4fffff74beffff04e1ffffe8e1ffff2ee4ffff18fbffff28740000807900000a8a0000188a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -689,7 +689,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -834,22 +834,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Quixel/Megascans/3D_Assets/Massive Canyon Sandstone Mesa_vbuieclga/Prefabs
+    - Assets/Models
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Quixel/Megascans/3D_Assets/Massive Canyon Sandstone Mesa_vbuieclga/Prefabs
+  - Assets/Models
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Basel\Lost-Oases-of-Egypt\InGame Final
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 961}
-    m_SelectedIDs: b6700000
-    m_LastClickedID: 28854
-    m_ExpandedIDs: 000000002c6c00002e6c0000306c0000326c0000346c0000366c0000986c00009e6c0000ae6c0000b06c000000ca9a3b
+    scrollPos: {x: 0, y: 177}
+    m_SelectedIDs: 626e0000
+    m_LastClickedID: 28258
+    m_ExpandedIDs: 000000005e6c0000606c0000626c0000646c0000666c0000686c00006a6c00006c6c00007a6e00007e6e0000806e0000826e0000846e0000866e0000886e00008a6e00008c6e00008e6e0000906e0000926e0000a66e0000bc6e0000ca6e0000cc6e0000fc6e0000fe6e0000ce8a0000de8a00005496000058960000749600007e96000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -865,7 +865,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -877,7 +877,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c6c00002e6c0000306c0000326c0000346c0000366c0000
+    m_ExpandedIDs: 000000005e6c0000606c0000626c0000646c0000666c0000686c00006a6c00006c6c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000048f10000d08e00002a9b0000fca50000b07900002c66fcff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
