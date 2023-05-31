@@ -1,0 +1,132 @@
+using UnityEngine;
+using UnityEngine.Tilemaps;
+using _Scripts.Player.Management;
+using _Scripts.Interaction.Management;
+using _Scripts.Utility.Entity;
+
+namespace _Scripts.Player.Structure
+{
+    public class BuildingHandler : MonoBehaviour
+    {
+        public static BuildingHandler instance;
+
+        public GridLayout gridLayout;
+        private Grid grid;
+        [SerializeField] private Tilemap mainTilemap;
+        [SerializeField] private TileBase whiteTile;
+
+        public AudioClip[] buildingSounds;
+        public AudioSource soundEffectSource;
+
+        public PlayerTrainer[] buildings;
+
+        private PlayerTrainer pT; // combine as part of refactor
+
+        private static RaycastHit hit;
+
+        void Awake()
+        {
+            instance = this;
+            grid = gridLayout.gameObject.GetComponent<Grid>();
+        }
+
+        public bool TryToPlace()
+        {
+            if (pT.isPrototype)
+            {
+                if (PlayerManager.instance.playerOre >= pT.trainerCost)
+                {
+                    if (CanBePlaced(pT.trainerPlacable))
+                    {
+                        pT.trainerPlacable.Place();
+                        Vector3Int start = gridLayout.WorldToCell(pT.trainerPlacable.GetStartPosition());
+                        TakeArea(start, pT.trainerPlacable.Size);
+                        PlayerManager.instance.playerOre -= pT.trainerCost;
+                        soundEffectSource.PlayOneShot(buildingSounds[2]);
+
+                        return true;
+                    }
+
+                    soundEffectSource.PlayOneShot(buildingSounds[1]);
+                    Debug.Log("Can't place structure here");
+                }
+                else
+                {
+                    soundEffectSource.PlayOneShot(buildingSounds[0]);
+                    Debug.Log("Can't afford structure");
+                }
+            }
+
+            return false;
+        }
+
+        public static Vector3 GetMouseWorldPosition()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                return hit.point;
+            }
+
+            return Vector3.zero;
+        }
+
+        public static Vector3 SnapToGrid(Vector3 position)
+        {
+            Vector3Int cellPosition = instance.gridLayout.WorldToCell(position);
+            return instance.gridLayout.CellToWorld(cellPosition) +
+                   new Vector3(0, 1 /*98*/, 0); // figure out modular / shifting height
+        }
+
+        private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)
+        {
+            TileBase[] tilebases = new TileBase[area.size.x * area.size.y * area.size.z];
+            int counter = 0;
+
+            foreach (var v in area.allPositionsWithin)
+            {
+                Vector3Int pos = new Vector3Int(v.x, v.y, 0);
+                tilebases[counter] = tilemap.GetTile(pos);
+                counter++;
+            }
+
+            return tilebases;
+        }
+
+        public void InitializeWithObject(int prefabIndex)
+        {
+            Vector3 position = SnapToGrid(Vector3.zero);
+            GameObject newObject = Instantiate(buildings[prefabIndex].trainerPrefab, position, Quaternion.identity);
+            newObject.transform.SetParent(PlayerManager.instance.playerTrainers);
+            pT = newObject.GetComponent<PlayerTrainer>();
+            EntityHandler.instance.SetPlayerTrainerStats(pT, newObject.gameObject.name);
+            InputHandler.instance.FirstSelectStructure(pT);
+            pT.isPrototype = true;
+        }
+
+        private bool CanBePlaced(PlacableObject objectToPlace)
+        {
+            BoundsInt area = new BoundsInt();
+            area.position = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
+            area.size = objectToPlace.Size;
+
+            TileBase[] tiles = GetTilesBlock(area, mainTilemap);
+
+            foreach (var tile in tiles)
+            {
+                if (tile == whiteTile)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private void TakeArea(Vector3Int start, Vector3Int size)
+        {
+            mainTilemap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
+        }
+    }
+}
