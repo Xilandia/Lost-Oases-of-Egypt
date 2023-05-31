@@ -1131,12 +1131,12 @@ MonoBehaviour:
   playerUnits: {fileID: 1593585765}
   playerTrainers: {fileID: 497144811}
   enemyUnits: {fileID: 31677847}
-  meleeSoldiers: []
+  meleeSoldiers:
+  - {fileID: 956167360}
   rangedSoldiers: []
   towers: []
   barracks: []
-  workers:
-  - {fileID: 0}
+  workers: []
   playerOre: 1000
   roundTimer:
   - 0
@@ -1276,6 +1276,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1099695258}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &956167360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099695258}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abbe3b5bb8884c4a9fc3f14691899a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,23 +1468,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
-      propertyPath: unitName
-      value: Dummy
-      objectReference: {fileID: 0}
-    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
       propertyPath: unitArmor
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: unitHealth
-      value: 10000000
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: unitCurrentHealth
-      value: 10000000
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
@@ -1482,7 +1489,7 @@ PrefabInstance:
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.038696
+      value: 37.3
       objectReference: {fileID: 0}
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
@@ -1492,7 +1499,7 @@ PrefabInstance:
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 63.406326
+      value: 40.6
       objectReference: {fileID: 0}
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
@@ -1533,11 +1540,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: playerUnit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9651d834d343548d0aa17bde5abeedd2, type: 3}

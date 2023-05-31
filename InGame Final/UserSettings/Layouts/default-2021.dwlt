@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1440
     height: 847
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 85
+  controlID: 36
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 86
+  controlID: 37
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 87
+  controlID: 23
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -407,21 +407,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7c60feff62d4feff64f6fffffef6ffff28fbffff54680000ee5401008055010090550100
+      m_ExpandedIDs: c4c8feffc8dfffff20c1000032c10000c4c10000d8520100e8520100fc520100485301006c53010074530100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Game Controller
-        m_OriginalName: Game Controller
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 87440
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -713,9 +713,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.8103044, y: 1.5120983, z: -78.60485}
+    m_Target: {x: -85.653496, y: -6.655548, z: 83.8447}
     speed: 2
-    m_Value: {x: -1.8103044, y: 1.5120983, z: -78.60485}
+    m_Value: {x: -85.653496, y: -6.655548, z: 83.8447}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -762,13 +762,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.24233516, y: -0.017161924, z: 0.0042923363, w: 0.97004753}
+    m_Target: {x: 0.40306762, y: 0.2269892, z: -0.10391606, w: 0.88047963}
     speed: 2
-    m_Value: {x: 0.24233134, y: -0.017161654, z: 0.004292269, w: 0.9700323}
+    m_Value: {x: 0.40306148, y: 0.22698574, z: -0.10391447, w: 0.8804662}
   m_Size:
-    m_Target: 11.780037
+    m_Target: 80.57696
     speed: 2
-    m_Value: 11.780037
+    m_Value: 80.57696
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -836,37 +836,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/Characters/egyptian-man2/textures
+    - Assets/_Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models/Characters/egyptian-man2/textures
+  - Assets/_Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/omersegal/Documents/GitHub/InGameFinalProject/InGame
     Final
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 203.99765}
-    m_SelectedIDs: 620e0100
-    m_LastClickedID: 69218
-    m_ExpandedIDs: 00000000ba690000bc690000be690000c0690000c2690000c4690000c6690000c8690000ca690000cc690000ce690000d0690000d469000000ca9a3b
+    scrollPos: {x: 0, y: 70.99463}
+    m_SelectedIDs: d2c30000
+    m_LastClickedID: 50130
+    m_ExpandedIDs: 0000000036c3000038c300003ac300003cc300003ec3000040c3000042c3000044c3000046c3000048c300004ac300004cc300004ec30000d2c3000066100100781001007e10010080100100d4100100f6100100001101001411010054110100b4110100c8110100201201003a1201007c140100941401009e1401000e1501002e1501007c15010086150100b8150100da150100e41501004a3c0100923c010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: textures
-      m_OriginalName: textures
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 69210
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -880,7 +880,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba690000bc690000be690000c0690000c2690000c4690000c6690000c8690000ca690000cc690000ce690000d0690000d2690000d4690000
+    m_ExpandedIDs: 0000000036c3000038c300003ac300003cc300003ec3000040c3000042c3000044c3000046c3000048c300004ac300004cc300004ec30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -907,24 +907,24 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Peon
+      m_OriginalName: Peon
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 69672
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
