@@ -318,7 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84bbcb680b3d34157bf0709da7852c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTransform: {fileID: 0}
   cameraTransform: {fileID: 963194228}
   normalSpeed: 0.04
   fastSpeed: 0.2
@@ -329,10 +328,6 @@ MonoBehaviour:
   newPosition: {x: 0, y: 0, z: 0}
   newRotation: {x: 0, y: 0, z: 0, w: 0}
   newZoom: {x: 0, y: 0, z: 0}
-  dragStartPosition: {x: 0, y: 0, z: 0}
-  dragCurrentPosition: {x: 0, y: 0, z: 0}
-  rotateStartPosition: {x: 0, y: 0, z: 0}
-  rotateCurrentPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &93231629
 Transform:
   m_ObjectHideFlags: 0
@@ -1137,13 +1132,11 @@ MonoBehaviour:
   playerTrainers: {fileID: 497144811}
   enemyUnits: {fileID: 31677847}
   meleeSoldiers:
-  - {fileID: 0}
-  rangedSoldiers:
-  - {fileID: 0}
+  - {fileID: 956167360}
+  rangedSoldiers: []
   towers: []
   barracks: []
-  workers:
-  - {fileID: 0}
+  workers: []
   playerOre: 1000
   roundTimer:
   - 0
@@ -1283,6 +1276,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1099695258}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &956167360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099695258}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abbe3b5bb8884c4a9fc3f14691899a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,13 +1450,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75e2a94a2d25476e88314af04d48cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
+  enemySpawnPoints:
   - {fileID: 1796834693}
   enemyUnits:
   - {fileID: -3730260759065913479, guid: f12a181bb9b794cee846a25db320bd41, type: 3}
-  periodLength: 600
-  progressionMultiplier: 1
-  enemyGoal: {fileID: 747399005}
+  periodLength: 5
+  progressionMultiplier: 0.01
+  enemyBehaviorTransitionTransform: {fileID: 747399005}
   enemyOnePrefab: {fileID: -3730260759065913479, guid: f12a181bb9b794cee846a25db320bd41,
     type: 3}
 --- !u!1001 &1099695258
@@ -1463,23 +1468,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
-      propertyPath: unitName
-      value: Dummy
-      objectReference: {fileID: 0}
-    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
       propertyPath: unitArmor
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: unitHealth
-      value: 10000000
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: unitCurrentHealth
-      value: 10000000
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
@@ -1489,7 +1489,7 @@ PrefabInstance:
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.038696
+      value: 37.3
       objectReference: {fileID: 0}
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
@@ -1499,7 +1499,7 @@ PrefabInstance:
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 63.406326
+      value: 40.6
       objectReference: {fileID: 0}
     - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
@@ -13943,7 +13943,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796834692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14143,7 +14143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridLayout: {fileID: 475607578}
-  MainTilemap: {fileID: 1437853102}
+  mainTilemap: {fileID: 1437853102}
   whiteTile: {fileID: 11400000, guid: f0392f6823cdf41e180723cc735f224e, type: 2}
   buildingSounds:
   - {fileID: 8300000, guid: 998238951db684a19ad57918609e51f1, type: 3}
