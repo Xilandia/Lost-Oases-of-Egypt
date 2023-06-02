@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using _Scripts.Interaction.Action;
 using _Scripts.Interaction.Interactable;
 using _Scripts.Player.Management;
 using _Scripts.Player.Structure;
@@ -15,14 +16,15 @@ namespace _Scripts.Interaction.Management
 		private RaycastHit hit;
 
 		public List<PlayerUnit> selectedUnits;
-		public PlayerTrainer selectedStructure;
+		public List<PlayerWorker> selectedWorkers;
+		public PlayerBarracks selectedBarracks;
+		public PlayerTower selectedTower;
 
 		public bool isDragging;
 		private Vector3 mousePosition;
 
 		private Camera cam;
 
-		// Start is called before the first frame update
 		void Awake()
 		{
 			instance = this;
@@ -69,13 +71,27 @@ namespace _Scripts.Interaction.Management
 						if (AddedUnit(hit.transform.gameObject.GetComponent<PlayerUnit>(),
 							    Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
 						{
-							DeselectStructure();
+							DeselectBarracks();
+							DeselectTower();
+							DeselectWorkers();
+							// do unit stuff
+						}
+						
+						if (AddedWorker(hit.transform.gameObject.GetComponent<PlayerWorker>(),
+							    Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+						{
+							DeselectBarracks();
+							DeselectTower();
+							DeselectUnits();
 							// do unit stuff
 						}
 
-						if (AddedTrainer(hit.transform.gameObject.GetComponent<PlayerTrainer>()))
+						if (AddedBarracks(hit.transform.gameObject.GetComponent<PlayerBarracks>()))
 						{
 							// do structure stuff
+							DeselectTower();
+							DeselectUnits();
+							DeselectWorkers();
 						}
 					}
 					else
@@ -90,22 +106,18 @@ namespace _Scripts.Interaction.Management
 			{
 				foreach (Transform child in PlayerManager.instance.playerUnits)
 				{
-					// for single category of units
 					// rework for object pools later - to get rid of GetComponent
 					if (IsWithinSelectionBounds(child))
 					{
-						AddedUnit(child.gameObject.GetComponent<PlayerUnit>(), true);
+						if (child.CompareTag("Unit"))
+						{
+							AddedUnit(child.gameObject.GetComponent<PlayerUnit>(), true);
+						}
+						else if (child.CompareTag("Worker"))
+						{
+							AddedWorker(child.gameObject.GetComponent<PlayerWorker>(), true);
+						}
 					}
-
-
-					// for when there are nested categories of units
-					/*foreach (Transform unit in child)
-					{
-						if (IsWithinSelectionBounds(unit))
-		                {
-		                    AddedUnit(unit, true);
-		                }
-		            }*/
 				}
 
 				isDragging = false;
@@ -114,7 +126,7 @@ namespace _Scripts.Interaction.Management
 
 		private void HandleUnitOrders()
 		{
-			if (Input.GetMouseButtonDown(1) && HaveSelectedUnits())
+			if (Input.GetMouseButtonDown(1) && (HaveSelectedUnits() || HaveSelectedWorkers()))
 			{
 				mousePosition = Input.mousePosition;
 
@@ -122,9 +134,19 @@ namespace _Scripts.Interaction.Management
 
 				if (Physics.Raycast(ray, out hit))
 				{
-					LayerMask layerHit = hit.transform.gameObject.layer;
+					foreach (PlayerUnit unit in selectedUnits)
+					{
+						unit.MoveUnit(hit.point);
+					}
 
-					switch (layerHit.value)
+					foreach (PlayerWorker worker in selectedWorkers)
+					{
+						worker.MoveWorker(hit.point);
+					}
+					
+					//LayerMask layerHit = hit.transform.gameObject.layer;
+
+					/*switch (layerHit.value)
 					{
 						case 8:
 							// do something? (player unit layer)
@@ -139,36 +161,58 @@ namespace _Scripts.Interaction.Management
 							}
 
 							break;
-					}
+					}*/
 				}
 			}
 		}
 
 		private void HandleStructurePrototype()
 		{
-			if (selectedStructure)
+			if (selectedBarracks)
 			{
-				if (selectedStructure.isPrototype)
+				if (selectedBarracks.isPrototype)
 				{
-					selectedStructure.UpdatePrototypePosition();
+					selectedBarracks.UpdatePrototypePosition();
 
 					if (Input.GetKeyDown(KeyCode.Space))
 					{
 						if (BuildingHandler.instance.TryToPlace())
 						{
-							selectedStructure.isPrototype = false;
-							selectedStructure.StartConstruction();
+							selectedBarracks.isPrototype = false;
+							selectedBarracks.StartConstruction();
 						}
 					}
 
 					if (Input.GetKeyDown(KeyCode.T))
 					{
-						selectedStructure.trainerPlacable.Rotate();
+						selectedBarracks.barracksPlacable.Rotate();
 					}
 
 					if (Input.GetKeyDown(KeyCode.Escape))
 					{
-						DeselectStructure();
+						DeselectBarracks();
+					}
+				}
+			}
+			
+			if (selectedTower)
+			{
+				if (selectedTower.isPrototype)
+				{
+					selectedTower.UpdatePrototypePosition();
+
+					if (Input.GetKeyDown(KeyCode.Space))
+					{
+						if (BuildingHandler.instance.TryToPlace())
+						{
+							selectedTower.isPrototype = false;
+							selectedTower.StartConstruction();
+						}
+					}
+
+					if (Input.GetKeyDown(KeyCode.T))
+					{
+						selectedTower.towerPlacable.Rotate();
 					}
 				}
 			}
@@ -176,7 +220,70 @@ namespace _Scripts.Interaction.Management
 
 		private void HandleHotkeys()
 		{
-			if (Input.GetKeyDown(KeyCode.Z))
+			if (Input.GetKeyDown(KeyCode.Alpha1))
+			{
+				ActionFrame.instance.ActivateButton(0);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha2))
+			{
+				ActionFrame.instance.ActivateButton(1);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha3))
+			{
+				ActionFrame.instance.ActivateButton(2);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha4))
+			{
+				ActionFrame.instance.ActivateButton(3);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha5))
+			{
+				ActionFrame.instance.ActivateButton(4);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha6))
+			{
+				ActionFrame.instance.ActivateButton(5);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha7))
+			{
+				ActionFrame.instance.ActivateButton(6);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha8))
+			{
+				ActionFrame.instance.ActivateButton(7);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha9))
+			{
+				ActionFrame.instance.ActivateButton(8);
+			}
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				DeselectBarracks();
+				DeselectTower();
+				DeselectUnits();
+				DeselectWorkers();
+			}
+			/*if (selectedStructure)
+			{
+				if (Input.GetKeyDown(KeyCode.Alpha1))
+				{
+					
+				}
+				if (Input.GetKeyDown(KeyCode.Alpha2))
+				{
+					
+				}
+				if (Input.GetKeyDown(KeyCode.Alpha3))
+				{
+					char c = (char)KeyCode.Alpha1;
+				}
+			}
+			else if (HaveSelectedUnits()) // might need to change this to workers only somehow
+			{
+				
+			}*/
+			// Previous building placement code
+			/*if (Input.GetKeyDown(KeyCode.Z))
 			{
 				BuildingHandler.instance.InitializeWithObject(0);
 			}
@@ -189,18 +296,25 @@ namespace _Scripts.Interaction.Management
 			if (Input.GetKeyDown(KeyCode.C))
 			{
 				BuildingHandler.instance.InitializeWithObject(2);
-			}
+			}*/
 		}
 
-		public void FirstSelectStructure(PlayerTrainer pU)
+		public void FirstSelectBarracks(PlayerBarracks pB)
 		{
-			AddedTrainer(pU);
+			DeselectTower();
+			DeselectUnits();
+			AddedBarracks(pB);
+		}
+		
+		public void FirstSelectTower(PlayerTower pT)
+		{
+			DeselectBarracks();
+			DeselectUnits();
+			AddedTower(pT);
 		}
 
 		private void DeselectUnits()
 		{
-			DeselectStructure();
-
 			foreach (PlayerUnit selectedUnit in selectedUnits)
 			{
 				selectedUnit.interactable.OnInteractExit();
@@ -208,18 +322,44 @@ namespace _Scripts.Interaction.Management
 
 			selectedUnits.Clear();
 		}
-
-		private void DeselectStructure()
+		
+		private void DeselectWorkers()
 		{
-			if (selectedStructure)
+			foreach (PlayerWorker worker in selectedWorkers)
 			{
-				selectedStructure.interactable.OnInteractExit();
-				if (selectedStructure.isPrototype)
+				worker.interactable.OnInteractExit();
+			}
+
+			selectedWorkers.Clear();
+		}
+
+		private void DeselectBarracks()
+		{
+			if (selectedBarracks)
+			{
+				selectedBarracks.interactable.OnInteractExit();
+				
+				if (selectedBarracks.isPrototype)
 				{
-					Destroy(selectedStructure.gameObject);
+					Destroy(selectedBarracks.gameObject);
 				}
 
-				selectedStructure = null;
+				selectedBarracks = null;
+			}
+		}
+		
+		private void DeselectTower()
+		{
+			if (selectedTower)
+			{
+				selectedTower.interactable.OnInteractExit();
+				
+				if (selectedTower.isPrototype)
+				{
+					Destroy(selectedTower.gameObject);
+				}
+
+				selectedTower = null;
 			}
 		}
 
@@ -234,9 +374,14 @@ namespace _Scripts.Interaction.Management
 			return viewportBounds.Contains(cam.WorldToViewportPoint(tf.position));
 		}
 
-		private bool HaveSelectedUnits()
+		public bool HaveSelectedUnits()
 		{
 			return selectedUnits.Count > 0;
+		}
+		
+		public bool HaveSelectedWorkers()
+		{
+			return selectedWorkers.Count > 0;
 		}
 
 		private InteractableUnit AddedUnit(PlayerUnit pU, bool canMultiSelect = false)
@@ -262,23 +407,68 @@ namespace _Scripts.Interaction.Management
 
 			return null;
 		}
+		
+		private InteractableWorker AddedWorker(PlayerWorker pW, bool canMultiSelect = false)
+		{
+			if (pW == null)
+			{
+				return null;
+			}
 
-		private InteractableTrainer AddedTrainer(PlayerTrainer pT)
+			InteractableWorker iUnit = pW.interactable;
+			if (iUnit)
+			{
+				if (!canMultiSelect)
+				{
+					DeselectUnits();
+				}
+
+				selectedWorkers.Add(pW);
+				iUnit.OnInteractEnter();
+
+				return iUnit;
+			}
+
+			return null;
+		}
+
+		private InteractableBarracks AddedBarracks(PlayerBarracks pB)
+		{
+			if (pB == null)
+			{
+				return null;
+			}
+
+			InteractableBarracks iBarracks = pB.interactable;
+			if (iBarracks)
+			{
+				DeselectUnits();
+
+				selectedBarracks = pB;
+				iBarracks.OnInteractEnter();
+
+				return iBarracks;
+			}
+
+			return null;
+		}
+		
+		private InteractableTower AddedTower(PlayerTower pT)
 		{
 			if (pT == null)
 			{
 				return null;
 			}
 
-			InteractableTrainer iTrainer = pT.interactable;
-			if (iTrainer)
+			InteractableTower iTower = pT.interactable;
+			if (iTower)
 			{
 				DeselectUnits();
 
-				selectedStructure = pT;
-				iTrainer.OnInteractEnter();
+				selectedTower = pT;
+				iTower.OnInteractEnter();
 
-				return iTrainer;
+				return iTower;
 			}
 
 			return null;

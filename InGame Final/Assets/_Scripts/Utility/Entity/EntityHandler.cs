@@ -18,7 +18,7 @@ namespace _Scripts.Utility.Entity
 
         [SerializeField] private Entity enemy; // enemy units (to expand)
 
-        public LayerMask playerInteractableLayer, enemyUnitLayer;
+        public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer;
 
         void Awake()
         {
@@ -26,6 +26,7 @@ namespace _Scripts.Utility.Entity
 
             playerInteractableLayer = LayerMask.GetMask("Interactables");
             enemyUnitLayer = LayerMask.GetMask("Enemies");
+            resourceLayer = LayerMask.GetMask("Resource Nodes");
         }
 
         private Entity GetEntityStats(string _entityName)
@@ -79,18 +80,37 @@ namespace _Scripts.Utility.Entity
             pU.unitTrainTime = entityStats.entityCreationTime;
         }
 
-        public void SetPlayerTrainerStats(PlayerTrainer pT, string trainerType)
+        public void SetPlayerBarracksStats(PlayerBarracks pB, string trainerType)
         {
             Entity entityStats = GetEntityStats(trainerType);
 
-            pT.trainerName = entityStats.entityName;
-            pT.trainerCost = entityStats.entityCost;
-            pT.trainerHealth = entityStats.entityHealth;
-            pT.trainerCurrentHealth = entityStats.entityHealth;
-            pT.trainerArmor = entityStats.entityArmor;
-            pT.trainerBuildTime = entityStats.entityCreationTime;
+            pB.barracksName = entityStats.entityName;
+            pB.barracksCost = entityStats.entityCost;
+            pB.barracksHealth = entityStats.entityHealth;
+            pB.barracksCurrentHealth = entityStats.entityHealth;
+            pB.barracksArmor = entityStats.entityArmor;
+            pB.barracksBuildTime = entityStats.entityCreationTime;
 
-            pT.buildableUnits = entityStats.buildableUnits;
+            pB.trainableUnits = entityStats.buildableUnits;
+            pB.isPrototype = entityStats.isPrototype;
+            pB.isPlaced = entityStats.isPlaced;
+            pB.isComplete = entityStats.isComplete;
+        }
+        
+        public void SetPlayerTowerStats(PlayerTower pT, string trainerType)
+        {
+            Entity entityStats = GetEntityStats(trainerType);
+
+            pT.towerName = entityStats.entityName;
+            pT.towerCost = entityStats.entityCost;
+            pT.towerHealth = entityStats.entityHealth;
+            pT.towerCurrentHealth = entityStats.entityHealth;
+            pT.towerArmor = entityStats.entityArmor;
+            pT.towerAttack = entityStats.entityAttack;
+            pT.towerTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
+            pT.towerAttackRange = entityStats.entityAttackRange;
+            pT.towerBuildTime = entityStats.entityCreationTime;
+
             pT.isPrototype = entityStats.isPrototype;
             pT.isPlaced = entityStats.isPlaced;
             pT.isComplete = entityStats.isComplete;

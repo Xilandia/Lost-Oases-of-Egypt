@@ -9,6 +9,7 @@ namespace _Scripts.Player.Structure
     public class BuildingHandler : MonoBehaviour
     {
         public static BuildingHandler instance;
+        private static Camera cam;
 
         public GridLayout gridLayout;
         private Grid grid;
@@ -18,51 +19,84 @@ namespace _Scripts.Player.Structure
         public AudioClip[] buildingSounds;
         public AudioSource soundEffectSource;
 
-        public PlayerTrainer[] buildings;
-
-        private PlayerTrainer pT; // combine as part of refactor
+        private PlayerBarracks pB;
+        private PlayerTower pT;
+        private bool placingTower;
 
         private static RaycastHit hit;
 
         void Awake()
         {
             instance = this;
+            cam = Camera.main;
             grid = gridLayout.gameObject.GetComponent<Grid>();
         }
 
         public bool TryToPlace()
         {
-            if (pT.isPrototype)
+            if (placingTower)
             {
-                if (PlayerManager.instance.playerOre >= pT.trainerCost)
+                if (pT.isPrototype)
                 {
-                    if (CanBePlaced(pT.trainerPlacable))
+                    if (PlayerManager.instance.playerOre >= pT.towerCost)
                     {
-                        pT.trainerPlacable.Place();
-                        Vector3Int start = gridLayout.WorldToCell(pT.trainerPlacable.GetStartPosition());
-                        TakeArea(start, pT.trainerPlacable.Size);
-                        PlayerManager.instance.playerOre -= pT.trainerCost;
-                        soundEffectSource.PlayOneShot(buildingSounds[2]);
+                        if (CanBePlaced(pT.towerPlacable))
+                        {
+                            pT.towerPlacable.Place();
+                            Vector3Int start = gridLayout.WorldToCell(pT.towerPlacable.GetStartPosition());
+                            TakeArea(start, pT.towerPlacable.Size);
+                            PlayerManager.instance.playerOre -= pT.towerCost;
+                            soundEffectSource.PlayOneShot(buildingSounds[2]);
 
-                        return true;
+                            return true;
+                        }
+
+                        soundEffectSource.PlayOneShot(buildingSounds[1]);
+                        Debug.Log("Can't place structure here");
                     }
+                    else
+                    {
+                        soundEffectSource.PlayOneShot(buildingSounds[0]);
+                        Debug.Log("Can't afford structure");
+                    }
+                }
 
-                    soundEffectSource.PlayOneShot(buildingSounds[1]);
-                    Debug.Log("Can't place structure here");
-                }
-                else
-                {
-                    soundEffectSource.PlayOneShot(buildingSounds[0]);
-                    Debug.Log("Can't afford structure");
-                }
+                return false;
             }
+            else
+            {
+                if (pB.isPrototype)
+                {
+                    if (PlayerManager.instance.playerOre >= pB.barracksCost)
+                    {
+                        if (CanBePlaced(pB.barracksPlacable))
+                        {
+                            pB.barracksPlacable.Place();
+                            Vector3Int start = gridLayout.WorldToCell(pB.barracksPlacable.GetStartPosition());
+                            TakeArea(start, pB.barracksPlacable.Size);
+                            PlayerManager.instance.playerOre -= pB.barracksCost;
+                            soundEffectSource.PlayOneShot(buildingSounds[2]);
 
-            return false;
+                            return true;
+                        }
+
+                        soundEffectSource.PlayOneShot(buildingSounds[1]);
+                        Debug.Log("Can't place structure here");
+                    }
+                    else
+                    {
+                        soundEffectSource.PlayOneShot(buildingSounds[0]);
+                        Debug.Log("Can't afford structure");
+                    }
+                }
+
+                return false;
+            }
         }
 
         public static Vector3 GetMouseWorldPosition()
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -94,15 +128,26 @@ namespace _Scripts.Player.Structure
             return tilebases;
         }
 
-        public void InitializeWithObject(int prefabIndex)
+        public void InitializeWithObject(GameObject prefab, bool isTower)
         {
             Vector3 position = SnapToGrid(Vector3.zero);
-            GameObject newObject = Instantiate(buildings[prefabIndex].trainerPrefab, position, Quaternion.identity);
-            newObject.transform.SetParent(PlayerManager.instance.playerTrainers);
-            pT = newObject.GetComponent<PlayerTrainer>();
-            EntityHandler.instance.SetPlayerTrainerStats(pT, newObject.gameObject.name);
-            InputHandler.instance.FirstSelectStructure(pT);
-            pT.isPrototype = true;
+            GameObject newObject = Instantiate(prefab, position, Quaternion.identity);
+            if (isTower)
+            {
+                newObject.transform.SetParent(PlayerManager.instance.playerTowers);
+                pT = newObject.GetComponent<PlayerTower>();
+                EntityHandler.instance.SetPlayerTowerStats(pT, newObject.gameObject.name);
+                InputHandler.instance.FirstSelectTower(pT);
+                pT.isPrototype = true;
+            }
+            else
+            {
+                newObject.transform.SetParent(PlayerManager.instance.playerBarracks);
+                pB = newObject.GetComponent<PlayerBarracks>();
+                EntityHandler.instance.SetPlayerBarracksStats(pB, newObject.gameObject.name);
+                InputHandler.instance.FirstSelectBarracks(pB);
+                pB.isPrototype = true;
+            }
         }
 
         private bool CanBePlaced(PlacableObject objectToPlace)

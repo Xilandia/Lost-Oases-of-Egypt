@@ -1,32 +1,34 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using _Scripts.Utility.Interface;
 using _Scripts.Utility.Entity;
 using _Scripts.Interaction.Interactable;
+using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
 using _Scripts.Player.Unit;
 
 namespace _Scripts.Player.Structure
 {
-    public class PlayerTrainer : MonoBehaviour, IDamageable
+    public class PlayerBarracks : MonoBehaviour, IDamageable
     {
 
-        public string trainerName;
-        public float trainerCost, trainerHealth, trainerArmor, trainerBuildTime;
-        public float trainerCurrentHealth;
+        public string barracksName;
+        public float barracksCost, barracksHealth, barracksArmor, barracksBuildTime;
+        public float barracksCurrentHealth;
 
-        public GameObject trainerPrefab;
-        public Transform trainerTransform;
-        public PlacableObject trainerPlacable;
+        public GameObject barracksPrefab;
+        public Transform barracksTransform;
+        public PlacableObject barracksPlacable;
 
         public bool isPrototype, isPlaced, isComplete;
-        public Entity[] buildableUnits;
-        public InteractableTrainer interactable;
+        public Entity[] trainableUnits;
+        public string[] trainableUnitNames;
+        public InteractableBarracks interactable;
 
         private bool constructionStarted = false;
         private float currProgress, initYScale;
+        public List<PlayerWorker> workersInvolvedInConstruction = new List<PlayerWorker>();
 
         [SerializeField] private Transform spawnPoint;
         private Queue<Entity> unitQueue = new Queue<Entity>();
@@ -36,6 +38,19 @@ namespace _Scripts.Player.Structure
 
         private Vector3 originalScale;
 
+        void Update()
+        {
+            if (isTraining)
+            {
+                elapsedTrainingTime += Time.deltaTime;
+                if (elapsedTrainingTime >= currentUnitTrainTime)
+                {
+                    elapsedTrainingTime = 0;
+                    FinishTrainingUnit();
+                }
+            }
+        }
+        
         public void UpdatePrototypePosition()
         {
             if (isPrototype)
@@ -52,28 +67,30 @@ namespace _Scripts.Player.Structure
             originalScale = transform.localScale;
             transform.localScale = new Vector3(originalScale.x, originalScale.y / 100, originalScale.z);
             interactable.OnInteractExit();
+
+            foreach (PlayerWorker worker in InputHandler.instance.selectedWorkers)
+            {
+                workersInvolvedInConstruction.Add(worker);
+                worker.isAttemptingToBuild = true;
+                worker.isAttemptingToGather = false;
+                worker.isBuildingTower = false;
+                worker.structureTarget = gameObject.transform;
+                worker.constructionBarracks = this;
+                worker.interactable.OnInteractExit();
+            }
         }
 
-        void Update()
+        public void TickConstruction()
         {
             if (constructionStarted)
             {
                 currProgress += Time.deltaTime;
-                transform.localScale = new Vector3(originalScale.x, initYScale * (currProgress / trainerBuildTime),
+                transform.localScale = new Vector3(originalScale.x, initYScale * (currProgress / barracksBuildTime),
                     originalScale.z);
-                if (currProgress >= trainerBuildTime)
+                
+                if (currProgress >= barracksBuildTime)
                 {
                     CompleteConstruction();
-                }
-            }
-
-            if (isTraining)
-            {
-                elapsedTrainingTime += Time.deltaTime;
-                if (elapsedTrainingTime >= currentUnitTrainTime)
-                {
-                    elapsedTrainingTime = 0;
-                    FinishTrainingUnit();
                 }
             }
         }
@@ -83,12 +100,25 @@ namespace _Scripts.Player.Structure
             isPlaced = false;
             isComplete = true;
             transform.localScale = originalScale;
+            
+            foreach (PlayerWorker worker in workersInvolvedInConstruction)
+            {
+                worker.isAttemptingToBuild = false;
+                worker.isAttemptingToGather = false;
+                worker.isBuildingTower = false;
+                worker.structureTarget = null;
+                worker.constructionBarracks = null;
+
+                worker.CheckForResourceTargets();
+            }
+            
+            workersInvolvedInConstruction.Clear();
         }
 
         public void AddToQueue(string unitName)
         {
             Entity playerUnit = null;
-            foreach (Entity entity in buildableUnits)
+            foreach (Entity entity in trainableUnits)
             {
                 if (entity.entityName == unitName)
                 {
@@ -135,10 +165,10 @@ namespace _Scripts.Player.Structure
 
         public void TakeDamage(float damage)
         {
-            float totalDamage = damage - trainerArmor;
-            trainerCurrentHealth -= Math.Max(totalDamage, 1);
+            float totalDamage = damage - barracksArmor;
+            barracksCurrentHealth -= Math.Max(totalDamage, 1);
 
-            if (trainerCurrentHealth <= 0)
+            if (barracksCurrentHealth <= 0)
             {
                 // make sound, do something?
                 Destroy(gameObject);

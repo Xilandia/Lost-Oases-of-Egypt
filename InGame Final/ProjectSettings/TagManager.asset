@@ -5,9 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Unit
-  - Trainer
   - Tower
-  - Enemy Unit
+  - Barracks
+  - Worker
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - 
   - Interactables
-  - 
+  - Resource Nodes
   - 
   - 
   - 
@@ -33,8 +34,8 @@ TagManager:
   - 
   - 
   - 
-  - Player Targeting
-  - Enemy Targeting
+  - 
+  - 
   - 
   - 
   - 

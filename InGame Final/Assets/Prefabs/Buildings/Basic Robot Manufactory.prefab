@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2989114001335581047}
   m_Layer: 8
   m_Name: Basic Robot Manufactory
-  m_TagString: Trainer
+  m_TagString: Barracks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,20 +63,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a848d2ff0a4d74a01ad5eb3118caf339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trainerName: 
-  trainerCost: 0
-  trainerHealth: 0
-  trainerArmor: 0
-  trainerBuildTime: 0
-  trainerCurrentHealth: 0
-  trainerPrefab: {fileID: 3887137071503025175}
-  trainerTransform: {fileID: 9164537273305081322}
-  trainerPlacable: {fileID: 2989114001335581047}
-  isBuildable: 0
+  barracksName: 
+  barracksCost: 0
+  barracksHealth: 0
+  barracksArmor: 0
+  barracksBuildTime: 0
+  barracksCurrentHealth: 0
+  barracksPrefab: {fileID: 0}
+  barracksTransform: {fileID: 0}
+  barracksPlacable: {fileID: 0}
   isPrototype: 0
   isPlaced: 0
   isComplete: 0
-  buildableUnits: []
+  trainableUnits: []
   interactable: {fileID: 8394402020145376509}
   spawnPoint: {fileID: 1900376384161939627}
 --- !u!114 &8394402020145376509

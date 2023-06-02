@@ -60,7 +60,7 @@ namespace _Scripts.Enemy.Unit
             if (hasTarget)
             {
                 MoveToAggroTarget();
-                ConsiderAttack();
+                ConsiderAttacking();
             }
         }
 
@@ -95,7 +95,7 @@ namespace _Scripts.Enemy.Unit
             }
         }
 
-        private void ConsiderAttack()
+        private void ConsiderAttacking()
         {
             if (distanceToTarget <= enemyAttackRange + 1)
             {
@@ -137,7 +137,7 @@ namespace _Scripts.Enemy.Unit
                 }
                 else if (col.gameObject.tag.Equals("Trainer"))
                 {
-                    targetDamageable = targetTransform.gameObject.GetComponent<PlayerTrainer>();
+                    targetDamageable = targetTransform.gameObject.GetComponent<PlayerBarracks>();
                 }
 
                 m_NavAgent.stoppingDistance = enemyAttackRange;
@@ -233,7 +233,7 @@ namespace _Scripts.Enemy.Unit
         {
             bool inRange = false;
 
-            foreach (PlayerTrainer pT in PlayerManager.instance.towers)
+            foreach (PlayerTower pT in PlayerManager.instance.towers)
             {
                 if (distanceToClosestTarget > Vector3.Distance(transform.position, pT.transform.position))
                 {
@@ -252,13 +252,13 @@ namespace _Scripts.Enemy.Unit
         {
             bool inRange = false;
 
-            foreach (PlayerTrainer pT in PlayerManager.instance.barracks)
+            foreach (PlayerBarracks pB in PlayerManager.instance.barracks)
             {
-                if (distanceToClosestTarget > Vector3.Distance(transform.position, pT.transform.position))
+                if (distanceToClosestTarget > Vector3.Distance(transform.position, pB.transform.position))
                 {
-                    distanceToClosestTarget = Vector3.Distance(transform.position, pT.transform.position);
-                    targetTransform = pT.transform;
-                    targetDamageable = pT;
+                    distanceToClosestTarget = Vector3.Distance(transform.position, pB.transform.position);
+                    targetTransform = pB.transform;
+                    targetDamageable = pB;
                     hasTarget = true;
                     inRange = true;
                 }
@@ -271,13 +271,13 @@ namespace _Scripts.Enemy.Unit
         {
             bool inRange = false;
 
-            foreach (PlayerUnit pU in PlayerManager.instance.workers)
+            foreach (PlayerWorker pW in PlayerManager.instance.workers)
             {
-                if (distanceToClosestTarget > Vector3.Distance(transform.position, pU.transform.position))
+                if (distanceToClosestTarget > Vector3.Distance(transform.position, pW.transform.position))
                 {
-                    distanceToClosestTarget = Vector3.Distance(transform.position, pU.transform.position);
-                    targetTransform = pU.transform;
-                    targetDamageable = pU;
+                    distanceToClosestTarget = Vector3.Distance(transform.position, pW.transform.position);
+                    targetTransform = pW.transform;
+                    targetDamageable = pW;
                     hasTarget = true;
                     inRange = true;
                 }
@@ -295,8 +295,6 @@ namespace _Scripts.Enemy.Unit
 
         private void HandleHealth()
         {
-            //enemyCurrentHealth -= Time.deltaTime;
-
             if (enemyCurrentHealth <= 0)
             {
                 UnitDeath();
@@ -305,8 +303,7 @@ namespace _Scripts.Enemy.Unit
 
         private void UnitDeath()
         {
-            //disable?.Invoke(this);
-            Destroy(gameObject);
+            disable?.Invoke(this);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -318,13 +315,22 @@ namespace _Scripts.Enemy.Unit
                     Debug.Log("No target now, giving target");
                     hasTarget = true;
                     targetTransform = other.transform;
+                    
                     if (other.gameObject.tag.Equals("Unit"))
                     {
                         targetDamageable = targetTransform.gameObject.GetComponent<PlayerUnit>();
                     }
-                    else if (other.gameObject.tag.Equals("Trainer"))
+                    else if (other.gameObject.tag.Equals("Barracks"))
                     {
-                        targetDamageable = targetTransform.gameObject.GetComponent<PlayerTrainer>();
+                        targetDamageable = targetTransform.gameObject.GetComponent<PlayerBarracks>();
+                    }
+                    else if (other.gameObject.tag.Equals("Tower"))
+                    {
+                        targetDamageable = targetTransform.gameObject.GetComponent<PlayerTower>();
+                    }
+                    else if (other.gameObject.tag.Equals("Worker"))
+                    {
+                        targetDamageable = targetTransform.gameObject.GetComponent<PlayerWorker>();
                     }
 
                     m_NavAgent.stoppingDistance = enemyAttackRange;

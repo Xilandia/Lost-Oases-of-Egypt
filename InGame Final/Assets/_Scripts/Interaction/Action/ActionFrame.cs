@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using _Scripts.Utility.Entity;
 
 namespace _Scripts.Interaction.Action
 {
@@ -17,33 +16,40 @@ namespace _Scripts.Interaction.Action
         void Awake()
         {
             instance = this;
+
+            for (int i = 0; i < 9; i++)
+            {
+                Button button = Instantiate(actionButton, layoutGroup);
+                buttons.Add(button);
+                button.gameObject.SetActive(false);
+            }
         }
 
-        public void SetActionButtons(Entity trainer)
+        public void SetActionButtons(string[] listOfActions)
         {
-            foreach (Entity pU in trainer.buildableUnits)
+            for (int i = 0; i < listOfActions.Length; i++)
             {
-                Button button = Instantiate(actionButton, layoutGroup);
-                button.name = pU.entityName;
-                buttons.Add(button);
+                buttons[i].gameObject.SetActive(true);
+                buttons[i].name = listOfActions[i];
             }
-            /*foreach (PlayerTrainer pT in actions.playerTrainers)
+        }
+
+        public void ActivateButton(int i)
+        {
+            Button button = buttons[i];
+            
+            if (button.gameObject.activeSelf)
             {
-                Button button = Instantiate(actionButton, layoutGroup);
-                button.name = pT.trainerName;
-                buttons.Add(button);
-            }*/
+                button.onClick.Invoke();
+            }
         }
 
         public void ClearAction()
         {
-            // object pool buttons?
             foreach (Button button in buttons)
             {
-                Destroy(button.gameObject);
+                button.gameObject.SetActive(false);
             }
-
-            buttons.Clear();
         }
     }
 }

@@ -11,16 +11,19 @@ namespace _Scripts.Player.Management
         public static PlayerManager instance;
 
         public Transform playerUnits;
-        public Transform playerTrainers;
+        public Transform playerBarracks;
+        public Transform playerTowers;
         public Transform enemyUnits;
 
         public List<PlayerUnit> meleeSoldiers = new List<PlayerUnit>();
         public List<PlayerUnit> rangedSoldiers = new List<PlayerUnit>();
-        public List<PlayerTrainer> towers = new List<PlayerTrainer>();
-        public List<PlayerTrainer> barracks = new List<PlayerTrainer>();
-        public List<PlayerUnit> workers = new List<PlayerUnit>();
+        public List<PlayerTower> towers = new List<PlayerTower>();
+        public List<PlayerBarracks> barracks = new List<PlayerBarracks>();
+        public List<PlayerWorker> workers = new List<PlayerWorker>();
 
         public float playerOre;
+        public float playerWood;
+        public float playerGold;
         private float elapsedTime;
         public float[] roundTimer = new float[3];
 

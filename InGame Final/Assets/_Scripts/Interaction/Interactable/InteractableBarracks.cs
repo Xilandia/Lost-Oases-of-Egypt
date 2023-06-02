@@ -4,33 +4,36 @@ using _Scripts.Player.Structure;
 
 namespace _Scripts.Interaction.Interactable
 {
-    public class InteractableTrainer : Interactable
+    public class InteractableBarracks : Interactable
     {
-        public Entity playerTrainer; // squish into pT
-        public PlayerTrainer pT; // combine as part of refactor
+        public PlayerBarracks pB; // combine as part of refactor
 
         public override void OnInteractEnter()
         {
             base.OnInteractEnter();
-            if (pT.isPrototype)
+            if (pB.isPrototype)
             {
                 highlight.SetActive(false);
             }
 
-            if (pT.isPlaced)
+            if (pB.isPlaced)
             {
                 OnInteractExit();
             }
 
-            if (pT.isComplete)
+            if (pB.isComplete)
             {
-                ActionFrame.instance.SetActionButtons(playerTrainer);
+                ActionFrame.instance.SetActionButtons(pB.trainableUnitNames);
             }
         }
 
         public override void OnInteractExit()
         {
-            ActionFrame.instance.ClearAction();
+            if (pB.isComplete)
+            {
+                ActionFrame.instance.ClearAction();
+            }
+
             base.OnInteractExit();
         }
     }

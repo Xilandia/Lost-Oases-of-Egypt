@@ -44,7 +44,6 @@ namespace _Scripts.Player.Unit
         public Transform aggroTarget;
         public IDamageable aggroDamageable;
         public bool hasAggro = false;
-        public bool isMoving = false;
         private float distanceToTarget;
 
         void Start()
@@ -60,14 +59,13 @@ namespace _Scripts.Player.Unit
             if (hasAggro)
             {
                 MoveToAggroTarget();
-                ConsiderAttack();
+                ConsiderAttacking();
             }
         }
 
         public void MoveUnit(Vector3 _destination)
         {
             navAgent.SetDestination(_destination);
-            isMoving = true;
             moveTarget = _destination;
         }
 
@@ -118,7 +116,7 @@ namespace _Scripts.Player.Unit
             }
         }
 
-        private void ConsiderAttack()
+        private void ConsiderAttacking()
         {
             if (distanceToTarget <= unitAttackRange + 1)
             {
@@ -127,12 +125,11 @@ namespace _Scripts.Player.Unit
                     unitAttackCooldown = unitTimeBetweenAttacks;
                     if (aggroDamageable != null)
                     {
-                        Debug.Log("Player Unit is Attacking!", this);
                         aggroDamageable.TakeDamage(unitAttack);
                     }
                     else
                     {
-                        Debug.Log("Has target, but no damagable component");
+                        Debug.Log("Has target, but no damageable component");
                     }
                 }
                 else
@@ -171,7 +168,6 @@ namespace _Scripts.Player.Unit
 
             PlayerManager.instance.meleeSoldiers.Remove(this);
             PlayerManager.instance.rangedSoldiers.Remove(this);
-            PlayerManager.instance.workers.Remove(this);
 
             Destroy(gameObject);
         }
@@ -180,10 +176,8 @@ namespace _Scripts.Player.Unit
         {
             if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.enemyUnitLayer))
             {
-                //Debug.Log("Player Collider entered");
                 if (!hasAggro)
                 {
-                    Debug.Log("No target now, giving target");
                     hasAggro = true;
                     aggroTarget = other.transform;
                     aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();

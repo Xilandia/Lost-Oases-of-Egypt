@@ -7,7 +7,7 @@ namespace _Scripts.Interaction.Action
     {
         public void OnClick()
         {
-            InputHandler.instance.selectedStructure.AddToQueue(name);
+            ActionManager.instance.TriggerAction(name);
         }
     }
 }
