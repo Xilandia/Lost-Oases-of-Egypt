@@ -97,7 +97,10 @@ namespace _Scripts.Interaction.Management
 					else
 					{
 						isDragging = true;
+						DeselectBarracks();
+						DeselectTower();
 						DeselectUnits();
+						DeselectWorkers();
 					}
 				}
 			}
@@ -143,25 +146,6 @@ namespace _Scripts.Interaction.Management
 					{
 						worker.MoveWorker(hit.point);
 					}
-					
-					//LayerMask layerHit = hit.transform.gameObject.layer;
-
-					/*switch (layerHit.value)
-					{
-						case 8:
-							// do something? (player unit layer)
-							break;
-						case 16:
-							// do something? (enemy unit layer)
-							break;
-						default:
-							foreach (PlayerUnit unit in selectedUnits)
-							{
-								unit.MoveUnit(hit.point);
-							}
-
-							break;
-					}*/
 				}
 			}
 		}
@@ -263,40 +247,6 @@ namespace _Scripts.Interaction.Management
 				DeselectUnits();
 				DeselectWorkers();
 			}
-			/*if (selectedStructure)
-			{
-				if (Input.GetKeyDown(KeyCode.Alpha1))
-				{
-					
-				}
-				if (Input.GetKeyDown(KeyCode.Alpha2))
-				{
-					
-				}
-				if (Input.GetKeyDown(KeyCode.Alpha3))
-				{
-					char c = (char)KeyCode.Alpha1;
-				}
-			}
-			else if (HaveSelectedUnits()) // might need to change this to workers only somehow
-			{
-				
-			}*/
-			// Previous building placement code
-			/*if (Input.GetKeyDown(KeyCode.Z))
-			{
-				BuildingHandler.instance.InitializeWithObject(0);
-			}
-
-			if (Input.GetKeyDown(KeyCode.X))
-			{
-				BuildingHandler.instance.InitializeWithObject(1);
-			}
-
-			if (Input.GetKeyDown(KeyCode.C))
-			{
-				BuildingHandler.instance.InitializeWithObject(2);
-			}*/
 		}
 
 		public void FirstSelectBarracks(PlayerBarracks pB)
@@ -420,7 +370,7 @@ namespace _Scripts.Interaction.Management
 			{
 				if (!canMultiSelect)
 				{
-					DeselectUnits();
+					DeselectWorkers();
 				}
 
 				selectedWorkers.Add(pW);
@@ -442,8 +392,6 @@ namespace _Scripts.Interaction.Management
 			InteractableBarracks iBarracks = pB.interactable;
 			if (iBarracks)
 			{
-				DeselectUnits();
-
 				selectedBarracks = pB;
 				iBarracks.OnInteractEnter();
 
@@ -463,8 +411,6 @@ namespace _Scripts.Interaction.Management
 			InteractableTower iTower = pT.interactable;
 			if (iTower)
 			{
-				DeselectUnits();
-
 				selectedTower = pT;
 				iTower.OnInteractEnter();
 

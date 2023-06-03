@@ -9,12 +9,11 @@ namespace _Scripts.Utility.Entity
     {
         public static EntityHandler instance;
 
-        [SerializeField] private Entity arbalist, gladiator, guardian, warlock, worker; // units
+        [SerializeField] private Entity archer, worker; // units
 
-        [SerializeField] private Entity workerCenter, basicTrainer, advancedTrainer; // trainers (buildings)
+        [SerializeField] private Entity barracks; // trainers (buildings)
 
-        /*[SerializeField]
-        private Entity workerCenter;*/ // preparation for turrets / obelisks
+        [SerializeField] private Entity tower; // preparation for turrets / obelisks
 
         [SerializeField] private Entity enemy; // enemy units (to expand)
 
@@ -39,22 +38,14 @@ namespace _Scripts.Utility.Entity
 
             switch (_entityName)
             {
-                case "Arbalist":
-                    return arbalist;
-                case "Gladiator":
-                    return gladiator;
-                case "Guardian":
-                    return guardian;
-                case "Warlock":
-                    return warlock;
+                case "Archer":
+                    return archer;
                 case "Worker":
                     return worker;
-                case "Worker Center":
-                    return workerCenter;
-                case "Basic Robot Manufactory":
-                    return basicTrainer;
-                case "Advanced Robot Manufactory":
-                    return advancedTrainer;
+                case "Barracks":
+                    return barracks;
+                case "Tower":
+                    return tower;
                 case "Enemy":
                     return enemy;
                 default:
@@ -66,7 +57,7 @@ namespace _Scripts.Utility.Entity
         public void SetPlayerUnitStats(PlayerUnit pU, string unitType)
         {
             Entity entityStats = GetEntityStats(unitType);
-
+            
             pU.unitName = entityStats.entityName;
             pU.unitCost = entityStats.entityCost;
             pU.unitHealth = entityStats.entityHealth;

@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace _Scripts.Interaction.Action
 {
-    public class ActionManager : MonoBehaviour
+    public class ActionHandler : MonoBehaviour
     {
-        public static ActionManager instance;
+        public static ActionHandler instance;
         public bool isTower;
 
         void Awake()

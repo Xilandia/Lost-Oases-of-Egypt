@@ -15,7 +15,8 @@ namespace _Scripts.Player.Unit
 {
     public class PlayerUnit : MonoBehaviour, IDamageable
     {
-        private NavMeshAgent navAgent;
+        [SerializeField] NavMeshAgent navAgent;
+        [SerializeField] private SphereCollider rangeCollider;
         private Camera cam;
 
         public string unitName;
@@ -48,8 +49,8 @@ namespace _Scripts.Player.Unit
 
         void Start()
         {
-            navAgent = GetComponent<NavMeshAgent>();
             cam = Camera.main;
+            rangeCollider.radius = unitAggroRange;
         }
 
         void Update()

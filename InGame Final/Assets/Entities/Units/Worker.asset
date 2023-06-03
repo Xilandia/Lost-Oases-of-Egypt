@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: Archer
+  m_Name: Worker
   m_EditorClassIdentifier: 
-  entityName: Archer
-  entityPrefab: {fileID: 1100987419105808796, guid: d123798b4440345eb8370a98f3364faa,
+  entityName: Worker
+  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
     type: 3}
-  entityCost: 20
+  entityCost: 50
   entityHealth: 20
-  entityArmor: 0
-  entityAttack: 25
-  entityTimeBetweenAttacks: 2
-  entityAttackRange: 10
-  entityAggroRange: 12
+  entityArmor: 1
+  entityAttack: 1
+  entityTimeBetweenAttacks: 1
+  entityAttackRange: 5
+  entityAggroRange: 1
   entityMoveSpeed: 5
   entityCreationTime: 2
   isBuildable: 0

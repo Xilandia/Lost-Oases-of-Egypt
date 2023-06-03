@@ -132,6 +132,7 @@ namespace _Scripts.Player.Structure
         {
             Vector3 position = SnapToGrid(Vector3.zero);
             GameObject newObject = Instantiate(prefab, position, Quaternion.identity);
+            placingTower = isTower;
             if (isTower)
             {
                 newObject.transform.SetParent(PlayerManager.instance.playerTowers);

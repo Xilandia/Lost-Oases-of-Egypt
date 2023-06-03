@@ -5,16 +5,16 @@ namespace _Scripts.Player.Structure
 {
     public class PlacableObject : MonoBehaviour
     {
+        [SerializeField] private BoxCollider structureCollider;
         public bool Placed { get; private set; }
         public Vector3Int Size { get; private set; }
         private Vector3[] vertices;
 
         private void GetColliderVertexPositions()
         {
-            BoxCollider box = gameObject.GetComponent<BoxCollider>();
             vertices = new Vector3[4];
-            Vector3 size = box.size;
-            Vector3 center = box.center;
+            Vector3 size = structureCollider.size;
+            Vector3 center = structureCollider.center;
             vertices[0] = center + new Vector3(-size.x, -size.y, -size.z) * 0.5f;
             vertices[1] = center + new Vector3(size.x, -size.y, -size.z) * 0.5f;
             vertices[2] = center + new Vector3(size.x, -size.y, size.z) * 0.5f;

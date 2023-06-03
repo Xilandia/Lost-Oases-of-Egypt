@@ -7,7 +7,7 @@ namespace _Scripts.Interaction.Action
     {
         public void OnClick()
         {
-            ActionManager.instance.TriggerAction(name);
+            ActionHandler.instance.TriggerAction(name);
         }
     }
 }

@@ -6,13 +6,18 @@ using _Scripts.Utility.Interface;
 using _Scripts.Utility.Entity;
 using _Scripts.Interaction.Interactable;
 using _Scripts.Interaction.Management;
+using _Scripts.Player.Management;
 using _Scripts.Player.Unit;
 using _Scripts.Utility.Static;
+using UnityEngine.AI;
 
 namespace _Scripts.Player.Structure
 {
     public class PlayerTower : MonoBehaviour, IDamageable
     {
+        [SerializeField] private BoxCollider structureCollider;
+        [SerializeField] private SphereCollider rangeCollider;
+        [SerializeField] private NavMeshObstacle navObstacle;
 
         public string towerName;
         public float towerCost, towerHealth, towerArmor, towerAttack, towerTimeBetweenAttacks, towerAttackRange, towerBuildTime;
@@ -37,6 +42,11 @@ namespace _Scripts.Player.Structure
         public bool hasAggro = false;
         private float distanceToTarget;
 
+        void Start()
+        {
+            rangeCollider.radius = towerAttackRange;
+        }
+        
         void Update()
         {
 
@@ -59,10 +69,12 @@ namespace _Scripts.Player.Structure
         {
             constructionStarted = true;
             isPlaced = true;
+            isPrototype = false;
             currProgress = 0f;
             originalScale = transform.localScale;
             transform.localScale = new Vector3(originalScale.x, originalScale.y / 100, originalScale.z);
             interactable.OnInteractExit();
+            navObstacle.enabled = true;
             
             foreach (PlayerWorker worker in InputHandler.instance.selectedWorkers)
             {
@@ -96,6 +108,9 @@ namespace _Scripts.Player.Structure
             isPlaced = false;
             isComplete = true;
             transform.localScale = originalScale;
+            structureCollider.enabled = true;
+            rangeCollider.enabled = true;
+            PlayerManager.instance.towers.Add(this);
             
             foreach (PlayerWorker worker in workersInvolvedInConstruction)
             {

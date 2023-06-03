@@ -7,11 +7,14 @@ using _Scripts.Interaction.Interactable;
 using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
 using _Scripts.Player.Unit;
+using UnityEngine.AI;
 
 namespace _Scripts.Player.Structure
 {
     public class PlayerBarracks : MonoBehaviour, IDamageable
     {
+        [SerializeField] private BoxCollider structureCollider;
+        [SerializeField] private NavMeshObstacle navObstacle;
 
         public string barracksName;
         public float barracksCost, barracksHealth, barracksArmor, barracksBuildTime;
@@ -38,6 +41,11 @@ namespace _Scripts.Player.Structure
 
         private Vector3 originalScale;
 
+        void Start()
+        {
+            structureCollider.enabled = false;
+        }
+        
         void Update()
         {
             if (isTraining)
@@ -63,10 +71,13 @@ namespace _Scripts.Player.Structure
         {
             constructionStarted = true;
             isPlaced = true;
+            isPrototype = false;
             currProgress = 0f;
             originalScale = transform.localScale;
             transform.localScale = new Vector3(originalScale.x, originalScale.y / 100, originalScale.z);
             interactable.OnInteractExit();
+            navObstacle.enabled = true;
+            PlayerManager.instance.barracks.Add(this);
 
             foreach (PlayerWorker worker in InputHandler.instance.selectedWorkers)
             {
@@ -100,6 +111,7 @@ namespace _Scripts.Player.Structure
             isPlaced = false;
             isComplete = true;
             transform.localScale = originalScale;
+            structureCollider.enabled = true;
             
             foreach (PlayerWorker worker in workersInvolvedInConstruction)
             {
@@ -145,14 +157,25 @@ namespace _Scripts.Player.Structure
             }
         }
 
-        public void FinishTrainingUnit()
+        private void FinishTrainingUnit()
         {
-            Entity pU = unitQueue.Dequeue();
+            Entity entity = unitQueue.Dequeue();
 
-            GameObject unit = Instantiate(pU.entityPrefab, spawnPoint.position, Quaternion.identity);
+            GameObject unit = Instantiate(entity.entityPrefab, spawnPoint.position, Quaternion.identity);
             unit.transform.SetParent(PlayerManager.instance.playerUnits);
+            PlayerUnit pU = unit.GetComponent<PlayerUnit>();
 
-            EntityHandler.instance.SetPlayerUnitStats(unit.gameObject.GetComponent<PlayerUnit>(), pU.entityName);
+            EntityHandler.instance.SetPlayerUnitStats(pU, entity.entityName);
+            
+            if (pU.unitAttackRange > 5)
+            {
+                PlayerManager.instance.rangedSoldiers.Add(pU);
+            }
+            else
+            {
+                PlayerManager.instance.meleeSoldiers.Add(pU);
+            }
+            
             if (unitQueue.Count > 0)
             {
                 currentUnitTrainTime = unitQueue.Peek().entityCreationTime;

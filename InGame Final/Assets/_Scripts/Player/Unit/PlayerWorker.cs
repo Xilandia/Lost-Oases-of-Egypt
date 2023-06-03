@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using _Scripts.Interaction.Interactable;
+using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
 using _Scripts.Player.Structure;
 using _Scripts.Player.Resources;
@@ -14,8 +15,8 @@ namespace _Scripts.Player.Unit
 {
     public class PlayerWorker : MonoBehaviour, IDamageable
     {
-        private NavMeshAgent navAgent;
-        private Camera cam;
+        [SerializeField] private NavMeshAgent navAgent;
+        [SerializeField] private SphereCollider rangeCollider;
 
         public string workerName;
 
@@ -27,8 +28,6 @@ namespace _Scripts.Player.Unit
         public float workerCurrentHealth;
         public float workerGatherCooldown;
 
-        public GameObject workerStatDisplay;
-        public Image workerHealthBarImage;
         public GameObject workerPrefab;
         public Transform workerTransform;
         public InteractableWorker interactable;
@@ -44,15 +43,14 @@ namespace _Scripts.Player.Unit
         public Transform structureTarget;
         public PlayerTower constructionTower;
         public PlayerBarracks constructionBarracks;
-
-        public PlayerTower[] buildableTowers;
+        
         public PlayerBarracks[] buildableBarracks;
+        public PlayerTower[] buildableTowers;
         public string[] buildableStructureNames;
 
         void Start()
         {
-            navAgent = GetComponent<NavMeshAgent>();
-            cam = Camera.main;
+            rangeCollider.radius = workerOperationRange;
         }
 
         void Update()
@@ -149,7 +147,7 @@ namespace _Scripts.Player.Unit
         {
             distanceToSite = Vector3.Distance(transform.position,  structureTarget.position);
 
-            navAgent.SetDestination(resourceTarget.position);
+            navAgent.SetDestination(structureTarget.position);
         }
 
         private void ConsiderBuildTicking()
@@ -175,11 +173,6 @@ namespace _Scripts.Player.Unit
 
         private void HandleHealth()
         {
-            workerStatDisplay.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
-                cam.transform.rotation * Vector3.up);
-
-            workerHealthBarImage.fillAmount = workerCurrentHealth / workerHealth;
-
             if (workerCurrentHealth <= 0)
             {
                 UnitDeath();
@@ -188,7 +181,7 @@ namespace _Scripts.Player.Unit
 
         private void UnitDeath()
         {
-            //InputHandler.instance.selectedWorkers.Remove(this); // uncomment once supported properly in InputHandler
+            InputHandler.instance.selectedWorkers.Remove(this); // uncomment once supported properly in InputHandler
             
             PlayerManager.instance.workers.Remove(this);
 

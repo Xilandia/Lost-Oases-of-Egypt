@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abbe3b5bb8884c4a9fc3f14691899a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navAgent: {fileID: -512577293634403931}
+  rangeCollider: {fileID: 197294591}
   unitName: None
   unitCost: 0
   unitHealth: 0
@@ -143,7 +145,7 @@ MonoBehaviour:
   unitAggroRange: 0
   unitMoveSpeed: 0
   unitTrainTime: 0
-  unitCurrentHealth: 0
+  unitCurrentHealth: 5
   unitAttackCooldown: 0
   unitStatDisplay: {fileID: 1176556250010233137}
   unitHealthBarImage: {fileID: 8513949334024704735}
@@ -153,7 +155,6 @@ MonoBehaviour:
   moveTarget: {x: 0, y: 0, z: 0}
   aggroTarget: {fileID: 0}
   hasAggro: 0
-  isMoving: 0
 --- !u!114 &2508237986389632620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,7 +440,7 @@ PrefabInstance:
     - target: {fileID: 7636671190459920892, guid: 7e254a24117114f9494ec5c39277d6ae,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.2
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 7636671190459920892, guid: 7e254a24117114f9494ec5c39277d6ae,
         type: 3}

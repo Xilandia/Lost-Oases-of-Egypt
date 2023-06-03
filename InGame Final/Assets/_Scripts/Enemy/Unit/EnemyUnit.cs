@@ -15,8 +15,8 @@ namespace _Scripts.Enemy.Unit
     public class EnemyUnit : MonoBehaviour, IDamageable
     {
 
-        [SerializeField] NavMeshAgent m_NavAgent;
-        [SerializeField] private SphereCollider m_RangeCollider;
+        [SerializeField] NavMeshAgent navAgent;
+        [SerializeField] private SphereCollider rangeCollider;
 
         private Collider[] rangeColliders;
         private Transform targetTransform;
@@ -48,8 +48,8 @@ namespace _Scripts.Enemy.Unit
 
         void Start() // might need to change this to awake
         {
-            m_NavAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
-            m_RangeCollider.radius = enemyAggroRange;
+            navAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
+            rangeCollider.radius = enemyAggroRange;
             //CheckForPlayerTargets(); might not need if the collider automatically checks on awake
         }
 
@@ -84,7 +84,7 @@ namespace _Scripts.Enemy.Unit
 
                 if (distanceToTarget <= enemyAggroRange + 2 || !behaviorOne) // range offset or in second stage of behavior
                 {
-                    m_NavAgent.SetDestination(targetTransform.position);
+                    navAgent.SetDestination(targetTransform.position);
                 }
                 else
                 {
@@ -140,23 +140,23 @@ namespace _Scripts.Enemy.Unit
                     targetDamageable = targetTransform.gameObject.GetComponent<PlayerBarracks>();
                 }
 
-                m_NavAgent.stoppingDistance = enemyAttackRange;
+                navAgent.stoppingDistance = enemyAttackRange;
 
                 break;
             }
 
             if (!hasTarget)
             {
-                m_NavAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
+                navAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
                 targetTransform = null;
-                m_NavAgent.stoppingDistance = 0;
+                navAgent.stoppingDistance = 0;
             }
         }
 
         public void TransitionPhase()
         {
             behaviorOne = false;
-            m_NavAgent.stoppingDistance = enemyAttackRange;
+            navAgent.stoppingDistance = enemyAttackRange;
             CheckForClosestTarget();
         }
 
@@ -333,7 +333,7 @@ namespace _Scripts.Enemy.Unit
                         targetDamageable = targetTransform.gameObject.GetComponent<PlayerWorker>();
                     }
 
-                    m_NavAgent.stoppingDistance = enemyAttackRange;
+                    navAgent.stoppingDistance = enemyAttackRange;
                 }
             }
         }

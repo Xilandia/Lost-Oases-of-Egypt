@@ -344,6 +344,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &214658748 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 197294591, guid: 9651d834d343548d0aa17bde5abeedd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099695258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &475291141
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475607577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -527,7 +533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497144811}
   m_Layer: 0
-  m_Name: Player Trainers
+  m_Name: Player Barracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1094,6 +1100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769388889}
   - component: {fileID: 769388890}
+  - component: {fileID: 769388891}
   m_Layer: 0
   m_Name: Player Manager
   m_TagString: Untagged
@@ -1129,7 +1136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUnits: {fileID: 1593585765}
-  playerTrainers: {fileID: 497144811}
+  playerBarracks: {fileID: 497144811}
+  playerTowers: {fileID: 1110122860}
   enemyUnits: {fileID: 31677847}
   meleeSoldiers:
   - {fileID: 956167360}
@@ -1138,10 +1146,29 @@ MonoBehaviour:
   barracks: []
   workers: []
   playerOre: 1000
+  playerWood: 0
+  playerGold: 0
   roundTimer:
   - 0
   - 0
   - 0
+--- !u!114 &769388891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769388888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f6c465442b74d048deed4f0fa9dca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialUnits:
+  - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
+  - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
+  - {fileID: 1100987419105808796, guid: d123798b4440345eb8370a98f3364faa, type: 3}
+  worker: {fileID: 11400000, guid: 54b6804b18aac467d95f034f74694260, type: 2}
 --- !u!1 &776090119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1481,7 @@ MonoBehaviour:
   - {fileID: 1796834693}
   enemyUnits:
   - {fileID: -3730260759065913479, guid: f12a181bb9b794cee846a25db320bd41, type: 3}
-  periodLength: 5
+  periodLength: 600
   progressionMultiplier: 0.01
   enemyBehaviorTransitionTransform: {fileID: 747399005}
   enemyOnePrefab: {fileID: -3730260759065913479, guid: f12a181bb9b794cee846a25db320bd41,
@@ -1468,6 +1495,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
+      propertyPath: navAgent
+      value: 
+      objectReference: {fileID: 1111285111}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
       propertyPath: unitArmor
       value: 3
       objectReference: {fileID: 0}
@@ -1476,6 +1508,11 @@ PrefabInstance:
       propertyPath: unitHealth
       value: 100000
       objectReference: {fileID: 0}
+    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
+        type: 3}
+      propertyPath: rangeCollider
+      value: 
+      objectReference: {fileID: 214658748}
     - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
         type: 3}
       propertyPath: unitCurrentHealth
@@ -1543,6 +1580,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9651d834d343548d0aa17bde5abeedd2, type: 3}
+--- !u!1 &1110122859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110122860}
+  m_Layer: 0
+  m_Name: Player Towers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110122860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110122859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1123885125}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &1111285111 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: -512577293634403931, guid: 9651d834d343548d0aa17bde5abeedd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099695258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1123885124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1647,7 @@ Transform:
   m_Children:
   - {fileID: 1593585765}
   - {fileID: 497144811}
+  - {fileID: 1110122860}
   - {fileID: 1851303470}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -14016,7 +14091,7 @@ Transform:
   m_Children:
   - {fileID: 836176551}
   m_Father: {fileID: 1123885125}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2099778520
 GameObject:
@@ -14063,6 +14138,7 @@ GameObject:
   - component: {fileID: 2109516157}
   - component: {fileID: 2109516155}
   - component: {fileID: 2109516158}
+  - component: {fileID: 2109516159}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -14083,7 +14159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedUnits: []
-  selectedStructure: {fileID: 0}
+  selectedWorkers: []
+  selectedBarracks: {fileID: 0}
+  selectedTower: {fileID: 0}
   isDragging: 0
 --- !u!4 &2109516156
 Transform:
@@ -14115,19 +14193,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc0e27ce2b604ac9b6c138048c4b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arbalist: {fileID: 11400000, guid: 5db79ab3e071f4c92a367bb8f81b89d8, type: 2}
-  gladiator: {fileID: 11400000, guid: 9942556f0042f4fda9e645bafbe7349e, type: 2}
-  guardian: {fileID: 11400000, guid: a9fb0f02aaa16415ebdf7b72e68e4946, type: 2}
-  warlock: {fileID: 11400000, guid: 9513c6d8d738d428ea9fdfb105f817b2, type: 2}
+  archer: {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
   worker: {fileID: 11400000, guid: 54b6804b18aac467d95f034f74694260, type: 2}
-  workerCenter: {fileID: 11400000, guid: 7aaf612f110094aac852774be3c43ca5, type: 2}
-  basicTrainer: {fileID: 11400000, guid: 31857d3741e6f4d5ca530d817c81b6a0, type: 2}
-  advancedTrainer: {fileID: 11400000, guid: f109f7c06a55b4454b164bf7b3250a43, type: 2}
+  barracks: {fileID: 11400000, guid: 31857d3741e6f4d5ca530d817c81b6a0, type: 2}
+  tower: {fileID: 11400000, guid: 87554839fcae743d5bf814c685023eea, type: 2}
   enemy: {fileID: 11400000, guid: 3b4a629e7edd44c54bc5e7a0cd6d8a40, type: 2}
   playerInteractableLayer:
     serializedVersion: 2
     m_Bits: 0
   enemyUnitLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  resourceLayer:
     serializedVersion: 2
     m_Bits: 0
 --- !u!114 &2109516158
@@ -14150,7 +14227,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eaafcc42c279341ac873fcd85a4d713f, type: 3}
   - {fileID: 8300000, guid: 55560e3ebc883499293891f350a67349, type: 3}
   soundEffectSource: {fileID: 776090120}
-  buildings:
-  - {fileID: 1231638400916525711, guid: cdbbb50050bff47bfa2aa4fde67ce7b1, type: 3}
-  - {fileID: -7585415165409839783, guid: 1d01a8fd651264295b82a9e8452ed5f1, type: 3}
-  - {fileID: 1231638400916525711, guid: 13144e6c5638d4657b2e67a800116149, type: 3}
+--- !u!114 &2109516159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109516154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb53ec9f223d48c8ae948f54ca64e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTower: 0
