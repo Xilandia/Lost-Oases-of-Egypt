@@ -51,6 +51,7 @@ namespace _Scripts.Player.Unit
 
         void Start()
         {
+            navAgent.speed = workerMoveSpeed;
             rangeCollider.radius = workerOperationRange;
         }
 

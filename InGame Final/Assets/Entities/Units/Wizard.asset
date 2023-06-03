@@ -10,23 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: Player Robot Warlock
+  m_Name: Wizard
   m_EditorClassIdentifier: 
-  entityName: Warlock
-  entityType: 0
-  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
+  entityName: Wizard
+  entityPrefab: {fileID: 1100987419105808796, guid: fa2d293a5c9a548cab2b159132c0e678,
     type: 3}
-  belongsToPlayer: 1
-  entityCost: 300
-  entityHealth: 20
-  entityArmor: 1
-  entityAttack: 50
-  entityTimeBetweenAttacks: 4
-  entityAttackRange: 4
-  entityAggroRange: 50
-  entityMoveSpeed: 2
-  entityCreationTime: 3
-  isBuilding: 0
+  entityCost: 40
+  entityHealth: 30
+  entityArmor: 5
+  entityAttack: 15
+  entityTimeBetweenAttacks: 0.5
+  entityAttackRange: 8
+  entityAggroRange: 10
+  entityMoveSpeed: 4
+  entityCreationTime: 5
   isBuildable: 0
   isPrototype: 0
   isPlaced: 0

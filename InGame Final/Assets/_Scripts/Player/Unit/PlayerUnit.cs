@@ -50,6 +50,7 @@ namespace _Scripts.Player.Unit
         void Start()
         {
             cam = Camera.main;
+            navAgent.speed = unitMoveSpeed;
             rangeCollider.radius = unitAggroRange;
         }
 

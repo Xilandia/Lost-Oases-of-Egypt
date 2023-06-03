@@ -10,23 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: Barracks
+  m_Name: Small Tower
   m_EditorClassIdentifier: 
-  entityName: Barracks
-  entityPrefab: {fileID: 3887137071503025175, guid: 97d36d64e59dc42ee96bd27d7a9d983a,
+  entityName: Small Tower
+  entityPrefab: {fileID: 3887137071503025175, guid: e353e698bf73a4800a14ee325db8fa30,
     type: 3}
-  entityCost: 200
-  entityHealth: 300
-  entityArmor: 10
-  entityAttack: 0
-  entityTimeBetweenAttacks: 0
-  entityAttackRange: 0
-  entityAggroRange: 0
+  entityCost: 50
+  entityHealth: 100
+  entityArmor: 3
+  entityAttack: 10
+  entityTimeBetweenAttacks: 5
+  entityAttackRange: 15
+  entityAggroRange: 15
   entityMoveSpeed: 0
-  entityCreationTime: 10
-  isBuildable: 1
-  isPrototype: 1
+  entityCreationTime: 5
+  isBuildable: 0
+  isPrototype: 0
   isPlaced: 0
   isComplete: 0
-  buildableUnits:
-  - {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
+  buildableUnits: []

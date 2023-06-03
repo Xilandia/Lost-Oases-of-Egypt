@@ -10,23 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: Player Robot Arbalist
+  m_Name: Big Tower
   m_EditorClassIdentifier: 
-  entityName: Arbalist
-  entityType: 1
-  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
+  entityName: Small Tower
+  entityPrefab: {fileID: 3887137071503025175, guid: e353e698bf73a4800a14ee325db8fa30,
     type: 3}
-  belongsToPlayer: 1
-  entityCost: 200
-  entityHealth: 30
+  entityCost: 250
+  entityHealth: 300
   entityArmor: 5
-  entityAttack: 20
-  entityTimeBetweenAttacks: 5
-  entityAttackRange: 5
-  entityAggroRange: 50
-  entityMoveSpeed: 3
-  entityCreationTime: 20
-  isBuilding: 0
+  entityAttack: 25
+  entityTimeBetweenAttacks: 3
+  entityAttackRange: 20
+  entityAggroRange: 20
+  entityMoveSpeed: 0
+  entityCreationTime: 15
   isBuildable: 0
   isPrototype: 0
   isPlaced: 0

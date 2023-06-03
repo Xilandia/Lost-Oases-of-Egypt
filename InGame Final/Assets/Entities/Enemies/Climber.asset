@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: Tower
+  m_Name: Climber
   m_EditorClassIdentifier: 
-  entityName: Tower
-  entityPrefab: {fileID: 3887137071503025175, guid: e353e698bf73a4800a14ee325db8fa30,
+  entityName: Enemy
+  entityPrefab: {fileID: 1333876028791534613, guid: f12a181bb9b794cee846a25db320bd41,
     type: 3}
-  entityCost: 500
-  entityHealth: 500
-  entityArmor: 3
-  entityAttack: 20
-  entityTimeBetweenAttacks: 5
-  entityAttackRange: 20
+  entityCost: 0
+  entityHealth: 40
+  entityArmor: 1
+  entityAttack: 10
+  entityTimeBetweenAttacks: 3
+  entityAttackRange: 3
   entityAggroRange: 20
-  entityMoveSpeed: 0
-  entityCreationTime: 5
+  entityMoveSpeed: 5
+  entityCreationTime: 0
   isBuildable: 0
   isPrototype: 0
   isPlaced: 0

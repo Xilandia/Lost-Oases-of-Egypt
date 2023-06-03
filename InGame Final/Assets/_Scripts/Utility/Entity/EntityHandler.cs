@@ -13,9 +13,9 @@ namespace _Scripts.Utility.Entity
 
         [SerializeField] private Entity barracks; // trainers (buildings)
 
-        [SerializeField] private Entity tower; // preparation for turrets / obelisks
+        [SerializeField] private Entity smallTower, bigTower; // preparation for turrets / obelisks
 
-        [SerializeField] private Entity enemy; // enemy units (to expand)
+        [SerializeField] private Entity basicEnemy, climberEnemy, fastEnemy, slowEnemy, tankEnemy, juggernautEnemy; // enemy units (to expand)
 
         public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer;
 
@@ -44,10 +44,22 @@ namespace _Scripts.Utility.Entity
                     return worker;
                 case "Barracks":
                     return barracks;
-                case "Tower":
-                    return tower;
-                case "Enemy":
-                    return enemy;
+                case "Small Tower":
+                    return smallTower;
+                case "Big Tower":
+                    return bigTower;
+                case "Basic":
+                    return basicEnemy;
+                case "Climber":
+                    return climberEnemy;
+                case "Fast":
+                    return fastEnemy;
+                case "Slow":
+                    return slowEnemy;
+                case "Tank":
+                    return tankEnemy;
+                case "Juggernaut":
+                    return juggernautEnemy;
                 default:
                     Debug.LogError($"Entity {_entityName} not found!");
                     return null;
