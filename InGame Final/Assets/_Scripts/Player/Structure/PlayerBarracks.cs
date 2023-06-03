@@ -77,6 +77,7 @@ namespace _Scripts.Player.Structure
             transform.localScale = new Vector3(originalScale.x, originalScale.y / 100, originalScale.z);
             interactable.OnInteractExit();
             navObstacle.enabled = true;
+            structureCollider.enabled = true;
             PlayerManager.instance.barracks.Add(this);
 
             foreach (PlayerWorker worker in InputHandler.instance.selectedWorkers)
@@ -86,6 +87,7 @@ namespace _Scripts.Player.Structure
                 worker.isAttemptingToGather = false;
                 worker.isBuildingTower = false;
                 worker.structureTarget = gameObject.transform;
+                worker.MoveWorker(worker.structureTarget.position);
                 worker.constructionBarracks = this;
                 worker.interactable.OnInteractExit();
             }
@@ -111,11 +113,11 @@ namespace _Scripts.Player.Structure
             isPlaced = false;
             isComplete = true;
             transform.localScale = originalScale;
-            structureCollider.enabled = true;
             
             foreach (PlayerWorker worker in workersInvolvedInConstruction)
             {
                 worker.isAttemptingToBuild = false;
+                worker.isConstructing = false;
                 worker.isAttemptingToGather = false;
                 worker.isBuildingTower = false;
                 worker.structureTarget = null;

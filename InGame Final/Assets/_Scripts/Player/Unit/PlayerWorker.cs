@@ -32,11 +32,12 @@ namespace _Scripts.Player.Unit
         public Transform workerTransform;
         public InteractableWorker interactable;
 
-        private float distanceToSite;
+        private float distanceToResourceNode;
 
         private Collider[] rangeColliders;
         public bool isAttemptingToGather;
         public bool isAttemptingToBuild;
+        public bool isConstructing;
         public bool isBuildingTower;
         public Transform resourceTarget;
         public ResourceNode resourceNode;
@@ -63,10 +64,9 @@ namespace _Scripts.Player.Unit
                 ConsiderGathering();
             }
 
-            if (isAttemptingToBuild)
+            if (isConstructing)
             {
-                MoveToStructureTarget();
-                ConsiderBuildTicking();
+                TickConstructionProject();
             }
         }
 
@@ -78,7 +78,7 @@ namespace _Scripts.Player.Unit
         public void CheckForResourceTargets()
         {
             rangeColliders =
-                Physics.OverlapSphere(transform.position, workerOperationRange, EntityHandler.instance.enemyUnitLayer);
+                Physics.OverlapSphere(transform.position, workerOperationRange, EntityHandler.instance.resourceLayer);
 
             foreach (Collider col in rangeColliders)
             {
@@ -99,7 +99,7 @@ namespace _Scripts.Player.Unit
             }
             else
             {
-                distanceToSite = Vector3.Distance(transform.position, resourceTarget.position);
+                distanceToResourceNode = Vector3.Distance(transform.position, resourceTarget.position);
                 
                 navAgent.SetDestination(resourceTarget.position);
             }
@@ -107,7 +107,7 @@ namespace _Scripts.Player.Unit
 
         private void ConsiderGathering()
         {
-            if (distanceToSite <= workerOperationRange + 1)
+            if (distanceToResourceNode <= workerOperationRange + 1)
             {
                 if (workerGatherCooldown <= 0)
                 {
@@ -117,13 +117,13 @@ namespace _Scripts.Player.Unit
                         switch (resourceNode.resourceType)
                         {
                             case ResourceNode.ResourceTypes.Ore:
-                                PlayerManager.instance.playerOre += resourceNode.resourceAmount;
+                                PlayerManager.instance.playerOre += resourceNode.GatherResource();
                                 break;
                             case ResourceNode.ResourceTypes.Wood:
-                                PlayerManager.instance.playerWood += resourceNode.resourceAmount;
+                                PlayerManager.instance.playerWood += resourceNode.GatherResource();
                                 break;
                             case ResourceNode.ResourceTypes.Gold:
-                                PlayerManager.instance.playerGold += resourceNode.resourceAmount;
+                                PlayerManager.instance.playerGold += resourceNode.GatherResource();
                                 break;
                         }
                     }
@@ -142,26 +142,16 @@ namespace _Scripts.Player.Unit
                 workerGatherCooldown = (workerGatherCooldown + workerGatherSpeed) / 2;
             }
         }
-        
-        private void MoveToStructureTarget()
-        {
-            distanceToSite = Vector3.Distance(transform.position,  structureTarget.position);
 
-            navAgent.SetDestination(structureTarget.position);
-        }
-
-        private void ConsiderBuildTicking()
+        private void TickConstructionProject()
         {
-            if (distanceToSite <= workerOperationRange + 1)
+            if (isBuildingTower)
             {
-                if (isBuildingTower)
-                {
-                    constructionTower.TickConstruction();
-                }
-                else
-                {
-                    constructionBarracks.TickConstruction();
-                }
+                constructionTower.TickConstruction();
+            }
+            else
+            {
+                constructionBarracks.TickConstruction();
             }
         }
 
@@ -197,6 +187,51 @@ namespace _Scripts.Player.Unit
                     isAttemptingToGather = true;
                     resourceTarget = other.transform;
                     resourceNode = other.gameObject.GetComponent<ResourceNode>();
+                }
+            }
+            else if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.playerInteractableLayer))
+            {
+                if (other.CompareTag("Tower"))
+                {
+                    if (isAttemptingToBuild)
+                    {
+                        isConstructing = true;
+                        navAgent.SetDestination(transform.position);
+                    }
+                    else
+                    {
+                        PlayerTower tower = other.GetComponent<PlayerTower>();
+                        if (tower.isPlaced)
+                        {
+                            constructionTower = tower;
+                            isAttemptingToBuild = true;
+                            isConstructing = true;
+                            isBuildingTower = true;
+                            constructionTower.workersInvolvedInConstruction.Add(this);
+                            navAgent.SetDestination(transform.position);
+                        }
+                    }
+                }
+                else if (other.CompareTag("Barracks"))
+                {
+                    if (isAttemptingToBuild)
+                    {
+                        isConstructing = true;
+                        navAgent.SetDestination(transform.position);
+                    }
+                    else
+                    {
+                        PlayerBarracks barracks = other.GetComponent<PlayerBarracks>();
+                        if (barracks.isPlaced)
+                        {
+                            constructionBarracks = barracks;
+                            isAttemptingToBuild = true;
+                            isConstructing = true;
+                            isBuildingTower = false;
+                            constructionBarracks.workersInvolvedInConstruction.Add(this);
+                            navAgent.SetDestination(transform.position);
+                        }
+                    }
                 }
             }
         }

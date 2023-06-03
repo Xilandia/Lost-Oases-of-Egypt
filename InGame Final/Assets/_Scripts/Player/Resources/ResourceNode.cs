@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace _Scripts.Player.Resources
@@ -32,7 +30,7 @@ namespace _Scripts.Player.Resources
 
         private float RunDry()
         {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
             return resourceAmount;
         }
     }

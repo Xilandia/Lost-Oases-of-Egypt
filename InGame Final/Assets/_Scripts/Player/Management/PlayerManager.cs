@@ -24,7 +24,6 @@ namespace _Scripts.Player.Management
         public float playerOre;
         public float playerWood;
         public float playerGold;
-        private float elapsedTime;
         public float[] roundTimer = new float[3];
 
         void Awake()
@@ -36,21 +35,20 @@ namespace _Scripts.Player.Management
         void Update()
         {
             InputHandler.instance.HandlePlayerInput();
-            elapsedTime += Time.deltaTime;
+            //elapsedTime += Time.deltaTime;
             roundTimer[0] += Time.deltaTime;
             roundTimer[2] += Time.deltaTime;
-
-            if (elapsedTime > 1)
-            {
-                playerOre += 100;
-                elapsedTime = 0;
-            }
 
             if (roundTimer[0] > 60)
             {
                 roundTimer[0] -= 60;
                 roundTimer[1] += 1;
             }
+        }
+
+        private void OnGUI()
+        {
+            GUI.Label(new Rect(10, 10, 500, 30), $"Held Resources: {playerWood} Wood, {playerOre} Ore, {playerGold} Gold");
         }
     }
 }

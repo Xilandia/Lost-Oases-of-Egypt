@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Worker
   m_EditorClassIdentifier: 
   entityName: Worker
-  entityPrefab: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
+  entityPrefab: {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0,
     type: 3}
   entityCost: 50
   entityHealth: 20

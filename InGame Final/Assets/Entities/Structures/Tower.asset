@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
   m_Name: Tower
   m_EditorClassIdentifier: 
-  entityName: 
-  entityPrefab: {fileID: 0}
+  entityName: Tower
+  entityPrefab: {fileID: 3887137071503025175, guid: e353e698bf73a4800a14ee325db8fa30,
+    type: 3}
   entityCost: 500
   entityHealth: 500
   entityArmor: 3

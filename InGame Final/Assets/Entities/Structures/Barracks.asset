@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Barracks
   m_EditorClassIdentifier: 
   entityName: Barracks
-  entityPrefab: {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1,
+  entityPrefab: {fileID: 3887137071503025175, guid: 97d36d64e59dc42ee96bd27d7a9d983a,
     type: 3}
   entityCost: 200
   entityHealth: 300
@@ -23,7 +23,7 @@ MonoBehaviour:
   entityAttackRange: 0
   entityAggroRange: 0
   entityMoveSpeed: 0
-  entityCreationTime: 5
+  entityCreationTime: 120
   isBuildable: 1
   isPrototype: 1
   isPlaced: 0

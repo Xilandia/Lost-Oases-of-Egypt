@@ -80,8 +80,8 @@ namespace _Scripts.Enemy.Management
 
         private void OnGUI()
         {
-            GUI.Label(new Rect(10, 10, 200, 30), $"Total Pool Size: {enemyPool.CountAll}");
-            GUI.Label(new Rect(10, 30, 200, 30), $"Active Objects: {enemyPool.CountActive}");
+            GUI.Label(new Rect(10, 30, 200, 30), $"Total Pool Size: {enemyPool.CountAll}");
+            GUI.Label(new Rect(10, 50, 200, 30), $"Active Objects: {enemyPool.CountActive}");
         }
 
         private void SpawnEnemies()
