@@ -147,15 +147,24 @@ namespace _Scripts.Player.Structure
                 return;
             }
 
-            if (unitQueue.Count == 0)
+            if (PlayerManager.instance.playerOre >= playerUnit.entityCost)
             {
-                unitQueue.Enqueue(playerUnit);
-                currentUnitTrainTime = playerUnit.entityCreationTime;
-                isTraining = true;
+                PlayerManager.instance.playerOre -= playerUnit.entityCost;
+                
+                if (unitQueue.Count == 0)
+                {
+                    unitQueue.Enqueue(playerUnit);
+                    currentUnitTrainTime = playerUnit.entityCreationTime;
+                    isTraining = true;
+                }
+                else
+                {
+                    unitQueue.Enqueue(playerUnit);
+                }
             }
             else
             {
-                unitQueue.Enqueue(playerUnit);
+                Debug.Log("Not enough ore to train unit");
             }
         }
 

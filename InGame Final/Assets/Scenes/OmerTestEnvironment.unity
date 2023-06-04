@@ -1480,8 +1480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawnPoints:
   - {fileID: 1796834693}
-  periodLength: 600
-  progressionMultiplier: 0.01
+  periodLength: 1
+  progressionMultiplier: 1
   enemyBehaviorTransitionTransform: {fileID: 747399005}
 --- !u!114 &990790135
 MonoBehaviour:

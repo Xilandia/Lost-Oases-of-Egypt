@@ -27,7 +27,10 @@ namespace _Scripts.Enemy.Management
         void Awake()
         {
             instance = this;
-            
+        }
+
+        void Start()
+        {
             enemyPools.Add(EnemyPoolHandler.instance.basicEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.climberEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.fastEnemyPool);
@@ -35,8 +38,6 @@ namespace _Scripts.Enemy.Management
             enemyPools.Add(EnemyPoolHandler.instance.tankEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.juggernautEnemyPool);
         }
-
-        
 
 
         void Update()
@@ -66,7 +67,7 @@ namespace _Scripts.Enemy.Management
         private void CalculateWaveSize()
         {
             numberOfEnemiesToSpawn =
-                (int)Math.Ceiling(periodNumber * 2 * Math.Pow(1.1, periodNumber) * progressionMultiplier);
+                (int)Math.Ceiling(periodNumber * 1.5 * Math.Pow(1.05, periodNumber) * progressionMultiplier);
         }
     }
 }
