@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -880,6 +880,8 @@ MonoBehaviour:
   playerUnits: {fileID: 1593585765}
   playerTrainers: {fileID: 497144811}
   enemyUnits: {fileID: 31677847}
+  baseStructure: {fileID: 0}
+  baseStructureScript: {fileID: 0}
   playerOre: 1000
   roundTimer:
   - 0
@@ -1058,6 +1060,7 @@ MonoBehaviour:
   enemyUnits:
   - {fileID: 11400000, guid: 3b4a629e7edd44c54bc5e7a0cd6d8a40, type: 2}
   periodLength: 5
+  progressionMultiplier: 1
 --- !u!1001 &1001404140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1420,7 +1423,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13874,6 +13877,8 @@ MonoBehaviour:
   gridLayout: {fileID: 475607578}
   MainTilemap: {fileID: 1437853102}
   whiteTile: {fileID: 11400000, guid: f0392f6823cdf41e180723cc735f224e, type: 2}
+  buildingSounds: []
+  soundEffectSource: {fileID: 0}
   buildingPrefabs:
   - {fileID: 3887137071503025175, guid: cdbbb50050bff47bfa2aa4fde67ce7b1, type: 3}
   - {fileID: 3887137071503025175, guid: 13144e6c5638d4657b2e67a800116149, type: 3}
