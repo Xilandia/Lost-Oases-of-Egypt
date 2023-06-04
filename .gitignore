@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Uu]serSettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -66,3 +67,5 @@ InGame\ Final\ holy*
 
 InGame\ Final/Assets/UltimateCleanGUIPack*
 .DS_Store
+InGame\ Final/UserSettings/Layouts/default-2021.dwlt
+InGame\ Final/UserSettings/EditorUserSettings.asset
