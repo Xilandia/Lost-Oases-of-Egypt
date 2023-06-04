@@ -69,9 +69,6 @@ MonoBehaviour:
   trainerArmor: 0
   trainerBuildTime: 0
   trainerCurrentHealth: 0
-  trainerPrefab: {fileID: 3887137071503025175}
-  trainerTransform: {fileID: 9164537273305081322}
-  trainerPlacable: {fileID: 4109460291600571321}
   isBuildable: 0
   isPrototype: 0
   isPlaced: 0

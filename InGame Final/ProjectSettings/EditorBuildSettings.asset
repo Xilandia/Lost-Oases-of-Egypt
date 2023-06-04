@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 3484dbc9a13734ab78f6cc542fa1f48c
   - enabled: 1
-    path: Assets/Scenes/OmerTestEnvironment.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MainMap.unity
+    guid: 147a610c63898c54c93ab6fb90bdec12
   m_configObjects: {}
