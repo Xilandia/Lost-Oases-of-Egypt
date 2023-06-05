@@ -61,8 +61,8 @@ Transform:
   m_GameObject: {fileID: 3887137071503025175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7999703900831448603}
   - {fileID: 1905755067820090933}
@@ -112,12 +112,15 @@ MonoBehaviour:
   trainableUnits:
   - {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
   - {fileID: 11400000, guid: d089d67873c5e4374be1b4102737bead, type: 2}
+  - {fileID: 11400000, guid: 285726f1a57b241b6b36820bf6f999dd, type: 2}
   trainableUnitNames:
   - Archer
   - Wizard
+  - Axeman
   interactable: {fileID: 2441923393280470069}
   workersInvolvedInConstruction: []
   spawnPoint: {fileID: 1035955586176750546}
+  isTraining: 0
 --- !u!114 &2441923393280470069
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ namespace _Scripts.Utility.Entity
     {
         public static EntityHandler instance;
 
-        [SerializeField] private Entity archer, worker; // units
+        [SerializeField] private Entity axeman, archer, wizard, worker; // units
 
         [SerializeField] private Entity barracks; // trainers (buildings)
 
@@ -38,8 +38,12 @@ namespace _Scripts.Utility.Entity
 
             switch (_entityName)
             {
+                case "Axeman":
+                    return axeman;
                 case "Archer":
                     return archer;
+                case "Wizard":
+                    return wizard;
                 case "Worker":
                     return worker;
                 case "Barracks":

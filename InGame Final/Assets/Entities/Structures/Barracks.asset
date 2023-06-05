@@ -30,3 +30,5 @@ MonoBehaviour:
   isComplete: 0
   buildableUnits:
   - {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
+  - {fileID: 11400000, guid: d089d67873c5e4374be1b4102737bead, type: 2}
+  - {fileID: 11400000, guid: 285726f1a57b241b6b36820bf6f999dd, type: 2}
