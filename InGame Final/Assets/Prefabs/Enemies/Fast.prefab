@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navAgent: {fileID: -512577293634403931}
   rangeCollider: {fileID: 197294591}
+  animator: {fileID: 1685200958218596883}
   behaviorOne: 1
   enemyName: 
   enemyHealth: 0
@@ -233,6 +234,12 @@ PrefabInstance:
 --- !u!4 &713547129737592945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9124233128993264239, guid: 851aa196872064a5d8d293a7b8f0164e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8608858171667960350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1685200958218596883 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6925348423394172941, guid: 851aa196872064a5d8d293a7b8f0164e,
     type: 3}
   m_PrefabInstance: {fileID: 8608858171667960350}
   m_PrefabAsset: {fileID: 0}

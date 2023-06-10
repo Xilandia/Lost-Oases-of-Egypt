@@ -17,6 +17,7 @@ namespace _Scripts.Enemy.Unit
 
         [SerializeField] NavMeshAgent navAgent;
         [SerializeField] private SphereCollider rangeCollider;
+        [SerializeField] private Animator animator;
 
         private Collider[] rangeColliders;
         private Transform targetTransform;
@@ -46,17 +47,26 @@ namespace _Scripts.Enemy.Unit
 
         public OnDisableCallback disable;
 
+        private int hasLifeHash;
+        private int isMovingHash;
+        private int inRangeHash;
+        
         void Start() // might need to change this to awake
         {
             navAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
             navAgent.speed = enemyMoveSpeed;
             rangeCollider.radius = enemyAggroRange;
+            hasLifeHash = Animator.StringToHash("HasLife");
+            isMovingHash = Animator.StringToHash("IsMoving");
+            inRangeHash = Animator.StringToHash("InRange");
+            animator.SetBool(hasLifeHash, true);
             //CheckForPlayerTargets(); might not need if the collider automatically checks on awake
         }
 
         void Update()
         {
             HandleHealth();
+            animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.0001f);
 
             if (hasTarget)
             {
@@ -100,6 +110,9 @@ namespace _Scripts.Enemy.Unit
         {
             if (distanceToTarget <= enemyAttackRange + 1)
             {
+                animator.SetBool(inRangeHash, true);
+                animator.SetBool(isMovingHash, false);
+                
                 if (enemyAttackCooldown <= 0)
                 {
                     enemyAttackCooldown = enemyTimeBetweenAttacks;
@@ -120,6 +133,8 @@ namespace _Scripts.Enemy.Unit
             else
             {
                 enemyAttackCooldown = (enemyAttackCooldown + enemyTimeBetweenAttacks) / 2;
+                animator.SetBool(inRangeHash, false);
+                animator.SetBool(isMovingHash, true);
             }
         }
 
@@ -304,6 +319,7 @@ namespace _Scripts.Enemy.Unit
 
         private void UnitDeath()
         {
+            animator.SetBool(hasLifeHash, false);
             disable?.Invoke(this);
         }
 
