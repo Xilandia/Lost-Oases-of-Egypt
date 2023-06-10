@@ -21,7 +21,8 @@ namespace _Scripts.Player.Unit
 
         public string unitName;
 
-        public float unitCost,
+        public float unitCostOre,
+            unitCostWood,
             unitHealth,
             unitArmor,
             unitAttack,

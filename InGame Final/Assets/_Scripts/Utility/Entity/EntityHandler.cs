@@ -8,16 +8,13 @@ namespace _Scripts.Utility.Entity
     public class EntityHandler : MonoBehaviour
     {
         public static EntityHandler instance;
-
-        [SerializeField] private Entity axeman, archer, wizard, worker; // units
-
-        [SerializeField] private Entity barracks; // trainers (buildings)
-
-        [SerializeField] private Entity smallTower, bigTower; // preparation for turrets / obelisks
-
-        [SerializeField] private Entity basicEnemy, climberEnemy, fastEnemy, tankEnemy, bossEnemy; // enemy units (to expand)
-
         public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer;
+
+        [SerializeField] private EntityEnemy[] enemies;
+        [SerializeField] private EntityUnit[] units;
+        [SerializeField] private EntityWorker[] workers;
+        [SerializeField] private EntityBarracks[] barracks;
+        [SerializeField] private EntityTower[] towers;
 
         void Awake()
         {
@@ -28,114 +25,154 @@ namespace _Scripts.Utility.Entity
             resourceLayer = LayerMask.GetMask("Resource Nodes");
         }
 
-        private Entity GetEntityStats(string _entityName)
-        {
-
-            if (_entityName.Contains("Clone"))
-            {
-                _entityName = _entityName.Substring(0, _entityName.Length - 7);
-            }
-
-            switch (_entityName)
-            {
-                case "Axeman":
-                    return axeman;
-                case "Archer":
-                    return archer;
-                case "Wizard":
-                    return wizard;
-                case "Worker":
-                    return worker;
-                case "Barracks":
-                    return barracks;
-                case "Small Tower":
-                    return smallTower;
-                case "Big Tower":
-                    return bigTower;
-                case "Basic":
-                    return basicEnemy;
-                case "Climber":
-                    return climberEnemy;
-                case "Fast":
-                    return fastEnemy;
-                case "Tank":
-                    return tankEnemy;
-                case "Boss":
-                    return bossEnemy;
-                default:
-                    Debug.LogError($"Entity {_entityName} not found!");
-                    return null;
-            }
-        }
-
         public void SetPlayerUnitStats(PlayerUnit pU, string unitType)
         {
-            Entity entityStats = GetEntityStats(unitType);
+            EntityUnit entity = null;
             
-            pU.unitName = entityStats.entityName;
-            pU.unitCost = entityStats.entityCost;
-            pU.unitHealth = entityStats.entityHealth;
-            pU.unitCurrentHealth = entityStats.entityHealth;
-            pU.unitArmor = entityStats.entityArmor;
-            pU.unitAttack = entityStats.entityAttack;
-            pU.unitTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
-            pU.unitAttackRange = entityStats.entityAttackRange;
-            pU.unitAggroRange = entityStats.entityAggroRange;
-            pU.unitMoveSpeed = entityStats.entityMoveSpeed;
-            pU.unitTrainTime = entityStats.entityCreationTime;
+            if (unitType.Contains("Clone"))
+            {
+                unitType = unitType.Substring(0, unitType.Length - 7);
+            }
+
+            foreach (EntityUnit unit in units)
+            {
+                if (unit.entityName == unitType)
+                {
+                    entity = unit;
+                    break;
+                }
+            }
+            
+            pU.unitName = entity.entityName;
+            pU.unitCostOre = entity.entityCostOre;
+            pU.unitCostWood = entity.entityCostWood;
+            pU.unitHealth = entity.entityHealth;
+            pU.unitCurrentHealth = entity.entityHealth;
+            pU.unitArmor = entity.entityArmor;
+            pU.unitAttack = entity.entityAttack;
+            pU.unitTimeBetweenAttacks = entity.entityTimeBetweenAttacks;
+            pU.unitAttackRange = entity.entityAttackRange;
+            pU.unitAggroRange = entity.entityAggroRange;
+            pU.unitMoveSpeed = entity.entityMoveSpeed;
+            pU.unitTrainTime = entity.entityCreationTime;
         }
 
-        public void SetPlayerBarracksStats(PlayerBarracks pB, string trainerType)
+        public void SetPlayerWorkerStats(PlayerWorker pW, string workerType)
         {
-            Entity entityStats = GetEntityStats(trainerType);
+            EntityWorker entity = null;
+            
+            if (workerType.Contains("Clone"))
+            {
+                workerType = workerType.Substring(0, workerType.Length - 7);
+            }
 
-            pB.barracksName = entityStats.entityName;
-            pB.barracksCost = entityStats.entityCost;
-            pB.barracksHealth = entityStats.entityHealth;
-            pB.barracksCurrentHealth = entityStats.entityHealth;
-            pB.barracksArmor = entityStats.entityArmor;
-            pB.barracksBuildTime = entityStats.entityCreationTime;
-
-            pB.trainableUnits = entityStats.buildableUnits;
-            pB.isPrototype = entityStats.isPrototype;
-            pB.isPlaced = entityStats.isPlaced;
-            pB.isComplete = entityStats.isComplete;
+            foreach (EntityWorker worker in workers)
+            {
+                if (worker.entityName == workerType)
+                {
+                    entity = worker;
+                    break;
+                }
+            }
+            
+            pW.workerName = entity.entityName;
+            pW.workerHealth = entity.entityHealth;
+            pW.workerCurrentHealth = entity.entityHealth;
+            pW.workerArmor = entity.entityArmor;
+            pW.workerOperationRange = entity.entityOperationRange;
+            pW.workerMoveSpeed = entity.entityMoveSpeed;
+            pW.workerGatherSpeed = entity.entityTimeBetweenGathering;
+            pW.buildableBarracks = entity.buildableBarracks;
+            pW.buildableTowers = entity.buildableTowers;
+            pW.buildableStructureNames = entity.buildableStructureNames;
         }
         
-        public void SetPlayerTowerStats(PlayerTower pT, string trainerType)
+        public void SetPlayerBarracksStats(PlayerBarracks pB, string barracksType)
         {
-            Entity entityStats = GetEntityStats(trainerType);
+            EntityBarracks entity = null;
+            
+            if (barracksType.Contains("Clone"))
+            {
+                barracksType = barracksType.Substring(0, barracksType.Length - 7);
+            }
 
-            pT.towerName = entityStats.entityName;
-            pT.towerCost = entityStats.entityCost;
-            pT.towerHealth = entityStats.entityHealth;
-            pT.towerCurrentHealth = entityStats.entityHealth;
-            pT.towerArmor = entityStats.entityArmor;
-            pT.towerAttack = entityStats.entityAttack;
-            pT.towerTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
-            pT.towerAttackRange = entityStats.entityAttackRange;
-            pT.towerBuildTime = entityStats.entityCreationTime;
+            foreach (EntityBarracks barrack in barracks)
+            {
+                if (barrack.entityName == barracksType)
+                {
+                    entity = barrack;
+                    break;
+                }
+            }
 
-            pT.isPrototype = entityStats.isPrototype;
-            pT.isPlaced = entityStats.isPlaced;
-            pT.isComplete = entityStats.isComplete;
+            pB.barracksName = entity.entityName;
+            pB.barracksCostOre = entity.entityCostOre;
+            pB.barracksCostWood = entity.entityCostWood;
+            pB.barracksHealth = entity.entityHealth;
+            pB.barracksCurrentHealth = entity.entityHealth;
+            pB.barracksArmor = entity.entityArmor;
+            pB.barracksBuildTime = entity.entityCreationTime;
+            pB.buildableUnits = entity.buildableUnits;
+        }
+        
+        public void SetPlayerTowerStats(PlayerTower pT, string towerType)
+        {
+            EntityTower entity = null;
+            
+            if (towerType.Contains("Clone"))
+            {
+                towerType = towerType.Substring(0, towerType.Length - 7);
+            }
+
+            foreach (EntityTower tower in towers)
+            {
+                if (tower.entityName == towerType)
+                {
+                    entity = tower;
+                    break;
+                }
+            }
+
+            pT.towerName = entity.entityName;
+            pT.towerCostOre = entity.entityCostOre;
+            pT.towerCostWood = entity.entityCostWood;
+            pT.towerHealth = entity.entityHealth;
+            pT.towerCurrentHealth = entity.entityHealth;
+            pT.towerArmor = entity.entityArmor;
+            pT.towerAttack = entity.entityAttack;
+            pT.towerTimeBetweenAttacks = entity.entityTimeBetweenAttacks;
+            pT.towerAttackRange = entity.entityAttackRange;
+            pT.towerBuildTime = entity.entityCreationTime;
         }
 
         public void SetEnemyStats(EnemyUnit eU, string enemyType)
         {
-            Entity entityStats = GetEntityStats(enemyType);
+            EntityEnemy entity = null;
+            
+            if (enemyType.Contains("Clone"))
+            {
+                enemyType = enemyType.Substring(0, enemyType.Length - 7);
+            }
 
-            eU.enemyName = entityStats.entityName;
-            eU.enemyHealth = entityStats.entityHealth;
-            eU.enemyCurrentHealth = entityStats.entityHealth;
-            eU.enemyArmor = entityStats.entityArmor;
-            eU.enemyAttack = entityStats.entityAttack;
-            eU.enemyTimeBetweenAttacks = entityStats.entityTimeBetweenAttacks;
-            eU.enemyAttackCooldown = entityStats.entityTimeBetweenAttacks;
-            eU.enemyAttackRange = entityStats.entityAttackRange;
-            eU.enemyAggroRange = entityStats.entityAggroRange;
-            eU.enemyMoveSpeed = entityStats.entityMoveSpeed;
-
+            foreach (EntityEnemy enemy in enemies)
+            {
+                if (enemy.entityName == enemyType)
+                {
+                    entity = enemy;
+                    break;
+                }
+            }
+            
+            eU.enemyName = entity.entityName;
+            eU.enemyHealth = entity.entityHealth;
+            eU.enemyCurrentHealth = entity.entityHealth;
+            eU.enemyArmor = entity.entityArmor;
+            eU.enemyAttack = entity.entityAttack;
+            eU.enemyTimeBetweenAttacks = entity.entityTimeBetweenAttacks;
+            eU.enemyAttackCooldown = entity.entityTimeBetweenAttacks;
+            eU.enemyAttackRange = entity.entityAttackRange;
+            eU.enemyAggroRange = entity.entityAggroRange;
+            eU.enemyMoveSpeed = entity.entityMoveSpeed;
         }
     }
 }

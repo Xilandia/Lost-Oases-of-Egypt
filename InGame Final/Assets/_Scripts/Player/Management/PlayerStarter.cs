@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerStarter : MonoBehaviour
 {
     [SerializeField] private List<GameObject> initialUnits = new List<GameObject>();
-    [SerializeField] private Entity worker;
 
     void Start()
     {
@@ -31,17 +30,8 @@ public class PlayerStarter : MonoBehaviour
             }
             else if (unit.CompareTag("Worker"))
             {
-                // move to entity handler once properly implemented
                 PlayerWorker pW = unit.GetComponent<PlayerWorker>();
-                
-                pW.workerName = worker.entityName;
-                pW.workerHealth = worker.entityHealth;
-                pW.workerCurrentHealth = worker.entityHealth;
-                pW.workerArmor = worker.entityArmor;
-                pW.workerOperationRange = worker.entityAttackRange;
-                pW.workerMoveSpeed = worker.entityMoveSpeed;
-                pW.workerGatherSpeed = worker.entityTimeBetweenAttacks;
-                
+                EntityHandler.instance.SetPlayerWorkerStats(pW, unit.name);
                 PlayerManager.instance.workers.Add(pW);
             }
         }

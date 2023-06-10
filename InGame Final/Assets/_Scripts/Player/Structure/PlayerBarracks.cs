@@ -17,7 +17,7 @@ namespace _Scripts.Player.Structure
         [SerializeField] private NavMeshObstacle navObstacle;
 
         public string barracksName;
-        public float barracksCost, barracksHealth, barracksArmor, barracksBuildTime;
+        public float barracksCostOre, barracksCostWood, barracksHealth, barracksArmor, barracksBuildTime;
         public float barracksCurrentHealth;
 
         public GameObject barracksPrefab;
@@ -25,7 +25,7 @@ namespace _Scripts.Player.Structure
         public PlacableObject barracksPlacable;
 
         public bool isPrototype, isPlaced, isComplete;
-        public Entity[] trainableUnits;
+        public Entity[] buildableUnits;
         public string[] trainableUnitNames;
         public InteractableBarracks interactable;
 
@@ -132,7 +132,7 @@ namespace _Scripts.Player.Structure
         public void AddToQueue(string unitName)
         {
             Entity playerUnit = null;
-            foreach (Entity entity in trainableUnits)
+            foreach (Entity entity in buildableUnits)
             {
                 if (entity.entityName == unitName)
                 {

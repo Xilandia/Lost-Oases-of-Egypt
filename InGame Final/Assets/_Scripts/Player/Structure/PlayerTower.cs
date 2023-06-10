@@ -20,7 +20,7 @@ namespace _Scripts.Player.Structure
         [SerializeField] private NavMeshObstacle navObstacle;
 
         public string towerName;
-        public float towerCost, towerHealth, towerArmor, towerAttack, towerTimeBetweenAttacks, towerAttackRange, towerBuildTime;
+        public float towerCostOre, towerCostWood, towerHealth, towerArmor, towerAttack, towerTimeBetweenAttacks, towerAttackRange, towerBuildTime;
         public float towerCurrentHealth;
         public float towerAttackCooldown;
 
@@ -138,7 +138,7 @@ namespace _Scripts.Player.Structure
             
             distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
 
-            if (distanceToTarget > towerAttackRange + 1) // range offset or in second stage of behavior
+            if (distanceToTarget > towerAttackRange + 1) // range offset
             {
                 aggroTarget = null;
                 hasAggro = false;
