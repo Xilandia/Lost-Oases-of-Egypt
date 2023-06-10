@@ -7,12 +7,13 @@ using UnityEngine;
 public class PlayerStarter : MonoBehaviour
 {
     [SerializeField] private List<GameObject> initialUnits = new List<GameObject>();
+    [SerializeField] private Transform playerStartPosition;
 
     void Start()
     {
         foreach (GameObject prefab in initialUnits)
         {
-            GameObject unit = Instantiate(prefab, transform.position, Quaternion.identity);
+            GameObject unit = Instantiate(prefab, playerStartPosition.position, Quaternion.identity);
             unit.transform.SetParent(PlayerManager.instance.playerUnits);
             if (unit.CompareTag("Unit"))
             {
