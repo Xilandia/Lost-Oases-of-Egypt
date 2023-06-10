@@ -13,9 +13,8 @@ namespace _Scripts.Enemy.Management
         public ObjectPool<EnemyUnit> basicEnemyPool;
         public ObjectPool<EnemyUnit> climberEnemyPool;
         public ObjectPool<EnemyUnit> fastEnemyPool;
-        public ObjectPool<EnemyUnit> slowEnemyPool;
         public ObjectPool<EnemyUnit> tankEnemyPool;
-        public ObjectPool<EnemyUnit> juggernautEnemyPool;
+        public ObjectPool<EnemyUnit> bossEnemyPool;
 
         [SerializeField] private EnemyUnit[] enemyPrefabs;
         
@@ -28,11 +27,9 @@ namespace _Scripts.Enemy.Management
                 false, 20, 100);
             fastEnemyPool = new ObjectPool<EnemyUnit>(CreatePooledObjectFast, OnTakeFromPool, OnReturnToPool, OnDestroyObject,
                 false, 15, 30);
-            slowEnemyPool = new ObjectPool<EnemyUnit>(CreatePooledObjectSlow, OnTakeFromPool, OnReturnToPool, OnDestroyObject,
-                false, 30, 500);
             tankEnemyPool = new ObjectPool<EnemyUnit>(CreatePooledObjectTank, OnTakeFromPool, OnReturnToPool, OnDestroyObject,
                 false, 10, 30);
-            juggernautEnemyPool = new ObjectPool<EnemyUnit>(CreatePooledObjectJuggernaut, OnTakeFromPool, OnReturnToPool, OnDestroyObject,
+            bossEnemyPool = new ObjectPool<EnemyUnit>(CreatePooledObjectBoss, OnTakeFromPool, OnReturnToPool, OnDestroyObject,
                 false, 3, 10);
         }
         
@@ -62,8 +59,8 @@ namespace _Scripts.Enemy.Management
 
             return Instance;
         }
-        
-        private EnemyUnit CreatePooledObjectSlow()
+
+        private EnemyUnit CreatePooledObjectTank()
         {
             EnemyUnit Instance = Instantiate(enemyPrefabs[3], Vector3.zero, Quaternion.identity);
             Instance.disable += ReturnObjectToPool;
@@ -72,18 +69,9 @@ namespace _Scripts.Enemy.Management
             return Instance;
         }
         
-        private EnemyUnit CreatePooledObjectTank()
+        private EnemyUnit CreatePooledObjectBoss()
         {
             EnemyUnit Instance = Instantiate(enemyPrefabs[4], Vector3.zero, Quaternion.identity);
-            Instance.disable += ReturnObjectToPool;
-            Instance.gameObject.SetActive(false);
-
-            return Instance;
-        }
-        
-        private EnemyUnit CreatePooledObjectJuggernaut()
-        {
-            EnemyUnit Instance = Instantiate(enemyPrefabs[5], Vector3.zero, Quaternion.identity);
             Instance.disable += ReturnObjectToPool;
             Instance.gameObject.SetActive(false);
 

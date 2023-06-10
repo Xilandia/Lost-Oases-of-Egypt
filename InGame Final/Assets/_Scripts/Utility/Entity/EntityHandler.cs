@@ -15,7 +15,7 @@ namespace _Scripts.Utility.Entity
 
         [SerializeField] private Entity smallTower, bigTower; // preparation for turrets / obelisks
 
-        [SerializeField] private Entity basicEnemy, climberEnemy, fastEnemy, slowEnemy, tankEnemy, juggernautEnemy; // enemy units (to expand)
+        [SerializeField] private Entity basicEnemy, climberEnemy, fastEnemy, tankEnemy, bossEnemy; // enemy units (to expand)
 
         public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer;
 
@@ -58,12 +58,10 @@ namespace _Scripts.Utility.Entity
                     return climberEnemy;
                 case "Fast":
                     return fastEnemy;
-                case "Slow":
-                    return slowEnemy;
                 case "Tank":
                     return tankEnemy;
-                case "Juggernaut":
-                    return juggernautEnemy;
+                case "Boss":
+                    return bossEnemy;
                 default:
                     Debug.LogError($"Entity {_entityName} not found!");
                     return null;

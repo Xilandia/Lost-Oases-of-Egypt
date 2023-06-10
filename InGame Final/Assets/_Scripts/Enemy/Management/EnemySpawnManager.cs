@@ -34,9 +34,8 @@ namespace _Scripts.Enemy.Management
             enemyPools.Add(EnemyPoolHandler.instance.basicEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.climberEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.fastEnemyPool);
-            enemyPools.Add(EnemyPoolHandler.instance.slowEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.tankEnemyPool);
-            enemyPools.Add(EnemyPoolHandler.instance.juggernautEnemyPool);
+            enemyPools.Add(EnemyPoolHandler.instance.bossEnemyPool);
         }
 
 

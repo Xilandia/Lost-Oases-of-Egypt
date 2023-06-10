@@ -1499,7 +1499,6 @@ MonoBehaviour:
   - {fileID: 2652072512273715311, guid: a7a0f3f6d242d4eb6af50a4a4f84b11e, type: 3}
   - {fileID: 2652072512273715311, guid: a79310cc2218342a994c7aab6fb1e1a1, type: 3}
   - {fileID: 2652072512273715311, guid: 84c65409886c643379748280ec8905ab, type: 3}
-  - {fileID: 2652072512273715311, guid: 5f879497b93ef4febb27eba0f7994c2c, type: 3}
   - {fileID: 2652072512273715311, guid: 14dc20a461d3d47389681fd12bf62562, type: 3}
   - {fileID: 2652072512273715311, guid: 6fdaf4f4ba5c04e7aa09e9fc17b9eeeb, type: 3}
 --- !u!1001 &1099695258
@@ -2215,9 +2214,8 @@ MonoBehaviour:
   basicEnemy: {fileID: 11400000, guid: 3de4bc541198e401f8a4f854ded12e58, type: 2}
   climberEnemy: {fileID: 11400000, guid: 74a93b3f5811949bcaa4224e9b1e428c, type: 2}
   fastEnemy: {fileID: 11400000, guid: e0a0f53eb90d7460496bd767ec49b15e, type: 2}
-  slowEnemy: {fileID: 11400000, guid: 4802cdd59478b4b07975e50b7e7ce1c7, type: 2}
   tankEnemy: {fileID: 11400000, guid: 162239c071d5948b282170f4c47ff7c1, type: 2}
-  juggernautEnemy: {fileID: 11400000, guid: d3842d14e49794c8c824ea624af60500, type: 2}
+  bossEnemy: {fileID: 11400000, guid: d3842d14e49794c8c824ea624af60500, type: 2}
   playerInteractableLayer:
     serializedVersion: 2
     m_Bits: 0

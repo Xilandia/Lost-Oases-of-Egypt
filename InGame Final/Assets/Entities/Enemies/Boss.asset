@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
-  m_Name: Juggernaut
+  m_Name: Boss
   m_EditorClassIdentifier: 
   entityName: Enemy
   entityPrefab: {fileID: 1333876028791534613, guid: f12a181bb9b794cee846a25db320bd41,
