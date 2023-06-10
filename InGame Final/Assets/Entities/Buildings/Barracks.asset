@@ -9,26 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
+  m_Script: {fileID: 11500000, guid: ea1e62443b96844f2854f49e5dc6c069, type: 3}
   m_Name: Barracks
   m_EditorClassIdentifier: 
   entityName: Barracks
   entityPrefab: {fileID: 3887137071503025175, guid: 97d36d64e59dc42ee96bd27d7a9d983a,
     type: 3}
-  entityCost: 200
+  entityCostOre: 120
+  entityCostWood: 120
   entityHealth: 300
   entityArmor: 10
-  entityAttack: 0
-  entityTimeBetweenAttacks: 0
-  entityAttackRange: 0
-  entityAggroRange: 0
-  entityMoveSpeed: 0
   entityCreationTime: 10
-  isBuildable: 1
-  isPrototype: 1
-  isPlaced: 0
-  isComplete: 0
   buildableUnits:
-  - {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
-  - {fileID: 11400000, guid: d089d67873c5e4374be1b4102737bead, type: 2}
-  - {fileID: 11400000, guid: 285726f1a57b241b6b36820bf6f999dd, type: 2}
+  - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
+  - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
+  - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}

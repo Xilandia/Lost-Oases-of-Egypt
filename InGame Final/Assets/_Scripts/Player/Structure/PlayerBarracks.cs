@@ -25,7 +25,7 @@ namespace _Scripts.Player.Structure
         public PlacableObject barracksPlacable;
 
         public bool isPrototype, isPlaced, isComplete;
-        public Entity[] buildableUnits;
+        public EntityUnit[] buildableUnits;
         public string[] trainableUnitNames;
         public InteractableBarracks interactable;
 
@@ -34,7 +34,7 @@ namespace _Scripts.Player.Structure
         public List<PlayerWorker> workersInvolvedInConstruction = new List<PlayerWorker>();
 
         [SerializeField] private Transform spawnPoint;
-        private Queue<Entity> unitQueue = new Queue<Entity>();
+        private readonly Queue<EntityUnit> unitQueue = new Queue<EntityUnit>();
         private float currentUnitTrainTime;
         private float elapsedTrainingTime;
         private bool isTraining;
@@ -131,8 +131,8 @@ namespace _Scripts.Player.Structure
 
         public void AddToQueue(string unitName)
         {
-            Entity playerUnit = null;
-            foreach (Entity entity in buildableUnits)
+            EntityUnit playerUnit = null;
+            foreach (EntityUnit entity in buildableUnits)
             {
                 if (entity.entityName == unitName)
                 {
@@ -147,9 +147,10 @@ namespace _Scripts.Player.Structure
                 return;
             }
 
-            if (PlayerManager.instance.playerOre >= playerUnit.entityCost)
+            if (PlayerManager.instance.playerOre >= playerUnit.entityCostOre && PlayerManager.instance.playerWood >= playerUnit.entityCostWood)
             {
-                PlayerManager.instance.playerOre -= playerUnit.entityCost;
+                PlayerManager.instance.playerOre -= playerUnit.entityCostOre;
+                PlayerManager.instance.playerWood -= playerUnit.entityCostWood;
                 
                 if (unitQueue.Count == 0)
                 {
@@ -164,13 +165,13 @@ namespace _Scripts.Player.Structure
             }
             else
             {
-                Debug.Log("Not enough ore to train unit");
+                Debug.Log("Not enough resources to train unit");
             }
         }
 
         private void FinishTrainingUnit()
         {
-            Entity entity = unitQueue.Dequeue();
+            EntityUnit entity = unitQueue.Dequeue();
 
             GameObject unit = Instantiate(entity.entityPrefab, spawnPoint.position, Quaternion.identity);
             unit.transform.SetParent(PlayerManager.instance.playerUnits);

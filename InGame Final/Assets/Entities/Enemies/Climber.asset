@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 94bb9f511f8ec4f4db6d3517ca1f491f, type: 3}
   m_Name: Climber
   m_EditorClassIdentifier: 
-  entityName: Enemy
-  entityPrefab: {fileID: 1333876028791534613, guid: f12a181bb9b794cee846a25db320bd41,
+  entityName: Climber
+  entityPrefab: {fileID: 1100987419105808796, guid: a79310cc2218342a994c7aab6fb1e1a1,
     type: 3}
-  entityCost: 0
   entityHealth: 40
   entityArmor: 1
   entityAttack: 10
@@ -23,9 +22,3 @@ MonoBehaviour:
   entityAttackRange: 3
   entityAggroRange: 20
   entityMoveSpeed: 5
-  entityCreationTime: 0
-  isBuildable: 0
-  isPrototype: 0
-  isPlaced: 0
-  isComplete: 0
-  buildableUnits: []

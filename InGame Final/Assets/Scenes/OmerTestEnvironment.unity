@@ -1168,7 +1168,6 @@ MonoBehaviour:
   - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
   - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
   - {fileID: 1100987419105808796, guid: d123798b4440345eb8370a98f3364faa, type: 3}
-  worker: {fileID: 11400000, guid: 54b6804b18aac467d95f034f74694260, type: 2}
 --- !u!1 &776090119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,18 +2203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc0e27ce2b604ac9b6c138048c4b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axeman: {fileID: 11400000, guid: 285726f1a57b241b6b36820bf6f999dd, type: 2}
-  archer: {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
-  wizard: {fileID: 11400000, guid: d089d67873c5e4374be1b4102737bead, type: 2}
-  worker: {fileID: 11400000, guid: 54b6804b18aac467d95f034f74694260, type: 2}
-  barracks: {fileID: 11400000, guid: 31857d3741e6f4d5ca530d817c81b6a0, type: 2}
-  smallTower: {fileID: 11400000, guid: 87554839fcae743d5bf814c685023eea, type: 2}
-  bigTower: {fileID: 11400000, guid: aa5b762965c984991a7dbe461266534a, type: 2}
-  basicEnemy: {fileID: 11400000, guid: 3de4bc541198e401f8a4f854ded12e58, type: 2}
-  climberEnemy: {fileID: 11400000, guid: 74a93b3f5811949bcaa4224e9b1e428c, type: 2}
-  fastEnemy: {fileID: 11400000, guid: e0a0f53eb90d7460496bd767ec49b15e, type: 2}
-  tankEnemy: {fileID: 11400000, guid: 162239c071d5948b282170f4c47ff7c1, type: 2}
-  bossEnemy: {fileID: 11400000, guid: d3842d14e49794c8c824ea624af60500, type: 2}
   playerInteractableLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -2225,6 +2212,23 @@ MonoBehaviour:
   resourceLayer:
     serializedVersion: 2
     m_Bits: 0
+  enemies:
+  - {fileID: 11400000, guid: 3de4bc541198e401f8a4f854ded12e58, type: 2}
+  - {fileID: 11400000, guid: d3842d14e49794c8c824ea624af60500, type: 2}
+  - {fileID: 11400000, guid: 74a93b3f5811949bcaa4224e9b1e428c, type: 2}
+  - {fileID: 11400000, guid: e0a0f53eb90d7460496bd767ec49b15e, type: 2}
+  - {fileID: 11400000, guid: 162239c071d5948b282170f4c47ff7c1, type: 2}
+  units:
+  - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
+  - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
+  - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}
+  workers:
+  - {fileID: 11400000, guid: f1020b79e74b94022aeae858373ab1ce, type: 2}
+  barracks:
+  - {fileID: 11400000, guid: 900ce74a24a4e4f15b96c0387f21e75f, type: 2}
+  towers:
+  - {fileID: 11400000, guid: db28f21125c804500af9156ce640d09d, type: 2}
+  - {fileID: 11400000, guid: 5fb62565c40d34b768f3ebbb3558fe77, type: 2}
 --- !u!114 &2109516158
 MonoBehaviour:
   m_ObjectHideFlags: 0

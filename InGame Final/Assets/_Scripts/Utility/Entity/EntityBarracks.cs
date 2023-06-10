@@ -12,6 +12,6 @@ namespace _Scripts.Utility.Entity
 		public float entityHealth;
 		public float entityArmor;
 		public float entityCreationTime;
-		public Entity[] buildableUnits;
+		public EntityUnit[] buildableUnits;
 	}
 }

@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 94bb9f511f8ec4f4db6d3517ca1f491f, type: 3}
   m_Name: Fast
   m_EditorClassIdentifier: 
-  entityName: Enemy
-  entityPrefab: {fileID: 1333876028791534613, guid: f12a181bb9b794cee846a25db320bd41,
+  entityName: Fast
+  entityPrefab: {fileID: 1100987419105808796, guid: 84c65409886c643379748280ec8905ab,
     type: 3}
-  entityCost: 0
   entityHealth: 10
   entityArmor: 0
   entityAttack: 3
@@ -23,9 +22,3 @@ MonoBehaviour:
   entityAttackRange: 2
   entityAggroRange: 15
   entityMoveSpeed: 8
-  entityCreationTime: 0
-  isBuildable: 0
-  isPrototype: 0
-  isPlaced: 0
-  isComplete: 0
-  buildableUnits: []

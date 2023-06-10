@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189a04b62eb644fcd9c83a9702d083d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c115d6fe5d4f441c9f0c58864b543a5, type: 3}
   m_Name: Axeman
   m_EditorClassIdentifier: 
   entityName: Axeman
   entityPrefab: {fileID: 1100987419105808796, guid: f4d73ee0f0cf54409b0021fb02e8084e,
     type: 3}
-  entityCost: 30
+  entityCostOre: 30
+  entityCostWood: 10
   entityHealth: 100
   entityArmor: 2
   entityAttack: 40
@@ -24,8 +25,3 @@ MonoBehaviour:
   entityAggroRange: 12
   entityMoveSpeed: 12
   entityCreationTime: 5
-  isBuildable: 0
-  isPrototype: 0
-  isPlaced: 0
-  isComplete: 0
-  buildableUnits: []
