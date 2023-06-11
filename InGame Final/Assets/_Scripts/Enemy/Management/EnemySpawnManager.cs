@@ -12,7 +12,7 @@ namespace _Scripts.Enemy.Management
     {
         public static EnemySpawnManager instance;
 
-        public List<Vector3> enemySpawnPoints;
+        public List<Transform> enemySpawnPoints;
         
         [SerializeField] private List<EnemyStage> enemyStages;
         private EnemyStage currentStage;
@@ -60,7 +60,6 @@ namespace _Scripts.Enemy.Management
             if (currentWaveIndex < currentStage.waves.Count)
             {
                 EnemyWave currentWave = currentStage.waves[currentWaveIndex];
-                enemySpawnPoints = currentWave.waveEnemySpawnPositions;
 
                 for (int i = 0; i < currentWave.waveEnemyIndex.Count; i++)
                 {
@@ -69,13 +68,13 @@ namespace _Scripts.Enemy.Management
                 }
                 
                 currentWaveIndex++;
-                enemySpawnPoints.Clear();
             }
             else
             {
                 currentWaveIndex = 0;
                 currentStageIndex++;
                 currentStage = enemyStages[currentStageIndex];
+                Debug.Log("Done with stage");
             }
         }
     }

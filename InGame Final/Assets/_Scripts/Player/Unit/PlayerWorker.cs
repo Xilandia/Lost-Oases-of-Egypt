@@ -17,6 +17,7 @@ namespace _Scripts.Player.Unit
     {
         [SerializeField] private NavMeshAgent navAgent;
         [SerializeField] private SphereCollider rangeCollider;
+        [SerializeField] private Animator animator;
 
         public string workerName;
 
@@ -48,16 +49,26 @@ namespace _Scripts.Player.Unit
         public PlayerBarracks[] buildableBarracks;
         public PlayerTower[] buildableTowers;
         public string[] buildableStructureNames;
+        
+        private int hasLifeHash;
+        private int isMovingHash;
+        private int inRangeHash;
 
         void Start()
         {
             navAgent.speed = workerMoveSpeed;
             rangeCollider.radius = workerOperationRange;
+            
+            hasLifeHash = Animator.StringToHash("HasLife");
+            isMovingHash = Animator.StringToHash("IsMoving");
+            inRangeHash = Animator.StringToHash("InRange");
+            animator.SetBool(hasLifeHash, true);
         }
 
         void Update()
         {
             HandleHealth();
+            animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.0001f);
 
             if (isAttemptingToGather)
             {
@@ -110,6 +121,9 @@ namespace _Scripts.Player.Unit
         {
             if (distanceToResourceNode <= workerOperationRange + 1)
             {
+                animator.SetBool(inRangeHash, true);
+                animator.SetBool(isMovingHash, false);
+                
                 if (workerGatherCooldown <= 0)
                 {
                     workerGatherCooldown = workerGatherSpeed;
@@ -141,6 +155,8 @@ namespace _Scripts.Player.Unit
             else
             {
                 workerGatherCooldown = (workerGatherCooldown + workerGatherSpeed) / 2;
+                animator.SetBool(inRangeHash, false);
+                animator.SetBool(isMovingHash, true);
             }
         }
 
