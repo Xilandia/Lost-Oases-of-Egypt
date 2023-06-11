@@ -24,4 +24,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f541986203a754d48ae3224782b60e08, type: 2}
   - {fileID: 11400000, guid: f541986203a754d48ae3224782b60e08, type: 2}
   - {fileID: 11400000, guid: 29e08c042c28d4bc69dd2755c1dcb254, type: 2}
-  waveLength: 10
+  waveLength: 15

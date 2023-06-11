@@ -19,6 +19,6 @@ MonoBehaviour:
   entityArmor: 1
   entityAttack: 10
   entityTimeBetweenAttacks: 3
-  entityAttackRange: 3
-  entityAggroRange: 20
-  entityMoveSpeed: 5
+  entityAttackRange: 15
+  entityAggroRange: 100
+  entityMoveSpeed: 25

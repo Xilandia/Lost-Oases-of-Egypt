@@ -171,11 +171,6 @@ namespace _Scripts.Interaction.Management
 					{
 						selectedBarracks.barracksPlacable.Rotate();
 					}
-
-					if (Input.GetKeyDown(KeyCode.Escape))
-					{
-						DeselectBarracks();
-					}
 				}
 			}
 			
@@ -242,9 +237,7 @@ namespace _Scripts.Interaction.Management
 			}
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				DeselectBarracks();
-				DeselectTower();
-				DeselectUnits();
+				DeselectAll();
 				DeselectWorkers();
 			}
 		}
@@ -261,6 +254,13 @@ namespace _Scripts.Interaction.Management
 			DeselectBarracks();
 			DeselectUnits();
 			AddedTower(pT);
+		}
+
+		public void DeselectAll()
+		{
+			DeselectBarracks();
+			DeselectTower();
+			DeselectUnits();
 		}
 
 		private void DeselectUnits()

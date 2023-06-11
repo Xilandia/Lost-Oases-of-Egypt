@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   waveEnemyIndex: 04000000
-  waveEnemySides: 00000000
-  waveEnemySpawnPositions:
-  - {x: -424.0024, y: 80.89573, z: 379.6193}
+  waveEnemySides: 05000000
