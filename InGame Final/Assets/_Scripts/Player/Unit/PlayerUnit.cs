@@ -17,11 +17,13 @@ namespace _Scripts.Player.Unit
     {
         [SerializeField] NavMeshAgent navAgent;
         [SerializeField] private SphereCollider rangeCollider;
+        [SerializeField] private Animator animator;
         private Camera cam;
 
         public string unitName;
 
-        public float unitCost,
+        public float unitCostOre,
+            unitCostWood,
             unitHealth,
             unitArmor,
             unitAttack,
@@ -47,16 +49,25 @@ namespace _Scripts.Player.Unit
         public bool hasAggro = false;
         private float distanceToTarget;
 
+        private int hasLifeHash;
+        private int isMovingHash;
+        private int inRangeHash;
+
         void Start()
         {
             cam = Camera.main;
             navAgent.speed = unitMoveSpeed;
             rangeCollider.radius = unitAggroRange;
+            hasLifeHash = Animator.StringToHash("HasLife");
+            isMovingHash = Animator.StringToHash("IsMoving");
+            inRangeHash = Animator.StringToHash("InRange");
+            animator.SetBool(hasLifeHash, true);
         }
 
         void Update()
         {
             HandleHealth();
+            animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.0001f);
 
             if (hasAggro)
             {
@@ -122,6 +133,9 @@ namespace _Scripts.Player.Unit
         {
             if (distanceToTarget <= unitAttackRange + 1)
             {
+                animator.SetBool(inRangeHash, true);
+                animator.SetBool(isMovingHash, false);
+                
                 if (unitAttackCooldown <= 0)
                 {
                     unitAttackCooldown = unitTimeBetweenAttacks;
@@ -142,6 +156,8 @@ namespace _Scripts.Player.Unit
             else
             {
                 unitAttackCooldown = (unitAttackCooldown + unitTimeBetweenAttacks) / 2;
+                animator.SetBool(inRangeHash, false);
+                animator.SetBool(isMovingHash, true);
             }
         }
 
@@ -171,6 +187,7 @@ namespace _Scripts.Player.Unit
             PlayerManager.instance.meleeSoldiers.Remove(this);
             PlayerManager.instance.rangedSoldiers.Remove(this);
 
+            animator.SetBool(hasLifeHash, false);
             Destroy(gameObject);
         }
 

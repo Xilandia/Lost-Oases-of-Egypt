@@ -30,7 +30,7 @@ namespace _Scripts.Player.Resources
 
         private float RunDry()
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             return resourceAmount;
         }
     }

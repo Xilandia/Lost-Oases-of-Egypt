@@ -155,15 +155,9 @@ MonoBehaviour:
   structureTarget: {fileID: 0}
   constructionTower: {fileID: 0}
   constructionBarracks: {fileID: 0}
-  buildableBarracks:
-  - {fileID: 1231638400916525711, guid: 97d36d64e59dc42ee96bd27d7a9d983a, type: 3}
-  buildableTowers:
-  - {fileID: 9105802772211754174, guid: e353e698bf73a4800a14ee325db8fa30, type: 3}
-  - {fileID: 9105802772211754174, guid: 836cba6fee5114676b3907ce814b9430, type: 3}
-  buildableStructureNames:
-  - Barracks
-  - Small Tower
-  - Big Tower
+  buildableBarracks: []
+  buildableTowers: []
+  buildableStructureNames: []
 --- !u!114 &8356980964151757527
 MonoBehaviour:
   m_ObjectHideFlags: 0

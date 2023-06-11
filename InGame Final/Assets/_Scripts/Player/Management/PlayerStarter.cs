@@ -7,13 +7,13 @@ using UnityEngine;
 public class PlayerStarter : MonoBehaviour
 {
     [SerializeField] private List<GameObject> initialUnits = new List<GameObject>();
-    [SerializeField] private Entity worker;
+    [SerializeField] private Transform playerStartPosition;
 
     void Start()
     {
         foreach (GameObject prefab in initialUnits)
         {
-            GameObject unit = Instantiate(prefab, transform.position, Quaternion.identity);
+            GameObject unit = Instantiate(prefab, playerStartPosition.position, Quaternion.identity);
             unit.transform.SetParent(PlayerManager.instance.playerUnits);
             if (unit.CompareTag("Unit"))
             {
@@ -31,17 +31,8 @@ public class PlayerStarter : MonoBehaviour
             }
             else if (unit.CompareTag("Worker"))
             {
-                // move to entity handler once properly implemented
                 PlayerWorker pW = unit.GetComponent<PlayerWorker>();
-                
-                pW.workerName = worker.entityName;
-                pW.workerHealth = worker.entityHealth;
-                pW.workerCurrentHealth = worker.entityHealth;
-                pW.workerArmor = worker.entityArmor;
-                pW.workerOperationRange = worker.entityAttackRange;
-                pW.workerMoveSpeed = worker.entityMoveSpeed;
-                pW.workerGatherSpeed = worker.entityTimeBetweenAttacks;
-                
+                EntityHandler.instance.SetPlayerWorkerStats(pW, unit.name);
                 PlayerManager.instance.workers.Add(pW);
             }
         }

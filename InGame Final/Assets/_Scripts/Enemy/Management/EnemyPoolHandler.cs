@@ -102,8 +102,7 @@ namespace _Scripts.Enemy.Management
         
         private void SpawnEnemy(EnemyUnit Instance)
         {
-            int spawnPointIndex = Random.Range(0, EnemySpawnManager.instance.enemySpawnPoints.Count);
-            Instance.transform.position = EnemySpawnManager.instance.enemySpawnPoints[spawnPointIndex].position;
+            Instance.transform.position = EnemySpawnManager.instance.enemySpawnPoints[EnemySpawnManager.instance.currentSpawnPointIndex];
             EntityHandler.instance.SetEnemyStats(Instance, Instance.gameObject.name);
         }
     }

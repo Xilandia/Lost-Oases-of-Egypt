@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 using _Scripts.Enemy.Unit;
 using _Scripts.Player.Management;
-using _Scripts.Utility.Entity;
+using _Scripts.Utility.Scriptable;
 
 namespace _Scripts.Enemy.Management
 {
@@ -12,13 +12,16 @@ namespace _Scripts.Enemy.Management
     {
         public static EnemySpawnManager instance;
 
-        public List<Transform> enemySpawnPoints;
-
+        public List<Vector3> enemySpawnPoints;
+        
+        [SerializeField] private List<EnemyStage> enemyStages;
+        private EnemyStage currentStage;
+        private int currentWaveIndex;
+        private int currentStageIndex;
         private int numberOfEnemiesToSpawn;
         private float previousPeriodTick;
-        private int periodNumber;
-        public float periodLength;
-        public float progressionMultiplier = 1;
+        [SerializeField] private int periodNumber;
+        public int currentSpawnPointIndex;
 
         public Transform enemyBehaviorTransitionTransform;
         
@@ -36,15 +39,17 @@ namespace _Scripts.Enemy.Management
             enemyPools.Add(EnemyPoolHandler.instance.fastEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.tankEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.bossEnemyPool);
+            
+            currentStage = enemyStages[currentStageIndex];
+            currentWaveIndex = 0;
         }
 
 
         void Update()
         {
-            if (PlayerManager.instance.roundTimer[2] - previousPeriodTick >= periodLength)
+            if (PlayerManager.instance.roundTimer[2] - previousPeriodTick >= currentStage.waveLength)
             {
                 periodNumber++;
-                CalculateWaveSize();
                 SpawnEnemies();
                 previousPeriodTick = PlayerManager.instance.roundTimer[2];
             }
@@ -52,21 +57,26 @@ namespace _Scripts.Enemy.Management
 
         private void SpawnEnemies()
         {
-            Debug.Log(numberOfEnemiesToSpawn);
-
-            for (int i = 0; i < numberOfEnemiesToSpawn; i++)
+            if (currentWaveIndex < currentStage.waves.Count)
             {
-                for (int j = 0; j < enemyPools.Count; j++)
-                {
-                    enemyPools[j].Get();
-                }
-            }
-        }
+                EnemyWave currentWave = currentStage.waves[currentWaveIndex];
+                enemySpawnPoints = currentWave.waveEnemySpawnPositions;
 
-        private void CalculateWaveSize()
-        {
-            numberOfEnemiesToSpawn =
-                (int)Math.Ceiling(periodNumber * 1.5 * Math.Pow(1.05, periodNumber) * progressionMultiplier);
+                for (int i = 0; i < currentWave.waveEnemyIndex.Count; i++)
+                {
+                    currentSpawnPointIndex = currentWave.waveEnemySides[i];
+                    enemyPools[(int) currentWave.waveEnemyIndex[i]].Get();
+                }
+                
+                currentWaveIndex++;
+                enemySpawnPoints.Clear();
+            }
+            else
+            {
+                currentWaveIndex = 0;
+                currentStageIndex++;
+                currentStage = enemyStages[currentStageIndex];
+            }
         }
     }
 }

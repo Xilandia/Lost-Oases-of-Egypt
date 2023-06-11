@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bb9f511f8ec4f4db6d3517ca1f491f, type: 3}
+  m_Name: Climber
+  m_EditorClassIdentifier: 
+  entityName: Climber
+  entityPrefab: {fileID: 1100987419105808796, guid: a79310cc2218342a994c7aab6fb1e1a1,
+    type: 3}
+  entityHealth: 40
+  entityArmor: 1
+  entityAttack: 10
+  entityTimeBetweenAttacks: 3
+  entityAttackRange: 3
+  entityAggroRange: 20
+  entityMoveSpeed: 5

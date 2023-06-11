@@ -344,12 +344,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &214658748 stripped
-SphereCollider:
-  m_CorrespondingSourceObject: {fileID: 197294591, guid: 9651d834d343548d0aa17bde5abeedd2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099695258}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &475291141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,14 +1133,13 @@ MonoBehaviour:
   playerBarracks: {fileID: 497144811}
   playerTowers: {fileID: 1110122860}
   enemyUnits: {fileID: 31677847}
-  meleeSoldiers:
-  - {fileID: 956167360}
+  meleeSoldiers: []
   rangedSoldiers: []
   towers: []
   barracks: []
   workers: []
   playerOre: 1000
-  playerWood: 0
+  playerWood: 1000
   playerGold: 0
   roundTimer:
   - 0
@@ -1168,7 +1161,6 @@ MonoBehaviour:
   - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
   - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
   - {fileID: 1100987419105808796, guid: d123798b4440345eb8370a98f3364faa, type: 3}
-  worker: {fileID: 11400000, guid: 54b6804b18aac467d95f034f74694260, type: 2}
 --- !u!1 &776090119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,24 +1289,6 @@ Transform:
   m_Father: {fileID: 2099778521}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &836176551 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099695258}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &956167360 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099695258}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9abbe3b5bb8884c4a9fc3f14691899a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,100 +1475,6 @@ MonoBehaviour:
   - {fileID: 2652072512273715311, guid: 84c65409886c643379748280ec8905ab, type: 3}
   - {fileID: 2652072512273715311, guid: 14dc20a461d3d47389681fd12bf62562, type: 3}
   - {fileID: 2652072512273715311, guid: 6fdaf4f4ba5c04e7aa09e9fc17b9eeeb, type: 3}
---- !u!1001 &1099695258
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1851303470}
-    m_Modifications:
-    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: navAgent
-      value: 
-      objectReference: {fileID: 1111285111}
-    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: unitArmor
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: unitHealth
-      value: 100000
-      objectReference: {fileID: 0}
-    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: rangeCollider
-      value: 
-      objectReference: {fileID: 214658748}
-    - target: {fileID: -6677162688861279046, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: unitCurrentHealth
-      value: 100000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 37.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.956588
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 40.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808784, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100987419105808796, guid: 9651d834d343548d0aa17bde5abeedd2,
-        type: 3}
-      propertyPath: m_Name
-      value: playerUnit
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9651d834d343548d0aa17bde5abeedd2, type: 3}
 --- !u!1 &1110122859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,12 +1506,6 @@ Transform:
   m_Father: {fileID: 1123885125}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &1111285111 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: -512577293634403931, guid: 9651d834d343548d0aa17bde5abeedd2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099695258}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1123885124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,8 +1973,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 836176551}
+  m_Children: []
   m_Father: {fileID: 1123885125}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2204,18 +2077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc0e27ce2b604ac9b6c138048c4b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axeman: {fileID: 11400000, guid: 285726f1a57b241b6b36820bf6f999dd, type: 2}
-  archer: {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
-  wizard: {fileID: 11400000, guid: d089d67873c5e4374be1b4102737bead, type: 2}
-  worker: {fileID: 11400000, guid: 54b6804b18aac467d95f034f74694260, type: 2}
-  barracks: {fileID: 11400000, guid: 31857d3741e6f4d5ca530d817c81b6a0, type: 2}
-  smallTower: {fileID: 11400000, guid: 87554839fcae743d5bf814c685023eea, type: 2}
-  bigTower: {fileID: 11400000, guid: aa5b762965c984991a7dbe461266534a, type: 2}
-  basicEnemy: {fileID: 11400000, guid: 3de4bc541198e401f8a4f854ded12e58, type: 2}
-  climberEnemy: {fileID: 11400000, guid: 74a93b3f5811949bcaa4224e9b1e428c, type: 2}
-  fastEnemy: {fileID: 11400000, guid: e0a0f53eb90d7460496bd767ec49b15e, type: 2}
-  tankEnemy: {fileID: 11400000, guid: 162239c071d5948b282170f4c47ff7c1, type: 2}
-  bossEnemy: {fileID: 11400000, guid: d3842d14e49794c8c824ea624af60500, type: 2}
   playerInteractableLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -2225,6 +2086,23 @@ MonoBehaviour:
   resourceLayer:
     serializedVersion: 2
     m_Bits: 0
+  enemies:
+  - {fileID: 11400000, guid: 3de4bc541198e401f8a4f854ded12e58, type: 2}
+  - {fileID: 11400000, guid: d3842d14e49794c8c824ea624af60500, type: 2}
+  - {fileID: 11400000, guid: 74a93b3f5811949bcaa4224e9b1e428c, type: 2}
+  - {fileID: 11400000, guid: e0a0f53eb90d7460496bd767ec49b15e, type: 2}
+  - {fileID: 11400000, guid: 162239c071d5948b282170f4c47ff7c1, type: 2}
+  units:
+  - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
+  - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
+  - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}
+  workers:
+  - {fileID: 11400000, guid: f1020b79e74b94022aeae858373ab1ce, type: 2}
+  barracks:
+  - {fileID: 11400000, guid: 900ce74a24a4e4f15b96c0387f21e75f, type: 2}
+  towers:
+  - {fileID: 11400000, guid: db28f21125c804500af9156ce640d09d, type: 2}
+  - {fileID: 11400000, guid: 5fb62565c40d34b768f3ebbb3558fe77, type: 2}
 --- !u!114 &2109516158
 MonoBehaviour:
   m_ObjectHideFlags: 0

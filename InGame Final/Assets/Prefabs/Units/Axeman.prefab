@@ -135,8 +135,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navAgent: {fileID: -512577293634403931}
   rangeCollider: {fileID: 197294591}
+  animator: {fileID: 2637119225320935519}
   unitName: None
-  unitCost: 0
+  unitCostOre: 0
+  unitCostWood: 0
   unitHealth: 0
   unitArmor: 0
   unitAttack: 0
@@ -354,6 +356,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5c9effb098f044e8aac424032dad9fe, type: 3}
+--- !u!95 &2637119225320935519 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9054281786364202082, guid: c5c9effb098f044e8aac424032dad9fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 6431044226965609533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6864482088642478759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467286608023756442, guid: c5c9effb098f044e8aac424032dad9fe,

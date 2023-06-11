@@ -38,14 +38,15 @@ namespace _Scripts.Player.Structure
             {
                 if (pT.isPrototype)
                 {
-                    if (PlayerManager.instance.playerOre >= pT.towerCost)
+                    if (PlayerManager.instance.playerOre >= pT.towerCostOre && PlayerManager.instance.playerWood >= pT.towerCostWood)
                     {
                         if (CanBePlaced(pT.towerPlacable))
                         {
                             pT.towerPlacable.Place();
                             Vector3Int start = gridLayout.WorldToCell(pT.towerPlacable.GetStartPosition());
                             TakeArea(start, pT.towerPlacable.Size);
-                            PlayerManager.instance.playerOre -= pT.towerCost;
+                            PlayerManager.instance.playerOre -= pT.towerCostOre;
+                            PlayerManager.instance.playerWood -= pT.towerCostWood;
                             soundEffectSource.PlayOneShot(buildingSounds[2]);
 
                             return true;
@@ -67,14 +68,15 @@ namespace _Scripts.Player.Structure
             {
                 if (pB.isPrototype)
                 {
-                    if (PlayerManager.instance.playerOre >= pB.barracksCost)
+                    if (PlayerManager.instance.playerOre >= pB.barracksCostOre && PlayerManager.instance.playerWood >= pB.barracksCostWood)
                     {
                         if (CanBePlaced(pB.barracksPlacable))
                         {
                             pB.barracksPlacable.Place();
                             Vector3Int start = gridLayout.WorldToCell(pB.barracksPlacable.GetStartPosition());
                             TakeArea(start, pB.barracksPlacable.Size);
-                            PlayerManager.instance.playerOre -= pB.barracksCost;
+                            PlayerManager.instance.playerOre -= pB.barracksCostOre;
+                            PlayerManager.instance.playerWood -= pB.barracksCostWood;
                             soundEffectSource.PlayOneShot(buildingSounds[2]);
 
                             return true;
@@ -109,8 +111,7 @@ namespace _Scripts.Player.Structure
         public static Vector3 SnapToGrid(Vector3 position)
         {
             Vector3Int cellPosition = instance.gridLayout.WorldToCell(position);
-            return instance.gridLayout.CellToWorld(cellPosition) +
-                   new Vector3(0, 1 /*98*/, 0); // figure out modular / shifting height
+            return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0, position.y, 0);
         }
 
         private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)
