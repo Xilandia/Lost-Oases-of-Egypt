@@ -22712,10 +22712,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnPoints:
-  - {fileID: 69777703}
-  - {fileID: 1728338005}
-  periodLength: 600
-  progressionMultiplier: 1
+  - {x: -2.3030155e-28, y: 3e-45, z: 0.000000051965976}
+  - {x: 4.518009e-39, y: 4.2741525e+20, z: 1e-45}
+  enemyStages:
+  - {fileID: 11400000, guid: c7844ef6416a841088cb09f487d75c96, type: 2}
+  periodNumber: 0
+  currentSpawnPointIndex: 0
   enemyBehaviorTransitionTransform: {fileID: 1170276727}
 --- !u!1 &1880317937
 GameObject:
