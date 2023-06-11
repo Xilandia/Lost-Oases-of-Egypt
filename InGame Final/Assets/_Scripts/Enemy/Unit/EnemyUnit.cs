@@ -53,6 +53,7 @@ namespace _Scripts.Enemy.Unit
         
         void Start() // might need to change this to awake
         {
+            navAgent.enabled = true;
             navAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
             navAgent.speed = enemyMoveSpeed;
             rangeCollider.radius = enemyAggroRange;

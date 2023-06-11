@@ -111,7 +111,7 @@ namespace _Scripts.Player.Structure
         public static Vector3 SnapToGrid(Vector3 position)
         {
             Vector3Int cellPosition = instance.gridLayout.WorldToCell(position);
-            return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0, 0, 0);
+            return instance.gridLayout.CellToWorld(cellPosition) + new Vector3(0, position.y, 0);
         }
 
         private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)

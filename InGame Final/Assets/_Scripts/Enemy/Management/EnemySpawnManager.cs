@@ -23,6 +23,7 @@ namespace _Scripts.Enemy.Management
         public Transform enemyBehaviorTransitionTransform;
         
         private readonly List<ObjectPool<EnemyUnit>> enemyPools = new List<ObjectPool<EnemyUnit>>();
+        private readonly List<EnemyUnit> newEnemies = new List<EnemyUnit>();
 
         void Awake()
         {
@@ -48,6 +49,12 @@ namespace _Scripts.Enemy.Management
                 SpawnEnemies();
                 previousPeriodTick = PlayerManager.instance.roundTimer[2];
             }
+            
+            /*foreach (EnemyUnit enemy in newEnemies)
+            {
+                enemy.transform.position = enemySpawnPoints[0].position;
+                newEnemies.Remove(enemy);
+            }*/
         }
 
         private void SpawnEnemies()
@@ -58,7 +65,8 @@ namespace _Scripts.Enemy.Management
             {
                 for (int j = 0; j < enemyPools.Count; j++)
                 {
-                    enemyPools[j].Get();
+                    EnemyUnit eU = enemyPools[j].Get();
+                    //newEnemies.Add(eU);
                 }
             }
         }
