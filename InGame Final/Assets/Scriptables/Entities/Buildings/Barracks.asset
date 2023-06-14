@@ -21,6 +21,12 @@ MonoBehaviour:
   entityArmor: 10
   entityCreationTime: 10
   buildableUnits:
+  - {fileID: 11400000, guid: 5f3e3fef8f4ae433bb3a9e7f245d1ce0, type: 2}
   - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
   - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
   - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}
+  buildableUnitNames:
+  - Knight
+  - Axeman
+  - Archer
+  - Wizard

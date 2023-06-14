@@ -79,7 +79,9 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 11400000, guid: 2d25b1995ead542d8a79b8dc4437e60e,
       type: 2}
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
+    - Server
   - serializedVersion: 2
     name: High Fidelity
     pixelLightCount: 2
@@ -116,7 +118,9 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 11400000, guid: 0ffd593f842384fc88e9b3c0a2587475,
       type: 2}
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
+    - Server
   m_PerPlatformDefaultQuality:
     Android: 1
     CloudRendering: 2

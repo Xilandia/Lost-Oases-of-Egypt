@@ -23,7 +23,7 @@ namespace _Scripts.Interaction.Interactable
 
             if (pB.isComplete)
             {
-                ActionFrame.instance.SetActionButtons(pB.trainableUnitNames);
+                ActionFrame.instance.SetActionButtons(pB.buildableUnitNames);
             }
         }
 
