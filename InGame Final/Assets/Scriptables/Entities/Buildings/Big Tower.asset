@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b764b2c8e55e4aaa9fdc5affc25d5f7, type: 3}
+  m_Name: Big Tower
+  m_EditorClassIdentifier: 
+  entityName: Big Tower
+  entityPrefab: {fileID: 3887137071503025175, guid: 836cba6fee5114676b3907ce814b9430,
+    type: 3}
+  entityCostOre: 250
+  entityCostWood: 50
+  entityHealth: 300
+  entityArmor: 5
+  entityAttack: 25
+  entityTimeBetweenAttacks: 3
+  entityAttackRange: 20
+  entityCreationTime: 15
