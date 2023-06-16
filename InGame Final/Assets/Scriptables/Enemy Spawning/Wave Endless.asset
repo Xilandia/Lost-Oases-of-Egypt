@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: Wave Endless
   m_EditorClassIdentifier: 
   waveEnemyIndex: 000000000000000003000000
-  waveEnemySides: 000000000000000000000000
-  waveEnemySpawnPositions:
-  - {x: -424.0024, y: 80.89573, z: 379.6193}
+  waveEnemySides: 050000000500000005000000

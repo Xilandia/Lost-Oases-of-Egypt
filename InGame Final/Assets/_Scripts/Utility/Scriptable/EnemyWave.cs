@@ -17,6 +17,5 @@ namespace _Scripts.Utility.Scriptable
 
         public List<EnemyType> waveEnemyIndex;
         public List<int> waveEnemySides;
-        public List<Vector3> waveEnemySpawnPositions;
     }
 }

@@ -1,6 +1,7 @@
 using _Scripts.Utility.Entity;
 using _Scripts.Interaction.Action;
 using _Scripts.Player.Structure;
+using UnityEngine;
 
 namespace _Scripts.Interaction.Interactable
 {

@@ -9224,6 +9224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720156987}
+  - component: {fileID: 720156988}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -9248,6 +9249,25 @@ Transform:
   m_Father: {fileID: 673076738}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &720156988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720156986}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90852d970c8424626a3846c9d44834b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  soundEffects: []
+  musicSource: {fileID: 2064766430}
+  soundEffectSource: {fileID: 691512219}
 --- !u!1001 &727213292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22715,8 +22735,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnPoints:
-  - {x: -2.3030155e-28, y: 3e-45, z: 0.000000051965976}
-  - {x: 4.518009e-39, y: 4.2741525e+20, z: 1e-45}
+  - {fileID: 69777703}
+  - {fileID: 1728338005}
+  - {fileID: 1880317940}
+  - {fileID: 1278922499}
+  - {fileID: 1505457124}
+  - {fileID: 1769078292}
   enemyStages:
   - {fileID: 11400000, guid: c7844ef6416a841088cb09f487d75c96, type: 2}
   periodNumber: 0

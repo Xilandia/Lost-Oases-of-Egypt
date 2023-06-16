@@ -131,6 +131,7 @@ namespace _Scripts.Player.Structure
 
         public void InitializeWithObject(GameObject prefab, bool isTower)
         {
+            InputHandler.instance.DeselectAll();
             Vector3 position = SnapToGrid(Vector3.zero);
             GameObject newObject = Instantiate(prefab, position, Quaternion.identity);
             placingTower = isTower;

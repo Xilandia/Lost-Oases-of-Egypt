@@ -18,8 +18,8 @@ MonoBehaviour:
   entityHealth: 20
   entityArmor: 1
   entityTimeBetweenGathering: 1
-  entityOperationRange: 5
-  entityMoveSpeed: 5
+  entityOperationRange: 25
+  entityMoveSpeed: 25
   buildableBarracks:
   - {fileID: 1231638400916525711, guid: 97d36d64e59dc42ee96bd27d7a9d983a, type: 3}
   buildableTowers:
