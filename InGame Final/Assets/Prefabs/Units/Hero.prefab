@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: -512577293634403931}
   - component: {fileID: -6677162688861279046}
   - component: {fileID: 2508237986389632620}
+  - component: {fileID: -2439338860141271195}
   - component: {fileID: 434754386}
   m_Layer: 8
   m_Name: Hero
@@ -75,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 1100987419105808796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6825588071963018695}
@@ -172,6 +173,19 @@ MonoBehaviour:
   isInteracting: 0
   highlight: {fileID: 2663886706219859472}
   unitStatDisplay: {fileID: 1176556250010233137}
+--- !u!114 &-2439338860141271195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100987419105808796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb085e4b28d10403280a1a15e8a8d5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroUnit: {fileID: -6677162688861279046}
 --- !u!54 &434754386
 Rigidbody:
   m_ObjectHideFlags: 0
