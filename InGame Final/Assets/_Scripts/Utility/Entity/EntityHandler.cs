@@ -113,6 +113,7 @@ namespace _Scripts.Utility.Entity
             pB.barracksArmor = entity.entityArmor;
             pB.barracksBuildTime = entity.entityCreationTime;
             pB.buildableUnits = entity.buildableUnits;
+            pB.buildableUnitNames = entity.buildableUnitNames;
         }
         
         public void SetPlayerTowerStats(PlayerTower pT, string towerType)

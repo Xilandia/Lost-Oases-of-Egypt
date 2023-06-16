@@ -8338,6 +8338,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
   - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
   - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}
+  - {fileID: 11400000, guid: 5f3e3fef8f4ae433bb3a9e7f245d1ce0, type: 2}
+  - {fileID: 11400000, guid: 75f0b63f71d154989961d9778842f930, type: 2}
   workers:
   - {fileID: 11400000, guid: f1020b79e74b94022aeae858373ab1ce, type: 2}
   barracks:
@@ -20120,6 +20122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUnits:
+  - {fileID: 1100987419105808796, guid: c71428ec0d0bb4b359c71a929b359616, type: 3}
   - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
   - {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0, type: 3}
   - {fileID: 1100987419105808796, guid: d123798b4440345eb8370a98f3364faa, type: 3}

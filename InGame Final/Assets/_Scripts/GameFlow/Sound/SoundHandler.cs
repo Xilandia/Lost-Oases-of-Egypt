@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using _Scripts.Player.Management;
 using UnityEngine;
 
-public class SoundHandler : MonoBehaviour
+namespace _Scripts.GameFlow.Sound
 {
-    public AudioClip[] music;
-    public AudioClip[] soundEffects;
-    public AudioSource musicSource;
-    public AudioSource soundEffectSource;
-
-    private float lastChange = 0;
-    private int currTrack = 0;
-
-    void Update()
+    public class SoundHandler : MonoBehaviour
     {
-        if (PlayerManager.instance.roundTimer[2] - lastChange > 200)
+        public AudioClip[] music;
+        public AudioClip[] soundEffects;
+        public AudioSource musicSource;
+        public AudioSource soundEffectSource;
+
+        private float lastChange = 0;
+        private int currTrack = 0;
+
+        void Update()
         {
-            lastChange = 0;
-            musicSource.PlayOneShot(music[currTrack]);
-            currTrack++;
+            if (PlayerManager.instance.roundTimer[2] - lastChange > 200)
+            {
+                lastChange = 0;
+                musicSource.PlayOneShot(music[currTrack]);
+                currTrack++;
+            }
         }
     }
 }

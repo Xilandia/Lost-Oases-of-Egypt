@@ -26,7 +26,7 @@ namespace _Scripts.Player.Structure
 
         public bool isPrototype, isPlaced, isComplete;
         public EntityUnit[] buildableUnits;
-        public string[] trainableUnitNames;
+        public string[] buildableUnitNames;
         public InteractableBarracks interactable;
 
         private bool constructionStarted = false;
@@ -41,11 +41,6 @@ namespace _Scripts.Player.Structure
 
         private Vector3 originalScale;
 
-        void Start()
-        {
-            structureCollider.enabled = false;
-        }
-        
         void Update()
         {
             if (isTraining)
