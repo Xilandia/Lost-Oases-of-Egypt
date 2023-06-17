@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0cad7080f3eb0428fa1fbfa7920ae24e, type: 2}
   - {fileID: 11400000, guid: e4792a3fff6d6464f8a143bd2e33ebce, type: 2}
   - {fileID: 11400000, guid: 9679e014dafad49bebd7feb58e8e04cf, type: 2}
-  waveLength: 1
+  waveLength: 0.1

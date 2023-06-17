@@ -55,6 +55,8 @@ namespace _Scripts.Utility.Entity
             pU.unitAggroRange = entity.entityAggroRange;
             pU.unitMoveSpeed = entity.entityMoveSpeed;
             pU.unitTrainTime = entity.entityCreationTime;
+            pU.unitAttackSound = entity.entityAttackSound;
+            pU.unitDeathSound = entity.entityDeathSound;
         }
 
         public void SetPlayerWorkerStats(PlayerWorker pW, string workerType)
@@ -85,6 +87,8 @@ namespace _Scripts.Utility.Entity
             pW.buildableBarracks = entity.buildableBarracks;
             pW.buildableTowers = entity.buildableTowers;
             pW.buildableStructureNames = entity.buildableStructureNames;
+            pW.workerGatherSound = entity.entityGatherSound;
+            pW.workerDeathSound = entity.entityDeathSound;
         }
         
         public void SetPlayerBarracksStats(PlayerBarracks pB, string barracksType)
@@ -114,6 +118,10 @@ namespace _Scripts.Utility.Entity
             pB.barracksBuildTime = entity.entityCreationTime;
             pB.buildableUnits = entity.buildableUnits;
             pB.buildableUnitNames = entity.buildableUnitNames;
+            pB.barracksBuildSound = entity.entityBuildSound;
+            pB.barracksTrainSound = entity.entityTrainSound;
+            pB.barracksDamagedSound = entity.entityDamagedSound;
+            pB.barracksDeathSound = entity.entityDeathSound;
         }
         
         public void SetPlayerTowerStats(PlayerTower pT, string towerType)
@@ -144,6 +152,10 @@ namespace _Scripts.Utility.Entity
             pT.towerTimeBetweenAttacks = entity.entityTimeBetweenAttacks;
             pT.towerAttackRange = entity.entityAttackRange;
             pT.towerBuildTime = entity.entityCreationTime;
+            pT.towerAttackSound = entity.entityAttackSound;
+            pT.towerBuildSound = entity.entityBuildSound;
+            pT.towerDamagedSound = entity.entityDamagedSound;
+            pT.towerDeathSound = entity.entityDeathSound;
         }
 
         public void SetEnemyStats(EnemyUnit eU, string enemyType)
@@ -174,6 +186,8 @@ namespace _Scripts.Utility.Entity
             eU.enemyAttackRange = entity.entityAttackRange;
             eU.enemyAggroRange = entity.entityAggroRange;
             eU.enemyMoveSpeed = entity.entityMoveSpeed;
+            eU.enemyAttackSound = entity.entityAttackSound;
+            eU.enemyDeathSound = entity.entityDeathSound;
         }
     }
 }

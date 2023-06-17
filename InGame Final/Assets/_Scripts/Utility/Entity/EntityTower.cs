@@ -15,5 +15,9 @@ namespace _Scripts.Utility.Entity
 		public float entityTimeBetweenAttacks;
 		public float entityAttackRange;
 		public float entityCreationTime;
+		public AudioClip entityAttackSound;
+		public AudioClip entityBuildSound;
+		public AudioClip entityDamagedSound;
+		public AudioClip entityDeathSound;
 	}
 }

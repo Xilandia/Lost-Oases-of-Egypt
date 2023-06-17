@@ -16,5 +16,7 @@ namespace _Scripts.Utility.Entity
 		public PlayerBarracks[] buildableBarracks;
 		public PlayerTower[] buildableTowers;
 		public string[] buildableStructureNames;
+		public AudioClip entityGatherSound;
+		public AudioClip entityDeathSound;
 	}
 }

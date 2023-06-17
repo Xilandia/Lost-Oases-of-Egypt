@@ -14,5 +14,9 @@ namespace _Scripts.Utility.Entity
 		public float entityCreationTime;
 		public EntityUnit[] buildableUnits;
 		public string[] buildableUnitNames;
+		public AudioClip entityBuildSound;
+		public AudioClip entityTrainSound;
+		public AudioClip entityDamagedSound;
+		public AudioClip entityDeathSound;
 	}
 }

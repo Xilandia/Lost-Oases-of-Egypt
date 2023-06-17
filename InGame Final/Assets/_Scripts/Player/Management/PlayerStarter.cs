@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Scripts.GameFlow.Sound;
 using _Scripts.Player.Management;
 using _Scripts.Player.Unit;
 using _Scripts.Utility.Entity;
@@ -11,6 +12,8 @@ public class PlayerStarter : MonoBehaviour
 
     void Start()
     {
+        SoundHandler.instance.PlayOpeningTrack();
+        
         foreach (GameObject prefab in initialUnits)
         {
             GameObject unit = Instantiate(prefab, playerStartPosition.position, Quaternion.identity);

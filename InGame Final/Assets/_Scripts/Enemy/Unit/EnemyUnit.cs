@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 using _Scripts.Enemy.Management;
+using _Scripts.GameFlow.Sound;
 using _Scripts.Player.Management;
 using _Scripts.Player.Structure;
 using _Scripts.Player.Unit;
@@ -39,6 +40,8 @@ namespace _Scripts.Enemy.Unit
 
         public float enemyCurrentHealth;
         public float enemyAttackCooldown;
+        public AudioClip enemyAttackSound;
+        public AudioClip enemyDeathSound;
 
         public GameObject enemyPrefab;
         public Transform enemyTransform;
@@ -120,6 +123,7 @@ namespace _Scripts.Enemy.Unit
                     if (targetDamageable != null)
                     {
                         targetDamageable.TakeDamage(enemyAttack);
+                        SoundHandler.instance.PlaySoundEffect(enemyAttackSound);
                     }
                     else
                     {
@@ -321,6 +325,7 @@ namespace _Scripts.Enemy.Unit
         private void UnitDeath()
         {
             animator.SetBool(hasLifeHash, false);
+            SoundHandler.instance.PlaySoundEffect(enemyDeathSound);
             disable?.Invoke(this);
         }
 

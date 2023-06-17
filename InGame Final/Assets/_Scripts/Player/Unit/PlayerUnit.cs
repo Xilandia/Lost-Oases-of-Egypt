@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using _Scripts.Enemy.Unit;
+using _Scripts.GameFlow.Sound;
 using _Scripts.Interaction.Interactable;
 using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
@@ -35,6 +36,8 @@ namespace _Scripts.Player.Unit
 
         public float unitCurrentHealth;
         public float unitAttackCooldown;
+        public AudioClip unitAttackSound;
+        public AudioClip unitDeathSound;
 
         public GameObject unitStatDisplay;
         public Image unitHealthBarImage;
@@ -142,6 +145,7 @@ namespace _Scripts.Player.Unit
                     if (aggroDamageable != null)
                     {
                         aggroDamageable.TakeDamage(unitAttack);
+                        SoundHandler.instance.PlaySoundEffect(unitAttackSound);
                     }
                     else
                     {
@@ -188,6 +192,7 @@ namespace _Scripts.Player.Unit
             PlayerManager.instance.rangedSoldiers.Remove(this);
 
             animator.SetBool(hasLifeHash, false);
+            SoundHandler.instance.PlaySoundEffect(unitDeathSound);
             Destroy(gameObject);
         }
 

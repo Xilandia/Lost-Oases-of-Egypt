@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _Scripts.Enemy.Unit;
+using _Scripts.GameFlow.Sound;
 using UnityEngine;
 using _Scripts.Utility.Interface;
 using _Scripts.Utility.Entity;
@@ -23,6 +24,10 @@ namespace _Scripts.Player.Structure
         public float towerCostOre, towerCostWood, towerHealth, towerArmor, towerAttack, towerTimeBetweenAttacks, towerAttackRange, towerBuildTime;
         public float towerCurrentHealth;
         public float towerAttackCooldown;
+        public AudioClip towerAttackSound;
+        public AudioClip towerBuildSound;
+        public AudioClip towerDamagedSound;
+        public AudioClip towerDeathSound;
 
         public GameObject towerPrefab;
         public Transform towerTransform;
@@ -32,7 +37,7 @@ namespace _Scripts.Player.Structure
         public InteractableTower interactable;
 
         private bool constructionStarted = false;
-        private float currProgress, initYScale;
+        private float currProgress, prevSoundEffect, initYScale;
         private Vector3 originalScale;
         public List<PlayerWorker> workersInvolvedInConstruction = new List<PlayerWorker>();
         
@@ -97,6 +102,12 @@ namespace _Scripts.Player.Structure
                 currProgress += Time.deltaTime;
                 transform.localScale = new Vector3(originalScale.x, initYScale * (currProgress / towerBuildTime),
                     originalScale.z);
+
+                if (currProgress >= prevSoundEffect + 1f)
+                {
+                    SoundHandler.instance.PlaySoundEffect(towerBuildSound);
+                    prevSoundEffect = currProgress;
+                }
                 
                 if (currProgress >= towerBuildTime)
                 {
@@ -170,6 +181,7 @@ namespace _Scripts.Player.Structure
                     if (aggroDamageable != null)
                     {
                         aggroDamageable.TakeDamage(towerAttack);
+                        SoundHandler.instance.PlaySoundEffect(towerAttackSound);
                     }
                     else
                     {
@@ -191,10 +203,11 @@ namespace _Scripts.Player.Structure
         {
             float totalDamage = damage - towerArmor;
             towerCurrentHealth -= Math.Max(totalDamage, 1);
+            SoundHandler.instance.PlaySoundEffect(towerDamagedSound);
 
             if (towerCurrentHealth <= 0)
             {
-                // make sound, do something?
+                SoundHandler.instance.PlaySoundEffect(towerDeathSound);
                 Destroy(gameObject);
             }
         }

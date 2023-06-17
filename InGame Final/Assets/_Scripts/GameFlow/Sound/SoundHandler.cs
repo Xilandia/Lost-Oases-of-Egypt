@@ -7,22 +7,40 @@ namespace _Scripts.GameFlow.Sound
 {
     public class SoundHandler : MonoBehaviour
     {
-        public AudioClip[] music;
-        public AudioClip[] soundEffects;
+        public static SoundHandler instance;
+        
+        public AudioClip openingTrack;
+        public AudioClip transitionTrack;
+        public AudioClip[] stageTracks;
         public AudioSource musicSource;
         public AudioSource soundEffectSource;
 
-        private float lastChange = 0;
-        private int currTrack = 0;
-
-        void Update()
+        void Awake()
         {
-            if (PlayerManager.instance.roundTimer[2] - lastChange > 200)
-            {
-                lastChange = PlayerManager.instance.roundTimer[2];
-                musicSource.PlayOneShot(music[currTrack]);
-                currTrack++;
-            }
+            instance = this;
+        }
+
+        public void PlayOpeningTrack()
+        {
+            musicSource.clip = openingTrack;
+            musicSource.Play();
+        }
+
+        public void PlayTransitionTrack()
+        {
+            musicSource.clip = transitionTrack;
+            musicSource.Play();
+        }
+        
+        public void PlayStageTrack(int stage)
+        {
+            musicSource.clip = stageTracks[stage];
+            musicSource.Play();
+        }
+
+        public void PlaySoundEffect(AudioClip clip)
+        {
+            soundEffectSource.PlayOneShot(clip, 0.2f);
         }
     }
 }

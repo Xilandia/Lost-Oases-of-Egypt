@@ -17,5 +17,7 @@ namespace _Scripts.Utility.Entity
 		public float entityAggroRange;
 		public float entityMoveSpeed;
 		public float entityCreationTime;
+		public AudioClip entityAttackSound;
+		public AudioClip entityDeathSound;
 	}
 }

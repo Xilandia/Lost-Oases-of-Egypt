@@ -1,4 +1,5 @@
 using System;
+using _Scripts.GameFlow.Sound;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -28,6 +29,8 @@ namespace _Scripts.Player.Unit
             workerGatherSpeed;
         public float workerCurrentHealth;
         public float workerGatherCooldown;
+        public AudioClip workerGatherSound;
+        public AudioClip workerDeathSound;
 
         public GameObject workerPrefab;
         public Transform workerTransform;
@@ -126,6 +129,7 @@ namespace _Scripts.Player.Unit
                 
                 if (workerGatherCooldown <= 0)
                 {
+                    SoundHandler.instance.PlaySoundEffect(workerGatherSound);
                     workerGatherCooldown = workerGatherSpeed;
                     if (resourceNode != null)
                     {
@@ -189,6 +193,8 @@ namespace _Scripts.Player.Unit
             
             PlayerManager.instance.workers.Remove(this);
 
+            animator.SetBool(hasLifeHash, false);
+            SoundHandler.instance.PlaySoundEffect(workerDeathSound);
             Destroy(gameObject);
         }
 

@@ -33,4 +33,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2834e580b1394a36adde2ef1633d456, type: 2}
   - {fileID: 11400000, guid: f2834e580b1394a36adde2ef1633d456, type: 2}
   - {fileID: 11400000, guid: f2834e580b1394a36adde2ef1633d456, type: 2}
-  waveLength: 0.1
+  waveLength: 5

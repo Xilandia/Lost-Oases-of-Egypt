@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _Scripts.GameFlow.Sound;
 using UnityEngine;
 using _Scripts.Utility.Interface;
 using _Scripts.Utility.Entity;
@@ -19,6 +20,10 @@ namespace _Scripts.Player.Structure
         public string barracksName;
         public float barracksCostOre, barracksCostWood, barracksHealth, barracksArmor, barracksBuildTime;
         public float barracksCurrentHealth;
+        public AudioClip barracksBuildSound;
+        public AudioClip barracksTrainSound;
+        public AudioClip barracksDamagedSound;
+        public AudioClip barracksDeathSound;
 
         public GameObject barracksPrefab;
         public Transform barracksTransform;
@@ -30,7 +35,7 @@ namespace _Scripts.Player.Structure
         public InteractableBarracks interactable;
 
         private bool constructionStarted = false;
-        private float currProgress, initYScale;
+        private float currProgress, prevSoundEffect, initYScale;
         public List<PlayerWorker> workersInvolvedInConstruction = new List<PlayerWorker>();
 
         [SerializeField] private Transform spawnPoint;
@@ -96,6 +101,12 @@ namespace _Scripts.Player.Structure
                 transform.localScale = new Vector3(originalScale.x, initYScale * (currProgress / barracksBuildTime),
                     originalScale.z);
                 
+                if (currProgress >= prevSoundEffect + 1f)
+                {
+                    prevSoundEffect = currProgress;
+                    SoundHandler.instance.PlaySoundEffect(barracksBuildSound);
+                }
+
                 if (currProgress >= barracksBuildTime)
                 {
                     CompleteConstruction();
@@ -191,16 +202,19 @@ namespace _Scripts.Player.Structure
             {
                 isTraining = false;
             }
+            
+            SoundHandler.instance.PlaySoundEffect(barracksTrainSound);
         }
 
         public void TakeDamage(float damage)
         {
             float totalDamage = damage - barracksArmor;
             barracksCurrentHealth -= Math.Max(totalDamage, 1);
+            SoundHandler.instance.PlaySoundEffect(barracksDamagedSound);
 
             if (barracksCurrentHealth <= 0)
             {
-                // make sound, do something?
+                SoundHandler.instance.PlaySoundEffect(barracksDeathSound);
                 Destroy(gameObject);
             }
         }

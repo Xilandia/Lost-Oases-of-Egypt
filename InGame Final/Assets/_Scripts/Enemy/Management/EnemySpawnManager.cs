@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 using _Scripts.Enemy.Unit;
+using _Scripts.GameFlow.Sound;
 using _Scripts.GameFlow.Transitions;
 using _Scripts.Player.Management;
 using _Scripts.Utility.Scriptable;
@@ -56,19 +57,20 @@ namespace _Scripts.Enemy.Management
         {
             if (currentWaveIndex < currentStage.waves.Count)
             {
-                /*EnemyWave currentWave = currentStage.waves[currentWaveIndex];
+                EnemyWave currentWave = currentStage.waves[currentWaveIndex];
 
                 for (int i = 0; i < currentWave.waveEnemyIndex.Count; i++)
                 {
                     currentSpawnPointIndex = currentWave.waveEnemySides[i];
                     enemyPools[(int) currentWave.waveEnemyIndex[i]].Get();
-                }*/
+                }
                 
                 currentWaveIndex++;
             }
             else
             {
                 stageIsActive = false;
+                SoundHandler.instance.PlayTransitionTrack();
                 StageTransitionHandler.instance.StageWasDeployed();
             }
         }

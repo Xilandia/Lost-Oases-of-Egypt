@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using _Scripts.Enemy.Management;
+using _Scripts.GameFlow.Sound;
 using _Scripts.Player.Management;
 using _Scripts.Utility.Scriptable;
 using UnityEngine;
@@ -27,7 +28,7 @@ namespace _Scripts.GameFlow.Transitions
             if (readyToLoadStage)
             {
                 readyToLoadStage = false;
-                // audio cue
+                SoundHandler.instance.PlayStageTrack(currentStage);
                 
                 if (currentStage < 3)
                 {
