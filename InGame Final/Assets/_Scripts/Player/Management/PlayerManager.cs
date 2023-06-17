@@ -23,7 +23,6 @@ namespace _Scripts.Player.Management
 
         public float playerOre;
         public float playerWood;
-        public float playerGold;
         public float[] roundTimer = new float[3];
 
         void Awake()
@@ -48,7 +47,7 @@ namespace _Scripts.Player.Management
 
         private void OnGUI()
         {
-            GUI.Label(new Rect(10, 10, 500, 30), $"Held Resources: {playerWood} Wood, {playerOre} Ore, {playerGold} Gold");
+            GUI.Label(new Rect(10, 10, 500, 30), $"Held Resources: {playerWood} Wood, {playerOre} Ore");
         }
     }
 }

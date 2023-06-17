@@ -20,6 +20,7 @@ namespace _Scripts.Enemy.Management
         private int currentStageIndex;
         private int numberOfEnemiesToSpawn;
         private float previousPeriodTick;
+        private bool stageIsActive;
         [SerializeField] private int periodNumber;
         public int currentSpawnPointIndex;
 
@@ -41,17 +42,21 @@ namespace _Scripts.Enemy.Management
             enemyPools.Add(EnemyPoolHandler.instance.bossEnemyPool);
             
             currentStage = enemyStages[currentStageIndex];
+            stageIsActive = true;
             currentWaveIndex = 0;
         }
 
 
         void Update()
         {
-            if (PlayerManager.instance.roundTimer[2] - previousPeriodTick >= currentStage.waveLength)
+            if (stageIsActive)
             {
-                periodNumber++;
-                SpawnEnemies();
-                previousPeriodTick = PlayerManager.instance.roundTimer[2];
+                if (PlayerManager.instance.roundTimer[2] - previousPeriodTick >= currentStage.waveLength)
+                {
+                    periodNumber++;
+                    SpawnEnemies();
+                    previousPeriodTick = PlayerManager.instance.roundTimer[2];
+                }
             }
         }
 
@@ -71,10 +76,11 @@ namespace _Scripts.Enemy.Management
             }
             else
             {
-                currentWaveIndex = 0;
+                stageIsActive = false;
+                /*currentWaveIndex = 0;
                 currentStageIndex++;
                 currentStage = enemyStages[currentStageIndex];
-                Debug.Log("Done with stage");
+                Debug.Log("Done with stage");*/
             }
         }
     }

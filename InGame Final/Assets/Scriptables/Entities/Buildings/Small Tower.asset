@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 3}
   entityCostOre: 50
   entityCostWood: 80
-  entityHealth: 100
+  entityHealth: 125
   entityArmor: 3
   entityAttack: 10
   entityTimeBetweenAttacks: 5

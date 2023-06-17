@@ -7,8 +7,7 @@ namespace _Scripts.Player.Resources
         public enum ResourceTypes
         {
             Wood,
-            Ore,
-            Gold
+            Ore
         }
 
         public float resourceAmount;

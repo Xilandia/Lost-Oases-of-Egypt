@@ -14,6 +14,8 @@ namespace _Scripts.Interaction.Management
         public float movementTime;
         public float rotationAmount;
         public Vector3 zoomAmount;
+        public Vector3 zoomMin;
+        public Vector3 zoomMax;
 
         public Vector3 newPosition;
         public Quaternion newRotation;
@@ -86,11 +88,21 @@ namespace _Scripts.Interaction.Management
             if (Input.GetKey(KeyCode.R))
             {
                 newZoom += zoomAmount;
+
+                if (newZoom.y < 100) // add indicator (sound?)
+                {
+                    newZoom = zoomMin;
+                }
             }
 
             if (Input.GetKey(KeyCode.F))
             {
                 newZoom -= zoomAmount;
+                
+                if (newZoom.y > 400) // add indicator (sound?)
+                {
+                    newZoom = zoomMax;
+                }
             }
 
             // Applies camera changes (movement, rotation, zoom)

@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 3}
   entityCostOre: 120
   entityCostWood: 120
-  entityHealth: 300
+  entityHealth: 340
   entityArmor: 10
   entityCreationTime: 10
   buildableUnits:

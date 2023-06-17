@@ -19,9 +19,9 @@ MonoBehaviour:
   entityCostWood: 10
   entityHealth: 100
   entityArmor: 2
-  entityAttack: 40
-  entityTimeBetweenAttacks: 3
-  entityAttackRange: 30
+  entityAttack: 45
+  entityTimeBetweenAttacks: 5
+  entityAttackRange: 10
   entityAggroRange: 60
   entityMoveSpeed: 60
-  entityCreationTime: 5
+  entityCreationTime: 8

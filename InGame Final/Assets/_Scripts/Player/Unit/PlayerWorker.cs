@@ -137,9 +137,6 @@ namespace _Scripts.Player.Unit
                             case ResourceNode.ResourceTypes.Wood:
                                 PlayerManager.instance.playerWood += resourceNode.GatherResource();
                                 break;
-                            case ResourceNode.ResourceTypes.Gold:
-                                PlayerManager.instance.playerGold += resourceNode.GatherResource();
-                                break;
                         }
                     }
                     else

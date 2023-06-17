@@ -15,8 +15,8 @@ MonoBehaviour:
   entityName: Worker
   entityPrefab: {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0,
     type: 3}
-  entityHealth: 20
-  entityArmor: 1
+  entityHealth: 35
+  entityArmor: 5
   entityTimeBetweenGathering: 1
   entityOperationRange: 25
   entityMoveSpeed: 25

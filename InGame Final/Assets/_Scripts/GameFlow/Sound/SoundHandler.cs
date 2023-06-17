@@ -19,7 +19,7 @@ namespace _Scripts.GameFlow.Sound
         {
             if (PlayerManager.instance.roundTimer[2] - lastChange > 200)
             {
-                lastChange = 0;
+                lastChange = PlayerManager.instance.roundTimer[2];
                 musicSource.PlayOneShot(music[currTrack]);
                 currTrack++;
             }

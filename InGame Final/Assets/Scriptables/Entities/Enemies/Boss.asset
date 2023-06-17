@@ -15,10 +15,10 @@ MonoBehaviour:
   entityName: Boss
   entityPrefab: {fileID: 1100987419105808796, guid: 6fdaf4f4ba5c04e7aa09e9fc17b9eeeb,
     type: 3}
-  entityHealth: 120
-  entityArmor: 4
-  entityAttack: 25
+  entityHealth: 300
+  entityArmor: 10
+  entityAttack: 34
   entityTimeBetweenAttacks: 3
   entityAttackRange: 25
-  entityAggroRange: 75
-  entityMoveSpeed: 15
+  entityAggroRange: 125
+  entityMoveSpeed: 10

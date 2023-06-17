@@ -20,8 +20,8 @@ MonoBehaviour:
   entityHealth: 500
   entityArmor: 10
   entityAttack: 25
-  entityTimeBetweenAttacks: 3
-  entityAttackRange: 40
+  entityTimeBetweenAttacks: 1
+  entityAttackRange: 10
   entityAggroRange: 50
   entityMoveSpeed: 30
   entityCreationTime: 0
