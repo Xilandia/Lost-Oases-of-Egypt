@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Scripts.GameFlow.Transitions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using _Scripts.Interaction.Action;
@@ -239,6 +240,10 @@ namespace _Scripts.Interaction.Management
 			{
 				DeselectAll();
 				DeselectWorkers();
+			}
+			if (Input.GetKeyDown(KeyCode.G))
+			{
+				StageTransitionHandler.instance.LoadStage();
 			}
 		}
 

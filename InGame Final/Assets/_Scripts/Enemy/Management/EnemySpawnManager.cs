@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 using _Scripts.Enemy.Unit;
+using _Scripts.GameFlow.Transitions;
 using _Scripts.Player.Management;
 using _Scripts.Utility.Scriptable;
 
@@ -14,14 +15,10 @@ namespace _Scripts.Enemy.Management
 
         public List<Transform> enemySpawnPoints;
         
-        [SerializeField] private List<EnemyStage> enemyStages;
-        private EnemyStage currentStage;
-        private int currentWaveIndex;
-        private int currentStageIndex;
-        private int numberOfEnemiesToSpawn;
-        private float previousPeriodTick;
-        private bool stageIsActive;
-        [SerializeField] private int periodNumber;
+        public EnemyStage currentStage;
+        public int currentWaveIndex;
+        public float previousPeriodTick;
+        public bool stageIsActive;
         public int currentSpawnPointIndex;
 
         public Transform enemyBehaviorTransitionTransform;
@@ -40,10 +37,6 @@ namespace _Scripts.Enemy.Management
             enemyPools.Add(EnemyPoolHandler.instance.fastEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.tankEnemyPool);
             enemyPools.Add(EnemyPoolHandler.instance.bossEnemyPool);
-            
-            currentStage = enemyStages[currentStageIndex];
-            stageIsActive = true;
-            currentWaveIndex = 0;
         }
 
 
@@ -53,7 +46,6 @@ namespace _Scripts.Enemy.Management
             {
                 if (PlayerManager.instance.roundTimer[2] - previousPeriodTick >= currentStage.waveLength)
                 {
-                    periodNumber++;
                     SpawnEnemies();
                     previousPeriodTick = PlayerManager.instance.roundTimer[2];
                 }
@@ -64,23 +56,20 @@ namespace _Scripts.Enemy.Management
         {
             if (currentWaveIndex < currentStage.waves.Count)
             {
-                EnemyWave currentWave = currentStage.waves[currentWaveIndex];
+                /*EnemyWave currentWave = currentStage.waves[currentWaveIndex];
 
                 for (int i = 0; i < currentWave.waveEnemyIndex.Count; i++)
                 {
                     currentSpawnPointIndex = currentWave.waveEnemySides[i];
                     enemyPools[(int) currentWave.waveEnemyIndex[i]].Get();
-                }
+                }*/
                 
                 currentWaveIndex++;
             }
             else
             {
                 stageIsActive = false;
-                /*currentWaveIndex = 0;
-                currentStageIndex++;
-                currentStage = enemyStages[currentStageIndex];
-                Debug.Log("Done with stage");*/
+                StageTransitionHandler.instance.StageWasDeployed();
             }
         }
     }
