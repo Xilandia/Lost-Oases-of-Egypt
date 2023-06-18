@@ -1,4 +1,6 @@
+using _Scripts.GameFlow.Menu;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Scripts.Player.Unit
 {
@@ -9,6 +11,10 @@ namespace _Scripts.Player.Unit
         void OnDisable() // when hero dies
         {
             // lose game
+            if (!PauseMenuHandler.instance.isGamePaused)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }

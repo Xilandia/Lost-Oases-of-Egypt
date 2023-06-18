@@ -88,13 +88,18 @@ public class NewGameOverScreen : MonoBehaviour
 
     }
 
-public void RestartButton()
+    public void RestartButton()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game Map");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void ExitButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
     }
 }

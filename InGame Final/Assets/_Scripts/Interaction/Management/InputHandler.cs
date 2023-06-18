@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Scripts.GameFlow.Menu;
 using _Scripts.GameFlow.Transitions;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -238,12 +239,48 @@ namespace _Scripts.Interaction.Management
 			}
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				DeselectAll();
-				DeselectWorkers();
+				if (PauseMenuHandler.instance.isGamePaused)
+				{
+					if (ControlViewHandler.instance.isControlViewActive)
+					{
+						ControlViewHandler.instance.Resume();
+					}
+					else
+					{
+						PauseMenuHandler.instance.Resume();
+					}
+				}
+				else
+				{
+					DeselectAll();
+					DeselectWorkers();
+				}
 			}
 			if (Input.GetKeyDown(KeyCode.G))
 			{
 				StageTransitionHandler.instance.LoadStage();
+			}
+			if (Input.GetKeyDown(KeyCode.F1))
+			{
+				if (ControlViewHandler.instance.isControlViewActive)
+				{
+					ControlViewHandler.instance.Resume();
+				}
+				else
+				{
+					ControlViewHandler.instance.Pause();
+				}
+			}
+			if (Input.GetKeyDown(KeyCode.P))
+			{
+				if (PauseMenuHandler.instance.isGamePaused)
+				{
+					PauseMenuHandler.instance.Resume();
+				}
+				else
+				{
+					PauseMenuHandler.instance.Pause();
+				}
 			}
 		}
 

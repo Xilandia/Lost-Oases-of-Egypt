@@ -11,6 +11,7 @@ namespace _Scripts.Interaction.Action
 
         [SerializeField] private Button actionButton = null;
         [SerializeField] Transform layoutGroup = null;
+        [SerializeField] private Image buttonBackground;
 
         private readonly List<Button> buttons = new List<Button>();
         private readonly List<ActionReferences> buttonReferences = new List<ActionReferences>();
@@ -30,6 +31,7 @@ namespace _Scripts.Interaction.Action
 
         public void SetActionButtons(EntityUI[] listOfActions)
         {
+            buttonBackground.enabled = true;
             for (int i = 0; i < listOfActions.Length; i++)
             {
                 buttons[i].gameObject.SetActive(true);
@@ -52,6 +54,8 @@ namespace _Scripts.Interaction.Action
 
         public void ClearAction()
         {
+            buttonBackground.enabled = false;
+            
             foreach (Button button in buttons)
             {
                 button.gameObject.SetActive(false);
