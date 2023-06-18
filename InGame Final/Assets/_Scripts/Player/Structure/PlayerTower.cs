@@ -148,12 +148,6 @@ namespace _Scripts.Player.Structure
             }
             
             distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
-
-            if (distanceToTarget > towerAttackRange + 1) // range offset
-            {
-                aggroTarget = null;
-                hasAggro = false;
-            }
         }
         
         private void CheckForEnemyTargets()

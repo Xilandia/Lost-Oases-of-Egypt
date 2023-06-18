@@ -71,7 +71,7 @@ namespace _Scripts.Player.Unit
         void Update()
         {
             HandleHealth();
-            animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.0001f);
+            animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.000001f);
 
             if (isAttemptingToGather)
             {
@@ -122,7 +122,7 @@ namespace _Scripts.Player.Unit
 
         private void ConsiderGathering()
         {
-            if (distanceToResourceNode <= workerOperationRange + 1)
+            if (distanceToResourceNode <= workerOperationRange - 20)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);
@@ -237,7 +237,7 @@ namespace _Scripts.Player.Unit
                     if (isAttemptingToBuild)
                     {
                         isConstructing = true;
-                        navAgent.SetDestination(transform.position);
+                        navAgent.SetDestination((transform.position + 4 * structureTarget.position) / 5);
                     }
                     else
                     {
@@ -249,7 +249,7 @@ namespace _Scripts.Player.Unit
                             isConstructing = true;
                             isBuildingTower = false;
                             constructionBarracks.workersInvolvedInConstruction.Add(this);
-                            navAgent.SetDestination(transform.position);
+                            navAgent.SetDestination((transform.position + 4 * structureTarget.position) / 5);
                         }
                     }
                 }

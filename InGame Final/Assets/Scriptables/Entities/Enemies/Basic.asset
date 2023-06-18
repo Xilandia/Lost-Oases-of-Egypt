@@ -23,4 +23,4 @@ MonoBehaviour:
   entityAggroRange: 50
   entityMoveSpeed: 20
   entityAttackSound: {fileID: 8300000, guid: 43738bb4cceed4c6fbac80e0b3cae6c5, type: 3}
-  entityDeathSound: {fileID: 8300000, guid: 8b9e19a9835d940ed95b6e2d5729752b, type: 3}
+  entityDeathSound: {fileID: 8300000, guid: c8e3594a3f95648dfb790e08590d6239, type: 3}

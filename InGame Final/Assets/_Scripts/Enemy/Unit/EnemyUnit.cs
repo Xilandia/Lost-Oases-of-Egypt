@@ -97,16 +97,7 @@ namespace _Scripts.Enemy.Unit
             {
                 distanceToTarget = Vector3.Distance(transform.position, targetTransform.position);
 
-                if (distanceToTarget <= enemyAggroRange + 2 || !behaviorOne) // range offset or in second stage of behavior
-                {
-                    navAgent.SetDestination(targetTransform.position);
-                }
-                else
-                {
-                    targetTransform = null;
-                    hasTarget = false;
-                    Debug.Log("Entered aggro range, but target is out of range");
-                }
+                navAgent.SetDestination(targetTransform.position);
             }
         }
 

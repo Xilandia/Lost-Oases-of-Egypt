@@ -70,7 +70,7 @@ namespace _Scripts.Player.Unit
         void Update()
         {
             HandleHealth();
-            animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.0001f);
+            animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.000001f);
 
             if (hasAggro)
             {
@@ -118,17 +118,8 @@ namespace _Scripts.Player.Unit
             else
             {
                 distanceToTarget = Vector3.Distance(transform.position, aggroTarget.position);
-
-                if (distanceToTarget <= unitAggroRange + 2) // range offset or in second stage of behavior
-                {
-                    navAgent.SetDestination(aggroTarget.position);
-                }
-                else
-                {
-                    aggroTarget = null;
-                    hasAggro = false;
-                    Debug.Log("Entered aggro range, but target is out of range");
-                }
+                
+                navAgent.SetDestination(aggroTarget.position);
             }
         }
 

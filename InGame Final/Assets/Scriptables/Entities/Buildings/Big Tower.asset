@@ -24,7 +24,7 @@ MonoBehaviour:
   entityTimeBetweenAttacks: 15
   entityAttackRange: 200
   entityCreationTime: 30
-  entityAttackSound: {fileID: 8300000, guid: f078a916398cf4f6291019908b52455a, type: 3}
-  entityBuildSound: {fileID: 8300000, guid: cf885f2bb348949ff845d06c61465119, type: 3}
+  entityAttackSound: {fileID: 8300000, guid: af959b41a6abb4fd9bdbc4531262c877, type: 3}
+  entityBuildSound: {fileID: 8300000, guid: 3bc2c5d92b7f54be7b439b2fb535fc76, type: 3}
   entityDamagedSound: {fileID: 8300000, guid: d3726e963bd404897bb73c46bb9d8aac, type: 3}
   entityDeathSound: {fileID: 8300000, guid: e45679b30ce164567b79e7c3e024cfd2, type: 3}

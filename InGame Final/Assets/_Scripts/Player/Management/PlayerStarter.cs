@@ -23,7 +23,7 @@ public class PlayerStarter : MonoBehaviour
                 PlayerUnit pU = unit.GetComponent<PlayerUnit>();
                 EntityHandler.instance.SetPlayerUnitStats(pU, unit.name);
                 
-                if (pU.unitAttackRange > 5)
+                if (pU.unitAttackRange > 12)
                 {
                     PlayerManager.instance.rangedSoldiers.Add(pU);
                 }
