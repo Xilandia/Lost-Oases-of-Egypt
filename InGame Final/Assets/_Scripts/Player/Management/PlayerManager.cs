@@ -21,6 +21,7 @@ namespace _Scripts.Player.Management
         public List<PlayerTower> towers = new List<PlayerTower>();
         public List<PlayerBarracks> barracks = new List<PlayerBarracks>();
         public List<PlayerWorker> workers = new List<PlayerWorker>();
+        public PlayerUnit hero;
 
         private float playerOre = 300;
         private float playerWood = 300;

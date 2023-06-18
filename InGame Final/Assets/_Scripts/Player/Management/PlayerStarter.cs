@@ -22,7 +22,7 @@ public class PlayerStarter : MonoBehaviour
             {
                 PlayerUnit pU = unit.GetComponent<PlayerUnit>();
                 EntityHandler.instance.SetPlayerUnitStats(pU, unit.name);
-
+                
                 if (pU.unitAttackRange > 5)
                 {
                     PlayerManager.instance.rangedSoldiers.Add(pU);
@@ -37,6 +37,12 @@ public class PlayerStarter : MonoBehaviour
                 PlayerWorker pW = unit.GetComponent<PlayerWorker>();
                 EntityHandler.instance.SetPlayerWorkerStats(pW, unit.name);
                 PlayerManager.instance.workers.Add(pW);
+            }
+            else if (unit.CompareTag("Hero"))
+            {
+                PlayerUnit pU = unit.GetComponent<PlayerUnit>();
+                EntityHandler.instance.SetPlayerUnitStats(pU, unit.name);
+                PlayerManager.instance.hero = pU;
             }
         }
     }

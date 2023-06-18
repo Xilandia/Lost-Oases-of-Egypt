@@ -208,7 +208,9 @@ namespace _Scripts.Enemy.Unit
             }
             else
             {
-                Debug.Log("No targets in lists");
+                targetTransform = PlayerManager.instance.hero.transform;
+                targetDamageable = PlayerManager.instance.hero;
+                hasTarget = true;
             }
         }
 

@@ -9,6 +9,7 @@ TagManager:
   - Barracks
   - Worker
   - Enemy
+  - Hero
   layers:
   - Default
   - TransparentFX

@@ -150,6 +150,8 @@ MonoBehaviour:
   unitTrainTime: 0
   unitCurrentHealth: 5
   unitAttackCooldown: 0
+  unitAttackSound: {fileID: 0}
+  unitDeathSound: {fileID: 0}
   unitStatDisplay: {fileID: 1176556250010233137}
   unitHealthBarImage: {fileID: 8513949334024704735}
   unitPrefab: {fileID: 1100987419105808796}
