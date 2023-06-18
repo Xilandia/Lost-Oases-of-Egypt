@@ -49,6 +49,7 @@ namespace _Scripts.GameFlow.Transitions
                 if (timer >= 10f && !restoredCamera)
                 {
                     RestoreCameraPosition();
+                    PlayerManager.instance.canGatherResources = true;
                 }
                 if (timer >= 12f)
                 {

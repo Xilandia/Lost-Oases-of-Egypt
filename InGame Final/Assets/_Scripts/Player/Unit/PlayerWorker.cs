@@ -155,7 +155,6 @@ namespace _Scripts.Player.Unit
             }
             else
             {
-                Debug.Log(distanceToResourceNode, gameObject);
                 workerGatherCooldown = (workerGatherCooldown + workerGatherSpeed) / 2;
                 animator.SetBool(inRangeHash, false);
                 animator.SetBool(isMovingHash, true);

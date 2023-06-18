@@ -58,7 +58,6 @@ namespace _Scripts.Enemy.Management
         {
             if (currentWaveIndex < currentStage.waves.Count)
             {
-                Debug.Log("Spawning enemies");
                 EnemyWave currentWave = currentStage.waves[currentWaveIndex];
 
                 for (int i = 0; i < currentWave.waveEnemyIndex.Count; i++)
