@@ -136,10 +136,10 @@ namespace _Scripts.Player.Unit
                         switch (resourceNode.resourceType)
                         {
                             case ResourceNode.ResourceTypes.Ore:
-                                PlayerManager.instance.playerOre += resourceNode.GatherResource();
+                                PlayerManager.instance.PlayerOre += resourceNode.GatherResource();
                                 break;
                             case ResourceNode.ResourceTypes.Wood:
-                                PlayerManager.instance.playerWood += resourceNode.GatherResource();
+                                PlayerManager.instance.PlayerWood += resourceNode.GatherResource();
                                 break;
                         }
                     }

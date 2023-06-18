@@ -38,15 +38,15 @@ namespace _Scripts.Player.Structure
             {
                 if (pT.isPrototype)
                 {
-                    if (PlayerManager.instance.playerOre >= pT.towerCostOre && PlayerManager.instance.playerWood >= pT.towerCostWood)
+                    if (PlayerManager.instance.PlayerOre >= pT.towerCostOre && PlayerManager.instance.PlayerWood >= pT.towerCostWood)
                     {
                         if (CanBePlaced(pT.towerPlacable))
                         {
                             pT.towerPlacable.Place();
                             Vector3Int start = gridLayout.WorldToCell(pT.towerPlacable.GetStartPosition());
                             TakeArea(start, pT.towerPlacable.Size);
-                            PlayerManager.instance.playerOre -= pT.towerCostOre;
-                            PlayerManager.instance.playerWood -= pT.towerCostWood;
+                            PlayerManager.instance.PlayerOre -= pT.towerCostOre;
+                            PlayerManager.instance.PlayerWood -= pT.towerCostWood;
                             soundEffectSource.PlayOneShot(buildingSounds[2]);
 
                             return true;
@@ -68,15 +68,15 @@ namespace _Scripts.Player.Structure
             {
                 if (pB.isPrototype)
                 {
-                    if (PlayerManager.instance.playerOre >= pB.barracksCostOre && PlayerManager.instance.playerWood >= pB.barracksCostWood)
+                    if (PlayerManager.instance.PlayerOre >= pB.barracksCostOre && PlayerManager.instance.PlayerWood >= pB.barracksCostWood)
                     {
                         if (CanBePlaced(pB.barracksPlacable))
                         {
                             pB.barracksPlacable.Place();
                             Vector3Int start = gridLayout.WorldToCell(pB.barracksPlacable.GetStartPosition());
                             TakeArea(start, pB.barracksPlacable.Size);
-                            PlayerManager.instance.playerOre -= pB.barracksCostOre;
-                            PlayerManager.instance.playerWood -= pB.barracksCostWood;
+                            PlayerManager.instance.PlayerOre -= pB.barracksCostOre;
+                            PlayerManager.instance.PlayerWood -= pB.barracksCostWood;
                             soundEffectSource.PlayOneShot(buildingSounds[2]);
 
                             return true;

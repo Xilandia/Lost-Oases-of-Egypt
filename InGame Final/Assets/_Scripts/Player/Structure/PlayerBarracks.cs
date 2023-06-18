@@ -153,10 +153,10 @@ namespace _Scripts.Player.Structure
                 return;
             }
 
-            if (PlayerManager.instance.playerOre >= playerUnit.entityCostOre && PlayerManager.instance.playerWood >= playerUnit.entityCostWood)
+            if (PlayerManager.instance.PlayerOre >= playerUnit.entityCostOre && PlayerManager.instance.PlayerWood >= playerUnit.entityCostWood)
             {
-                PlayerManager.instance.playerOre -= playerUnit.entityCostOre;
-                PlayerManager.instance.playerWood -= playerUnit.entityCostWood;
+                PlayerManager.instance.PlayerOre -= playerUnit.entityCostOre;
+                PlayerManager.instance.PlayerWood -= playerUnit.entityCostWood;
                 
                 if (unitQueue.Count == 0)
                 {
