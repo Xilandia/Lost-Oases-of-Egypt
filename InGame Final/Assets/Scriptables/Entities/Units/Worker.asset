@@ -29,5 +29,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 900ce74a24a4e4f15b96c0387f21e75f, type: 2}
   - {fileID: 11400000, guid: db28f21125c804500af9156ce640d09d, type: 2}
   - {fileID: 11400000, guid: 5fb62565c40d34b768f3ebbb3558fe77, type: 2}
-  entityGatherSound: {fileID: 0}
-  entityDeathSound: {fileID: 0}
+  entityGatherSound: {fileID: 8300000, guid: f21c8e6780be84e9b82ec9e1fad71b23, type: 3}
+  entityDeathSound: {fileID: 8300000, guid: 8b9e19a9835d940ed95b6e2d5729752b, type: 3}

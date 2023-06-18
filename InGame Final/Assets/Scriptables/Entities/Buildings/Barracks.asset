@@ -31,7 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
   - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
   - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}
-  entityBuildSound: {fileID: 0}
-  entityTrainSound: {fileID: 0}
-  entityDamagedSound: {fileID: 0}
-  entityDeathSound: {fileID: 0}
+  entityBuildSound: {fileID: 8300000, guid: cf885f2bb348949ff845d06c61465119, type: 3}
+  entityTrainSound: {fileID: 8300000, guid: df656365eaebb4bee93c951ad541ee7d, type: 3}
+  entityDamagedSound: {fileID: 8300000, guid: d3726e963bd404897bb73c46bb9d8aac, type: 3}
+  entityDeathSound: {fileID: 8300000, guid: e45679b30ce164567b79e7c3e024cfd2, type: 3}

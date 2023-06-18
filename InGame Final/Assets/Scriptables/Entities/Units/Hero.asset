@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Hero
   m_EditorClassIdentifier: 
   entityName: Hero
-  entityPrefab: {fileID: 1100987419105808796, guid: 3cfb93c2e079749af86423d41c2b8dd6,
-    type: 3}
   entityCostOre: 0
   entityCostWood: 0
+  entitySprite: {fileID: 0}
+  entityPrefab: {fileID: 1100987419105808796, guid: 3cfb93c2e079749af86423d41c2b8dd6,
+    type: 3}
   entityHealth: 500
   entityArmor: 10
   entityAttack: 25
@@ -25,3 +26,5 @@ MonoBehaviour:
   entityAggroRange: 50
   entityMoveSpeed: 30
   entityCreationTime: 0
+  entityAttackSound: {fileID: 8300000, guid: 2ad6dc69f2e7e4d698ea0fe2114bcb29, type: 3}
+  entityDeathSound: {fileID: 8300000, guid: 8b9e19a9835d940ed95b6e2d5729752b, type: 3}
