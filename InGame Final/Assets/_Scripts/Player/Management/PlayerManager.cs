@@ -31,6 +31,8 @@ namespace _Scripts.Player.Management
         public TextMeshProUGUI secondText;
         public TextMeshProUGUI minuteText;
 
+        public bool canGatherResources;
+        
         public float PlayerOre
         {
             get { return playerOre; }

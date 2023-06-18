@@ -29,6 +29,7 @@ namespace _Scripts.GameFlow.Transitions
             if (readyToLoadStage)
             {
                 readyToLoadStage = false;
+                PlayerManager.instance.canGatherResources = true;
                 SoundHandler.instance.PlayStageTrack(currentStage);
                 
                 if (currentStage < 3)

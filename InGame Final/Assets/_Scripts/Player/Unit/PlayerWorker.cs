@@ -122,7 +122,7 @@ namespace _Scripts.Player.Unit
 
         private void ConsiderGathering()
         {
-            if (distanceToResourceNode <= workerOperationRange - 20)
+            if (distanceToResourceNode <= workerOperationRange - 10 && PlayerManager.instance.canGatherResources)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);
@@ -155,6 +155,7 @@ namespace _Scripts.Player.Unit
             }
             else
             {
+                Debug.Log(distanceToResourceNode, gameObject);
                 workerGatherCooldown = (workerGatherCooldown + workerGatherSpeed) / 2;
                 animator.SetBool(inRangeHash, false);
                 animator.SetBool(isMovingHash, true);
