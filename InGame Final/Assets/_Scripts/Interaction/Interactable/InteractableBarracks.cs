@@ -24,7 +24,7 @@ namespace _Scripts.Interaction.Interactable
 
             if (pB.isComplete)
             {
-                ActionFrame.instance.SetActionButtons(pB.buildableUnitNames);
+                ActionFrame.instance.SetActionButtons(pB.buildableUnitInfo);
             }
         }
 

@@ -31,7 +31,7 @@ namespace _Scripts.Player.Structure
 
         public bool isPrototype, isPlaced, isComplete;
         public EntityUnit[] buildableUnits;
-        public string[] buildableUnitNames;
+        public EntityUI[] buildableUnitInfo;
         public InteractableBarracks interactable;
 
         private bool constructionStarted = false;

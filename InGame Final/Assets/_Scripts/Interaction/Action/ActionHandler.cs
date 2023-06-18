@@ -2,6 +2,7 @@ using System;
 using _Scripts.Interaction.Management;
 using _Scripts.Player.Structure;
 using _Scripts.Player.Unit;
+using _Scripts.Utility.Entity;
 using UnityEngine;
 
 namespace _Scripts.Interaction.Action
@@ -31,7 +32,16 @@ namespace _Scripts.Interaction.Action
         private GameObject SelectStructureFromList(string buttonName)
         {
             PlayerWorker worker = InputHandler.instance.selectedWorkers[0];
-            int place = Array.IndexOf(worker.buildableStructureNames, buttonName);
+            int place = -1;
+
+            for (int i = 0; i < worker.buildableStructureInfo.Length; i++)
+            {
+                if (worker.buildableStructureInfo[i].name == buttonName)
+                {
+                    place = i;
+                    break;
+                }
+            }
 
             if (place == -1)
             {

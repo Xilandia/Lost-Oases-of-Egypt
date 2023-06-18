@@ -15,7 +15,7 @@ namespace _Scripts.Utility.Entity
 		public float entityMoveSpeed;
 		public PlayerBarracks[] buildableBarracks;
 		public PlayerTower[] buildableTowers;
-		public string[] buildableStructureNames;
+		public EntityUI[] buildableStructureInfo;
 		public AudioClip entityGatherSound;
 		public AudioClip entityDeathSound;
 	}

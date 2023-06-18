@@ -25,7 +25,9 @@ MonoBehaviour:
   buildableTowers:
   - {fileID: 9105802772211754174, guid: e353e698bf73a4800a14ee325db8fa30, type: 3}
   - {fileID: 9105802772211754174, guid: 836cba6fee5114676b3907ce814b9430, type: 3}
-  buildableStructureNames:
-  - Barracks
-  - Small Tower
-  - Big Tower
+  buildableStructureInfo:
+  - {fileID: 11400000, guid: 900ce74a24a4e4f15b96c0387f21e75f, type: 2}
+  - {fileID: 11400000, guid: db28f21125c804500af9156ce640d09d, type: 2}
+  - {fileID: 11400000, guid: 5fb62565c40d34b768f3ebbb3558fe77, type: 2}
+  entityGatherSound: {fileID: 0}
+  entityDeathSound: {fileID: 0}

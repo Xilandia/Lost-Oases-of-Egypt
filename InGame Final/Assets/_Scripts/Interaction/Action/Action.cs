@@ -1,5 +1,4 @@
 using UnityEngine;
-using _Scripts.Interaction.Management;
 
 namespace _Scripts.Interaction.Action
 {

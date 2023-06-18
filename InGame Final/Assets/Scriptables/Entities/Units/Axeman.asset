@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Axeman
   m_EditorClassIdentifier: 
   entityName: Axeman
-  entityPrefab: {fileID: 1100987419105808796, guid: f4d73ee0f0cf54409b0021fb02e8084e,
-    type: 3}
   entityCostOre: 30
   entityCostWood: 10
+  entitySprite: {fileID: 21300000, guid: 1ae17643ab1b04206963c96c0981fa9f, type: 3}
+  entityPrefab: {fileID: 1100987419105808796, guid: f4d73ee0f0cf54409b0021fb02e8084e,
+    type: 3}
   entityHealth: 100
   entityArmor: 2
   entityAttack: 45
@@ -25,3 +26,5 @@ MonoBehaviour:
   entityAggroRange: 60
   entityMoveSpeed: 60
   entityCreationTime: 8
+  entityAttackSound: {fileID: 0}
+  entityDeathSound: {fileID: 0}

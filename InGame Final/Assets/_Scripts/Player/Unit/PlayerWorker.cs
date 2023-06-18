@@ -51,7 +51,7 @@ namespace _Scripts.Player.Unit
         
         public PlayerBarracks[] buildableBarracks;
         public PlayerTower[] buildableTowers;
-        public string[] buildableStructureNames;
+        public EntityUI[] buildableStructureInfo;
         
         private int hasLifeHash;
         private int isMovingHash;

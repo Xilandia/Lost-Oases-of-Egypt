@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Barracks
   m_EditorClassIdentifier: 
   entityName: Barracks
-  entityPrefab: {fileID: 3887137071503025175, guid: 97d36d64e59dc42ee96bd27d7a9d983a,
-    type: 3}
   entityCostOre: 120
   entityCostWood: 120
+  entitySprite: {fileID: 21300000, guid: 109facd65a9774a02bbeceffef99b6f3, type: 3}
+  entityPrefab: {fileID: 3887137071503025175, guid: 97d36d64e59dc42ee96bd27d7a9d983a,
+    type: 3}
   entityHealth: 340
   entityArmor: 10
   entityCreationTime: 10
@@ -25,8 +26,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
   - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
   - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}
-  buildableUnitNames:
-  - Knight
-  - Axeman
-  - Archer
-  - Wizard
+  buildableUnitInfo:
+  - {fileID: 11400000, guid: 5f3e3fef8f4ae433bb3a9e7f245d1ce0, type: 2}
+  - {fileID: 11400000, guid: 462c903c802644cf48a621cd816eca9a, type: 2}
+  - {fileID: 11400000, guid: 29c3519e0ac8a4e15b5c4f5939139a48, type: 2}
+  - {fileID: 11400000, guid: 4c66cd7ee04ca466c99708c2ec28d611, type: 2}
+  entityBuildSound: {fileID: 0}
+  entityTrainSound: {fileID: 0}
+  entityDamagedSound: {fileID: 0}
+  entityDeathSound: {fileID: 0}

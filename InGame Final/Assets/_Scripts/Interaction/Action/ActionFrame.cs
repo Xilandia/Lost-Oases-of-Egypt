@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Scripts.Utility.Entity;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,8 @@ namespace _Scripts.Interaction.Action
         [SerializeField] private Button actionButton = null;
         [SerializeField] Transform layoutGroup = null;
 
-        private List<Button> buttons = new List<Button>();
+        private readonly List<Button> buttons = new List<Button>();
+        private readonly List<ActionReferences> buttonReferences = new List<ActionReferences>();
 
         void Awake()
         {
@@ -21,16 +23,20 @@ namespace _Scripts.Interaction.Action
             {
                 Button button = Instantiate(actionButton, layoutGroup);
                 buttons.Add(button);
+                buttonReferences.Add(button.GetComponent<ActionReferences>());
                 button.gameObject.SetActive(false);
             }
         }
 
-        public void SetActionButtons(string[] listOfActions)
+        public void SetActionButtons(EntityUI[] listOfActions)
         {
             for (int i = 0; i < listOfActions.Length; i++)
             {
                 buttons[i].gameObject.SetActive(true);
-                buttons[i].name = listOfActions[i];
+                buttons[i].name = listOfActions[i].entityName;
+                buttonReferences[i].image.sprite = listOfActions[i].entitySprite;
+                buttonReferences[i].oreCost.text = listOfActions[i].entityCostOre.ToString();
+                buttonReferences[i].woodCost.text = listOfActions[i].entityCostWood.ToString();
             }
         }
 

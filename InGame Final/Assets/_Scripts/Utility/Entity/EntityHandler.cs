@@ -86,7 +86,7 @@ namespace _Scripts.Utility.Entity
             pW.workerGatherSpeed = entity.entityTimeBetweenGathering;
             pW.buildableBarracks = entity.buildableBarracks;
             pW.buildableTowers = entity.buildableTowers;
-            pW.buildableStructureNames = entity.buildableStructureNames;
+            pW.buildableStructureInfo = entity.buildableStructureInfo;
             pW.workerGatherSound = entity.entityGatherSound;
             pW.workerDeathSound = entity.entityDeathSound;
         }
@@ -117,7 +117,7 @@ namespace _Scripts.Utility.Entity
             pB.barracksArmor = entity.entityArmor;
             pB.barracksBuildTime = entity.entityCreationTime;
             pB.buildableUnits = entity.buildableUnits;
-            pB.buildableUnitNames = entity.buildableUnitNames;
+            pB.buildableUnitInfo = entity.buildableUnitInfo;
             pB.barracksBuildSound = entity.entityBuildSound;
             pB.barracksTrainSound = entity.entityTrainSound;
             pB.barracksDamagedSound = entity.entityDamagedSound;

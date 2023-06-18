@@ -12,7 +12,7 @@ namespace _Scripts.Interaction.Interactable
             if (!pW.isAttemptingToBuild)
             {
                 base.OnInteractEnter();
-                ActionFrame.instance.SetActionButtons(pW.buildableStructureNames);
+                ActionFrame.instance.SetActionButtons(pW.buildableStructureInfo);
             }
         }
 
