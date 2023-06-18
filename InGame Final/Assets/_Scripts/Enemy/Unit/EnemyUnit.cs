@@ -26,6 +26,7 @@ namespace _Scripts.Enemy.Unit
         private bool hasTarget;
         private float distanceToTarget;
         private float distanceToClosestTarget;
+        public int targetOffset;
         public bool behaviorOne = true;
 
         public string enemyName;
@@ -40,6 +41,7 @@ namespace _Scripts.Enemy.Unit
 
         public float enemyCurrentHealth;
         public float enemyAttackCooldown;
+        public int enemyOffset;
         public AudioClip enemyAttackSound;
         public AudioClip enemyDeathSound;
 
@@ -103,7 +105,7 @@ namespace _Scripts.Enemy.Unit
 
         private void ConsiderAttacking()
         {
-            if (distanceToTarget <= enemyAttackRange + 1)
+            if (distanceToTarget <= enemyAttackRange + targetOffset)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);
@@ -151,7 +153,7 @@ namespace _Scripts.Enemy.Unit
                 {
                     targetDamageable = targetTransform.gameObject.GetComponent<PlayerBarracks>();
                 }
-
+                targetOffset = targetDamageable.GetOffset();
                 navAgent.stoppingDistance = enemyAttackRange;
 
                 break;
@@ -201,6 +203,7 @@ namespace _Scripts.Enemy.Unit
             {
                 targetTransform = PlayerManager.instance.hero.transform;
                 targetDamageable = PlayerManager.instance.hero;
+                targetOffset = targetDamageable.GetOffset();
                 hasTarget = true;
             }
         }
@@ -216,6 +219,7 @@ namespace _Scripts.Enemy.Unit
                     distanceToClosestTarget = Vector3.Distance(transform.position, pU.transform.position);
                     targetTransform = pU.transform;
                     targetDamageable = pU;
+                    targetOffset = targetDamageable.GetOffset();
                     hasTarget = true;
                     inRange = true;
                 }
@@ -235,6 +239,7 @@ namespace _Scripts.Enemy.Unit
                     distanceToClosestTarget = Vector3.Distance(transform.position, pU.transform.position);
                     targetTransform = pU.transform;
                     targetDamageable = pU;
+                    targetOffset = targetDamageable.GetOffset();
                     hasTarget = true;
                     inRange = true;
                 }
@@ -254,6 +259,7 @@ namespace _Scripts.Enemy.Unit
                     distanceToClosestTarget = Vector3.Distance(transform.position, pT.transform.position);
                     targetTransform = pT.transform;
                     targetDamageable = pT;
+                    targetOffset = targetDamageable.GetOffset();
                     hasTarget = true;
                     inRange = true;
                 }
@@ -273,6 +279,7 @@ namespace _Scripts.Enemy.Unit
                     distanceToClosestTarget = Vector3.Distance(transform.position, pB.transform.position);
                     targetTransform = pB.transform;
                     targetDamageable = pB;
+                    targetOffset = targetDamageable.GetOffset();
                     hasTarget = true;
                     inRange = true;
                 }
@@ -292,6 +299,7 @@ namespace _Scripts.Enemy.Unit
                     distanceToClosestTarget = Vector3.Distance(transform.position, pW.transform.position);
                     targetTransform = pW.transform;
                     targetDamageable = pW;
+                    targetOffset = targetDamageable.GetOffset();
                     hasTarget = true;
                     inRange = true;
                 }
@@ -307,6 +315,11 @@ namespace _Scripts.Enemy.Unit
             enemyCurrentHealth -= Math.Max(totalDamage, 1);
         }
 
+        public int GetOffset()
+        {
+            return enemyOffset;
+        }
+        
         private void HandleHealth()
         {
             if (enemyCurrentHealth <= 0)
@@ -319,7 +332,8 @@ namespace _Scripts.Enemy.Unit
         {
             animator.SetBool(hasLifeHash, false);
             SoundHandler.instance.PlaySoundEffect(enemyDeathSound);
-            disable?.Invoke(this);
+            Destroy(gameObject);
+            //disable?.Invoke(this);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -348,7 +362,7 @@ namespace _Scripts.Enemy.Unit
                     {
                         targetDamageable = targetTransform.gameObject.GetComponent<PlayerWorker>();
                     }
-
+                    targetOffset = targetDamageable.GetOffset();
                     navAgent.stoppingDistance = enemyAttackRange;
                 }
             }

@@ -123,6 +123,11 @@ MonoBehaviour:
   towerBuildTime: 0
   towerCurrentHealth: 0
   towerAttackCooldown: 0
+  towerOffset: 36
+  towerAttackSound: {fileID: 0}
+  towerBuildSound: {fileID: 0}
+  towerDamagedSound: {fileID: 0}
+  towerDeathSound: {fileID: 0}
   towerPrefab: {fileID: 3887137071503025175}
   towerTransform: {fileID: 9164537273305081322}
   towerPlacable: {fileID: 6209489510080761250}
@@ -132,6 +137,7 @@ MonoBehaviour:
   interactable: {fileID: 6856938315445897229}
   workersInvolvedInConstruction: []
   aggroTarget: {fileID: 0}
+  aggroOffset: 0
   hasAggro: 0
 --- !u!114 &6856938315445897229
 MonoBehaviour:

@@ -20,6 +20,7 @@ namespace _Scripts.Player.Structure
         public string barracksName;
         public float barracksCostOre, barracksCostWood, barracksHealth, barracksArmor, barracksBuildTime;
         public float barracksCurrentHealth;
+        public int barracksOffset;
         public AudioClip barracksBuildSound;
         public AudioClip barracksTrainSound;
         public AudioClip barracksDamagedSound;
@@ -217,6 +218,11 @@ namespace _Scripts.Player.Structure
                 SoundHandler.instance.PlaySoundEffect(barracksDeathSound);
                 Destroy(gameObject);
             }
+        }
+
+        public int GetOffset()
+        {
+            return barracksOffset;
         }
     }
 }

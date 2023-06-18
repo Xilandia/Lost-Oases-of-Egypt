@@ -29,6 +29,7 @@ namespace _Scripts.Player.Unit
             workerGatherSpeed;
         public float workerCurrentHealth;
         public float workerGatherCooldown;
+        public int workerOffset;
         public AudioClip workerGatherSound;
         public AudioClip workerDeathSound;
 
@@ -178,6 +179,11 @@ namespace _Scripts.Player.Unit
             float totalDamage = damage - workerArmor;
             workerCurrentHealth -= Math.Max(totalDamage, 1);
         }
+        
+        public int GetOffset()
+        {
+            return workerOffset;
+        }
 
         private void HandleHealth()
         {
@@ -216,7 +222,7 @@ namespace _Scripts.Player.Unit
                     if (isAttemptingToBuild)
                     {
                         isConstructing = true;
-                        navAgent.SetDestination(transform.position);
+                        navAgent.SetDestination((transform.position + 4 * structureTarget.position) / 5);
                     }
                     else
                     {
@@ -228,7 +234,7 @@ namespace _Scripts.Player.Unit
                             isConstructing = true;
                             isBuildingTower = true;
                             constructionTower.workersInvolvedInConstruction.Add(this);
-                            navAgent.SetDestination(transform.position);
+                            navAgent.SetDestination((transform.position + 4 * structureTarget.position) / 5);
                         }
                     }
                 }

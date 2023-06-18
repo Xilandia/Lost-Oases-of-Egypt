@@ -150,6 +150,7 @@ MonoBehaviour:
   unitTrainTime: 0
   unitCurrentHealth: 5
   unitAttackCooldown: 0
+  unitOffset: 3
   unitAttackSound: {fileID: 0}
   unitDeathSound: {fileID: 0}
   unitStatDisplay: {fileID: 1176556250010233137}
@@ -159,6 +160,7 @@ MonoBehaviour:
   interactable: {fileID: 2508237986389632620}
   moveTarget: {x: 0, y: 0, z: 0}
   aggroTarget: {fileID: 0}
+  aggroOffset: 0
   hasAggro: 0
 --- !u!114 &2508237986389632620
 MonoBehaviour:

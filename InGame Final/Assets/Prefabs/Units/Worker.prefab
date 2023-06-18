@@ -144,6 +144,7 @@ MonoBehaviour:
   workerGatherSpeed: 0
   workerCurrentHealth: 0
   workerGatherCooldown: 0
+  workerOffset: 3
   workerGatherSound: {fileID: 0}
   workerDeathSound: {fileID: 0}
   workerPrefab: {fileID: 1100987419105808796}

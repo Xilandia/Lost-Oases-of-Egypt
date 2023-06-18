@@ -23,14 +23,9 @@ namespace _Scripts.Player.Resources
             }
             else
             {
-                return RunDry();
+                Destroy(gameObject);
+                return resourceAmount;
             }
-        }
-
-        private float RunDry()
-        {
-            gameObject.SetActive(false);
-            return resourceAmount;
         }
     }
 }

@@ -36,6 +36,7 @@ namespace _Scripts.Player.Unit
 
         public float unitCurrentHealth;
         public float unitAttackCooldown;
+        public int unitOffset;
         public AudioClip unitAttackSound;
         public AudioClip unitDeathSound;
 
@@ -49,6 +50,7 @@ namespace _Scripts.Player.Unit
         public Vector3 moveTarget;
         public Transform aggroTarget;
         public IDamageable aggroDamageable;
+        public int aggroOffset;
         public bool hasAggro = false;
         private float distanceToTarget;
 
@@ -95,6 +97,7 @@ namespace _Scripts.Player.Unit
                 hasAggro = true;
                 aggroTarget = col.transform;
                 aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
+                aggroOffset = aggroDamageable.GetOffset();
                 navAgent.stoppingDistance = unitAttackRange;
 
                 break;
@@ -125,7 +128,7 @@ namespace _Scripts.Player.Unit
 
         private void ConsiderAttacking()
         {
-            if (distanceToTarget <= unitAttackRange + 1)
+            if (distanceToTarget <= unitAttackRange + aggroOffset)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);
@@ -162,6 +165,11 @@ namespace _Scripts.Player.Unit
             unitCurrentHealth -= Math.Max(totalDamage, 1);
         }
 
+        public int GetOffset()
+        {
+            return unitOffset;
+        }
+
         private void HandleHealth()
         {
             unitStatDisplay.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
@@ -196,6 +204,7 @@ namespace _Scripts.Player.Unit
                     hasAggro = true;
                     aggroTarget = other.transform;
                     aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
+                    aggroOffset = aggroDamageable.GetOffset();
                     navAgent.stoppingDistance = unitAttackRange;
                 }
             }

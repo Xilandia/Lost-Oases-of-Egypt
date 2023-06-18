@@ -98,29 +98,28 @@ MonoBehaviour:
   structureCollider: {fileID: 1782935513676322206}
   navObstacle: {fileID: 7337746087141080265}
   barracksName: 
-  barracksCost: 0
+  barracksCostOre: 0
+  barracksCostWood: 0
   barracksHealth: 0
   barracksArmor: 0
   barracksBuildTime: 0
   barracksCurrentHealth: 0
+  barracksOffset: 24
+  barracksBuildSound: {fileID: 0}
+  barracksTrainSound: {fileID: 0}
+  barracksDamagedSound: {fileID: 0}
+  barracksDeathSound: {fileID: 0}
   barracksPrefab: {fileID: 3887137071503025175}
   barracksTransform: {fileID: 9164537273305081322}
   barracksPlacable: {fileID: 6209489510080761250}
   isPrototype: 0
   isPlaced: 0
   isComplete: 0
-  trainableUnits:
-  - {fileID: 11400000, guid: 81a62d7e00a0b4a818a5183fb3efded0, type: 2}
-  - {fileID: 11400000, guid: d089d67873c5e4374be1b4102737bead, type: 2}
-  - {fileID: 11400000, guid: 285726f1a57b241b6b36820bf6f999dd, type: 2}
-  trainableUnitNames:
-  - Archer
-  - Wizard
-  - Axeman
+  buildableUnits: []
+  buildableUnitInfo: []
   interactable: {fileID: 2441923393280470069}
   workersInvolvedInConstruction: []
   spawnPoint: {fileID: 1035955586176750546}
-  isTraining: 0
 --- !u!114 &2441923393280470069
 MonoBehaviour:
   m_ObjectHideFlags: 0

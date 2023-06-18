@@ -24,6 +24,7 @@ namespace _Scripts.Player.Structure
         public float towerCostOre, towerCostWood, towerHealth, towerArmor, towerAttack, towerTimeBetweenAttacks, towerAttackRange, towerBuildTime;
         public float towerCurrentHealth;
         public float towerAttackCooldown;
+        public int towerOffset;
         public AudioClip towerAttackSound;
         public AudioClip towerBuildSound;
         public AudioClip towerDamagedSound;
@@ -44,6 +45,7 @@ namespace _Scripts.Player.Structure
         private Collider[] rangeColliders;
         public Transform aggroTarget;
         public IDamageable aggroDamageable;
+        public int aggroOffset;
         public bool hasAggro = false;
         private float distanceToTarget;
 
@@ -160,6 +162,7 @@ namespace _Scripts.Player.Structure
                 hasAggro = true;
                 aggroTarget = col.transform;
                 aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
+                aggroOffset = aggroDamageable.GetOffset();
 
                 break;
             }
@@ -167,7 +170,7 @@ namespace _Scripts.Player.Structure
         
         private void ConsiderAttack()
         {
-            if (distanceToTarget <= towerAttackRange + 1)
+            if (distanceToTarget <= towerAttackRange + aggroOffset)
             {
                 if (towerAttackCooldown <= 0)
                 {
@@ -205,6 +208,11 @@ namespace _Scripts.Player.Structure
                 Destroy(gameObject);
             }
         }
+
+        public int GetOffset()
+        {
+            return towerOffset;
+        }
         
         private void OnTriggerEnter(Collider other)
         {
@@ -215,6 +223,7 @@ namespace _Scripts.Player.Structure
                     hasAggro = true;
                     aggroTarget = other.transform;
                     aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
+                    aggroOffset = aggroDamageable.GetOffset();
                 }
             }
         }

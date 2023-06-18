@@ -149,6 +149,7 @@ MonoBehaviour:
   navAgent: {fileID: -512577293634403931}
   rangeCollider: {fileID: 197294591}
   animator: {fileID: 6011500721795001421}
+  targetOffset: 0
   behaviorOne: 1
   enemyName: 
   enemyHealth: 0
@@ -160,6 +161,9 @@ MonoBehaviour:
   enemyAggroRange: 0
   enemyCurrentHealth: 0
   enemyAttackCooldown: 0
+  enemyOffset: 3
+  enemyAttackSound: {fileID: 0}
+  enemyDeathSound: {fileID: 0}
   enemyPrefab: {fileID: 1100987419105808796}
   enemyTransform: {fileID: 1100987419105808784}
 --- !u!1001 &7553435246145738239
