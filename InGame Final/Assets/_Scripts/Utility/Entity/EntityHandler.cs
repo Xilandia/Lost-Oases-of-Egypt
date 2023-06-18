@@ -8,7 +8,9 @@ namespace _Scripts.Utility.Entity
     public class EntityHandler : MonoBehaviour
     {
         public static EntityHandler instance;
+        
         public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer;
+        public bool endgame = false;
 
         [SerializeField] private EntityEnemy[] enemies;
         [SerializeField] private EntityUnit[] units;
@@ -188,6 +190,11 @@ namespace _Scripts.Utility.Entity
             eU.enemyMoveSpeed = entity.entityMoveSpeed;
             eU.enemyAttackSound = entity.entityAttackSound;
             eU.enemyDeathSound = entity.entityDeathSound;
+
+            if (endgame)
+            {
+                eU.behaviorOne = false;
+            }
         }
     }
 }

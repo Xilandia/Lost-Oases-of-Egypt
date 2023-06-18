@@ -22,7 +22,8 @@ namespace _Scripts.Enemy.Management
         public bool stageIsActive;
         public int currentSpawnPointIndex;
 
-        public Transform enemyBehaviorTransitionTransform;
+        public Transform currentEnemyGoalTransform;
+        public Transform[] enemyGoalTransforms;
         
         private readonly List<ObjectPool<EnemyUnit>> enemyPools = new List<ObjectPool<EnemyUnit>>();
 

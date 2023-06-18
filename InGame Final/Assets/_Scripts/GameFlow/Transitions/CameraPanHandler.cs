@@ -62,7 +62,7 @@ namespace _Scripts.GameFlow.Transitions
         private void StartStage()
         {
             isActive = false;
-            EnemySpawnManager.instance.previousPeriodTick = PlayerManager.instance.roundTimer[2];
+            EnemySpawnManager.instance.previousPeriodTick = 0;
             EnemySpawnManager.instance.stageIsActive = true;
         }
 

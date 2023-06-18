@@ -8,5 +8,6 @@ namespace _Scripts.Utility.Scriptable
     {
         public List<EnemyWave> waves;
         public float waveLength;
+        public int enemyStageGoal;
     }
 }

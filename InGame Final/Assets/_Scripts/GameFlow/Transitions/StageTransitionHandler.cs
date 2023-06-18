@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using _Scripts.Enemy.Management;
 using _Scripts.GameFlow.Sound;
 using _Scripts.Player.Management;
+using _Scripts.Utility.Entity;
 using _Scripts.Utility.Scriptable;
 using UnityEngine;
 
@@ -34,9 +35,15 @@ namespace _Scripts.GameFlow.Transitions
                 {
                     CameraPanHandler.instance.PanCameraToPortal(currentStage);
                 }
+                else
+                {
+                    EntityHandler.instance.endgame = true;
+                }
                 
                 EnemySpawnManager.instance.currentStage = stages[currentStage++];
                 EnemySpawnManager.instance.currentWaveIndex = 0;
+                EnemySpawnManager.instance.currentEnemyGoalTransform =
+                    EnemySpawnManager.instance.enemyGoalTransforms[stages[currentStage].enemyStageGoal];
             }
         }
 

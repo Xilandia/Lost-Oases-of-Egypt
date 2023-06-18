@@ -57,7 +57,7 @@ namespace _Scripts.Enemy.Unit
         void Start() // might need to change this to awake
         {
             navAgent.enabled = true;
-            navAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
+            navAgent.SetDestination(EnemySpawnManager.instance.currentEnemyGoalTransform.position);
             navAgent.speed = enemyMoveSpeed;
             rangeCollider.radius = enemyAggroRange;
             hasLifeHash = Animator.StringToHash("HasLife");
@@ -159,7 +159,7 @@ namespace _Scripts.Enemy.Unit
 
             if (!hasTarget)
             {
-                navAgent.SetDestination(EnemySpawnManager.instance.enemyBehaviorTransitionTransform.position);
+                navAgent.SetDestination(EnemySpawnManager.instance.currentEnemyGoalTransform.position);
                 targetTransform = null;
                 navAgent.stoppingDistance = 0;
             }
