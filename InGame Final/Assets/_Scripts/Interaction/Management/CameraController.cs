@@ -74,12 +74,12 @@ namespace _Scripts.Interaction.Management
             }
 
             // Handles rotation
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.E))
             {
                 newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
             }
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Q))
             {
                 newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
             }

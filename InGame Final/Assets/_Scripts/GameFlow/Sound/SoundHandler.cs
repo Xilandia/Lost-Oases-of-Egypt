@@ -9,11 +9,11 @@ namespace _Scripts.GameFlow.Sound
     {
         public static SoundHandler instance;
         
-        public AudioClip openingTrack;
-        public AudioClip transitionTrack;
-        public AudioClip[] stageTracks;
-        public AudioSource musicSource;
-        public AudioSource soundEffectSource;
+        [SerializeField] private AudioClip openingTrack;
+        [SerializeField] private AudioClip transitionTrack;
+        [SerializeField] private AudioClip[] stageTracks;
+        [SerializeField] private AudioSource musicSource;
+        [SerializeField] private AudioSource soundEffectSource;
 
         void Awake()
         {

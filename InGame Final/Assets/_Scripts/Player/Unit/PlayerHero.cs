@@ -13,7 +13,7 @@ namespace _Scripts.Player.Unit
             // lose game
             if (!PauseMenuHandler.instance.isGamePaused)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene("Lose Screen");
             }
         }
     }

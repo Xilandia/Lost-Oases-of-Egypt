@@ -1,3 +1,4 @@
+using _Scripts.GameFlow.Sound;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using _Scripts.Player.Management;
@@ -17,7 +18,6 @@ namespace _Scripts.Player.Structure
         [SerializeField] private TileBase whiteTile;
 
         public AudioClip[] buildingSounds;
-        public AudioSource soundEffectSource;
 
         private PlayerBarracks pB;
         private PlayerTower pT;
@@ -47,17 +47,17 @@ namespace _Scripts.Player.Structure
                             TakeArea(start, pT.towerPlacable.Size);
                             PlayerManager.instance.PlayerOre -= pT.towerCostOre;
                             PlayerManager.instance.PlayerWood -= pT.towerCostWood;
-                            soundEffectSource.PlayOneShot(buildingSounds[2]);
+                            SoundHandler.instance.PlaySoundEffect(buildingSounds[2]);
 
                             return true;
                         }
 
-                        soundEffectSource.PlayOneShot(buildingSounds[1]);
+                        SoundHandler.instance.PlaySoundEffect(buildingSounds[1]);
                         Debug.Log("Can't place structure here");
                     }
                     else
                     {
-                        soundEffectSource.PlayOneShot(buildingSounds[0]);
+                        SoundHandler.instance.PlaySoundEffect(buildingSounds[0]);
                         Debug.Log("Can't afford structure");
                     }
                 }
@@ -77,17 +77,17 @@ namespace _Scripts.Player.Structure
                             TakeArea(start, pB.barracksPlacable.Size);
                             PlayerManager.instance.PlayerOre -= pB.barracksCostOre;
                             PlayerManager.instance.PlayerWood -= pB.barracksCostWood;
-                            soundEffectSource.PlayOneShot(buildingSounds[2]);
+                            SoundHandler.instance.PlaySoundEffect(buildingSounds[2]);
 
                             return true;
                         }
 
-                        soundEffectSource.PlayOneShot(buildingSounds[1]);
+                        SoundHandler.instance.PlaySoundEffect(buildingSounds[1]);
                         Debug.Log("Can't place structure here");
                     }
                     else
                     {
-                        soundEffectSource.PlayOneShot(buildingSounds[0]);
+                        SoundHandler.instance.PlaySoundEffect(buildingSounds[0]);
                         Debug.Log("Can't afford structure");
                     }
                 }
