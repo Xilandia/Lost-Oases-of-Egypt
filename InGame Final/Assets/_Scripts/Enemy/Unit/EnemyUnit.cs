@@ -63,6 +63,7 @@ namespace _Scripts.Enemy.Unit
             navAgent.enabled = true;
             navAgent.SetDestination(EnemySpawnManager.instance.currentEnemyGoalTransform.position);
             navAgent.speed = enemyMoveSpeed;
+            navAgent.acceleration = enemyMoveSpeed;
             rangeCollider.radius = enemyAggroRange;
             hasLifeHash = Animator.StringToHash("HasLife");
             isMovingHash = Animator.StringToHash("IsMoving");

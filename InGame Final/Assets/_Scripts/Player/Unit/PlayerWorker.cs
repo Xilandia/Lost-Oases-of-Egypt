@@ -63,6 +63,7 @@ namespace _Scripts.Player.Unit
         void Start()
         {
             navAgent.speed = workerMoveSpeed;
+            navAgent.acceleration = workerMoveSpeed;
             rangeCollider.radius = workerOperationRange;
             
             hasLifeHash = Animator.StringToHash("HasLife");

@@ -64,6 +64,7 @@ namespace _Scripts.Player.Unit
         {
             cam = Camera.main;
             navAgent.speed = unitMoveSpeed;
+            navAgent.acceleration = unitMoveSpeed;
             rangeCollider.radius = unitAggroRange;
             hasLifeHash = Animator.StringToHash("HasLife");
             isMovingHash = Animator.StringToHash("IsMoving");
