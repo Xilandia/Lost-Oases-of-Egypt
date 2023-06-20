@@ -55,6 +55,8 @@ namespace _Scripts.Enemy.Unit
         private int hasLifeHash;
         private int isMovingHash;
         private int inRangeHash;
+
+        private float timer;
         
         void Start() // might need to change this to awake
         {
@@ -71,13 +73,17 @@ namespace _Scripts.Enemy.Unit
 
         void Update()
         {
-            HandleHealth();
             animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.0001f);
 
             if (hasTarget)
             {
-                MoveToAggroTarget();
                 ConsiderAttacking();
+
+                if (PlayerManager.instance.roundTimer[2] - timer >= 1)
+                {
+                    timer = PlayerManager.instance.roundTimer[2];
+                    MoveToAggroTarget();
+                }
             }
         }
 
@@ -313,6 +319,8 @@ namespace _Scripts.Enemy.Unit
         {
             float totalDamage = damage - enemyArmor;
             enemyCurrentHealth -= Math.Max(totalDamage, 1);
+            
+            CheckIfDead();
         }
 
         public int GetOffset()
@@ -320,20 +328,15 @@ namespace _Scripts.Enemy.Unit
             return enemyOffset;
         }
         
-        private void HandleHealth()
+        private void CheckIfDead()
         {
             if (enemyCurrentHealth <= 0)
             {
-                UnitDeath();
+                animator.SetBool(hasLifeHash, false);
+                SoundHandler.instance.PlaySoundEffect(enemyDeathSound);
+                Destroy(gameObject);
+                //disable?.Invoke(this);
             }
-        }
-
-        private void UnitDeath()
-        {
-            animator.SetBool(hasLifeHash, false);
-            SoundHandler.instance.PlaySoundEffect(enemyDeathSound);
-            Destroy(gameObject);
-            //disable?.Invoke(this);
         }
 
         private void OnTriggerEnter(Collider other)

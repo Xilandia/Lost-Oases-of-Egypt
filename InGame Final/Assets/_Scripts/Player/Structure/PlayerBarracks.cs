@@ -213,6 +213,11 @@ namespace _Scripts.Player.Structure
             barracksCurrentHealth -= Math.Max(totalDamage, 1);
             SoundHandler.instance.PlaySoundEffect(barracksDamagedSound);
 
+            CheckIfDead();
+        }
+
+        private void CheckIfDead()
+        {
             if (barracksCurrentHealth <= 0)
             {
                 SoundHandler.instance.PlaySoundEffect(barracksDeathSound);

@@ -58,6 +58,8 @@ namespace _Scripts.Player.Unit
         private int isMovingHash;
         private int inRangeHash;
 
+        private float timer;
+
         void Start()
         {
             cam = Camera.main;
@@ -71,13 +73,18 @@ namespace _Scripts.Player.Unit
 
         void Update()
         {
-            HandleHealth();
             animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.000001f);
 
             if (hasAggro)
             {
                 MoveToAggroTarget();
                 ConsiderAttacking();
+
+                if (PlayerManager.instance.roundTimer[2] - timer >= 1)
+                {
+                    timer = PlayerManager.instance.roundTimer[2];
+                    MoveToAggroTarget();
+                }
             }
         }
 
@@ -163,6 +170,9 @@ namespace _Scripts.Player.Unit
         {
             float totalDamage = damage - unitArmor;
             unitCurrentHealth -= Math.Max(totalDamage, 1);
+            
+            
+            HandleHealth();
         }
 
         public int GetOffset()

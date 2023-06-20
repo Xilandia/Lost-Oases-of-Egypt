@@ -202,6 +202,11 @@ namespace _Scripts.Player.Structure
             towerCurrentHealth -= Math.Max(totalDamage, 1);
             SoundHandler.instance.PlaySoundEffect(towerDamagedSound);
 
+            CheckIfDead();
+        }
+
+        private void CheckIfDead()
+        {
             if (towerCurrentHealth <= 0)
             {
                 SoundHandler.instance.PlaySoundEffect(towerDeathSound);

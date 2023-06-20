@@ -58,6 +58,8 @@ namespace _Scripts.Player.Unit
         private int isMovingHash;
         private int inRangeHash;
 
+        private float timer;
+
         void Start()
         {
             navAgent.speed = workerMoveSpeed;
@@ -71,13 +73,17 @@ namespace _Scripts.Player.Unit
 
         void Update()
         {
-            HandleHealth();
             animator.SetBool(isMovingHash, navAgent.velocity.magnitude > 0.000001f);
 
             if (isAttemptingToGather)
             {
-                MoveToResourceTarget();
                 ConsiderGathering();
+
+                if (PlayerManager.instance.roundTimer[2] - timer >= 1)
+                {
+                    timer = PlayerManager.instance.roundTimer[2];
+                    MoveToResourceTarget();
+                }
             }
 
             if (isConstructing)
@@ -178,6 +184,8 @@ namespace _Scripts.Player.Unit
         {
             float totalDamage = damage - workerArmor;
             workerCurrentHealth -= Math.Max(totalDamage, 1);
+            
+            CheckIfDead();
         }
         
         public int GetOffset()
@@ -185,23 +193,18 @@ namespace _Scripts.Player.Unit
             return workerOffset;
         }
 
-        private void HandleHealth()
+        private void CheckIfDead()
         {
             if (workerCurrentHealth <= 0)
             {
-                UnitDeath();
-            }
-        }
-
-        private void UnitDeath()
-        {
-            InputHandler.instance.selectedWorkers.Remove(this); // uncomment once supported properly in InputHandler
+                InputHandler.instance.selectedWorkers.Remove(this);
             
-            PlayerManager.instance.workers.Remove(this);
+                PlayerManager.instance.workers.Remove(this);
 
-            animator.SetBool(hasLifeHash, false);
-            SoundHandler.instance.PlaySoundEffect(workerDeathSound);
-            Destroy(gameObject);
+                animator.SetBool(hasLifeHash, false);
+                SoundHandler.instance.PlaySoundEffect(workerDeathSound);
+                Destroy(gameObject);
+            }
         }
 
         private void OnTriggerEnter(Collider other)
