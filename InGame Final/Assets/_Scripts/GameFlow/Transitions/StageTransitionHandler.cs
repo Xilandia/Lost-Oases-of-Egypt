@@ -43,7 +43,7 @@ namespace _Scripts.GameFlow.Transitions
                 EnemySpawnManager.instance.currentStage = stages[currentStage++];
                 EnemySpawnManager.instance.currentWaveIndex = 0;
                 EnemySpawnManager.instance.currentEnemyGoalTransform =
-                    EnemySpawnManager.instance.enemyGoalTransforms[stages[currentStage].enemyStageGoal];
+                    EnemySpawnManager.instance.enemyGoalTransforms[EnemySpawnManager.instance.currentStage.enemyStageGoal];
             }
         }
 

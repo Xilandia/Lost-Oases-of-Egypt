@@ -51,7 +51,7 @@ namespace _Scripts.Player.Unit
         public Transform aggroTarget;
         public IDamageable aggroDamageable;
         public int aggroOffset;
-        public bool hasAggro = false;
+        public bool hasAggro;
         private float distanceToTarget;
 
         private int hasLifeHash;
@@ -65,7 +65,9 @@ namespace _Scripts.Player.Unit
             cam = Camera.main;
             navAgent.speed = unitMoveSpeed;
             navAgent.acceleration = unitMoveSpeed;
+            navAgent.stoppingDistance = unitAttackRange;
             rangeCollider.radius = unitAggroRange;
+            moveTarget = transform.position + new Vector3(0,5,0);
             hasLifeHash = Animator.StringToHash("HasLife");
             isMovingHash = Animator.StringToHash("IsMoving");
             inRangeHash = Animator.StringToHash("InRange");
@@ -81,7 +83,7 @@ namespace _Scripts.Player.Unit
                 MoveToAggroTarget();
                 ConsiderAttacking();
 
-                if (PlayerManager.instance.roundTimer[2] - timer >= 1)
+                if (PlayerManager.instance.roundTimer[2] - timer >= 0.25)
                 {
                     timer = PlayerManager.instance.roundTimer[2];
                     MoveToAggroTarget();
@@ -136,7 +138,7 @@ namespace _Scripts.Player.Unit
 
         private void ConsiderAttacking()
         {
-            if (distanceToTarget <= unitAttackRange + aggroOffset)
+            if (distanceToTarget <= unitAttackRange * transform.localScale.x + aggroOffset)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);

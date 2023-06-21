@@ -592,9 +592,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 131440, guid: 5e617e90ac28ce7488be6a63235b1f32, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 131442, guid: 5e617e90ac28ce7488be6a63235b1f32, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 131444, guid: 5e617e90ac28ce7488be6a63235b1f32, type: 3}
       propertyPath: m_Name
       value: PalmTreeDualStraightTwoSided
+      objectReference: {fileID: 0}
+    - target: {fileID: 131444, guid: 5e617e90ac28ce7488be6a63235b1f32, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 431444, guid: 5e617e90ac28ce7488be6a63235b1f32, type: 3}
       propertyPath: m_RootOrder
@@ -652,7 +664,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6431444, guid: 5e617e90ac28ce7488be6a63235b1f32, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e617e90ac28ce7488be6a63235b1f32, type: 3}
 --- !u!4 &43693329 stripped
 Transform:
@@ -881,6 +894,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeTrioTwoSided (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 137888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137890, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137892, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 437888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -937,7 +962,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6467840, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
 --- !u!4 &96524847 stripped
 Transform:
@@ -3009,6 +3035,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeSingleBendedTwoSided
       objectReference: {fileID: 0}
+    - target: {fileID: 118788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 118790, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 118792, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 418788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -3065,7 +3103,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6481246, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
 --- !u!4 &222329607 stripped
 Transform:
@@ -4866,6 +4905,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &344736594
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344736591}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.3131535, y: 3.164276, z: 3.126075}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.2847796, y: 2.664276, z: -0.1199063}
+  m_TimeToStationary: 0.5
+--- !u!65 &344736595
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344736591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6263065, y: 6.3285522, z: 6.25215}
+  m_Center: {x: 0.28477964, y: 2.664276, z: -0.119906336}
 --- !u!1001 &347896242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7069,9 +7138,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 155930, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 155932, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 155934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
       propertyPath: m_Name
       value: PalmTreeTrioOneSided (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 155934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 455934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
       propertyPath: m_RootOrder
@@ -7129,7 +7210,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6467840, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
 --- !u!4 &496990016 stripped
 Transform:
@@ -7152,6 +7234,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &496990019
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046290}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.1433065, y: 3.479225, z: 2.840536}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.3959919, y: 2.979227, z: -0.7963564}
+  m_TimeToStationary: 0.5
+--- !u!65 &496990020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2866125, y: 6.9584503, z: 5.6810718}
+  m_Center: {x: 0.3959919, y: 2.9792266, z: -0.7963564}
 --- !u!1001 &511726654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7427,6 +7539,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeTrioTwoSided (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 137888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137890, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137892, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 437888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -7483,7 +7607,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6467840, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
 --- !u!4 &523870358 stripped
 Transform:
@@ -8825,6 +8950,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeSingleBendedOneSided (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 151538, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 151540, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 151542, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 451538, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8881,7 +9018,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6481246, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
 --- !u!4 &641163589 stripped
 Transform:
@@ -9542,7 +9680,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 998238951db684a19ad57918609e51f1, type: 3}
   - {fileID: 8300000, guid: eaafcc42c279341ac873fcd85a4d713f, type: 3}
   - {fileID: 8300000, guid: 55560e3ebc883499293891f350a67349, type: 3}
-  soundEffectSource: {fileID: 691512219}
 --- !u!114 &673076736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11689,9 +11826,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 155930, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 155932, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 155934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
       propertyPath: m_Name
       value: PalmTreeTrioOneSided (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 155934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 455934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
       propertyPath: m_RootOrder
@@ -11749,7 +11898,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6467840, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
 --- !u!4 &808164009 stripped
 Transform:
@@ -11778,6 +11928,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &822155782
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822155779}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1645385, y: 1.543278, z: 1.2999805}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.2419906, y: 1.043279, z: 0.06585002}
+  m_TimeToStationary: 0.5
+--- !u!65 &822155783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822155779}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3290768, y: 3.0865562, z: 2.599961}
+  m_Center: {x: 0.24199061, y: 1.0432787, z: 0.06585002}
 --- !u!1001 &826454752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11788,6 +11968,18 @@ PrefabInstance:
     - target: {fileID: 118788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_Name
       value: PalmTreeSingleBendedTwoSided (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 118788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 118790, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 118792, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 418788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_RootOrder
@@ -11845,7 +12037,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6481246, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
 --- !u!4 &826454753 stripped
 Transform:
@@ -14865,9 +15058,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 109762, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 109764, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 109766, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
       propertyPath: m_Name
       value: PalmTreeDualBendedOneSided
+      objectReference: {fileID: 0}
+    - target: {fileID: 109766, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 409766, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
       propertyPath: m_RootOrder
@@ -14925,7 +15130,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6426442, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
 --- !u!4 &1024184807 stripped
 Transform:
@@ -17143,8 +17349,8 @@ Transform:
   m_GameObject: {fileID: 1170276726}
   m_LocalRotation: {x: -0.68709844, y: -0.19432716, z: -0.33524528, w: 0.61460835}
   m_LocalPosition: {x: 441, y: 26, z: 695}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1525048435}
   m_RootOrder: 0
@@ -18377,6 +18583,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeSingleStraightOneSided
       objectReference: {fileID: 0}
+    - target: {fileID: 124274, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 124276, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 124278, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 424274, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -18433,7 +18651,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6459010, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+    - {fileID: 9524274, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
 --- !u!4 &1255728876 stripped
 Transform:
@@ -18456,6 +18676,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1255728880
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471045340}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 5.133605, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 4.633607, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &1255728881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471045340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10.267212, z: 1}
+  m_Center: {x: 0, y: 4.633607, z: 0}
 --- !u!1 &1264354002
 GameObject:
   m_ObjectHideFlags: 0
@@ -20222,6 +20472,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1378861907
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378861904}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.3131535, y: 3.164276, z: 3.126075}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.2847796, y: 2.664276, z: -0.1199063}
+  m_TimeToStationary: 0.5
+--- !u!65 &1378861908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378861904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6263065, y: 6.3285522, z: 6.25215}
+  m_Center: {x: 0.28477964, y: 2.664276, z: -0.119906336}
 --- !u!1001 &1379955875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20453,6 +20733,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeSingleBendedOneSided
       objectReference: {fileID: 0}
+    - target: {fileID: 151538, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 151540, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 151542, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 451538, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -20509,7 +20801,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6481246, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
 --- !u!4 &1386597812 stripped
 Transform:
@@ -20532,6 +20825,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1386597815
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115121577}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.005049, y: 2.512985, z: 1.0307724}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.505046, y: 2.012985, z: -0.5307705}
+  m_TimeToStationary: 0.5
+--- !u!65 &1386597816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115121577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0100975, y: 5.0259695, z: 2.0615454}
+  m_Center: {x: -2.505046, y: 2.0129848, z: -0.53077054}
 --- !u!1 &1389203435
 GameObject:
   m_ObjectHideFlags: 0
@@ -20917,9 +21240,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 161614, guid: 03566e50eb2d319468a8720030b6bcf6, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 161616, guid: 03566e50eb2d319468a8720030b6bcf6, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 161618, guid: 03566e50eb2d319468a8720030b6bcf6, type: 3}
       propertyPath: m_Name
       value: PalmTreeSingleStraightTwoSided
+      objectReference: {fileID: 0}
+    - target: {fileID: 161618, guid: 03566e50eb2d319468a8720030b6bcf6, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 461618, guid: 03566e50eb2d319468a8720030b6bcf6, type: 3}
       propertyPath: m_RootOrder
@@ -20977,7 +21312,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6492726, guid: 03566e50eb2d319468a8720030b6bcf6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03566e50eb2d319468a8720030b6bcf6, type: 3}
 --- !u!4 &1418767389 stripped
 Transform:
@@ -21290,6 +21626,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1458333768
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458333765}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.005049, y: 2.512985, z: 1.0307724}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.505046, y: 2.012985, z: -0.5307705}
+  m_TimeToStationary: 0.5
+--- !u!65 &1458333769
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458333765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0100975, y: 5.0259695, z: 2.0615454}
+  m_Center: {x: -2.505046, y: 2.0129848, z: -0.53077054}
 --- !u!1001 &1459752312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21300,6 +21666,18 @@ PrefabInstance:
     - target: {fileID: 124274, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
       propertyPath: m_Name
       value: PalmTreeSingleStraightOneSided (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 124274, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 124276, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 124278, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 424274, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
       propertyPath: m_RootOrder
@@ -21357,7 +21735,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6459010, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
+    - {fileID: 9524274, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 20ddc844cd25b244f8005cba06955856, type: 3}
 --- !u!4 &1459752313 stripped
 Transform:
@@ -21537,9 +21917,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 109762, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 109764, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 109766, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
       propertyPath: m_Name
       value: PalmTreeDualBendedOneSided (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 109766, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 409766, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
       propertyPath: m_RootOrder
@@ -21597,7 +21989,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6426442, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38291ecd3571d294ead9e9d15c345a6d, type: 3}
 --- !u!4 &1475903506 stripped
 Transform:
@@ -21620,6 +22013,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1475903509
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410880050}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.4999999, y: 1.8026814, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -3.330669e-16, y: 1.302682, z: 4.440892e-16}
+  m_TimeToStationary: 0.5
+--- !u!65 &1475903510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410880050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999998, y: 3.6053634, z: 1}
+  m_Center: {x: -3.330669e-16, y: 1.3026824, z: 4.440892e-16}
 --- !u!1001 &1484356074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22130,6 +22553,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1509286720
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509286717}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.9709815, y: 1.819867, z: 0.980102}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.9306538, y: 1.319861, z: -0.4800918}
+  m_TimeToStationary: 0.5
+--- !u!65 &1509286721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509286717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9419632, y: 3.6397338, z: 1.9602042}
+  m_Center: {x: -0.9306538, y: 1.3198613, z: -0.48009178}
 --- !u!1001 &1516735926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22614,6 +23067,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1549229957
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549229954}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.005049, y: 2.512985, z: 1.0307724}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.505046, y: 2.012985, z: -0.5307705}
+  m_TimeToStationary: 0.5
+--- !u!65 &1549229958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549229954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0100975, y: 5.0259695, z: 2.0615454}
+  m_Center: {x: -2.505046, y: 2.0129848, z: -0.53077054}
 --- !u!4 &1558791247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1201997303293945270, guid: 988b77c5aca194522864d0a90e3734dc,
@@ -23469,9 +23952,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 155930, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 155932, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 155934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
       propertyPath: m_Name
       value: PalmTreeTrioOneSided
+      objectReference: {fileID: 0}
+    - target: {fileID: 155934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 455934, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
       propertyPath: m_RootOrder
@@ -23529,7 +24024,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6467840, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2ed7cc7e3c944414d8f3fabb4d533018, type: 3}
 --- !u!4 &1641176797 stripped
 Transform:
@@ -23552,6 +24048,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1641176800
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065971456}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.0404356, y: 2.8882315, z: 2.4144335}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.283237, y: 2.388232, z: -0.3796312}
+  m_TimeToStationary: 0.5
+--- !u!65 &1641176801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065971456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.080871, y: 5.776463, z: 4.828867}
+  m_Center: {x: 0.28323704, y: 2.3882315, z: -0.37963122}
 --- !u!1 &1643093095
 GameObject:
   m_ObjectHideFlags: 0
@@ -23729,6 +24255,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeTrioTwoSided (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 137888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137890, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137892, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 437888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -23785,7 +24323,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6467840, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
 --- !u!4 &1657058158 stripped
 Transform:
@@ -23808,6 +24347,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1657058161
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331927777}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.3131535, y: 3.164276, z: 3.126075}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.2847796, y: 2.664276, z: -0.1199063}
+  m_TimeToStationary: 0.5
+--- !u!65 &1657058162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331927777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6263065, y: 6.3285522, z: 6.25215}
+  m_Center: {x: 0.28477964, y: 2.664276, z: -0.119906336}
 --- !u!1001 &1657129184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23909,6 +24478,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeSingleBendedTwoSided (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 118788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 118790, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 118792, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 418788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -23927,15 +24508,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 388.77115
+      value: 382.17
       objectReference: {fileID: 0}
     - target: {fileID: 418788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.499008
+      value: 25.65
       objectReference: {fileID: 0}
     - target: {fileID: 418788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 436.33698
+      value: 442.05
       objectReference: {fileID: 0}
     - target: {fileID: 418788, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23965,7 +24546,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6481246, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d67c8074b567ec459905d65232f7154, type: 3}
 --- !u!4 &1668319381 stripped
 Transform:
@@ -23988,6 +24570,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1668319384
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249898181}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.005049, y: 2.512985, z: 1.0307724}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.505046, y: 2.012985, z: -0.5307705}
+  m_TimeToStationary: 0.5
+--- !u!65 &1668319385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249898181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0100975, y: 5.0259695, z: 2.0615454}
+  m_Center: {x: -2.505046, y: 2.0129848, z: -0.53077054}
 --- !u!1001 &1671736182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25024,6 +25636,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1714449524
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714449521}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 5.133605, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 4.633607, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &1714449525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714449521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10.267212, z: 1}
+  m_Center: {x: 0, y: 4.633607, z: 0}
 --- !u!1 &1716657594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 118788, guid: 8d67c8074b567ec459905d65232f7154,
@@ -25045,6 +25687,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1716657597
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716657594}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.867965, y: 2.933959, z: 1.040021}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.368005, y: 2.433959, z: -0.5400206}
+  m_TimeToStationary: 0.5
+--- !u!65 &1716657598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716657594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.73593, y: 5.8679175, z: 2.0800416}
+  m_Center: {x: -2.3680053, y: 2.4339588, z: -0.54002064}
 --- !u!1 &1718990406
 GameObject:
   m_ObjectHideFlags: 0
@@ -25558,8 +26230,8 @@ Transform:
   m_GameObject: {fileID: 1728935560}
   m_LocalRotation: {x: -0.68709844, y: -0.19432716, z: -0.33524528, w: 0.61460835}
   m_LocalPosition: {x: -415, y: 68.75, z: 688.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1525048435}
   m_RootOrder: 2
@@ -26913,6 +27585,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1834749610
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834749607}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.448175, y: 2.1886084, z: 0.5746585}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.7217794, y: 1.688609, z: -0.07465963}
+  m_TimeToStationary: 0.5
+--- !u!65 &1834749611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834749607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.89635, y: 4.3772173, z: 1.1493171}
+  m_Center: {x: -0.7217794, y: 1.6886089, z: -0.07465963}
 --- !u!1001 &1846262185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27734,6 +28436,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeDualBendedTwoSided
       objectReference: {fileID: 0}
+    - target: {fileID: 119418, guid: 785bfd81c9fb838469851c06eb415f7a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 119420, guid: 785bfd81c9fb838469851c06eb415f7a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 119422, guid: 785bfd81c9fb838469851c06eb415f7a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 419418, guid: 785bfd81c9fb838469851c06eb415f7a, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -27790,7 +28504,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6426442, guid: 785bfd81c9fb838469851c06eb415f7a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 785bfd81c9fb838469851c06eb415f7a, type: 3}
 --- !u!4 &1900880220 stripped
 Transform:
@@ -27813,6 +28528,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1900880223
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380910020}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.325956, y: 2.020758, z: 0.628634}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -1.450721, y: 1.520752, z: 0.1286137}
+  m_TimeToStationary: 0.5
+--- !u!65 &1900880224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380910020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6519117, y: 4.041516, z: 1.2572677}
+  m_Center: {x: -1.4507205, y: 1.520752, z: 0.12861374}
 --- !u!1001 &1906114897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28004,6 +28749,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTreeTrioTwoSided
       objectReference: {fileID: 0}
+    - target: {fileID: 137888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137890, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 137892, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 437888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -28060,7 +28817,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6467840, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
 --- !u!4 &1916379904 stripped
 Transform:
@@ -28083,6 +28841,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &1916379907
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855293501}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.4148455, y: 3.649712, z: 2.8827136}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.09643567, y: 3.149714, z: -0.5210181}
+  m_TimeToStationary: 0.5
+--- !u!65 &1916379908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855293501}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.829691, y: 7.299424, z: 5.7654266}
+  m_Center: {x: 0.09643567, y: 3.1497135, z: -0.52101815}
 --- !u!1001 &1919252186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29000,8 +29788,8 @@ Transform:
   m_GameObject: {fileID: 2012250002}
   m_LocalRotation: {x: -0.68709844, y: -0.19432716, z: -0.33524528, w: 0.61460835}
   m_LocalPosition: {x: 34.2, y: 42.09, z: 770.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1525048435}
   m_RootOrder: 1
@@ -29213,6 +30001,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &2021059744
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021059740}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 5.133605, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 4.633607, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &2021059745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021059740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10.267212, z: 1}
+  m_Center: {x: 0, y: 4.633607, z: 0}
 --- !u!4 &2022561659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1201997303293945270, guid: 2def920a9e7f843b58418b0c34865428,
@@ -31248,9 +32066,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205210158}
     m_Modifications:
+    - target: {fileID: 130680, guid: b9a200fc20bd2b54392b467e9411a431, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 130682, guid: b9a200fc20bd2b54392b467e9411a431, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 130684, guid: b9a200fc20bd2b54392b467e9411a431, type: 3}
       propertyPath: m_Name
       value: PalmTreeDualStraightOneSided
+      objectReference: {fileID: 0}
+    - target: {fileID: 130684, guid: b9a200fc20bd2b54392b467e9411a431, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 430684, guid: b9a200fc20bd2b54392b467e9411a431, type: 3}
       propertyPath: m_RootOrder
@@ -31308,7 +32138,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6430680, guid: b9a200fc20bd2b54392b467e9411a431, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9a200fc20bd2b54392b467e9411a431, type: 3}
 --- !u!4 &2145123822 stripped
 Transform:
@@ -31331,6 +32162,36 @@ MonoBehaviour:
   resourceAmount: 500
   resourceGatherRate: 10
   resourceType: 0
+  offset: 10
+--- !u!208 &2145123825
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435646270}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.9421455, y: 2.863408, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.1594201, y: 2.363408, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &2145123826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435646270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8842912, y: 5.726816, z: 1}
+  m_Center: {x: -0.15942009, y: 2.363408, z: 0}
 --- !u!1001 &2146178317
 PrefabInstance:
   m_ObjectHideFlags: 0

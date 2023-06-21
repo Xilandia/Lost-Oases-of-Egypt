@@ -80,7 +80,7 @@ namespace _Scripts.Enemy.Unit
             {
                 ConsiderAttacking();
 
-                if (PlayerManager.instance.roundTimer[2] - timer >= 1)
+                if (PlayerManager.instance.roundTimer[2] - timer >= 0.25)
                 {
                     timer = PlayerManager.instance.roundTimer[2];
                     MoveToAggroTarget();
@@ -112,7 +112,7 @@ namespace _Scripts.Enemy.Unit
 
         private void ConsiderAttacking()
         {
-            if (distanceToTarget <= enemyAttackRange + targetOffset)
+            if (distanceToTarget <= enemyAttackRange * transform.localScale.x + targetOffset)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);

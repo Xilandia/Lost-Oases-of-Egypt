@@ -19,8 +19,8 @@ MonoBehaviour:
   entityArmor: 10
   entityAttack: 34
   entityTimeBetweenAttacks: 3
-  entityAttackRange: 25
-  entityAggroRange: 125
+  entityAttackRange: 5
+  entityAggroRange: 25
   entityMoveSpeed: 10
   entityAttackSound: {fileID: 8300000, guid: 9a8ecdec7aa1a43f5ae43919167c0d21, type: 3}
   entityDeathSound: {fileID: 8300000, guid: 88e36e377860c465d9bb43d67a5949f2, type: 3}

@@ -80,7 +80,7 @@ namespace _Scripts.Player.Unit
             {
                 ConsiderGathering();
 
-                if (PlayerManager.instance.roundTimer[2] - timer >= 1)
+                if (PlayerManager.instance.roundTimer[2] - timer >= 0.25)
                 {
                     timer = PlayerManager.instance.roundTimer[2];
                     MoveToResourceTarget();
@@ -130,7 +130,7 @@ namespace _Scripts.Player.Unit
 
         private void ConsiderGathering()
         {
-            if (distanceToResourceNode <= workerOperationRange - 10 && PlayerManager.instance.canGatherResources)
+            if (distanceToResourceNode <= workerOperationRange + resourceNode.offset && PlayerManager.instance.canGatherResources)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);
@@ -217,6 +217,7 @@ namespace _Scripts.Player.Unit
                     isAttemptingToGather = true;
                     resourceTarget = other.transform;
                     resourceNode = other.gameObject.GetComponent<ResourceNode>();
+                    distanceToResourceNode = Vector3.Distance(transform.position, resourceTarget.position);
                 }
             }
             else if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.playerInteractableLayer))

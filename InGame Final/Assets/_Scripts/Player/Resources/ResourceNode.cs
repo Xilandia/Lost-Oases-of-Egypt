@@ -13,6 +13,7 @@ namespace _Scripts.Player.Resources
         public float resourceAmount;
         public float resourceGatherRate;
         public ResourceTypes resourceType;
+        public float offset;
 
         public float GatherResource()
         {
