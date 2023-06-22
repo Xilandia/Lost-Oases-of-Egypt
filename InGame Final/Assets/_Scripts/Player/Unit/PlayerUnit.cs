@@ -67,7 +67,9 @@ namespace _Scripts.Player.Unit
             navAgent.acceleration = unitMoveSpeed;
             navAgent.stoppingDistance = unitAttackRange;
             rangeCollider.radius = unitAggroRange;
-            moveTarget = transform.position + new Vector3(0,5,0);
+            unitAttackRange *= transform.position.x;
+            unitAggroRange *= transform.position.x;
+            MoveUnit(transform.position + new Vector3(1, 0, 1));
             hasLifeHash = Animator.StringToHash("HasLife");
             isMovingHash = Animator.StringToHash("IsMoving");
             inRangeHash = Animator.StringToHash("InRange");
@@ -138,7 +140,7 @@ namespace _Scripts.Player.Unit
 
         private void ConsiderAttacking()
         {
-            if (distanceToTarget <= unitAttackRange * transform.localScale.x + aggroOffset)
+            if (distanceToTarget <= unitAttackRange + aggroOffset)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);

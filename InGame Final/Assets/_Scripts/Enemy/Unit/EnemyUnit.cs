@@ -65,6 +65,8 @@ namespace _Scripts.Enemy.Unit
             navAgent.speed = enemyMoveSpeed;
             navAgent.acceleration = enemyMoveSpeed;
             rangeCollider.radius = enemyAggroRange;
+            enemyAggroRange *= transform.localScale.x;
+            enemyAttackRange *= transform.localScale.x;
             hasLifeHash = Animator.StringToHash("HasLife");
             isMovingHash = Animator.StringToHash("IsMoving");
             inRangeHash = Animator.StringToHash("InRange");
@@ -112,7 +114,7 @@ namespace _Scripts.Enemy.Unit
 
         private void ConsiderAttacking()
         {
-            if (distanceToTarget <= enemyAttackRange * transform.localScale.x + targetOffset)
+            if (distanceToTarget <= enemyAttackRange + targetOffset)
             {
                 animator.SetBool(inRangeHash, true);
                 animator.SetBool(isMovingHash, false);
@@ -122,6 +124,7 @@ namespace _Scripts.Enemy.Unit
                     enemyAttackCooldown = enemyTimeBetweenAttacks;
                     if (targetDamageable != null)
                     {
+                        Debug.Log("Attacking my target", ((PlayerWorker) targetDamageable).gameObject);
                         targetDamageable.TakeDamage(enemyAttack);
                         SoundHandler.instance.PlaySoundEffect(enemyAttackSound);
                     }
@@ -155,10 +158,18 @@ namespace _Scripts.Enemy.Unit
                 if (col.gameObject.tag.Equals("Unit"))
                 {
                     targetDamageable = targetTransform.gameObject.GetComponent<PlayerUnit>();
+                } 
+                else if (col.gameObject.tag.Equals("Tower"))
+                {
+                    targetDamageable = targetTransform.gameObject.GetComponent<PlayerTower>();
                 }
-                else if (col.gameObject.tag.Equals("Trainer"))
+                else if (col.gameObject.tag.Equals("Barracks"))
                 {
                     targetDamageable = targetTransform.gameObject.GetComponent<PlayerBarracks>();
+                }
+                else if (col.gameObject.tag.Equals("Worker"))
+                {
+                    targetDamageable = targetTransform.gameObject.GetComponent<PlayerWorker>();
                 }
                 targetOffset = targetDamageable.GetOffset();
                 navAgent.stoppingDistance = enemyAttackRange;

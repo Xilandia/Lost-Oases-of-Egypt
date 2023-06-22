@@ -65,6 +65,7 @@ namespace _Scripts.Player.Unit
             navAgent.speed = workerMoveSpeed;
             navAgent.acceleration = workerMoveSpeed;
             rangeCollider.radius = workerOperationRange;
+            MoveWorker(transform.position + new Vector3(1, 0, 1));
             
             hasLifeHash = Animator.StringToHash("HasLife");
             isMovingHash = Animator.StringToHash("IsMoving");
@@ -210,7 +211,7 @@ namespace _Scripts.Player.Unit
 
         private void OnTriggerEnter(Collider other)
         {
-            if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.resourceLayer)) // change to resource layer
+            if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.resourceLayer))
             {
                 if (!isAttemptingToGather && !isAttemptingToBuild)
                 {
