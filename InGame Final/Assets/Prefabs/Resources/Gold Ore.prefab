@@ -51,7 +51,7 @@ MonoBehaviour:
   resourceAmount: 5000
   resourceGatherRate: 25
   resourceType: 1
-  offset: 15
+  offset: 18
 --- !u!65 &796022771802590681
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -81,6 +81,7 @@ Transform:
   - {fileID: 1966403992366511294}
   - {fileID: 1905755067820090933}
   - {fileID: 5192178239344980937}
+  - {fileID: 8977163519359143230}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,6 +131,7 @@ MonoBehaviour:
   towerDeathSound: {fileID: 0}
   towerPrefab: {fileID: 3887137071503025175}
   towerTransform: {fileID: 9164537273305081322}
+  towerPopupSpawnPosition: {fileID: 8977163519359143230}
   towerPlacable: {fileID: 6209489510080761250}
   isPrototype: 0
   isPlaced: 0
@@ -266,6 +268,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8874242286831517544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8977163519359143230}
+  m_Layer: 8
+  m_Name: Popup Spawn Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8977163519359143230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874242286831517544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9164537273305081322}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4266232904290414159
 PrefabInstance:
   m_ObjectHideFlags: 0

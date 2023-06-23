@@ -9,6 +9,7 @@ using _Scripts.Interaction.Interactable;
 using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
 using _Scripts.Player.Unit;
+using _Scripts.Utility.Popup;
 using _Scripts.Utility.Static;
 using UnityEngine.AI;
 
@@ -32,6 +33,7 @@ namespace _Scripts.Player.Structure
 
         public GameObject towerPrefab;
         public Transform towerTransform;
+        public Transform towerPopupSpawnPosition;
         public PlacableObject towerPlacable;
 
         public bool isPrototype, isPlaced, isComplete;
@@ -198,8 +200,9 @@ namespace _Scripts.Player.Structure
 
         public void TakeDamage(float damage)
         {
-            float totalDamage = damage - towerArmor;
-            towerCurrentHealth -= Math.Max(totalDamage, 1);
+            float totalDamage = Math.Max(damage - towerArmor, 1);
+            towerCurrentHealth -= totalDamage;
+            PopupHandler.instance.CreatePopup("-" + totalDamage + " Health!", Color.red, towerPopupSpawnPosition.position);
             SoundHandler.instance.PlaySoundEffect(towerDamagedSound);
 
             CheckIfDead();

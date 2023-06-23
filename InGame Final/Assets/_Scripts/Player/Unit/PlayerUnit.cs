@@ -9,6 +9,7 @@ using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
 using _Scripts.Utility.Entity;
 using _Scripts.Utility.Interface;
+using _Scripts.Utility.Popup;
 using _Scripts.Utility.Static;
 
 
@@ -44,6 +45,7 @@ namespace _Scripts.Player.Unit
         public Image unitHealthBarImage;
         public GameObject unitPrefab;
         public Transform unitTransform;
+        public Transform unitPopupSpawnPosition;
         public InteractableUnit interactable;
 
         private Collider[] rangeColliders;
@@ -90,6 +92,12 @@ namespace _Scripts.Player.Unit
                     timer = PlayerManager.instance.roundTimer[2];
                     MoveToAggroTarget();
                 }
+            }
+
+            if (unitStatDisplay.activeSelf)
+            {
+                unitStatDisplay.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
+                    cam.transform.rotation * Vector3.up);
             }
         }
 
@@ -173,9 +181,9 @@ namespace _Scripts.Player.Unit
 
         public void TakeDamage(float damage)
         {
-            float totalDamage = damage - unitArmor;
-            unitCurrentHealth -= Math.Max(totalDamage, 1);
-            
+            float totalDamage = Math.Max(damage - unitArmor, 1);
+            unitCurrentHealth -= totalDamage;
+            PopupHandler.instance.CreatePopup("-" + totalDamage + " Health!", Color.red, unitPopupSpawnPosition.position);
             
             HandleHealth();
         }
@@ -187,9 +195,6 @@ namespace _Scripts.Player.Unit
 
         private void HandleHealth()
         {
-            unitStatDisplay.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
-                cam.transform.rotation * Vector3.up);
-
             unitHealthBarImage.fillAmount = unitCurrentHealth / unitHealth;
 
             if (unitCurrentHealth <= 0)

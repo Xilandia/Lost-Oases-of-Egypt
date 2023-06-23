@@ -8,6 +8,7 @@ using _Scripts.Interaction.Interactable;
 using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
 using _Scripts.Player.Unit;
+using _Scripts.Utility.Popup;
 using UnityEngine.AI;
 
 namespace _Scripts.Player.Structure
@@ -28,6 +29,7 @@ namespace _Scripts.Player.Structure
 
         public GameObject barracksPrefab;
         public Transform barracksTransform;
+        public Transform barracksPopupSpawnPosition;
         public PlacableObject barracksPlacable;
 
         public bool isPrototype, isPlaced, isComplete;
@@ -209,8 +211,9 @@ namespace _Scripts.Player.Structure
 
         public void TakeDamage(float damage)
         {
-            float totalDamage = damage - barracksArmor;
-            barracksCurrentHealth -= Math.Max(totalDamage, 1);
+            float totalDamage = Math.Max(damage - barracksArmor, 1);
+            barracksCurrentHealth -= totalDamage;
+            PopupHandler.instance.CreatePopup("-" + totalDamage + " Health!", Color.red, barracksPopupSpawnPosition.position);
             SoundHandler.instance.PlaySoundEffect(barracksDamagedSound);
 
             CheckIfDead();

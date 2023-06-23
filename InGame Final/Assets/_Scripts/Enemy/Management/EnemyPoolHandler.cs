@@ -36,7 +36,6 @@ namespace _Scripts.Enemy.Management
         private EnemyUnit CreatePooledObjectBasic()
         {
             EnemyUnit Instance = Instantiate(enemyPrefabs[0], Vector3.zero, Quaternion.identity);
-            Instance.disable += ReturnObjectToPool;
             Instance.gameObject.SetActive(false);
 
             return Instance;
@@ -45,7 +44,6 @@ namespace _Scripts.Enemy.Management
         private EnemyUnit CreatePooledObjectClimber()
         {
             EnemyUnit Instance = Instantiate(enemyPrefabs[1], Vector3.zero, Quaternion.identity);
-            Instance.disable += ReturnObjectToPool;
             Instance.gameObject.SetActive(false);
 
             return Instance;
@@ -54,7 +52,6 @@ namespace _Scripts.Enemy.Management
         private EnemyUnit CreatePooledObjectFast()
         {
             EnemyUnit Instance = Instantiate(enemyPrefabs[2], Vector3.zero, Quaternion.identity);
-            Instance.disable += ReturnObjectToPool;
             Instance.gameObject.SetActive(false);
 
             return Instance;
@@ -63,7 +60,6 @@ namespace _Scripts.Enemy.Management
         private EnemyUnit CreatePooledObjectTank()
         {
             EnemyUnit Instance = Instantiate(enemyPrefabs[3], Vector3.zero, Quaternion.identity);
-            Instance.disable += ReturnObjectToPool;
             Instance.gameObject.SetActive(false);
 
             return Instance;
@@ -72,15 +68,9 @@ namespace _Scripts.Enemy.Management
         private EnemyUnit CreatePooledObjectBoss()
         {
             EnemyUnit Instance = Instantiate(enemyPrefabs[4], Vector3.zero, Quaternion.identity);
-            Instance.disable += ReturnObjectToPool;
             Instance.gameObject.SetActive(false);
 
             return Instance;
-        }
-
-        private void ReturnObjectToPool(EnemyUnit Instance)
-        {
-            basicEnemyPool.Release(Instance);
         }
 
         private void OnTakeFromPool(EnemyUnit Instance)

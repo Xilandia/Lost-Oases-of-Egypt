@@ -9,6 +9,7 @@ using _Scripts.Player.Unit;
 using _Scripts.Utility.Static;
 using _Scripts.Utility.Entity;
 using _Scripts.Utility.Interface;
+using _Scripts.Utility.Popup;
 
 namespace _Scripts.Enemy.Unit
 {
@@ -47,10 +48,7 @@ namespace _Scripts.Enemy.Unit
 
         public GameObject enemyPrefab;
         public Transform enemyTransform;
-
-        public delegate void OnDisableCallback(EnemyUnit Instance);
-
-        public OnDisableCallback disable;
+        public Transform enemyPopupSpawnPosition;
 
         private int hasLifeHash;
         private int isMovingHash;
@@ -124,7 +122,6 @@ namespace _Scripts.Enemy.Unit
                     enemyAttackCooldown = enemyTimeBetweenAttacks;
                     if (targetDamageable != null)
                     {
-                        Debug.Log("Attacking my target", ((PlayerWorker) targetDamageable).gameObject);
                         targetDamageable.TakeDamage(enemyAttack);
                         SoundHandler.instance.PlaySoundEffect(enemyAttackSound);
                     }
@@ -329,8 +326,9 @@ namespace _Scripts.Enemy.Unit
 
         public void TakeDamage(float damage)
         {
-            float totalDamage = damage - enemyArmor;
-            enemyCurrentHealth -= Math.Max(totalDamage, 1);
+            float totalDamage = Math.Max(damage - enemyArmor, 1);
+            enemyCurrentHealth -= totalDamage;
+            PopupHandler.instance.CreatePopup("-" + totalDamage + " Health!", Color.red, enemyPopupSpawnPosition.position);
             
             CheckIfDead();
         }
@@ -347,7 +345,6 @@ namespace _Scripts.Enemy.Unit
                 animator.SetBool(hasLifeHash, false);
                 SoundHandler.instance.PlaySoundEffect(enemyDeathSound);
                 Destroy(gameObject);
-                //disable?.Invoke(this);
             }
         }
 

@@ -10,6 +10,7 @@ using _Scripts.Player.Structure;
 using _Scripts.Player.Resources;
 using _Scripts.Utility.Entity;
 using _Scripts.Utility.Interface;
+using _Scripts.Utility.Popup;
 using _Scripts.Utility.Static;
 
 namespace _Scripts.Player.Unit
@@ -35,6 +36,7 @@ namespace _Scripts.Player.Unit
 
         public GameObject workerPrefab;
         public Transform workerTransform;
+        [SerializeField] private Transform workerPopupSpawnPosition;
         public InteractableWorker interactable;
 
         private float distanceToResourceNode;
@@ -59,6 +61,7 @@ namespace _Scripts.Player.Unit
         private int inRangeHash;
 
         private float timer;
+        private float amountGathered;
 
         void Start()
         {
@@ -145,10 +148,14 @@ namespace _Scripts.Player.Unit
                         switch (resourceNode.resourceType)
                         {
                             case ResourceNode.ResourceTypes.Ore:
-                                PlayerManager.instance.PlayerOre += resourceNode.GatherResource();
+                                amountGathered = resourceNode.GatherResource();
+                                PlayerManager.instance.PlayerOre += amountGathered;
+                                PopupHandler.instance.CreatePopup("+" + amountGathered + " Ore!", Color.green, workerPopupSpawnPosition.position);
                                 break;
                             case ResourceNode.ResourceTypes.Wood:
-                                PlayerManager.instance.PlayerWood += resourceNode.GatherResource();
+                                amountGathered = resourceNode.GatherResource();
+                                PlayerManager.instance.PlayerWood += amountGathered;
+                                PopupHandler.instance.CreatePopup("+" + amountGathered + " Wood!", Color.green, workerPopupSpawnPosition.position);
                                 break;
                         }
                     }
@@ -184,9 +191,10 @@ namespace _Scripts.Player.Unit
 
         public void TakeDamage(float damage)
         {
-            float totalDamage = damage - workerArmor;
-            workerCurrentHealth -= Math.Max(totalDamage, 1);
-            
+            float totalDamage = Math.Max(damage - workerArmor, 1);
+            workerCurrentHealth -= totalDamage;
+            PopupHandler.instance.CreatePopup("-" + totalDamage + " Health!", Color.red, workerPopupSpawnPosition.position);
+
             CheckIfDead();
         }
         
