@@ -207,7 +207,7 @@ namespace _Scripts.Enemy.Unit
             }
             else if (StageTransitionHandler.instance.currentStage == 4)
             {
-                targetTransform = StatueHandler.instance.statue.transform;
+                targetTransform = StatueHandler.instance.statue.statue.transform;
                 targetDamageable = StatueHandler.instance.statue;
                 targetOffset = targetDamageable.GetOffset();
                 hasTarget = true;
