@@ -165,6 +165,7 @@ namespace _Scripts.Player.Structure
                 aggroTarget = col.transform;
                 aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
                 aggroOffset = aggroDamageable.GetOffset();
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, towerPopupSpawnPosition.position);
 
                 break;
             }
@@ -232,6 +233,7 @@ namespace _Scripts.Player.Structure
                     aggroTarget = other.transform;
                     aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
                     aggroOffset = aggroDamageable.GetOffset();
+                    PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, towerPopupSpawnPosition.position);
                 }
             }
         }

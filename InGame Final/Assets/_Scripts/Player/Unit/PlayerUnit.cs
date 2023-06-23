@@ -69,8 +69,8 @@ namespace _Scripts.Player.Unit
             navAgent.acceleration = unitMoveSpeed;
             navAgent.stoppingDistance = unitAttackRange;
             rangeCollider.radius = unitAggroRange;
-            unitAttackRange *= transform.position.x;
-            unitAggroRange *= transform.position.x;
+            unitAttackRange *= transform.localScale.x;
+            unitAggroRange *= transform.localScale.x;
             MoveUnit(transform.position + new Vector3(1, 0, 1));
             hasLifeHash = Animator.StringToHash("HasLife");
             isMovingHash = Animator.StringToHash("IsMoving");
@@ -119,6 +119,7 @@ namespace _Scripts.Player.Unit
                 aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
                 aggroOffset = aggroDamageable.GetOffset();
                 navAgent.stoppingDistance = unitAttackRange;
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, unitPopupSpawnPosition.position);
 
                 break;
             }
@@ -183,7 +184,7 @@ namespace _Scripts.Player.Unit
         {
             float totalDamage = Math.Max(damage - unitArmor, 1);
             unitCurrentHealth -= totalDamage;
-            PopupHandler.instance.CreatePopup("-" + totalDamage + " Health!", Color.red, unitPopupSpawnPosition.position);
+            PopupHandler.instance.CreatePopup("-" + totalDamage + " Health!", Color.blue, unitPopupSpawnPosition.position);
             
             HandleHealth();
         }
@@ -226,6 +227,7 @@ namespace _Scripts.Player.Unit
                     aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
                     aggroOffset = aggroDamageable.GetOffset();
                     navAgent.stoppingDistance = unitAttackRange;
+                    PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, unitPopupSpawnPosition.position);
                 }
             }
         }

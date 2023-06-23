@@ -185,6 +185,7 @@ namespace _Scripts.Player.Structure
             GameObject unit = Instantiate(entity.entityPrefab, spawnPoint.position, Quaternion.identity);
             unit.transform.SetParent(PlayerManager.instance.playerUnits);
             PlayerUnit pU = unit.GetComponent<PlayerUnit>();
+            PopupHandler.instance.CreatePopup("Unit sighted!", Color.yellow, barracksPopupSpawnPosition.position);
 
             EntityHandler.instance.SetPlayerUnitStats(pU, entity.entityName);
             

@@ -170,6 +170,7 @@ namespace _Scripts.Enemy.Unit
                 }
                 targetOffset = targetDamageable.GetOffset();
                 navAgent.stoppingDistance = enemyAttackRange;
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
 
                 break;
             }
@@ -220,6 +221,7 @@ namespace _Scripts.Enemy.Unit
                 targetDamageable = PlayerManager.instance.hero;
                 targetOffset = targetDamageable.GetOffset();
                 hasTarget = true;
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
             }
         }
 
@@ -238,6 +240,10 @@ namespace _Scripts.Enemy.Unit
                     hasTarget = true;
                     inRange = true;
                 }
+            }
+            if (inRange)
+            {
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
             }
 
             return inRange;
@@ -259,6 +265,10 @@ namespace _Scripts.Enemy.Unit
                     inRange = true;
                 }
             }
+            if (inRange)
+            {
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
+            }
 
             return inRange;
         }
@@ -278,6 +288,10 @@ namespace _Scripts.Enemy.Unit
                     hasTarget = true;
                     inRange = true;
                 }
+            }
+            if (inRange)
+            {
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
             }
 
             return inRange;
@@ -299,6 +313,10 @@ namespace _Scripts.Enemy.Unit
                     inRange = true;
                 }
             }
+            if (inRange)
+            {
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
+            }
 
             return inRange;
         }
@@ -319,7 +337,11 @@ namespace _Scripts.Enemy.Unit
                     inRange = true;
                 }
             }
-
+            if (inRange)
+            {
+                PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
+            }
+            
             return inRange;
         }
 
@@ -376,6 +398,7 @@ namespace _Scripts.Enemy.Unit
                     }
                     targetOffset = targetDamageable.GetOffset();
                     navAgent.stoppingDistance = enemyAttackRange;
+                    PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, enemyPopupSpawnPosition.position);
                 }
             }
         }

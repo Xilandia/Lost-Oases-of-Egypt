@@ -112,6 +112,7 @@ namespace _Scripts.Player.Unit
                 isAttemptingToGather = true;
                 resourceTarget = col.transform;
                 resourceNode = col.gameObject.GetComponent<ResourceNode>();
+                PopupHandler.instance.CreatePopup("!Resource node sighted!", Color.black, workerPopupSpawnPosition.position);
 
                 break;
             }
@@ -227,6 +228,7 @@ namespace _Scripts.Player.Unit
                     resourceTarget = other.transform;
                     resourceNode = other.gameObject.GetComponent<ResourceNode>();
                     distanceToResourceNode = Vector3.Distance(transform.position, resourceTarget.position);
+                    PopupHandler.instance.CreatePopup("!Resource node sighted!", Color.black, workerPopupSpawnPosition.position);
                 }
             }
             else if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.playerInteractableLayer))
