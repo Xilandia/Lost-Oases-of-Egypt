@@ -155,11 +155,13 @@ namespace _Scripts.Player.Unit
                                 amountGathered = resourceNode.GatherResource();
                                 PlayerManager.instance.PlayerOre += amountGathered;
                                 PopupHandler.instance.CreatePopup("+" + amountGathered + " Ore!", Color.green, workerPopupSpawnPosition.position);
+                                ScoreHandler.instance.ResourceCollected("Ore", amountGathered);
                                 break;
                             case ResourceNode.ResourceTypes.Wood:
                                 amountGathered = resourceNode.GatherResource();
                                 PlayerManager.instance.PlayerWood += amountGathered;
                                 PopupHandler.instance.CreatePopup("+" + amountGathered + " Wood!", Color.green, workerPopupSpawnPosition.position);
+                                ScoreHandler.instance.ResourceCollected("Wood", amountGathered);
                                 break;
                         }
                     }

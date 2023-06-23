@@ -8,6 +8,7 @@ namespace _Scripts.GameFlow.Objective
         {
             if (other.CompareTag("Hero"))
             {
+                ScoreHandler.instance.GameEndScoreCalculation(true);
                 Debug.Log("You win!");
                 // implement proper victory
             }

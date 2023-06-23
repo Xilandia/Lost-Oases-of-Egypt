@@ -82,6 +82,7 @@ namespace _Scripts.GameFlow.Objective
         {
             if (statueCurrentHealth <= 0)
             {
+                ScoreHandler.instance.GameEndScoreCalculation(false);
                 SceneManager.LoadScene("Lose Screen");
             }
         }

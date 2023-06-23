@@ -32,6 +32,7 @@ namespace _Scripts.GameFlow.Objective
             statue.gameObject.SetActive(false);
             StageTransitionHandler.instance.readyToLoadStage = true;
             StageTransitionHandler.instance.LoadStage();
+            ScoreHandler.instance.StatueBuilt();
             
             foreach (PlayerWorker worker in statue.workersInvolvedInConstruction)
             {

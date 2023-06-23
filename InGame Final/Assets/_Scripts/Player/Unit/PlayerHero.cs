@@ -1,4 +1,5 @@
 using _Scripts.GameFlow.Menu;
+using _Scripts.GameFlow.Objective;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,11 +9,11 @@ namespace _Scripts.Player.Unit
     {
         [SerializeField] private PlayerUnit heroUnit;
 
-        void OnDisable() // when hero dies
+        void OnDisable()
         {
-            // lose game
             if (!PauseMenuHandler.instance.isGamePaused)
             {
+                ScoreHandler.instance.GameEndScoreCalculation(false);
                 SceneManager.LoadScene("Lose Screen");
             }
         }

@@ -376,6 +376,7 @@ namespace _Scripts.Enemy.Unit
             {
                 animator.SetBool(hasLifeHash, false);
                 SoundHandler.instance.PlaySoundEffect(enemyDeathSound);
+                ScoreHandler.instance.EnemyKilled(enemyName);
                 Destroy(gameObject);
             }
         }
