@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using _Scripts.GameFlow.Sound;
+using _Scripts.Player.Unit;
 using _Scripts.Utility.Interface;
 using _Scripts.Utility.Popup;
 using UnityEngine;
@@ -24,6 +26,7 @@ namespace _Scripts.GameFlow.Objective
         public AudioClip statueDamagedSound;
         public AudioClip statueBuildSound;
         public Transform statuePopupSpawnPosition;
+        public List<PlayerWorker> workersInvolvedInConstruction = new List<PlayerWorker>();
 
         private float currProgress;
         private float prevSoundEffect;

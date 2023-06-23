@@ -43,9 +43,11 @@ namespace _Scripts.GameFlow.Transition
                     case 3:
                         StatueHandler.instance.StartStatueStage();
                         EntityHandler.instance.endgame = true;
+                        EnemySpawnManager.instance.stageIsActive = true;
                         break;
                     case 4:
                         boatCollider.enabled = true;
+                        EnemySpawnManager.instance.stageIsActive = true;
                         break;
                 }
 

@@ -256,6 +256,7 @@ namespace _Scripts.Player.Unit
                             isAttemptingToBuild = true;
                             isConstructing = true;
                             isBuildingTower = true;
+                            structureTarget = tower.transform;
                             constructionTower.workersInvolvedInConstruction.Add(this);
                             navAgent.SetDestination((transform.position + 4 * structureTarget.position) / 5);
                         }
@@ -277,6 +278,7 @@ namespace _Scripts.Player.Unit
                             isAttemptingToBuild = true;
                             isConstructing = true;
                             isBuildingTower = false;
+                            structureTarget = barracks.transform;
                             constructionBarracks.workersInvolvedInConstruction.Add(this);
                             navAgent.SetDestination((transform.position + 4 * structureTarget.position) / 5);
                         }
@@ -287,12 +289,14 @@ namespace _Scripts.Player.Unit
             {
                 if (other.CompareTag("Statue"))
                 {
-                    if (StageTransitionHandler.instance.currentStage == 3)
+                    if (StageTransitionHandler.instance.currentStage == 4)
                     {
                         isConstructing = true;
                         isBuildingStatue = true;
                         isAttemptingToBuild = true;
+                        structureTarget = other.transform;
                         constructionStatue = other.GetComponent<Statue>();
+                        constructionStatue.workersInvolvedInConstruction.Add(this);
                         navAgent.SetDestination((transform.position + 3 * structureTarget.position) / 4);
                     }
                 }

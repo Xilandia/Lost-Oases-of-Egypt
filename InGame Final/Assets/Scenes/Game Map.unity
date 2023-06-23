@@ -9058,6 +9058,98 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 641163588}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &650397462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650397463}
+  - component: {fileID: 650397466}
+  - component: {fileID: 650397465}
+  - component: {fileID: 650397464}
+  m_Layer: 0
+  m_Name: Statue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &650397463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650397462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 688994185}
+  m_Father: {fileID: 2125044804}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &650397464
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650397462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 13.69849
+  m_Height: 70.75519
+  m_Direction: 1
+  m_Center: {x: -491.9109, y: 103.6476, z: 691.9714}
+--- !u!54 &650397465
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650397462}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &650397466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650397462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e6d95329ee64e9fa07ceb31b9bc870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statue: {fileID: 1645781642}
+  statueCollider: {fileID: 650397464}
+  outerScaffolding: {fileID: 1197166594}
+  innerScaffolding: {fileID: 1458993242}
+  outerScaffoldingUp: 0
+  innerScaffoldingUp: 0
+  statueHealth: 5000
+  statueArmor: 2
+  statueCurrentHealth: 5000
+  statueBuildTime: 120
+  statueOffset: 45
+  statueDamagedSound: {fileID: 8300000, guid: d3726e963bd404897bb73c46bb9d8aac, type: 3}
+  statueBuildSound: {fileID: 8300000, guid: 3bc2c5d92b7f54be7b439b2fb535fc76, type: 3}
+  statuePopupSpawnPosition: {fileID: 165348491}
+  workersInvolvedInConstruction: []
 --- !u!1001 &655393850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9880,7 +9972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21ca8e337ebb4230a8feea3dac1b282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statue: {fileID: 1645781643}
+  statue: {fileID: 650397466}
 --- !u!1001 &680277522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10171,27 +10263,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2125044804}
+    m_TransformParent: {fileID: 650397463}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 05e0536c0d2cdde4fa7edaf62965cdca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05e0536c0d2cdde4fa7edaf62965cdca,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.017713
+      value: 5.017714
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05e0536c0d2cdde4fa7edaf62965cdca,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.017712
+      value: 5.0177126
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05e0536c0d2cdde4fa7edaf62965cdca,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.01771
+      value: 5.0177097
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05e0536c0d2cdde4fa7edaf62965cdca,
         type: 3}
@@ -24619,46 +24711,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 688994184}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1645781643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645781642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e6d95329ee64e9fa07ceb31b9bc870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statue: {fileID: 1645781642}
-  statueCollider: {fileID: 1645781644}
-  outerScaffolding: {fileID: 1197166594}
-  innerScaffolding: {fileID: 1458993242}
-  outerScaffoldingUp: 0
-  innerScaffoldingUp: 0
-  statueHealth: 5000
-  statueArmor: 2
-  statueCurrentHealth: 5000
-  statueBuildTime: 120
-  statueOffset: 45
-  statueDamagedSound: {fileID: 8300000, guid: d3726e963bd404897bb73c46bb9d8aac, type: 3}
-  statueBuildSound: {fileID: 8300000, guid: 3bc2c5d92b7f54be7b439b2fb535fc76, type: 3}
-  statuePopupSpawnPosition: {fileID: 165348491}
---- !u!136 &1645781644
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645781642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 3.2242708
-  m_Height: 15.146145
-  m_Direction: 1
-  m_Center: {x: 0.12885185, y: -1.8353829, z: -6.9849193e-10}
 --- !u!1001 &1656640726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32492,7 +32544,7 @@ Transform:
   - {fileID: 205210158}
   - {fileID: 800549858}
   - {fileID: 1803934887}
-  - {fileID: 688994185}
+  - {fileID: 650397463}
   - {fileID: 1365517725}
   m_Father: {fileID: 0}
   m_RootOrder: 8

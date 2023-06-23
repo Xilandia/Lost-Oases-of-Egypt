@@ -22,7 +22,7 @@ namespace _Scripts.GameFlow.Objective
 
             foreach (PlayerWorker worker in PlayerManager.instance.workers)
             {
-                worker.MoveWorker(statue.transform.position);
+                worker.MoveWorker(statue.statue.transform.position);
             }
         }
 
@@ -32,6 +32,19 @@ namespace _Scripts.GameFlow.Objective
             statue.gameObject.SetActive(false);
             StageTransitionHandler.instance.readyToLoadStage = true;
             StageTransitionHandler.instance.LoadStage();
+            
+            foreach (PlayerWorker worker in statue.workersInvolvedInConstruction)
+            {
+                worker.isAttemptingToBuild = false;
+                worker.isConstructing = false;
+                worker.isAttemptingToGather = false;
+                worker.isBuildingTower = false;
+                worker.isBuildingStatue = false;
+                worker.structureTarget = null;
+                worker.constructionStatue = null;
+
+                worker.CheckForResourceTargets();
+            }
         }
     }
 }

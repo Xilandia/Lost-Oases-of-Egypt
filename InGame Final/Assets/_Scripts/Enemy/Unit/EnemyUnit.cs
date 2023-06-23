@@ -205,7 +205,7 @@ namespace _Scripts.Enemy.Unit
             {
 
             }
-            else if (StageTransitionHandler.instance.currentStage == 3)
+            else if (StageTransitionHandler.instance.currentStage == 4)
             {
                 targetTransform = StatueHandler.instance.statue.transform;
                 targetDamageable = StatueHandler.instance.statue;

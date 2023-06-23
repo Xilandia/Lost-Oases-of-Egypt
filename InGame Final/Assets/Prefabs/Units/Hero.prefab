@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 434754386}
   m_Layer: 8
   m_Name: Hero
-  m_TagString: Unit
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

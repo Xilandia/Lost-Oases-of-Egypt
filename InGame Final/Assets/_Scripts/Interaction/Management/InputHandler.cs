@@ -111,10 +111,9 @@ namespace _Scripts.Interaction.Management
 			{
 				foreach (Transform child in PlayerManager.instance.playerUnits)
 				{
-					// rework for object pools later - to get rid of GetComponent
 					if (IsWithinSelectionBounds(child))
 					{
-						if (child.CompareTag("Unit"))
+						if (child.CompareTag("Unit") || child.CompareTag("Hero"))
 						{
 							AddedUnit(child.gameObject.GetComponent<PlayerUnit>(), true);
 						}
