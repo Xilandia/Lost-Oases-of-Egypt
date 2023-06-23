@@ -189,7 +189,7 @@ namespace _Scripts.Player.Structure
 
             EntityHandler.instance.SetPlayerUnitStats(pU, entity.entityName);
             
-            if (pU.unitAttackRange > 12)
+            if (pU.unitAttackRange > 5)
             {
                 PlayerManager.instance.rangedSoldiers.Add(pU);
             }

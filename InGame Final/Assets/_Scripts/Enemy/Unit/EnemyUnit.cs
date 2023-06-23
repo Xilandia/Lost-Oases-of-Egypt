@@ -2,7 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 using _Scripts.Enemy.Management;
+using _Scripts.GameFlow.Objective;
 using _Scripts.GameFlow.Sound;
+using _Scripts.GameFlow.Transition;
 using _Scripts.Player.Management;
 using _Scripts.Player.Structure;
 using _Scripts.Player.Unit;
@@ -202,6 +204,14 @@ namespace _Scripts.Enemy.Unit
             else if (RangedSoldierInRange())
             {
 
+            }
+            else if (StageTransitionHandler.instance.currentStage == 3)
+            {
+                targetTransform = StatueHandler.instance.statue.transform;
+                targetDamageable = StatueHandler.instance.statue;
+                targetOffset = targetDamageable.GetOffset();
+                hasTarget = true;
+                PopupHandler.instance.CreatePopup("!Going after the objective!", Color.magenta, enemyPopupSpawnPosition.position);
             }
             else if (TowerInRange())
             {

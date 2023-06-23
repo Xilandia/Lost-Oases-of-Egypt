@@ -4,7 +4,7 @@ using _Scripts.Player.Management;
 using UnityEngine;
 using UnityEngine.VFX;
 
-namespace _Scripts.GameFlow.Transitions
+namespace _Scripts.GameFlow.Transition
 {
     public class CameraPanHandler : MonoBehaviour
     {

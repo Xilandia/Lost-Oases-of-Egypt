@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using _Scripts.GameFlow.Menu;
-using _Scripts.GameFlow.Transitions;
+using _Scripts.GameFlow.Transition;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using _Scripts.Interaction.Action;

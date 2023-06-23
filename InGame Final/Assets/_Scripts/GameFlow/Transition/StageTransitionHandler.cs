@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using _Scripts.Enemy.Management;
+using _Scripts.GameFlow.Objective;
 using _Scripts.GameFlow.Sound;
 using _Scripts.Player.Management;
 using _Scripts.Utility.Entity;
 using _Scripts.Utility.Scriptable;
 using UnityEngine;
 
-namespace _Scripts.GameFlow.Transitions
+namespace _Scripts.GameFlow.Transition
 {
     public class StageTransitionHandler : MonoBehaviour
     {
@@ -15,8 +16,9 @@ namespace _Scripts.GameFlow.Transitions
         [SerializeField] private GameObject middleBoundary;
         [SerializeField] private GameObject upperLeftBoundary;
         [SerializeField] private GameObject upperRightBoundary;
+        [SerializeField] private SphereCollider boatCollider;
         [SerializeField] private List<EnemyStage> stages;
-        [SerializeField] private int currentStage;
+        public int currentStage;
         public bool readyToLoadStage = true;
 
         void Awake()
@@ -30,16 +32,23 @@ namespace _Scripts.GameFlow.Transitions
             {
                 readyToLoadStage = false;
                 SoundHandler.instance.PlayStageTrack(currentStage);
-                
-                if (currentStage < 3)
+
+                switch (currentStage)
                 {
-                    CameraPanHandler.instance.PanCameraToPortal(currentStage);
+                    case 0:
+                    case 1:
+                    case 2:
+                        CameraPanHandler.instance.PanCameraToPortal(currentStage);
+                        break;
+                    case 3:
+                        StatueHandler.instance.StartStatueStage();
+                        EntityHandler.instance.endgame = true;
+                        break;
+                    case 4:
+                        boatCollider.enabled = true;
+                        break;
                 }
-                else
-                {
-                    EntityHandler.instance.endgame = true;
-                }
-                
+
                 EnemySpawnManager.instance.currentStage = stages[currentStage++];
                 EnemySpawnManager.instance.currentWaveIndex = 0;
                 EnemySpawnManager.instance.currentEnemyGoalTransform =

@@ -9,7 +9,7 @@ namespace _Scripts.Utility.Entity
     {
         public static EntityHandler instance;
         
-        public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer;
+        public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer, objectiveLayer;
         public bool endgame = false;
 
         [SerializeField] private EntityEnemy[] enemies;
@@ -25,6 +25,7 @@ namespace _Scripts.Utility.Entity
             playerInteractableLayer = LayerMask.GetMask("Interactables");
             enemyUnitLayer = LayerMask.GetMask("Enemies");
             resourceLayer = LayerMask.GetMask("Resource Nodes");
+            objectiveLayer = LayerMask.GetMask("Objectives");
         }
 
         public void SetPlayerUnitStats(PlayerUnit pU, string unitType)
@@ -193,7 +194,7 @@ namespace _Scripts.Utility.Entity
 
             if (endgame)
             {
-                eU.behaviorOne = false;
+                eU.TransitionPhase();
             }
         }
     }

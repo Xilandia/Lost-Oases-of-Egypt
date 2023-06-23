@@ -1,8 +1,9 @@
 using System;
+using _Scripts.GameFlow.Objective;
 using _Scripts.GameFlow.Sound;
+using _Scripts.GameFlow.Transition;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 using _Scripts.Interaction.Interactable;
 using _Scripts.Interaction.Management;
 using _Scripts.Player.Management;
@@ -46,11 +47,13 @@ namespace _Scripts.Player.Unit
         public bool isAttemptingToBuild;
         public bool isConstructing;
         public bool isBuildingTower;
+        public bool isBuildingStatue;
         public Transform resourceTarget;
         public ResourceNode resourceNode;
         public Transform structureTarget;
         public PlayerTower constructionTower;
         public PlayerBarracks constructionBarracks;
+        public Statue constructionStatue;
         
         public PlayerBarracks[] buildableBarracks;
         public PlayerTower[] buildableTowers;
@@ -184,6 +187,10 @@ namespace _Scripts.Player.Unit
             {
                 constructionTower.TickConstruction();
             }
+            else if (isBuildingStatue)
+            {
+                constructionStatue.TickConstruction();
+            }
             else
             {
                 constructionBarracks.TickConstruction();
@@ -273,6 +280,20 @@ namespace _Scripts.Player.Unit
                             constructionBarracks.workersInvolvedInConstruction.Add(this);
                             navAgent.SetDestination((transform.position + 4 * structureTarget.position) / 5);
                         }
+                    }
+                }
+            }
+            else if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.objectiveLayer))
+            {
+                if (other.CompareTag("Statue"))
+                {
+                    if (StageTransitionHandler.instance.currentStage == 3)
+                    {
+                        isConstructing = true;
+                        isBuildingStatue = true;
+                        isAttemptingToBuild = true;
+                        constructionStatue = other.GetComponent<Statue>();
+                        navAgent.SetDestination((transform.position + 3 * structureTarget.position) / 4);
                     }
                 }
             }

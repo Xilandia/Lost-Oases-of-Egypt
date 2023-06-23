@@ -10,6 +10,7 @@ TagManager:
   - Worker
   - Enemy
   - Hero
+  - Statue
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - Interactables
   - Resource Nodes
-  - 
+  - Objectives
   - 
   - 
   - 
