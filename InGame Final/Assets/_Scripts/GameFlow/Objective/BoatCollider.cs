@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Scripts.GameFlow.Objective
 {
@@ -9,8 +10,7 @@ namespace _Scripts.GameFlow.Objective
             if (other.CompareTag("Hero"))
             {
                 ScoreHandler.instance.GameEndScoreCalculation(true);
-                Debug.Log("You win!");
-                // implement proper victory
+                SceneManager.LoadScene("Win Screen");
             }
         }
     }

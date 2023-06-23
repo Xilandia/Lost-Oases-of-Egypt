@@ -15,6 +15,8 @@ namespace _Scripts.GameFlow.Objective
         public float[] totalResourcesCollected = new float[2];
         public int[] totalUnitsSurvived = new int[5];
         public int[] totalBuildingsSurvived = new int[3];
+        public float[] subtotals = new float[4];
+        public bool isStatueBuilt;
 
         public int[] gameTime = new int[2];
 
@@ -31,22 +33,27 @@ namespace _Scripts.GameFlow.Objective
                 case "Basic":
                     totalEnemiesKilled[0] += 1;
                     totalScore += 5;
+                    subtotals[0] += 5;
                     break;
                 case "Climber":
                     totalEnemiesKilled[1] += 1;
                     totalScore += 8;
+                    subtotals[0] += 8;
                     break;
                 case "Fast":
                     totalEnemiesKilled[2] += 1;
                     totalScore += 8;
+                    subtotals[0] += 8;
                     break;
                 case "Tank":
                     totalEnemiesKilled[3] += 1;
                     totalScore += 15;
+                    subtotals[0] += 15;
                     break;
                 case "Boss":
                     totalEnemiesKilled[4] += 1;
                     totalScore += 500;
+                    subtotals[0] += 500;
                     break;
             }
         }
@@ -58,10 +65,12 @@ namespace _Scripts.GameFlow.Objective
                 case "Wood":
                     totalResourcesCollected[0] += resourceAmount;
                     totalScore += resourceAmount / 2f;
+                    subtotals[1] += resourceAmount / 2f;
                     break;
                 case "Ore":
                     totalResourcesCollected[1] += resourceAmount;
                     totalScore += resourceAmount / 2;
+                    subtotals[1] += resourceAmount / 2;
                     break;
             }
         }
@@ -69,6 +78,8 @@ namespace _Scripts.GameFlow.Objective
         public void StatueBuilt()
         {
             totalScore += 200;
+            subtotals[1] += 200;
+            isStatueBuilt = true;
         }
 
         public void GameEndScoreCalculation(bool isWin)
@@ -80,10 +91,12 @@ namespace _Scripts.GameFlow.Objective
                     case "Axeman":
                         totalUnitsSurvived[0] += 1;
                         totalScore += 40;
+                        subtotals[2] += 40;
                         break;
                     case "Knight":
                         totalUnitsSurvived[1] += 1;
                         totalScore += 20;
+                        subtotals[2] += 20;
                         break;
                 }
             }
@@ -94,10 +107,12 @@ namespace _Scripts.GameFlow.Objective
                     case "Archer":
                         totalUnitsSurvived[2] += 1;
                         totalScore += 25;
+                        subtotals[2] += 25;
                         break;
                     case "Wizard":
                         totalUnitsSurvived[3] += 1;
                         totalScore += 60;
+                        subtotals[2] += 60;
                         break;
                 }
             }
@@ -108,18 +123,22 @@ namespace _Scripts.GameFlow.Objective
                     case "Small Tower":
                         totalBuildingsSurvived[0] += 1;
                         totalScore += 100;
+                        subtotals[3] += 100;
                         break;
                     case "Big Tower":
                         totalBuildingsSurvived[1] += 1;
                         totalScore += 300;
+                        subtotals[3] += 300;
                         break;
                 }
             }
 
             totalBuildingsSurvived[2] = PlayerManager.instance.barracks.Count;
             totalScore += totalBuildingsSurvived[2] * 240;
+            subtotals[3] += totalBuildingsSurvived[2] * 240;
             totalUnitsSurvived[4] = PlayerManager.instance.workers.Count;
             totalScore += totalUnitsSurvived[4] * 100;
+            subtotals[2] += totalUnitsSurvived[4] * 100;
             gameTime[0] = (int) PlayerManager.instance.roundTimer[0];
             gameTime[1] = (int) PlayerManager.instance.roundTimer[1];
             
