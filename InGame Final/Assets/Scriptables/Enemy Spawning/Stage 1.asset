@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4059f64ca774744eb963295995da2f0c, type: 2}
   - {fileID: 11400000, guid: 962315295d7d04027bcb5869bb0f01e9, type: 2}
   - {fileID: 11400000, guid: 8052e2f6b7f584e4a94724ee41423196, type: 2}
-  waveLength: 0.1
+  waveLength: 20
   enemyStageGoal: 0

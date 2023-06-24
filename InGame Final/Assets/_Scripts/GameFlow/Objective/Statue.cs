@@ -31,16 +31,6 @@ namespace _Scripts.GameFlow.Objective
         private float currProgress;
         private float prevSoundEffect;
 
-        public bool debug;
-
-        void Update()
-        {
-            if (debug)
-            {
-                StatueHandler.instance.StatueIsFinished();
-            }
-        }
-
         public void TickConstruction()
         {
             currProgress += Time.deltaTime;
