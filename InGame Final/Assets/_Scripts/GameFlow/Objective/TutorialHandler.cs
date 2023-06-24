@@ -63,7 +63,6 @@ namespace _Scripts.GameFlow.Objective
 
         void Update()
         {
-            StartCoroutine(Fadeout());
             switch (tutorialPart)
             {
                 case 0:
