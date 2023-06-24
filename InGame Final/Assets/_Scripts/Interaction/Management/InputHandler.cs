@@ -234,6 +234,10 @@ namespace _Scripts.Interaction.Management
 					{
 						ControlViewHandler.instance.Resume();
 					}
+					else if (HelpScreenHandler.instance.isHelpScreenActive)
+					{
+						HelpScreenHandler.instance.Resume();
+					}
 					else
 					{
 						PauseMenuHandler.instance.Resume();
@@ -258,6 +262,18 @@ namespace _Scripts.Interaction.Management
 				else
 				{
 					ControlViewHandler.instance.Pause();
+				}
+			}
+
+			if (Input.GetKeyDown(KeyCode.F2))
+			{
+				if (HelpScreenHandler.instance.isHelpScreenActive)
+				{
+					HelpScreenHandler.instance.Resume();
+				}
+				else
+				{
+					HelpScreenHandler.instance.Pause();
 				}
 			}
 			if (Input.GetKeyDown(KeyCode.P))

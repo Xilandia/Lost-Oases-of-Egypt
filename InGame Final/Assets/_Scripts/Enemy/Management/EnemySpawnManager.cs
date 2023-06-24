@@ -57,7 +57,7 @@ namespace _Scripts.Enemy.Management
         {
             if (currentWaveIndex < currentStage.waves.Count)
             {
-                EnemyWave currentWave = currentStage.waves[currentWaveIndex];
+                /*EnemyWave currentWave = currentStage.waves[currentWaveIndex];
 
                 for (int i = 0; i < currentWave.waveEnemyIndex.Count; i++)
                 {
@@ -66,7 +66,7 @@ namespace _Scripts.Enemy.Management
                     {
                         enemyPools[(int) currentWave.waveEnemyIndex[i]].Get();
                     }
-                }
+                }*/
                 
                 currentWaveIndex++;
             }

@@ -8,7 +8,7 @@ namespace _Scripts.GameFlow.Menu
         public static PauseMenuHandler instance;
         
         public GameObject pauseMenuUI;
-        public bool isGamePaused = false;
+        public bool isGamePaused;
         
         void Awake()
         {
