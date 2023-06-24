@@ -55,13 +55,7 @@ namespace _Scripts.Interaction.Management
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
-				if (EventSystem.current.IsPointerOverGameObject())
-				{
-					return;
-				}
-
 				mousePosition = Input.mousePosition;
-
 				Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
 				if (Physics.Raycast(ray, out hit))
@@ -76,7 +70,6 @@ namespace _Scripts.Interaction.Management
 							DeselectBarracks();
 							DeselectTower();
 							DeselectWorkers();
-							// do unit stuff
 						}
 						
 						if (AddedWorker(hit.transform.gameObject.GetComponent<PlayerWorker>(),
@@ -85,12 +78,10 @@ namespace _Scripts.Interaction.Management
 							DeselectBarracks();
 							DeselectTower();
 							DeselectUnits();
-							// do unit stuff
 						}
 
 						if (AddedBarracks(hit.transform.gameObject.GetComponent<PlayerBarracks>()))
 						{
-							// do structure stuff
 							DeselectTower();
 							DeselectUnits();
 							DeselectWorkers();
@@ -133,7 +124,6 @@ namespace _Scripts.Interaction.Management
 			if (Input.GetMouseButtonDown(1) && (HaveSelectedUnits() || HaveSelectedWorkers()))
 			{
 				mousePosition = Input.mousePosition;
-
 				Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
 				if (Physics.Raycast(ray, out hit))

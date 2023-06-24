@@ -11,7 +11,7 @@ namespace _Scripts.Player.Unit
 
         void OnDisable()
         {
-            if (!PauseMenuHandler.instance.isGamePaused)
+            if (!PauseMenuHandler.instance.isGamePaused && heroUnit.unitCurrentHealth < 0)
             {
                 ScoreHandler.instance.GameEndScoreCalculation(false);
                 SceneManager.LoadScene("Lose Screen");

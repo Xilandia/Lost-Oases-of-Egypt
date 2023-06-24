@@ -71,7 +71,6 @@ namespace _Scripts.Enemy.Unit
             isMovingHash = Animator.StringToHash("IsMoving");
             inRangeHash = Animator.StringToHash("InRange");
             animator.SetBool(hasLifeHash, true);
-            //CheckForPlayerTargets(); might not need if the collider automatically checks on awake
         }
 
         void Update()
@@ -391,19 +390,19 @@ namespace _Scripts.Enemy.Unit
                     hasTarget = true;
                     targetTransform = other.transform;
                     
-                    if (other.gameObject.tag.Equals("Unit"))
+                    if (other.gameObject.CompareTag("Unit") || other.gameObject.CompareTag("Hero"))
                     {
                         targetDamageable = targetTransform.gameObject.GetComponent<PlayerUnit>();
                     }
-                    else if (other.gameObject.tag.Equals("Barracks"))
+                    else if (other.gameObject.CompareTag("Barracks"))
                     {
                         targetDamageable = targetTransform.gameObject.GetComponent<PlayerBarracks>();
                     }
-                    else if (other.gameObject.tag.Equals("Tower"))
+                    else if (other.gameObject.CompareTag("Tower"))
                     {
                         targetDamageable = targetTransform.gameObject.GetComponent<PlayerTower>();
                     }
-                    else if (other.gameObject.tag.Equals("Worker"))
+                    else if (other.gameObject.CompareTag("Worker"))
                     {
                         targetDamageable = targetTransform.gameObject.GetComponent<PlayerWorker>();
                     }

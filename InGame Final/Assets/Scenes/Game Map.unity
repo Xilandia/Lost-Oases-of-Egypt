@@ -142,6 +142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -321,6 +326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -1366,6 +1376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -2274,6 +2289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -2538,117 +2558,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 191005088}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &193671159
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 193671164}
-  - component: {fileID: 193671163}
-  - component: {fileID: 193671162}
-  - component: {fileID: 193671161}
-  - component: {fileID: 193671160}
-  m_Layer: 0
-  m_Name: Floor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!156049354 &193671160
-Grid:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193671159}
-  m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 1}
-  m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 0
-  m_CellSwizzle: 0
---- !u!64 &193671161
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193671159}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &193671162
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193671159}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &193671163
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193671159}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &193671164
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193671159}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 20}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202763514
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,6 +3489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Huge Canyon Sandstone Cliff_veoneio (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!4 &261974508 stripped
@@ -4046,7 +3960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292712608}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 770, y: 14.7, z: 420}
+  m_LocalPosition: {x: 812.8367, y: 14.7, z: 429.7168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4155,6 +4069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -8504,7 +8423,7 @@ Transform:
   - {fileID: 2026259128}
   - {fileID: 2082168927}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &635534399
 PrefabInstance:
@@ -8587,6 +8506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Huge Canyon Sandstone Cliff_veoneio (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
@@ -9260,7 +9184,7 @@ Transform:
   - {fileID: 945109039}
   - {fileID: 986327083}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &657875729
 PrefabInstance:
@@ -10532,7 +10456,7 @@ RectTransform:
   - {fileID: 1597847677}
   - {fileID: 710085752}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13294,6 +13218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -14200,7 +14129,7 @@ Transform:
   m_Children:
   - {fileID: 1035247231}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &981574115 stripped
 Transform:
@@ -16367,6 +16296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Huge Canyon Sandstone Cliff_veoneio (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!4 &1114377262 stripped
@@ -17417,6 +17351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -17644,6 +17583,12 @@ MonoBehaviour:
   - 0
   totalUnitsSurvived: 0000000000000000000000000000000000000000
   totalBuildingsSurvived: 000000000000000000000000
+  subtotals:
+  - 0
+  - 0
+  - 0
+  - 0
+  isStatueBuilt: 0
   gameTime: 0000000000000000
 --- !u!1001 &1197166593
 PrefabInstance:
@@ -17965,6 +17910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -18396,6 +18346,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Huge Canyon Sandstone Cliff_veoneio (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!4 &1236262836 stripped
@@ -18505,6 +18460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -20548,6 +20508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -21705,7 +21670,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1440369767
 MeshCollider:
@@ -22232,6 +22197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Huge Canyon Sandstone Cliff_veoneio (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
@@ -23530,7 +23500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587035869}
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 150, z: -150}
+  m_LocalPosition: {x: 0, y: 230, z: -230}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24726,6 +24696,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -24948,6 +24923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -25944,6 +25924,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Huge Canyon Sandstone Cliff_veoneio (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4376395340827654060, guid: e20ec08eed1aa6f4c9f255929bfd673e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20ec08eed1aa6f4c9f255929bfd673e, type: 3}
 --- !u!4 &1711248427 stripped
@@ -26225,7 +26210,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1725920748
 MeshCollider:
@@ -28684,6 +28669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
       propertyPath: m_RootOrder
@@ -29664,7 +29654,7 @@ Transform:
   - {fileID: 1753060495}
   - {fileID: 1525048435}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1984094892
 PrefabInstance:
@@ -29767,6 +29757,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gigantic Canyon Sandstone Cliff_umdjfhfga (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278157828159369965, guid: 685885546bced5646a65cc6de39a4418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6644000908307043875, guid: 685885546bced5646a65cc6de39a4418,
         type: 3}
@@ -32327,7 +32322,7 @@ Transform:
   - {fileID: 650397463}
   - {fileID: 1365517725}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2127916672
 PrefabInstance:

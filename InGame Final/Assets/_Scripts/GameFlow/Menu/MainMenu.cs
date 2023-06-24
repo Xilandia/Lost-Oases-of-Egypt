@@ -7,7 +7,7 @@ namespace _Scripts.GameFlow.Menu
     {
         public void PlayGame()
         {
-            SceneManager.LoadScene("Game Map");
+            SceneManager.LoadScene("Tutorial");
         }
 
         public void QuitGame()

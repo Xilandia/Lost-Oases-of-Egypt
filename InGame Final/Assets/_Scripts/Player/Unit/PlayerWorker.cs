@@ -103,6 +103,7 @@ namespace _Scripts.Player.Unit
         public void MoveWorker(Vector3 _destination)
         {
             navAgent.SetDestination(_destination);
+            isAttemptingToGather = false;
         }
         
         public void CheckForResourceTargets()

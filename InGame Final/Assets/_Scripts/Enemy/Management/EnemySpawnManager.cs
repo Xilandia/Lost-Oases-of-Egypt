@@ -62,7 +62,10 @@ namespace _Scripts.Enemy.Management
                 for (int i = 0; i < currentWave.waveEnemyIndex.Count; i++)
                 {
                     currentSpawnPointIndex = currentWave.waveEnemySides[i];
-                    enemyPools[(int) currentWave.waveEnemyIndex[i]].Get();
+                    for (int j = 0; j < PlayerManager.instance.roundTimer[1] / 2 + 1; j++)
+                    {
+                        enemyPools[(int) currentWave.waveEnemyIndex[i]].Get();
+                    }
                 }
                 
                 currentWaveIndex++;
