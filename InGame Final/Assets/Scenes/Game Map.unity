@@ -8725,9 +8725,9 @@ GameObject:
   - component: {fileID: 650397466}
   - component: {fileID: 650397465}
   - component: {fileID: 650397464}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Statue
-  m_TagString: Untagged
+  m_TagString: Statue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9496,6 +9496,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   objectiveLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  colliderLayer:
     serializedVersion: 2
     m_Bits: 0
   endgame: 0
