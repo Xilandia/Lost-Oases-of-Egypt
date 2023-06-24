@@ -55,7 +55,6 @@ namespace _Scripts.GameFlow.Objective
 
             if (currProgress >= statueBuildTime)
             {
-                Debug.Log("Statue complete");
                 StatueHandler.instance.StatueIsFinished();
             }
         }

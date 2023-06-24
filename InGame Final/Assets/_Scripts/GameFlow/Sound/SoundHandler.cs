@@ -42,5 +42,20 @@ namespace _Scripts.GameFlow.Sound
         {
             soundEffectSource.PlayOneShot(clip, 0.2f);
         }
+
+        public void MuteForExplosion()
+        {
+            musicSource.mute = true;
+        }
+        
+        public void UnmuteAfterExplosion()
+        {
+            musicSource.mute = false;
+        }
+
+        public void PlayExplosion(AudioClip clip)
+        {
+            soundEffectSource.PlayOneShot(clip);
+        }
     }
 }
