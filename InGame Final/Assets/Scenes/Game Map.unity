@@ -9613,6 +9613,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b61c41ed8fd2b4ed7978765c9f3491fe, type: 2}
   - {fileID: 11400000, guid: 9a19de7817004461db6b5c5bf7c94c4b, type: 2}
   - {fileID: 11400000, guid: 0a51228de39ec496982c0193a1ab0e6c, type: 2}
+  boundaryDing: {fileID: 8300000, guid: ba556cde0c6734b9dacfdcbaa4f4c470, type: 3}
   currentStage: 0
   readyToLoadStage: 1
 --- !u!114 &673076741

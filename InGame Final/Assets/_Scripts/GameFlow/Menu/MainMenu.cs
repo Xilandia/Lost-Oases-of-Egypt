@@ -9,10 +9,5 @@ namespace _Scripts.GameFlow.Menu
         {
             SceneManager.LoadScene("Tutorial");
         }
-
-        public void QuitGame()
-        {
-            Application.Quit();
-        }
     }
 }

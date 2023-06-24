@@ -1471,6 +1471,7 @@ MonoBehaviour:
   firstBoundaryArrow: {fileID: 228800471}
   congratulatoryText: {fileID: 2037421805}
   blackoutImage: {fileID: 1389454186}
+  boundaryDing: {fileID: 8300000, guid: ba556cde0c6734b9dacfdcbaa4f4c470, type: 3}
   tutorialPart: 0
 --- !u!114 &343074311
 MonoBehaviour:
@@ -1489,6 +1490,7 @@ MonoBehaviour:
   upperRightBoundary: {fileID: 0}
   boatCollider: {fileID: 0}
   stages: []
+  boundaryDing: {fileID: 0}
   currentStage: 0
   readyToLoadStage: 1
 --- !u!1 &376339528

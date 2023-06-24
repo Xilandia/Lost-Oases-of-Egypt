@@ -54,6 +54,7 @@ namespace _Scripts.Player.Structure
         void Start()
         {
             rangeCollider.radius = towerAttackRange;
+            towerAttackRange *= transform.localScale.x;
         }
         
         void Update()
@@ -234,6 +235,20 @@ namespace _Scripts.Player.Structure
                     aggroDamageable = aggroTarget.gameObject.GetComponent<EnemyUnit>();
                     aggroOffset = aggroDamageable.GetOffset();
                     PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, towerPopupSpawnPosition.position);
+                }
+            }
+            else if (Utilities.IsInLayerMask(other.gameObject.layer, EntityHandler.instance.colliderLayer))
+            {
+                if (other.CompareTag("Enemy Collider"))
+                {
+                    if (!hasAggro)
+                    {
+                        hasAggro = true;
+                        aggroTarget = other.transform.parent;
+                        aggroDamageable = aggroTarget.gameObject.GetComponentInParent<EnemyUnit>();
+                        aggroOffset = aggroDamageable.GetOffset();
+                        PopupHandler.instance.CreatePopup("!Target sighted!", Color.black, towerPopupSpawnPosition.position);
+                    }
                 }
             }
         }

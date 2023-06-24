@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using _Scripts.Enemy.Unit;
+using _Scripts.GameFlow.Sound;
 using _Scripts.Player.Management;
 using _Scripts.Player.Structure;
 using _Scripts.Player.Unit;
@@ -23,6 +24,7 @@ namespace _Scripts.GameFlow.Objective
         public GameObject firstBoundaryArrow;
         public GameObject congratulatoryText;
         public Image blackoutImage;
+        public AudioClip boundaryDing;
 
         public int tutorialPart;
 
@@ -30,7 +32,7 @@ namespace _Scripts.GameFlow.Objective
         {
             InitializeUnits();
             InitializeEnemies();
-
+            
             PlayerManager.instance.PlayerOre = 50;
             PlayerManager.instance.PlayerWood = 50;
         }
@@ -97,6 +99,7 @@ namespace _Scripts.GameFlow.Objective
                 case 1:
                     firstBoundary.SetActive(false);
                     firstBoundaryArrow.SetActive(true);
+                    SoundHandler.instance.PlaySoundEffect(boundaryDing);
                     PlayerManager.instance.canGatherResources = true;
                     
                     foreach (PlayerWorker worker in workers)
@@ -107,6 +110,7 @@ namespace _Scripts.GameFlow.Objective
                     break;
                 case 2:
                     secondBoundary.SetActive(false);
+                    SoundHandler.instance.PlaySoundEffect(boundaryDing);
                     for (int i = 0; i < enemies.Length - 1; i++) 
                     {
                         enemies[i].gameObject.SetActive(true);

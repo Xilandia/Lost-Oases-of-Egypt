@@ -9,7 +9,7 @@ namespace _Scripts.Utility.Entity
     {
         public static EntityHandler instance;
         
-        public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer, objectiveLayer;
+        public LayerMask playerInteractableLayer, enemyUnitLayer, resourceLayer, objectiveLayer, colliderLayer;
         public bool endgame = false;
 
         [SerializeField] private EntityEnemy[] enemies;
@@ -26,6 +26,7 @@ namespace _Scripts.Utility.Entity
             enemyUnitLayer = LayerMask.GetMask("Enemies");
             resourceLayer = LayerMask.GetMask("Resource Nodes");
             objectiveLayer = LayerMask.GetMask("Objectives");
+            colliderLayer = LayerMask.GetMask("Ignore Raycast");
         }
 
         public void SetPlayerUnitStats(PlayerUnit pU, string unitType)

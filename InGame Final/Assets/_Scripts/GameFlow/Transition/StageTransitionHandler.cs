@@ -18,6 +18,7 @@ namespace _Scripts.GameFlow.Transition
         [SerializeField] private GameObject upperRightBoundary;
         [SerializeField] private SphereCollider boatCollider;
         [SerializeField] private List<EnemyStage> stages;
+        [SerializeField] private AudioClip boundaryDing;
         public int currentStage;
         public bool readyToLoadStage = true;
 
@@ -65,11 +66,13 @@ namespace _Scripts.GameFlow.Transition
             if (currentStage == 1)
             {
                 middleBoundary.SetActive(false);
+                SoundHandler.instance.PlaySoundEffect(boundaryDing);
             }
             if (currentStage == 2)
             {
                 upperLeftBoundary.SetActive(false);
                 upperRightBoundary.SetActive(false);
+                SoundHandler.instance.PlaySoundEffect(boundaryDing);
             }
             
             Debug.Log("Stage " + currentStage + " was deployed.");

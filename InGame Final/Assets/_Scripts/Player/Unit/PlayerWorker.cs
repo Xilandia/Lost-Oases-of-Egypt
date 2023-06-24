@@ -109,7 +109,7 @@ namespace _Scripts.Player.Unit
         public void CheckForResourceTargets()
         {
             rangeColliders =
-                Physics.OverlapSphere(transform.position, workerOperationRange, EntityHandler.instance.resourceLayer);
+                Physics.OverlapSphere(transform.position, workerOperationRange * 2, EntityHandler.instance.resourceLayer);
 
             foreach (Collider col in rangeColliders)
             {
