@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Big Tower
   m_EditorClassIdentifier: 
   entityName: Big Tower
-  entityCostOre: 250
-  entityCostWood: 50
+  entityCostOre: 900
+  entityCostWood: 25
   entitySprite: {fileID: 21300000, guid: fb611e3a0fe9747178bc50bd2451eeab, type: 3}
   entityPrefab: {fileID: 3887137071503025175, guid: 836cba6fee5114676b3907ce814b9430,
     type: 3}
   entityHealth: 300
   entityArmor: 5
-  entityAttack: 55
-  entityTimeBetweenAttacks: 15
-  entityAttackRange: 20
-  entityCreationTime: 30
+  entityAttack: 80
+  entityTimeBetweenAttacks: 10
+  entityAttackRange: 50
+  entityCreationTime: 15
   entityAttackSound: {fileID: 8300000, guid: af959b41a6abb4fd9bdbc4531262c877, type: 3}
   entityBuildSound: {fileID: 8300000, guid: 3bc2c5d92b7f54be7b439b2fb535fc76, type: 3}
   entityDamagedSound: {fileID: 8300000, guid: d3726e963bd404897bb73c46bb9d8aac, type: 3}

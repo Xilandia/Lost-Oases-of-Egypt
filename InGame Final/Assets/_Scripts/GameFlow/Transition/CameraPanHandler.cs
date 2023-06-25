@@ -42,16 +42,16 @@ namespace _Scripts.GameFlow.Transition
         {
             if (isActive)
             {
-                if (timer >= 5f && !viewedRightPortal)
+                if (timer >= 3f && !viewedRightPortal)
                 {
                     ViewRightPortal();
                 }
-                if (timer >= 10f && !restoredCamera)
+                if (timer >= 6f && !restoredCamera)
                 {
                     RestoreCameraPosition();
                     PlayerManager.instance.canGatherResources = true;
                 }
-                if (timer >= 12f)
+                if (timer >= 10f)
                 {
                     StartStage();
                 }

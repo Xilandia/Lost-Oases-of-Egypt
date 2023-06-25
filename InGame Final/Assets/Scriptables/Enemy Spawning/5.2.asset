@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea41ecc5ed5b4a4b941b25b1d62e42e8, type: 3}
   m_Name: 5.2
   m_EditorClassIdentifier: 
-  waveEnemyIndex: 0200000002000000
-  waveEnemySides: 0200000002000000
+  waveEnemyIndex: 02000000
+  waveEnemySides: 02000000

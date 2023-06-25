@@ -34,7 +34,7 @@ namespace _Scripts.GameFlow.Objective
             InitializeEnemies();
             
             PlayerManager.instance.PlayerOre = 50;
-            PlayerManager.instance.PlayerWood = 50;
+            PlayerManager.instance.PlayerWood = 0;
         }
 
         private void InitializeUnits()

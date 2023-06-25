@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Small Tower
   m_EditorClassIdentifier: 
   entityName: Small Tower
-  entityCostOre: 50
-  entityCostWood: 80
+  entityCostOre: 45
+  entityCostWood: 7
   entitySprite: {fileID: 21300000, guid: 81ffb44c32b5a4fb8a6de9e796054ba2, type: 3}
   entityPrefab: {fileID: 3887137071503025175, guid: e353e698bf73a4800a14ee325db8fa30,
     type: 3}
-  entityHealth: 125
+  entityHealth: 150
   entityArmor: 3
   entityAttack: 10
   entityTimeBetweenAttacks: 5

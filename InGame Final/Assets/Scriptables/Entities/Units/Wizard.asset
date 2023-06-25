@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Wizard
   m_EditorClassIdentifier: 
   entityName: Wizard
-  entityCostOre: 10
-  entityCostWood: 40
-  entitySprite: {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
+  entityCostOre: 525
+  entityCostWood: 45
+  entitySprite: {fileID: 21300000, guid: 4ca4494cb2d654ae6a23f655d38b0576, type: 3}
   entityPrefab: {fileID: 1100987419105808796, guid: fa2d293a5c9a548cab2b159132c0e678,
     type: 3}
-  entityHealth: 30
-  entityArmor: 5
-  entityAttack: 20
+  entityHealth: 300
+  entityArmor: 0
+  entityAttack: 30
   entityTimeBetweenAttacks: 0.5
   entityAttackRange: 8
   entityAggroRange: 10

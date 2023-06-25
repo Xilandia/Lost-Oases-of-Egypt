@@ -15,11 +15,11 @@ MonoBehaviour:
   entityName: Worker
   entityPrefab: {fileID: 1100987419105808796, guid: 6cd870872df7145e3baad51b50f71fe0,
     type: 3}
-  entityHealth: 35
-  entityArmor: 5
+  entityHealth: 120
+  entityArmor: 10
   entityTimeBetweenGathering: 1
   entityOperationRange: 5
-  entityMoveSpeed: 25
+  entityMoveSpeed: 30
   buildableBarracks:
   - {fileID: 1231638400916525711, guid: 97d36d64e59dc42ee96bd27d7a9d983a, type: 3}
   buildableTowers:

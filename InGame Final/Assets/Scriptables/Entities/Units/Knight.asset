@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Knight
   m_EditorClassIdentifier: 
   entityName: Knight
-  entityCostOre: 20
-  entityCostWood: 20
+  entityCostOre: 575
+  entityCostWood: 45
   entitySprite: {fileID: 21300000, guid: fa00a9a02b83d4bc785319a6aa83b7b7, type: 3}
   entityPrefab: {fileID: 1100987419105808796, guid: 3cfb93c2e079749af86423d41c2b8dd6,
     type: 3}
-  entityHealth: 120
+  entityHealth: 500
   entityArmor: 10
-  entityAttack: 10
-  entityTimeBetweenAttacks: 5
+  entityAttack: 40
+  entityTimeBetweenAttacks: 3
   entityAttackRange: 2
   entityAggroRange: 5
-  entityMoveSpeed: 30
+  entityMoveSpeed: 50
   entityCreationTime: 2
   entityAttackSound: {fileID: 8300000, guid: 4ad167e83d38a4bafa155effb85181b2, type: 3}
   entityDeathSound: {fileID: 8300000, guid: b36ac80c004fd4fdcaa94cd10ea20997, type: 3}

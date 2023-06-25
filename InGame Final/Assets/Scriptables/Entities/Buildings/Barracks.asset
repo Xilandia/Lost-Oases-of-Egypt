@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Barracks
   m_EditorClassIdentifier: 
   entityName: Barracks
-  entityCostOre: 120
-  entityCostWood: 120
+  entityCostOre: 3000
+  entityCostWood: 350
   entitySprite: {fileID: 21300000, guid: 109facd65a9774a02bbeceffef99b6f3, type: 3}
   entityPrefab: {fileID: 3887137071503025175, guid: 97d36d64e59dc42ee96bd27d7a9d983a,
     type: 3}
-  entityHealth: 340
+  entityHealth: 300
   entityArmor: 10
   entityCreationTime: 10
   buildableUnits:

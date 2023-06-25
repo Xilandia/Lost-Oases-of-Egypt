@@ -15,10 +15,10 @@ MonoBehaviour:
   entityName: Tank
   entityPrefab: {fileID: 1100987419105808796, guid: 14dc20a461d3d47389681fd12bf62562,
     type: 3}
-  entityHealth: 100
-  entityArmor: 12
-  entityAttack: 3
-  entityTimeBetweenAttacks: 4
+  entityHealth: 80
+  entityArmor: 8
+  entityAttack: 10
+  entityTimeBetweenAttacks: 7
   entityAttackRange: 2
   entityAggroRange: 10
   entityMoveSpeed: 15

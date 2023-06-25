@@ -18,13 +18,13 @@ MonoBehaviour:
   entitySprite: {fileID: 0}
   entityPrefab: {fileID: 1100987419105808796, guid: 3cfb93c2e079749af86423d41c2b8dd6,
     type: 3}
-  entityHealth: 500
-  entityArmor: 10
-  entityAttack: 25
+  entityHealth: 600
+  entityArmor: 6
+  entityAttack: 50
   entityTimeBetweenAttacks: 1
   entityAttackRange: 2
-  entityAggroRange: 10
-  entityMoveSpeed: 30
+  entityAggroRange: 5
+  entityMoveSpeed: 70
   entityCreationTime: 0
   entityAttackSound: {fileID: 8300000, guid: 2ad6dc69f2e7e4d698ea0fe2114bcb29, type: 3}
   entityDeathSound: {fileID: 8300000, guid: 5cc7596f12ef94fe3b04c635ff5bdf5f, type: 3}

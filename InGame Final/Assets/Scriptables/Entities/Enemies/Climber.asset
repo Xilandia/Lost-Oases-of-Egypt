@@ -15,10 +15,10 @@ MonoBehaviour:
   entityName: Climber
   entityPrefab: {fileID: 1100987419105808796, guid: a79310cc2218342a994c7aab6fb1e1a1,
     type: 3}
-  entityHealth: 40
-  entityArmor: 8
-  entityAttack: 10
-  entityTimeBetweenAttacks: 3
+  entityHealth: 50
+  entityArmor: 5
+  entityAttack: 15
+  entityTimeBetweenAttacks: 4
   entityAttackRange: 5
   entityAggroRange: 20
   entityMoveSpeed: 25

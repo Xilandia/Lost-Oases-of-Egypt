@@ -16,9 +16,9 @@ MonoBehaviour:
   entityPrefab: {fileID: 1100987419105808796, guid: 6fdaf4f4ba5c04e7aa09e9fc17b9eeeb,
     type: 3}
   entityHealth: 300
-  entityArmor: 10
-  entityAttack: 34
-  entityTimeBetweenAttacks: 3
+  entityArmor: 5
+  entityAttack: 15
+  entityTimeBetweenAttacks: 2
   entityAttackRange: 5
   entityAggroRange: 25
   entityMoveSpeed: 10

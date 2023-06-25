@@ -15,9 +15,9 @@ MonoBehaviour:
   entityName: Fast
   entityPrefab: {fileID: 1100987419105808796, guid: 84c65409886c643379748280ec8905ab,
     type: 3}
-  entityHealth: 10
+  entityHealth: 25
   entityArmor: 0
-  entityAttack: 3
+  entityAttack: 6
   entityTimeBetweenAttacks: 0.5
   entityAttackRange: 2
   entityAggroRange: 15

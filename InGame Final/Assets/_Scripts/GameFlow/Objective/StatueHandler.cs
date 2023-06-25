@@ -60,6 +60,7 @@ namespace _Scripts.GameFlow.Objective
 
         private IEnumerator StatueExplosion()
         {
+            blackoutImage.gameObject.SetActive(true);
             Color objectColor = blackoutImage.color;
             
             while (objectColor.a < 1f)
@@ -83,6 +84,7 @@ namespace _Scripts.GameFlow.Objective
             }
             
             SoundHandler.instance.UnmuteAfterExplosion();
+            blackoutImage.gameObject.SetActive(false);
             EndStageFour();
         }
     }
