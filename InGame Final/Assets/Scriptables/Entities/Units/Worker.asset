@@ -31,3 +31,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5fb62565c40d34b768f3ebbb3558fe77, type: 2}
   entityGatherSound: {fileID: 8300000, guid: f21c8e6780be84e9b82ec9e1fad71b23, type: 3}
   entityDeathSound: {fileID: 8300000, guid: 8b9e19a9835d940ed95b6e2d5729752b, type: 3}
+  entityJobDoneSound: {fileID: 8300000, guid: 245b323809fc04a60a675668ef26b7ec, type: 3}

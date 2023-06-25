@@ -34,6 +34,7 @@ namespace _Scripts.Player.Unit
         public int workerOffset;
         public AudioClip workerGatherSound;
         public AudioClip workerDeathSound;
+        public AudioClip workerJobDoneSound;
 
         public GameObject workerPrefab;
         public Transform workerTransform;
@@ -119,6 +120,11 @@ namespace _Scripts.Player.Unit
                 PopupHandler.instance.CreatePopup("!Resource node sighted!", Color.black, workerPopupSpawnPosition.position);
 
                 break;
+            }
+
+            if (!isAttemptingToGather)
+            {
+                SoundHandler.instance.PlaySoundEffect(workerJobDoneSound);
             }
         }
 

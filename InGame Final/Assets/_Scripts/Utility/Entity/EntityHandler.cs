@@ -93,6 +93,7 @@ namespace _Scripts.Utility.Entity
             pW.buildableStructureInfo = entity.buildableStructureInfo;
             pW.workerGatherSound = entity.entityGatherSound;
             pW.workerDeathSound = entity.entityDeathSound;
+            pW.workerJobDoneSound = entity.entityJobDoneSound;
         }
         
         public void SetPlayerBarracksStats(PlayerBarracks pB, string barracksType)

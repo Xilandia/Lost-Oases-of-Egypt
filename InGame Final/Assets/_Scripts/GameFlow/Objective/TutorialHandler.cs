@@ -127,6 +127,7 @@ namespace _Scripts.GameFlow.Objective
         private IEnumerator Fadeout()
         {
             Color objectColor = blackoutImage.color;
+            blackoutImage.gameObject.SetActive(true);
             
             while (objectColor.a < 1f)
             {

@@ -18,5 +18,6 @@ namespace _Scripts.Utility.Entity
 		public EntityUI[] buildableStructureInfo;
 		public AudioClip entityGatherSound;
 		public AudioClip entityDeathSound;
+		public AudioClip entityJobDoneSound;
 	}
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using _Scripts.Enemy.Management;
 using _Scripts.GameFlow.Objective;
@@ -19,6 +20,7 @@ namespace _Scripts.GameFlow.Transition
         [SerializeField] private SphereCollider boatCollider;
         [SerializeField] private List<EnemyStage> stages;
         [SerializeField] private AudioClip boundaryDing;
+        [SerializeField] private GameObject canAdvanceText;
         public int currentStage;
         public bool readyToLoadStage = true;
 
@@ -74,8 +76,15 @@ namespace _Scripts.GameFlow.Transition
                 upperRightBoundary.SetActive(false);
                 SoundHandler.instance.PlaySoundEffect(boundaryDing);
             }
-            
-            Debug.Log("Stage " + currentStage + " was deployed.");
+
+            StartCoroutine(DisplayCanAdvanceText());
+        }
+        
+        private IEnumerator DisplayCanAdvanceText()
+        {
+            canAdvanceText.SetActive(true);
+            yield return new WaitForSeconds(10f);
+            canAdvanceText.SetActive(false);
         }
     }
 }
