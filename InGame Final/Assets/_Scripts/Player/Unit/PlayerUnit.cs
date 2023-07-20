@@ -137,6 +137,8 @@ namespace _Scripts.Player.Unit
             if (aggroTarget == null)
             {
                 hasAggro = false;
+                animator.SetBool(inRangeHash, false);
+                animator.SetBool(isMovingHash, false);
                 CheckForEnemyTargets();
             }
             else

@@ -94,6 +94,9 @@ namespace _Scripts.Enemy.Unit
             if (targetTransform == null)
             {
                 hasTarget = false;
+                animator.SetBool(inRangeHash, false);
+                animator.SetBool(isMovingHash, false);
+                
                 if (behaviorOne)
                 {
                     CheckForPlayerTargets();

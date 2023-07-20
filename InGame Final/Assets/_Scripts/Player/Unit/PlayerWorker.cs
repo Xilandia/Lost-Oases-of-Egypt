@@ -133,6 +133,8 @@ namespace _Scripts.Player.Unit
             if (resourceTarget == null)
             {
                 isAttemptingToGather = false;
+                animator.SetBool(inRangeHash, false);
+                animator.SetBool(isMovingHash, false);
                 CheckForResourceTargets();
             }
             else
